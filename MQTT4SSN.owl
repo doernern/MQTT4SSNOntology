@@ -1,0 +1,3368 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://example.org/mqtt4ssn#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://example.org/mqtt4ssn#">
+    <Prefix name="" IRI="http://www.semanticweb.org/owl/owlapi/turtle#"/>
+    <Prefix name="ex" IRI="http://example.org/individuals#"/>
+    <Prefix name="qk" IRI="http://qudt.org/vocab/quantitykind/"/>
+    <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="mqv" IRI="https://www.w3.org/2019/wot/mqtt#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="ssn" IRI="http://www.w3.org/ns/ssn/"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="bibo" IRI="http://purl.org/ontology/bibo/"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="mqtt" IRI="http://example.org/mqtt4ssn#"/>
+    <Prefix name="qudt" IRI="http://qudt.org/schema/qudt/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="sosa" IRI="http://www.w3.org/ns/sosa/"/>
+    <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
+    <Prefix name="unit" IRI="http://qudt.org/vocab/unit/"/>
+    <Import>http://qudt.org/schema/qudt/</Import>
+    <Import>http://www.w3.org/ns/sosa/</Import>
+    <Import>http://www.w3.org/ns/ssn/</Import>
+    <Import>https://www.w3.org/2019/wot/mqtt</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:bibliographicCitation"/>
+        <Literal>Niklas Doerner, Maria Maleshkova (2025): MQTT4SSN Ontology. https://doi.org/10.5281/zenodo.15390282</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:created"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2025-08-02</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <AnonymousIndividual nodeID="_:genid2147484441"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <AnonymousIndividual nodeID="_:genid2147484443"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+        <IRI>https://creativecommons.org/licenses/by/4.0/</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <Literal>MQTT4SSN Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="bibo:doi"/>
+        <Literal>10.5281/zenodo.15390282</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT transport protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT transport protocol component.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="foaf:fundedBy"/>
+        <AbbreviatedIRI>ex:DTEC</AbbreviatedIRI>
+    </Annotation>
+    <Declaration>
+        <Class IRI="Broker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Client"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ControlPacket"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FixedHeader"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NetworkConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NetworkParticipant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Payload"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PublishFixedHeader"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PublishPacket"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PublishPayload"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PublishVariableHeader"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SubscribeFixedHeader"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SubscribePacket"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SubscribeVariableHeader"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SubscriptionEntry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SubscriptionPayload"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Topic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TopicFilter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="UnsubscribeFixedHeader"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="UnsubscribePacket"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="UnsubscribeVariableHeader"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="UnsubscriptionPayload"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="VariableHeader"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="forwardsPacket"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasClient"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasConnectedClient"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasEncodedFields"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasFixedHeader"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasParticipant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPayload"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPayloadEncodesFields"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPayloadSizeBytes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPublishPayload"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSubscriptionPayload"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSubscriptions"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTopicFilter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTopicName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasUnsubscriptionPayload"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasVariableHeader"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hosts"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isAcceptedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isConnectedToBroker"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isDescribedByTopic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isEncodedInPayload"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isHostedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isInitiatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isMatchedByFilter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isPayloadOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isSentBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isSubscriptionOfPayload"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="listensToTopic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="matchesTopic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="observesTopic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="payloadEncodesActuation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="payloadEncodesActuationCollection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="payloadEncodesObservation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="payloadEncodesObservationCollection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="publishesPacket"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="receivesSubscribePacket"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="receivesUnsubscribePacket"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="runsOnPlatform"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="sendsControlPacket"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="subscribesPacket"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="topicDescribesObservation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="unsubscribesPacket"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="usesConnection"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasClientID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasDupFlag"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasFilterPattern"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasHost"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasPacketIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasPayloadContent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasPayloadContentDelimiter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasPayloadContentType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasPayloadEncoding"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasPortNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasQosLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="isRetained"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="usesTLS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="unit:MilliS"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#graphName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#QUDT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Glasscheibe_00140"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Job_Ende_ZS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":filter_zentriereinheit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="unit:MilliM"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#CatalogEntry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/dtype#GMD_DTYPE"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="isManagedBy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ConstraintsGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":obs_RFID"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":filter_zentriereinheit_sub"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:BitEncoding"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:ISO8601-UTCDateTime-BasicFormat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":sub_payload_zentriereinheit_001"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="qudt:protocolBuffersName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":sub_header_fix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="connectsToBroker"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="qudt:vbName"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="publishesToTopic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/Person"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#GMD_VAEM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:CT_FINITE"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="usesBroker"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="mqv:SUBSCRIBE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#GMD_QUDT-SCHEMA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":header_fix"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:ScaleType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":message_zentriereinheit_001"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sosa:hasMember"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="mqv:PUBLISH"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="qudt:unit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:CT_COUNTABLY-INFINITE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ProxyGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ViewGraph"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="foaf:mbox"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#SchemaGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":payload_zentriereinheit_001"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:BigEndian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:TotallyOrdered"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Griffpunkt_Y"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Griffpunkt_Z"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/Organization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Griffpunkt_X"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#TransformsGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#CurationGraph"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sosa:ActuationCollection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":obsColl_Zentriereinheit_001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#RulesGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:Enumeration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":obs_Korr_X"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":obs_Korr_Y"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#graphTitle"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdf:Statement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:CardinalityType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:OctetEncoding"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#VocabularyGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://dbpedia.org/resource/Category:Units_of_angle"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl:Class"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:BooleanEncoding"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ex:DTEC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/dtype"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:hasCitation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xsd:gMonth"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sosa:isMemberOf"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="qudt:StringEncodingType"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xsd:gMonthDay"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":sub_header_var"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:EndianType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="qudt:oracleSQLName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="qudt:cName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/type/BigEndian"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#website"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":broker_fabrik"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:Aspect"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:Unordered"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:SignedIntegerEncoding"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="qudt:ansiSQLName"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xsd:gYear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#FunctionsGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Job_Start_ZS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#MappingGraph"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xsd:gYearMonth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:Verifiable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Korrekturwert_Y"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Korrekturwert_X"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":RFID_Code"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#0"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#DocumentationGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":unsub_header_fix"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":unsub_payload_zentriereinheit_001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/voag/CC-SHAREALIKE_3PT0-US"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:fieldCode"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sosa:ObservationCollection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:EnumeratedQuantity"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:bibliographicCitation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:IEEE754_1985RealEncoding"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://schema.org/affiliation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:CT_UNCOUNTABLE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Zentriereinheit"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="bibo:doi"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="qudt:SymmetricRelation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":obs_JobEnde"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:DerivedUnit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:DoublePrecisionEncoding"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/type/LittleEndian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:hasVocabulary"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:PhysicalConstant"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://schema.org/name"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:SIGNED"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:Quantity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ScriptGraph"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdf:List"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:LittleEndian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:ShortUnsignedIntegerEncoding"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":client_zentriereinheit"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="time:inXSDDateTime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":client_auswertung"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdfs:Resource"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="qudt:bits"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="qudt:length"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#DataGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":unsubscribe_zentriereinheit_001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:PartiallyOrdered"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:LongUnsignedIntegerEncoding"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xsd:gDay"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":obs_JobStart"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:exactMatch"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl:Ontology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":unsub_header_var"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/schema/voag#QUDT-SchemaCatalogEntry"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:UNSIGNED"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#TopQuadrant"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="qudt:SignednessType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:SinglePrecisionRealEncoding"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":topic_zentriereinheit"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#isMetadataFor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#LinkSetGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ControllersGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="mqv:UNSUBSCRIBE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#CollectionGraph"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="xsd:pattern"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:ShortSignedIntegerEncoding"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="qudt:pythonName"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdfs:Class"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="qudt:EnumeratedQuantity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":header_var"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_Z"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://schema.org/url"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:AngleUnit"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="time:Instant"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:UnsignedIntegerEncoding"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_X"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_Y"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":subscription_entry_zentriereinheit"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdfs:Datatype"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sosa:System"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="qudt:Aspect"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://schema.org/alternateName"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="foaf:fundedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="qudt:Verifiable"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sosa:Property"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:CharEncoding"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":subscribe_zentriereinheit_001"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="Broker"/>
+        <Class abbreviatedIRI="mqv:Server"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Client"/>
+        <Class abbreviatedIRI="mqv:Client"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="ControlPacket"/>
+        <Class abbreviatedIRI="mqv:ControlPacket"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="NetworkConnection"/>
+        <Class abbreviatedIRI="mqv:NetworkConnection"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="PublishPacket"/>
+        <Class abbreviatedIRI="mqv:PUBLISH"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="SubscribePacket"/>
+        <Class abbreviatedIRI="mqv:SUBSCRIBE"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Topic"/>
+        <Class abbreviatedIRI="mqv:TopicName"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="TopicFilter"/>
+        <Class abbreviatedIRI="mqv:TopicFilter"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="UnsubscribePacket"/>
+        <Class abbreviatedIRI="mqv:UNSUBSCRIBE"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="Broker"/>
+        <Class IRI="NetworkParticipant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Client"/>
+        <Class IRI="NetworkParticipant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PublishFixedHeader"/>
+        <Class IRI="FixedHeader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PublishPacket"/>
+        <Class IRI="ControlPacket"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PublishPayload"/>
+        <Class IRI="Payload"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PublishVariableHeader"/>
+        <Class IRI="VariableHeader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SubscribeFixedHeader"/>
+        <Class IRI="FixedHeader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SubscribePacket"/>
+        <Class IRI="ControlPacket"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SubscribeVariableHeader"/>
+        <Class IRI="VariableHeader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SubscriptionPayload"/>
+        <Class IRI="Payload"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="UnsubscribeFixedHeader"/>
+        <Class IRI="FixedHeader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="UnsubscribePacket"/>
+        <Class IRI="ControlPacket"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="UnsubscribeVariableHeader"/>
+        <Class IRI="VariableHeader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="UnsubscriptionPayload"/>
+        <Class IRI="Payload"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="ControlPacket"/>
+        <Class IRI="FixedHeader"/>
+        <Class IRI="NetworkParticipant"/>
+        <Class IRI="Payload"/>
+        <Class IRI="Topic"/>
+        <Class IRI="TopicFilter"/>
+        <Class IRI="VariableHeader"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="PublishFixedHeader"/>
+        <Class IRI="SubscribeFixedHeader"/>
+        <Class IRI="UnsubscribeFixedHeader"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="PublishPacket"/>
+        <Class IRI="SubscribePacket"/>
+        <Class IRI="UnsubscribePacket"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="PublishPayload"/>
+        <Class IRI="SubscriptionPayload"/>
+        <Class IRI="UnsubscriptionPayload"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="PublishVariableHeader"/>
+        <Class IRI="SubscribeVariableHeader"/>
+        <Class IRI="UnsubscribeVariableHeader"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Organization"/>
+        <NamedIndividual abbreviatedIRI="ex:DTEC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:FeatureOfInterest"/>
+        <NamedIndividual abbreviatedIRI=":Glasscheibe_00140"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Property"/>
+        <NamedIndividual abbreviatedIRI=":Griffpunkt_X"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Property"/>
+        <NamedIndividual abbreviatedIRI=":Griffpunkt_Y"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Property"/>
+        <NamedIndividual abbreviatedIRI=":Griffpunkt_Z"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Property"/>
+        <NamedIndividual abbreviatedIRI=":Job_Ende_ZS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Property"/>
+        <NamedIndividual abbreviatedIRI=":Job_Start_ZS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Property"/>
+        <NamedIndividual abbreviatedIRI=":Korrekturwert_X"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Property"/>
+        <NamedIndividual abbreviatedIRI=":Korrekturwert_Y"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Property"/>
+        <NamedIndividual abbreviatedIRI=":RFID_Code"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Sensor"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Platform"/>
+        <NamedIndividual abbreviatedIRI=":Zentriereinheit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Broker"/>
+        <NamedIndividual abbreviatedIRI=":broker_fabrik"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Client"/>
+        <NamedIndividual abbreviatedIRI=":client_auswertung"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Client"/>
+        <NamedIndividual abbreviatedIRI=":client_zentriereinheit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="TopicFilter"/>
+        <NamedIndividual abbreviatedIRI=":filter_zentriereinheit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="TopicFilter"/>
+        <NamedIndividual abbreviatedIRI=":filter_zentriereinheit_sub"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="PublishFixedHeader"/>
+        <NamedIndividual abbreviatedIRI=":header_fix"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="PublishVariableHeader"/>
+        <NamedIndividual abbreviatedIRI=":header_var"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="PublishPacket"/>
+        <NamedIndividual abbreviatedIRI=":message_zentriereinheit_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:ObservationCollection"/>
+        <NamedIndividual abbreviatedIRI=":obsColl_Zentriereinheit_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Observation"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_X"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Observation"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_Y"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Observation"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_Z"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Observation"/>
+        <NamedIndividual abbreviatedIRI=":obs_JobEnde"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Observation"/>
+        <NamedIndividual abbreviatedIRI=":obs_JobStart"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Observation"/>
+        <NamedIndividual abbreviatedIRI=":obs_Korr_X"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Observation"/>
+        <NamedIndividual abbreviatedIRI=":obs_Korr_Y"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Observation"/>
+        <NamedIndividual abbreviatedIRI=":obs_RFID"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="PublishPayload"/>
+        <NamedIndividual abbreviatedIRI=":payload_zentriereinheit_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="SubscribeFixedHeader"/>
+        <NamedIndividual abbreviatedIRI=":sub_header_fix"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="SubscribeVariableHeader"/>
+        <NamedIndividual abbreviatedIRI=":sub_header_var"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="SubscriptionPayload"/>
+        <NamedIndividual abbreviatedIRI=":sub_payload_zentriereinheit_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="SubscribePacket"/>
+        <NamedIndividual abbreviatedIRI=":subscribe_zentriereinheit_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="SubscriptionEntry"/>
+        <NamedIndividual abbreviatedIRI=":subscription_entry_zentriereinheit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Topic"/>
+        <NamedIndividual abbreviatedIRI=":topic_zentriereinheit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="UnsubscribeFixedHeader"/>
+        <NamedIndividual abbreviatedIRI=":unsub_header_fix"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="UnsubscribeVariableHeader"/>
+        <NamedIndividual abbreviatedIRI=":unsub_header_var"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="UnsubscriptionPayload"/>
+        <NamedIndividual abbreviatedIRI=":unsub_payload_zentriereinheit_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="UnsubscribePacket"/>
+        <NamedIndividual abbreviatedIRI=":unsubscribe_zentriereinheit_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <AnonymousIndividual nodeID="_:genid2147484441"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <AnonymousIndividual nodeID="_:genid2147484443"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="qudt:QuantityValue"/>
+        <AnonymousIndividual nodeID="_:genid2147484486"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="qudt:QuantityValue"/>
+        <AnonymousIndividual nodeID="_:genid2147484488"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="qudt:QuantityValue"/>
+        <AnonymousIndividual nodeID="_:genid2147484490"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="qudt:QuantityValue"/>
+        <AnonymousIndividual nodeID="_:genid2147484492"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="qudt:QuantityValue"/>
+        <AnonymousIndividual nodeID="_:genid2147484494"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="qudt:QuantityValue"/>
+        <AnonymousIndividual nodeID="_:genid2147484496"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="qudt:QuantityValue"/>
+        <AnonymousIndividual nodeID="_:genid2147484498"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="qudt:QuantityValue"/>
+        <AnonymousIndividual nodeID="_:genid2147484500"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="time:Instant"/>
+        <AnonymousIndividual nodeID="_:genid2147484502"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="qudt:QuantityValue"/>
+        <AnonymousIndividual nodeID="_:genid2147484512"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hosts"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+        <NamedIndividual abbreviatedIRI=":Zentriereinheit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeObservation"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+        <NamedIndividual abbreviatedIRI=":obsColl_Zentriereinheit_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeObservation"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_X"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeObservation"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_Y"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeObservation"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_Z"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeObservation"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+        <NamedIndividual abbreviatedIRI=":obs_JobEnde"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeObservation"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+        <NamedIndividual abbreviatedIRI=":obs_JobStart"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeObservation"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+        <NamedIndividual abbreviatedIRI=":obs_Korr_X"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeObservation"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+        <NamedIndividual abbreviatedIRI=":obs_Korr_Y"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeObservation"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+        <NamedIndividual abbreviatedIRI=":obs_RFID"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:isHostedBy"/>
+        <NamedIndividual abbreviatedIRI=":Zentriereinheit"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="forwardsPacket"/>
+        <NamedIndividual abbreviatedIRI=":broker_fabrik"/>
+        <NamedIndividual abbreviatedIRI=":message_zentriereinheit_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasConnectedClient"/>
+        <NamedIndividual abbreviatedIRI=":broker_fabrik"/>
+        <NamedIndividual abbreviatedIRI=":client_zentriereinheit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="receivesSubscribePacket"/>
+        <NamedIndividual abbreviatedIRI=":broker_fabrik"/>
+        <NamedIndividual abbreviatedIRI=":subscribe_zentriereinheit_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="receivesUnsubscribePacket"/>
+        <NamedIndividual abbreviatedIRI=":broker_fabrik"/>
+        <NamedIndividual abbreviatedIRI=":unsubscribe_zentriereinheit_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="subscribesPacket"/>
+        <NamedIndividual abbreviatedIRI=":client_auswertung"/>
+        <NamedIndividual abbreviatedIRI=":subscribe_zentriereinheit_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hosts"/>
+        <NamedIndividual abbreviatedIRI=":client_zentriereinheit"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="publishesPacket"/>
+        <NamedIndividual abbreviatedIRI=":client_zentriereinheit"/>
+        <NamedIndividual abbreviatedIRI=":message_zentriereinheit_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="matchesTopic"/>
+        <NamedIndividual abbreviatedIRI=":filter_zentriereinheit"/>
+        <NamedIndividual abbreviatedIRI=":topic_zentriereinheit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="matchesTopic"/>
+        <NamedIndividual abbreviatedIRI=":filter_zentriereinheit_sub"/>
+        <NamedIndividual abbreviatedIRI=":topic_zentriereinheit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasTopicName"/>
+        <NamedIndividual abbreviatedIRI=":header_var"/>
+        <NamedIndividual abbreviatedIRI=":topic_zentriereinheit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasFixedHeader"/>
+        <NamedIndividual abbreviatedIRI=":message_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":header_fix"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasPayload"/>
+        <NamedIndividual abbreviatedIRI=":message_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":payload_zentriereinheit_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasTopicName"/>
+        <NamedIndividual abbreviatedIRI=":message_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":topic_zentriereinheit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasVariableHeader"/>
+        <NamedIndividual abbreviatedIRI=":message_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":header_var"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isSentBy"/>
+        <NamedIndividual abbreviatedIRI=":message_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":client_zentriereinheit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isDescribedByTopic"/>
+        <NamedIndividual abbreviatedIRI=":obsColl_Zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":topic_zentriereinheit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual abbreviatedIRI=":obsColl_Zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":Glasscheibe_00140"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual abbreviatedIRI=":obsColl_Zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:phenomenonTime"/>
+        <NamedIndividual abbreviatedIRI=":obsColl_Zentriereinheit_001"/>
+        <AnonymousIndividual nodeID="_:genid2147484502"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_X"/>
+        <NamedIndividual abbreviatedIRI=":Glasscheibe_00140"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasResult"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_X"/>
+        <AnonymousIndividual nodeID="_:genid2147484490"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_X"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_X"/>
+        <NamedIndividual abbreviatedIRI=":Griffpunkt_X"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_Y"/>
+        <NamedIndividual abbreviatedIRI=":Glasscheibe_00140"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasResult"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_Y"/>
+        <AnonymousIndividual nodeID="_:genid2147484492"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_Y"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_Y"/>
+        <NamedIndividual abbreviatedIRI=":Griffpunkt_Y"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_Z"/>
+        <NamedIndividual abbreviatedIRI=":Glasscheibe_00140"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasResult"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_Z"/>
+        <AnonymousIndividual nodeID="_:genid2147484494"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_Z"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_Z"/>
+        <NamedIndividual abbreviatedIRI=":Griffpunkt_Z"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual abbreviatedIRI=":obs_JobEnde"/>
+        <NamedIndividual abbreviatedIRI=":Glasscheibe_00140"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasResult"/>
+        <NamedIndividual abbreviatedIRI=":obs_JobEnde"/>
+        <AnonymousIndividual nodeID="_:genid2147484488"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual abbreviatedIRI=":obs_JobEnde"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual abbreviatedIRI=":obs_JobEnde"/>
+        <NamedIndividual abbreviatedIRI=":Job_Ende_ZS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual abbreviatedIRI=":obs_JobStart"/>
+        <NamedIndividual abbreviatedIRI=":Glasscheibe_00140"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasResult"/>
+        <NamedIndividual abbreviatedIRI=":obs_JobStart"/>
+        <AnonymousIndividual nodeID="_:genid2147484486"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual abbreviatedIRI=":obs_JobStart"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual abbreviatedIRI=":obs_JobStart"/>
+        <NamedIndividual abbreviatedIRI=":Job_Start_ZS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual abbreviatedIRI=":obs_Korr_X"/>
+        <NamedIndividual abbreviatedIRI=":Glasscheibe_00140"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasResult"/>
+        <NamedIndividual abbreviatedIRI=":obs_Korr_X"/>
+        <AnonymousIndividual nodeID="_:genid2147484496"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual abbreviatedIRI=":obs_Korr_X"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual abbreviatedIRI=":obs_Korr_X"/>
+        <NamedIndividual abbreviatedIRI=":Korrekturwert_X"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual abbreviatedIRI=":obs_Korr_Y"/>
+        <NamedIndividual abbreviatedIRI=":Glasscheibe_00140"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasResult"/>
+        <NamedIndividual abbreviatedIRI=":obs_Korr_Y"/>
+        <AnonymousIndividual nodeID="_:genid2147484498"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual abbreviatedIRI=":obs_Korr_Y"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual abbreviatedIRI=":obs_Korr_Y"/>
+        <NamedIndividual abbreviatedIRI=":Korrekturwert_Y"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual abbreviatedIRI=":obs_RFID"/>
+        <NamedIndividual abbreviatedIRI=":Glasscheibe_00140"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasResult"/>
+        <NamedIndividual abbreviatedIRI=":obs_RFID"/>
+        <AnonymousIndividual nodeID="_:genid2147484500"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual abbreviatedIRI=":obs_RFID"/>
+        <NamedIndividual abbreviatedIRI=":SensorZentrierung"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual abbreviatedIRI=":obs_RFID"/>
+        <NamedIndividual abbreviatedIRI=":RFID_Code"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasEncodedFields"/>
+        <NamedIndividual abbreviatedIRI=":payload_zentriereinheit_001"/>
+        <AnonymousIndividual nodeID="_:genid2147484513"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasPayloadSizeBytes"/>
+        <NamedIndividual abbreviatedIRI=":payload_zentriereinheit_001"/>
+        <AnonymousIndividual nodeID="_:genid2147484512"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isPayloadOf"/>
+        <NamedIndividual abbreviatedIRI=":payload_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":message_zentriereinheit_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="payloadEncodesObservationCollection"/>
+        <NamedIndividual abbreviatedIRI=":payload_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":obsColl_Zentriereinheit_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasSubscriptions"/>
+        <NamedIndividual abbreviatedIRI=":sub_payload_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":subscription_entry_zentriereinheit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasFixedHeader"/>
+        <NamedIndividual abbreviatedIRI=":subscribe_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":sub_header_fix"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasPayload"/>
+        <NamedIndividual abbreviatedIRI=":subscribe_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":sub_payload_zentriereinheit_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasVariableHeader"/>
+        <NamedIndividual abbreviatedIRI=":subscribe_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":sub_header_var"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isSentBy"/>
+        <NamedIndividual abbreviatedIRI=":subscribe_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":client_auswertung"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasTopicFilter"/>
+        <NamedIndividual abbreviatedIRI=":subscription_entry_zentriereinheit"/>
+        <NamedIndividual abbreviatedIRI=":filter_zentriereinheit_sub"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isSubscriptionOfPayload"/>
+        <NamedIndividual abbreviatedIRI=":subscription_entry_zentriereinheit"/>
+        <NamedIndividual abbreviatedIRI=":sub_payload_zentriereinheit_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isMatchedByFilter"/>
+        <NamedIndividual abbreviatedIRI=":topic_zentriereinheit"/>
+        <NamedIndividual abbreviatedIRI=":filter_zentriereinheit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="topicDescribesObservation"/>
+        <NamedIndividual abbreviatedIRI=":topic_zentriereinheit"/>
+        <NamedIndividual abbreviatedIRI=":obsColl_Zentriereinheit_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasTopicFilter"/>
+        <NamedIndividual abbreviatedIRI=":unsub_payload_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":filter_zentriereinheit_sub"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasFixedHeader"/>
+        <NamedIndividual abbreviatedIRI=":unsubscribe_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":unsub_header_fix"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasPayload"/>
+        <NamedIndividual abbreviatedIRI=":unsubscribe_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":unsub_payload_zentriereinheit_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasVariableHeader"/>
+        <NamedIndividual abbreviatedIRI=":unsubscribe_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":unsub_header_var"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isSentBy"/>
+        <NamedIndividual abbreviatedIRI=":unsubscribe_zentriereinheit_001"/>
+        <NamedIndividual abbreviatedIRI=":client_auswertung"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="qudt:hasUnit"/>
+        <AnonymousIndividual nodeID="_:genid2147484486"/>
+        <NamedIndividual abbreviatedIRI="unit:MilliS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="qudt:hasUnit"/>
+        <AnonymousIndividual nodeID="_:genid2147484488"/>
+        <NamedIndividual abbreviatedIRI="unit:MilliS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="qudt:hasUnit"/>
+        <AnonymousIndividual nodeID="_:genid2147484490"/>
+        <NamedIndividual abbreviatedIRI="unit:MilliM"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="qudt:hasUnit"/>
+        <AnonymousIndividual nodeID="_:genid2147484492"/>
+        <NamedIndividual abbreviatedIRI="unit:MilliM"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="qudt:hasUnit"/>
+        <AnonymousIndividual nodeID="_:genid2147484494"/>
+        <NamedIndividual abbreviatedIRI="unit:MilliM"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="qudt:hasUnit"/>
+        <AnonymousIndividual nodeID="_:genid2147484496"/>
+        <NamedIndividual abbreviatedIRI="unit:MilliM"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="qudt:hasUnit"/>
+        <AnonymousIndividual nodeID="_:genid2147484498"/>
+        <NamedIndividual abbreviatedIRI="unit:MilliM"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasHost"/>
+        <NamedIndividual abbreviatedIRI=":broker_fabrik"/>
+        <Literal>mqtt.broker.fabrik.de</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasPortNumber"/>
+        <NamedIndividual abbreviatedIRI=":broker_fabrik"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1883</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="usesTLS"/>
+        <NamedIndividual abbreviatedIRI=":broker_fabrik"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasClientID"/>
+        <NamedIndividual abbreviatedIRI=":client_auswertung"/>
+        <Literal>client-auswertung</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasClientID"/>
+        <NamedIndividual abbreviatedIRI=":client_zentriereinheit"/>
+        <Literal>sensor-client-zentriereinheit</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasFilterPattern"/>
+        <NamedIndividual abbreviatedIRI=":filter_zentriereinheit"/>
+        <Literal>fabrik/zentrierung/#</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasFilterPattern"/>
+        <NamedIndividual abbreviatedIRI=":filter_zentriereinheit_sub"/>
+        <Literal>fabrik/zentrierung/#</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasQosLevel"/>
+        <NamedIndividual abbreviatedIRI=":header_fix"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="isRetained"/>
+        <NamedIndividual abbreviatedIRI=":header_fix"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_X"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-28T23:58:44Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_Y"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-28T23:58:44Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual abbreviatedIRI=":obs_Griff_Z"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-28T23:58:44Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual abbreviatedIRI=":obs_JobEnde"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-28T23:59:53Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual abbreviatedIRI=":obs_JobStart"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-28T23:58:44Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual abbreviatedIRI=":obs_Korr_X"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-28T23:58:44Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual abbreviatedIRI=":obs_Korr_Y"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-28T23:58:44Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual abbreviatedIRI=":obs_RFID"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-28T23:58:44Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasPayloadContent"/>
+        <NamedIndividual abbreviatedIRI=":payload_zentriereinheit_001"/>
+        <Literal>20240928235844;20240928235953;4.35837445;15.66778745;8.00612123;-7.583874;0.3858398;00140</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasPayloadContentDelimiter"/>
+        <NamedIndividual abbreviatedIRI=":payload_zentriereinheit_001"/>
+        <Literal>;</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasPayloadContentType"/>
+        <NamedIndividual abbreviatedIRI=":payload_zentriereinheit_001"/>
+        <Literal>text/csv</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasPayloadEncoding"/>
+        <NamedIndividual abbreviatedIRI=":payload_zentriereinheit_001"/>
+        <Literal>UTF-8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasPacketIdentifier"/>
+        <NamedIndividual abbreviatedIRI=":sub_header_var"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">567</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasQosLevel"/>
+        <NamedIndividual abbreviatedIRI=":subscription_entry_zentriereinheit"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasPacketIdentifier"/>
+        <NamedIndividual abbreviatedIRI=":unsub_header_var"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">568</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="qudt:value"/>
+        <AnonymousIndividual nodeID="_:genid2147484486"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20240928235844</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="qudt:value"/>
+        <AnonymousIndividual nodeID="_:genid2147484488"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20240928235953</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="qudt:value"/>
+        <AnonymousIndividual nodeID="_:genid2147484490"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">4.35837445</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="qudt:value"/>
+        <AnonymousIndividual nodeID="_:genid2147484492"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">15.66778745</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="qudt:value"/>
+        <AnonymousIndividual nodeID="_:genid2147484494"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">8.00612123</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="qudt:value"/>
+        <AnonymousIndividual nodeID="_:genid2147484496"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">-7.583874</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="qudt:value"/>
+        <AnonymousIndividual nodeID="_:genid2147484498"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.3858398</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="qudt:value"/>
+        <AnonymousIndividual nodeID="_:genid2147484500"/>
+        <Literal>0014040</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="qudt:value"/>
+        <AnonymousIndividual nodeID="_:genid2147484512"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">97</Literal>
+    </DataPropertyAssertion>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="hasPayload"/>
+        <ObjectProperty abbreviatedIRI="mqv:hasPayload"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="hasTopicFilter"/>
+        <ObjectProperty abbreviatedIRI="mqv:hasTopicFilters"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="hasTopicName"/>
+        <ObjectProperty abbreviatedIRI="mqv:hasTopicName"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="sendsControlPacket"/>
+        <ObjectProperty abbreviatedIRI="mqv:sendsControlPacket"/>
+    </EquivalentObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasPublishPayload"/>
+        <ObjectProperty IRI="hasPayload"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSubscriptionPayload"/>
+        <ObjectProperty IRI="hasPayload"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasUnsubscriptionPayload"/>
+        <ObjectProperty IRI="hasPayload"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hosts"/>
+        <ObjectProperty abbreviatedIRI="sosa:hosts"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isHostedBy"/>
+        <ObjectProperty abbreviatedIRI="sosa:isHostedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="publishesPacket"/>
+        <ObjectProperty IRI="sendsControlPacket"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="subscribesPacket"/>
+        <ObjectProperty IRI="sendsControlPacket"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="unsubscribesPacket"/>
+        <ObjectProperty IRI="sendsControlPacket"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasClient"/>
+        <ObjectProperty IRI="runsOnPlatform"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasConnectedClient"/>
+        <ObjectProperty IRI="isConnectedToBroker"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasEncodedFields"/>
+        <ObjectProperty IRI="isEncodedInPayload"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasParticipant"/>
+        <ObjectProperty IRI="usesConnection"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasPayload"/>
+        <ObjectProperty IRI="isPayloadOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasSubscriptions"/>
+        <ObjectProperty IRI="isSubscriptionOfPayload"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hosts"/>
+        <ObjectProperty IRI="isHostedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="isDescribedByTopic"/>
+        <ObjectProperty IRI="topicDescribesObservation"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="isMatchedByFilter"/>
+        <ObjectProperty IRI="matchesTopic"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="isSentBy"/>
+        <ObjectProperty IRI="sendsControlPacket"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasFixedHeader"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasPayload"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasPublishPayload"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasSubscriptionPayload"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasTopicName"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasUnsubscriptionPayload"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasVariableHeader"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="isPayloadOf"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="forwardsPacket"/>
+        <Class IRI="Broker"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasClient"/>
+        <Class abbreviatedIRI="sosa:Platform"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasConnectedClient"/>
+        <Class IRI="Broker"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasEncodedFields"/>
+        <Class IRI="Payload"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasFixedHeader"/>
+        <Class IRI="ControlPacket"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasParticipant"/>
+        <Class IRI="NetworkConnection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasPayload"/>
+        <Class IRI="ControlPacket"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasPayloadEncodesFields"/>
+        <Class IRI="PublishPayload"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasPayloadSizeBytes"/>
+        <Class IRI="Payload"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasPublishPayload"/>
+        <Class IRI="PublishPacket"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSubscriptionPayload"/>
+        <Class IRI="SubscribePacket"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSubscriptions"/>
+        <Class IRI="SubscriptionPayload"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasTopicFilter"/>
+        <ObjectUnionOf>
+            <Class IRI="SubscriptionEntry"/>
+            <Class IRI="UnsubscriptionPayload"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasTopicName"/>
+        <Class IRI="PublishVariableHeader"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasUnsubscriptionPayload"/>
+        <Class IRI="UnsubscribePacket"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasVariableHeader"/>
+        <Class IRI="ControlPacket"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hosts"/>
+        <Class IRI="Client"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isAcceptedBy"/>
+        <Class IRI="NetworkConnection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isConnectedToBroker"/>
+        <Class IRI="Client"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isDescribedByTopic"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="sosa:Observation"/>
+            <Class abbreviatedIRI="sosa:ObservationCollection"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isEncodedInPayload"/>
+        <Class abbreviatedIRI="rdf:List"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isHostedBy"/>
+        <Class abbreviatedIRI="sosa:System"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isInitiatedBy"/>
+        <Class IRI="NetworkConnection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isMatchedByFilter"/>
+        <Class IRI="Topic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isPayloadOf"/>
+        <Class IRI="Payload"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isSentBy"/>
+        <Class IRI="ControlPacket"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isSubscriptionOfPayload"/>
+        <Class IRI="SubscriptionEntry"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="listensToTopic"/>
+        <Class abbreviatedIRI="sosa:Actuator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="matchesTopic"/>
+        <Class IRI="TopicFilter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="observesTopic"/>
+        <Class abbreviatedIRI="sosa:Sensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="payloadEncodesActuation"/>
+        <Class IRI="PublishPayload"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="payloadEncodesActuationCollection"/>
+        <Class IRI="PublishPayload"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="payloadEncodesObservation"/>
+        <Class IRI="PublishPayload"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="payloadEncodesObservationCollection"/>
+        <Class IRI="PublishPayload"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="publishesPacket"/>
+        <Class IRI="Client"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="receivesSubscribePacket"/>
+        <Class IRI="Broker"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="receivesUnsubscribePacket"/>
+        <Class IRI="Broker"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="runsOnPlatform"/>
+        <Class IRI="Client"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="sendsControlPacket"/>
+        <Class IRI="Client"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="subscribesPacket"/>
+        <Class IRI="Client"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="topicDescribesObservation"/>
+        <Class IRI="Topic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="unsubscribesPacket"/>
+        <Class IRI="Client"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="usesConnection"/>
+        <Class IRI="NetworkParticipant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="forwardsPacket"/>
+        <Class IRI="PublishPacket"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasClient"/>
+        <Class IRI="Client"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasConnectedClient"/>
+        <Class IRI="Client"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasEncodedFields"/>
+        <Class abbreviatedIRI="rdf:List"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasFixedHeader"/>
+        <Class IRI="FixedHeader"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasParticipant"/>
+        <Class IRI="NetworkParticipant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasPayload"/>
+        <Class IRI="Payload"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasPayloadEncodesFields"/>
+        <Class abbreviatedIRI="rdf:List"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasPayloadSizeBytes"/>
+        <Class abbreviatedIRI="qudt:QuantityValue"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasPublishPayload"/>
+        <Class IRI="PublishPayload"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSubscriptionPayload"/>
+        <Class IRI="SubscriptionPayload"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSubscriptions"/>
+        <Class IRI="SubscriptionEntry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasTopicFilter"/>
+        <Class IRI="TopicFilter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasTopicName"/>
+        <Class IRI="Topic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasUnsubscriptionPayload"/>
+        <Class IRI="UnsubscriptionPayload"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasVariableHeader"/>
+        <Class IRI="VariableHeader"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hosts"/>
+        <Class abbreviatedIRI="sosa:System"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isAcceptedBy"/>
+        <Class IRI="Broker"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isConnectedToBroker"/>
+        <Class IRI="Broker"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isDescribedByTopic"/>
+        <Class IRI="Topic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isEncodedInPayload"/>
+        <Class IRI="Payload"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isHostedBy"/>
+        <Class IRI="Client"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isInitiatedBy"/>
+        <Class IRI="Client"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isMatchedByFilter"/>
+        <Class IRI="TopicFilter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isPayloadOf"/>
+        <Class IRI="ControlPacket"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isSentBy"/>
+        <Class IRI="Client"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isSubscriptionOfPayload"/>
+        <Class IRI="SubscriptionPayload"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="listensToTopic"/>
+        <Class IRI="Topic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="matchesTopic"/>
+        <Class IRI="Topic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="observesTopic"/>
+        <Class IRI="Topic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="payloadEncodesActuation"/>
+        <Class abbreviatedIRI="sosa:Actuation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="payloadEncodesActuationCollection"/>
+        <Class abbreviatedIRI="sosa:ActuationCollection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="payloadEncodesObservation"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="payloadEncodesObservationCollection"/>
+        <Class abbreviatedIRI="sosa:ObservationCollection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="publishesPacket"/>
+        <Class IRI="PublishPacket"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="receivesSubscribePacket"/>
+        <Class IRI="SubscribePacket"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="receivesUnsubscribePacket"/>
+        <Class IRI="UnsubscribePacket"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="runsOnPlatform"/>
+        <Class abbreviatedIRI="sosa:Platform"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="sendsControlPacket"/>
+        <Class IRI="ControlPacket"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="subscribesPacket"/>
+        <Class IRI="SubscribePacket"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="topicDescribesObservation"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="sosa:Observation"/>
+            <Class abbreviatedIRI="sosa:ObservationCollection"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="unsubscribesPacket"/>
+        <Class IRI="UnsubscribePacket"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="usesConnection"/>
+        <Class IRI="NetworkConnection"/>
+    </ObjectPropertyRange>
+    <EquivalentDataProperties>
+        <DataProperty IRI="hasDupFlag"/>
+        <DataProperty abbreviatedIRI="mqv:hasDUPFlag"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="isRetained"/>
+        <DataProperty abbreviatedIRI="mqv:hasRetainFlag"/>
+    </EquivalentDataProperties>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasClientID"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasHost"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasPayloadContent"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasPayloadContentType"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasPayloadEncoding"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasPortNumber"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasClientID"/>
+        <Class IRI="Client"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasDupFlag"/>
+        <Class IRI="PublishFixedHeader"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasFilterPattern"/>
+        <Class IRI="TopicFilter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasHost"/>
+        <Class IRI="Broker"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasPacketIdentifier"/>
+        <Class IRI="VariableHeader"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasPayloadContent"/>
+        <Class IRI="PublishPayload"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasPayloadContentDelimiter"/>
+        <Class IRI="PublishPayload"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasPayloadContentType"/>
+        <Class IRI="PublishPayload"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasPayloadEncoding"/>
+        <Class IRI="PublishPayload"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasPortNumber"/>
+        <Class IRI="Broker"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasQosLevel"/>
+        <ObjectUnionOf>
+            <Class IRI="PublishFixedHeader"/>
+            <Class IRI="SubscriptionEntry"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="isRetained"/>
+        <Class IRI="PublishFixedHeader"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="usesTLS"/>
+        <Class IRI="NetworkConnection"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="hasClientID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasDupFlag"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasFilterPattern"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasHost"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasPacketIdentifier"/>
+        <Datatype abbreviatedIRI="xsd:unsignedShort"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasPayloadContent"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasPayloadContentDelimiter"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasPayloadContentType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasPayloadEncoding"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasPortNumber"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasQosLevel"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </FacetRestriction>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="isRetained"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="usesTLS"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>ex:DTEC</AbbreviatedIRI>
+        <Literal>This research as part of the project EKI is funded by dtec.bw – Digitalization and Technology Research Center of the Bundeswehr which we gratefully acknowledge. dtec.bw is funded by the European Union – NextGenerationEU.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ex:DTEC</AbbreviatedIRI>
+        <Literal>Digitalization and Technology Research Center of the Bundeswehr</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
+        <AbbreviatedIRI>ex:DTEC</AbbreviatedIRI>
+        <IRI>https://dtecbw.de/home</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Broker</IRI>
+        <Literal xml:lang="en">An MQTT server that accepts client connections, manages subscriptions, and forwards published messages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Broker</IRI>
+        <Literal xml:lang="en">MQTT Broker</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Client</IRI>
+        <Literal xml:lang="en">An MQTT client that connects to rdf:type broker and may publish or subscribe to topics. May act as rdf:type SOSA platform hosting sensors or actuators.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Client</IRI>
+        <Literal xml:lang="en">MQTT Client</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ControlPacket</IRI>
+        <Literal xml:lang="en">A protocol message used to manage MQTT communication, e.g., PUBLISH, SUBSCRIBE, or UNSUBSCRIBE.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ControlPacket</IRI>
+        <Literal xml:lang="en">MQTT Control Packet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>FixedHeader</IRI>
+        <Literal xml:lang="en">The header section present in all MQTT control packets, containing flags and packet type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FixedHeader</IRI>
+        <Literal xml:lang="en">Fixed Header</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>NetworkConnection</IRI>
+        <Literal xml:lang="en">A connection between an MQTT client and broker, possibly encrypted via TLS.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NetworkConnection</IRI>
+        <Literal xml:lang="en">Network Connection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>NetworkParticipant</IRI>
+        <Literal xml:lang="en">An entity participating in an MQTT network, such as rdf:type client or broker.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NetworkParticipant</IRI>
+        <Literal xml:lang="en">Network Participant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Payload</IRI>
+        <Literal xml:lang="en">The application-specific data section of an MQTT control packet.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Payload</IRI>
+        <Literal xml:lang="en">MQTT Payload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PublishFixedHeader</IRI>
+        <Literal xml:lang="en">The fixed header used in MQTT PUBLISH control packets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PublishFixedHeader</IRI>
+        <Literal xml:lang="en">Publish Fixed Header</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PublishPacket</IRI>
+        <Literal xml:lang="en">An MQTT control packet used by rdf:type client to publish messages to rdf:type specific topic.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PublishPacket</IRI>
+        <Literal xml:lang="en">Publish Packet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PublishPayload</IRI>
+        <Literal xml:lang="en">The payload contained in an MQTT PUBLISH packet.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PublishPayload</IRI>
+        <Literal xml:lang="en">Publish Payload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PublishVariableHeader</IRI>
+        <Literal xml:lang="en">The variable header in rdf:type PUBLISH packet, including the topic name and optionally rdf:type packet identifier.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PublishVariableHeader</IRI>
+        <Literal xml:lang="en">Publish Variable Header</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SubscribeFixedHeader</IRI>
+        <Literal xml:lang="en">The fixed header used in MQTT SUBSCRIBE control packets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SubscribeFixedHeader</IRI>
+        <Literal xml:lang="en">Subscribe Fixed Header</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SubscribePacket</IRI>
+        <Literal xml:lang="en">An MQTT control packet used by rdf:type client to subscribe to one or more topic filters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SubscribePacket</IRI>
+        <Literal xml:lang="en">Subscribe Packet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SubscribeVariableHeader</IRI>
+        <Literal xml:lang="en">The variable header in rdf:type SUBSCRIBE packet, typically containing the packet identifier.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SubscribeVariableHeader</IRI>
+        <Literal xml:lang="en">Subscribe Variable Header</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SubscriptionEntry</IRI>
+        <Literal xml:lang="en">An entry in the subscription payload specifying rdf:type topic filter and QoS level.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SubscriptionEntry</IRI>
+        <Literal xml:lang="en">Subscription Entry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SubscriptionPayload</IRI>
+        <Literal xml:lang="en">The payload of an MQTT SUBSCRIBE packet, containing rdf:type list of subscription entries.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SubscriptionPayload</IRI>
+        <Literal xml:lang="en">Subscription Payload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Topic</IRI>
+        <Literal xml:lang="en">A hierarchical UTF-8 string to which MQTT clients can publish or subscribe.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Topic</IRI>
+        <Literal xml:lang="en">MQTT Topic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TopicFilter</IRI>
+        <Literal xml:lang="en">A filter expression used in SUBSCRIBE or UNSUBSCRIBE messages to match MQTT topics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TopicFilter</IRI>
+        <Literal xml:lang="en">Topic Filter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>UnsubscribeFixedHeader</IRI>
+        <Literal xml:lang="en">The fixed header used in MQTT UNSUBSCRIBE control packets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>UnsubscribeFixedHeader</IRI>
+        <Literal xml:lang="en">Unsubscribe Fixed Header</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>UnsubscribePacket</IRI>
+        <Literal xml:lang="en">An MQTT control packet used by rdf:type client to remove topic subscriptions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>UnsubscribePacket</IRI>
+        <Literal xml:lang="en">Unsubscribe Packet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>UnsubscribeVariableHeader</IRI>
+        <Literal xml:lang="en">The variable header in an UNSUBSCRIBE packet, typically containing the packet identifier.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>UnsubscribeVariableHeader</IRI>
+        <Literal xml:lang="en">Unsubscribe Variable Header</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>UnsubscriptionPayload</IRI>
+        <Literal xml:lang="en">The payload of an MQTT UNSUBSCRIBE packet, containing rdf:type list of topic filters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>UnsubscriptionPayload</IRI>
+        <Literal xml:lang="en">Unsubscription Payload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>VariableHeader</IRI>
+        <Literal xml:lang="en">The header section present in some MQTT control packets, used for additional metadata like packet ID or topic name.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>VariableHeader</IRI>
+        <Literal xml:lang="en">Variable Header</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>forwardsPacket</IRI>
+        <Literal xml:lang="en">Indicates that the broker forwards rdf:type published packet to subscribers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>forwardsPacket</IRI>
+        <Literal xml:lang="en">Forwards Packet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasClient</IRI>
+        <Literal xml:lang="en">Relates rdf:type SOSA platform to the MQTT client running on it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasClient</IRI>
+        <Literal xml:lang="en">Has MQTT Client</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasClientID</IRI>
+        <Literal xml:lang="en">The identifier used by the MQTT client when connecting to the broker.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasClientID</IRI>
+        <Literal xml:lang="en">Client ID</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasConnectedClient</IRI>
+        <Literal xml:lang="en">Links rdf:type broker to rdf:type client that is connected to it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasConnectedClient</IRI>
+        <Literal xml:lang="en">Has Connected Client</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasDupFlag</IRI>
+        <Literal xml:lang="en">Specifies whether this message is rdf:type duplicate delivery of an earlier PUBLISH message.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasDupFlag</IRI>
+        <Literal xml:lang="en">Duplicate Delivery Flag</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasEncodedFields</IRI>
+        <Literal xml:lang="en">An ordered RDF list of field names encoded in the payload.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasEncodedFields</IRI>
+        <Literal xml:lang="en">Has Encoded Fields</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasFilterPattern</IRI>
+        <Literal xml:lang="en">The MQTT topic filter pattern as rdf:type string, e.g., &apos;sensor/+/temp&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasFilterPattern</IRI>
+        <Literal xml:lang="en">Filter Pattern</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasFixedHeader</IRI>
+        <Literal xml:lang="en">Links rdf:type control packet to its fixed header section.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasFixedHeader</IRI>
+        <Literal xml:lang="en">Has Fixed Header</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasHost</IRI>
+        <Literal xml:lang="en">The hostname or IP address of the MQTT broker.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasHost</IRI>
+        <Literal xml:lang="en">Broker Host</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPacketIdentifier</IRI>
+        <Literal xml:lang="en">A 16-bit identifier used for correlating MQTT messages (QoS &gt; 0).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPacketIdentifier</IRI>
+        <Literal xml:lang="en">Packet Identifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasParticipant</IRI>
+        <Literal xml:lang="en">Relates rdf:type network connection to its participants (clients and/or broker).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasParticipant</IRI>
+        <Literal xml:lang="en">Has Participant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPayload</IRI>
+        <Literal xml:lang="en">Relates rdf:type control packet to its payload.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPayload</IRI>
+        <Literal xml:lang="en">Has Payload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPayloadContent</IRI>
+        <Literal xml:lang="en">The actual content of the payload, possibly serialized or encoded.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPayloadContent</IRI>
+        <Literal xml:lang="en">Payload Content</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPayloadContentDelimiter</IRI>
+        <Literal xml:lang="en">Specifies the delimiter used to separate fields in the payload content.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPayloadContentDelimiter</IRI>
+        <Literal xml:lang="en">Payload Content Delimiter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPayloadContentType</IRI>
+        <Literal xml:lang="en">The MIME type of the payload content, e.g., application/json.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPayloadContentType</IRI>
+        <Literal xml:lang="en">Payload Content Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPayloadEncodesFields</IRI>
+        <Literal xml:lang="en">Lists the field names or identifiers encoded in the payload.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPayloadEncodesFields</IRI>
+        <Literal xml:lang="en">Has Encoded Fields</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPayloadEncoding</IRI>
+        <Literal xml:lang="en">Specifies the encoding of the payload content, e.g., UTF-8 or Base64.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPayloadEncoding</IRI>
+        <Literal xml:lang="en">Payload Encoding</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPayloadSizeBytes</IRI>
+        <Literal xml:lang="en">Specifies the size of the payload in bytes as rdf:type QUDT quantity value.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPayloadSizeBytes</IRI>
+        <Literal xml:lang="en">Has Payload Size (Bytes)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPortNumber</IRI>
+        <Literal xml:lang="en">The port number the MQTT broker listens on.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPortNumber</IRI>
+        <Literal xml:lang="en">Broker Port</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPublishPayload</IRI>
+        <Literal xml:lang="en">Links rdf:type publish packet to its publish payload.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPublishPayload</IRI>
+        <Literal xml:lang="en">Has Publish Payload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasQosLevel</IRI>
+        <Literal xml:lang="en">Not mapped to mqv:hasQoSFlag because it is modeled as an ObjectProperty in MQV, whereas mqtt:hasQosLevel uses rdf:type DatatypeProperty.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasQosLevel</IRI>
+        <Literal xml:lang="en">The MQTT Quality of Service level (0 = at most once, 1 = at least once, 2 = exactly once).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasQosLevel</IRI>
+        <Literal xml:lang="en">QoS Level</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasSubscriptionPayload</IRI>
+        <Literal xml:lang="en">Links rdf:type subscribe packet to its subscription payload.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSubscriptionPayload</IRI>
+        <Literal xml:lang="en">Has Subscription Payload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasSubscriptions</IRI>
+        <Literal xml:lang="en">Links rdf:type subscription payload to one or more subscription entries.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSubscriptions</IRI>
+        <Literal xml:lang="en">Has Subscriptions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasTopicFilter</IRI>
+        <Literal xml:lang="en">Relates rdf:type subscription entry or unsubscription list to rdf:type topic filter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTopicFilter</IRI>
+        <Literal xml:lang="en">Has Topic Filter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasTopicName</IRI>
+        <Literal xml:lang="en">Links the publish variable header to the topic name the message is published to.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTopicName</IRI>
+        <Literal xml:lang="en">Has Topic Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasUnsubscriptionPayload</IRI>
+        <Literal xml:lang="en">Links an unsubscribe packet to its unsubscription payload.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasUnsubscriptionPayload</IRI>
+        <Literal xml:lang="en">Has Unsubscription Payload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasVariableHeader</IRI>
+        <Literal xml:lang="en">Links rdf:type control packet to its variable header section.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasVariableHeader</IRI>
+        <Literal xml:lang="en">Has Variable Header</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hosts</IRI>
+        <Literal xml:lang="en">Links an MQTT client to the sensors or actuators it hosts as rdf:type SOSA platform.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hosts</IRI>
+        <Literal xml:lang="en">Hosts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isAcceptedBy</IRI>
+        <Literal xml:lang="en">Indicates the broker that accepted rdf:type connection request from rdf:type client.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isAcceptedBy</IRI>
+        <Literal xml:lang="en">Is Accepted By</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isConnectedToBroker</IRI>
+        <Literal xml:lang="en">Links rdf:type client to the broker it is connected to.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isConnectedToBroker</IRI>
+        <Literal xml:lang="en">Is Connected To Broker</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isDescribedByTopic</IRI>
+        <Literal xml:lang="en">Indicates that this SOSA observation or collection is described or published under rdf:type specific MQTT topic.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isDescribedByTopic</IRI>
+        <Literal xml:lang="en">Is Described By Topic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isEncodedInPayload</IRI>
+        <Literal xml:lang="en">Inverse of mqtt:hasEncodedFields; links rdf:type list of encoded fields to the payload that contains them.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isEncodedInPayload</IRI>
+        <Literal xml:lang="en">Is Encoded In Payload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isHostedBy</IRI>
+        <Literal xml:lang="en">Inverse of mqtt:hosts; links rdf:type sensor or actuator to the hosting MQTT client.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isHostedBy</IRI>
+        <Literal xml:lang="en">Is Hosted By</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isInitiatedBy</IRI>
+        <Literal xml:lang="en">Indicates the client that initiated rdf:type connection to the broker.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isInitiatedBy</IRI>
+        <Literal xml:lang="en">Is Initiated By</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isMatchedByFilter</IRI>
+        <Literal xml:lang="en">Indicates that this MQTT topic is matched by rdf:type given topic filter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isMatchedByFilter</IRI>
+        <Literal xml:lang="en">Is Matched By Filter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isPayloadOf</IRI>
+        <Literal xml:lang="en">Inverse property of hasPayload; links rdf:type payload to its containing control packet.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isPayloadOf</IRI>
+        <Literal xml:lang="en">Is Payload Of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isRetained</IRI>
+        <Literal xml:lang="en">Indicates whether the message should be retained on the broker.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isRetained</IRI>
+        <Literal xml:lang="en">Retained Flag</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isSentBy</IRI>
+        <Literal xml:lang="en">Relates rdf:type control packet to the client that sent it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isSentBy</IRI>
+        <Literal xml:lang="en">Is Sent By</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isSubscriptionOfPayload</IRI>
+        <Literal xml:lang="en">Inverse of mqtt:hasSubscriptions; links rdf:type subscription entry to its containing subscription payload.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isSubscriptionOfPayload</IRI>
+        <Literal xml:lang="en">Is Subscription Of Payload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>listensToTopic</IRI>
+        <Literal xml:lang="en">The MQTT topic from which this actuator listens for actuation commands.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>listensToTopic</IRI>
+        <Literal xml:lang="en">Listens To Topic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>matchesTopic</IRI>
+        <Literal xml:lang="en">Indicates that this topic filter matches rdf:type specific MQTT topic.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>matchesTopic</IRI>
+        <Literal xml:lang="en">Matches Topic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>observesTopic</IRI>
+        <Literal xml:lang="en">The MQTT topic to which this sensor publishes its observations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>observesTopic</IRI>
+        <Literal xml:lang="en">Observes Topic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>payloadEncodesActuation</IRI>
+        <Literal xml:lang="en">Indicates that this payload encodes rdf:type single SOSA Actuation command.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>payloadEncodesActuation</IRI>
+        <Literal xml:lang="en">Payload Encodes Actuation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>payloadEncodesActuationCollection</IRI>
+        <Literal xml:lang="en">Indicates that this payload encodes rdf:type collection of actuation commands.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>payloadEncodesActuationCollection</IRI>
+        <Literal xml:lang="en">Payload Encodes Actuation Collection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>payloadEncodesObservation</IRI>
+        <Literal xml:lang="en">Indicates that this payload encodes rdf:type SOSA Observation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>payloadEncodesObservation</IRI>
+        <Literal xml:lang="en">Payload Encodes Observation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>payloadEncodesObservationCollection</IRI>
+        <Literal xml:lang="en">Indicates that this payload encodes rdf:type collection of SOSA Observations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>payloadEncodesObservationCollection</IRI>
+        <Literal xml:lang="en">Payload Encodes Observation Collection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>publishesPacket</IRI>
+        <Literal xml:lang="en">Indicates rdf:type PUBLISH packet sent by the client.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>publishesPacket</IRI>
+        <Literal xml:lang="en">Publishes Packet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>receivesSubscribePacket</IRI>
+        <Literal xml:lang="en">Indicates that the MQTT broker receives rdf:type subscribe packet from rdf:type client.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>receivesSubscribePacket</IRI>
+        <Literal xml:lang="en">Receives Subscribe Packet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>receivesUnsubscribePacket</IRI>
+        <Literal xml:lang="en">Indicates that the MQTT broker receives an unsubscribe packet from rdf:type client.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>receivesUnsubscribePacket</IRI>
+        <Literal xml:lang="en">Receives Unsubscribe Packet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>runsOnPlatform</IRI>
+        <Literal xml:lang="en">Links an MQTT client to the platform it operates on.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>runsOnPlatform</IRI>
+        <Literal xml:lang="en">Runs On Platform</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>sendsControlPacket</IRI>
+        <Literal xml:lang="en">Indicates rdf:type control packet sent by the MQTT client.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>sendsControlPacket</IRI>
+        <Literal xml:lang="en">Sends Control Packet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>subscribesPacket</IRI>
+        <Literal xml:lang="en">Indicates rdf:type SUBSCRIBE packet sent by the client.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>subscribesPacket</IRI>
+        <Literal xml:lang="en">Subscribes Packet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>topicDescribesObservation</IRI>
+        <Literal xml:lang="en">Relates an MQTT topic to the SOSA observation or observation collection it describes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>topicDescribesObservation</IRI>
+        <Literal xml:lang="en">Topic Describes Observation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>unsubscribesPacket</IRI>
+        <Literal xml:lang="en">Indicates an UNSUBSCRIBE packet sent by the client.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>unsubscribesPacket</IRI>
+        <Literal xml:lang="en">Unsubscribes Packet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>usesConnection</IRI>
+        <Literal xml:lang="en">Relates rdf:type network participant (client or broker) to the network connection it uses.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>usesConnection</IRI>
+        <Literal xml:lang="en">Uses Connection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>usesTLS</IRI>
+        <Literal xml:lang="en">Indicates whether the network connection uses TLS encryption.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>usesTLS</IRI>
+        <Literal xml:lang="en">Uses TLS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Glasscheibe_00140</AbbreviatedIRI>
+        <Literal xml:lang="de">RFID-Glasscheibe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Griffpunkt_X</AbbreviatedIRI>
+        <Literal xml:lang="de">Griffpunkt X</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Griffpunkt_Y</AbbreviatedIRI>
+        <Literal xml:lang="de">Griffpunkt Y</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Griffpunkt_Z</AbbreviatedIRI>
+        <Literal xml:lang="de">Griffpunkt Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Job_Ende_ZS</AbbreviatedIRI>
+        <Literal xml:lang="de">Job-Ende-Zeitstempel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Job_Start_ZS</AbbreviatedIRI>
+        <Literal xml:lang="de">Job-Start-Zeitstempel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Korrekturwert_X</AbbreviatedIRI>
+        <Literal xml:lang="de">Korrekturwert X</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Korrekturwert_Y</AbbreviatedIRI>
+        <Literal xml:lang="de">Korrekturwert Y</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:RFID_Code</AbbreviatedIRI>
+        <Literal xml:lang="de">RFID Glasscheibe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="isManagedBy"/>
+        <AbbreviatedIRI>:SensorZentrierung</AbbreviatedIRI>
+        <AbbreviatedIRI>:client_zentriereinheit</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="publishesToTopic"/>
+        <AbbreviatedIRI>:SensorZentrierung</AbbreviatedIRI>
+        <AbbreviatedIRI>:topic_zentriereinheit</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="usesBroker"/>
+        <AbbreviatedIRI>:SensorZentrierung</AbbreviatedIRI>
+        <AbbreviatedIRI>:broker_fabrik</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:SensorZentrierung</AbbreviatedIRI>
+        <Literal xml:lang="de">Sensor an Zentriereinheit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="connectsToBroker"/>
+        <AbbreviatedIRI>:client_auswertung</AbbreviatedIRI>
+        <AbbreviatedIRI>:broker_fabrik</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="connectsToBroker"/>
+        <AbbreviatedIRI>:client_zentriereinheit</AbbreviatedIRI>
+        <AbbreviatedIRI>:broker_fabrik</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:hasMember"/>
+        <AbbreviatedIRI>:obsColl_Zentriereinheit_001</AbbreviatedIRI>
+        <AbbreviatedIRI>:obs_Griff_X</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:hasMember"/>
+        <AbbreviatedIRI>:obsColl_Zentriereinheit_001</AbbreviatedIRI>
+        <AbbreviatedIRI>:obs_Griff_Y</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:hasMember"/>
+        <AbbreviatedIRI>:obsColl_Zentriereinheit_001</AbbreviatedIRI>
+        <AbbreviatedIRI>:obs_Griff_Z</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:hasMember"/>
+        <AbbreviatedIRI>:obsColl_Zentriereinheit_001</AbbreviatedIRI>
+        <AbbreviatedIRI>:obs_JobEnde</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:hasMember"/>
+        <AbbreviatedIRI>:obsColl_Zentriereinheit_001</AbbreviatedIRI>
+        <AbbreviatedIRI>:obs_JobStart</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:hasMember"/>
+        <AbbreviatedIRI>:obsColl_Zentriereinheit_001</AbbreviatedIRI>
+        <AbbreviatedIRI>:obs_Korr_X</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:hasMember"/>
+        <AbbreviatedIRI>:obsColl_Zentriereinheit_001</AbbreviatedIRI>
+        <AbbreviatedIRI>:obs_Korr_Y</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:hasMember"/>
+        <AbbreviatedIRI>:obsColl_Zentriereinheit_001</AbbreviatedIRI>
+        <AbbreviatedIRI>:obs_RFID</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:isMemberOf"/>
+        <AbbreviatedIRI>:obs_Griff_X</AbbreviatedIRI>
+        <AbbreviatedIRI>:obsColl_Zentriereinheit_001</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:isMemberOf"/>
+        <AbbreviatedIRI>:obs_Griff_Y</AbbreviatedIRI>
+        <AbbreviatedIRI>:obsColl_Zentriereinheit_001</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:isMemberOf"/>
+        <AbbreviatedIRI>:obs_Griff_Z</AbbreviatedIRI>
+        <AbbreviatedIRI>:obsColl_Zentriereinheit_001</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:isMemberOf"/>
+        <AbbreviatedIRI>:obs_JobEnde</AbbreviatedIRI>
+        <AbbreviatedIRI>:obsColl_Zentriereinheit_001</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:isMemberOf"/>
+        <AbbreviatedIRI>:obs_JobStart</AbbreviatedIRI>
+        <AbbreviatedIRI>:obsColl_Zentriereinheit_001</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:isMemberOf"/>
+        <AbbreviatedIRI>:obs_Korr_X</AbbreviatedIRI>
+        <AbbreviatedIRI>:obsColl_Zentriereinheit_001</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:isMemberOf"/>
+        <AbbreviatedIRI>:obs_Korr_Y</AbbreviatedIRI>
+        <AbbreviatedIRI>:obsColl_Zentriereinheit_001</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:isMemberOf"/>
+        <AbbreviatedIRI>:obs_RFID</AbbreviatedIRI>
+        <AbbreviatedIRI>:obsColl_Zentriereinheit_001</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
+        <AnonymousIndividual nodeID="_:genid2147484441"/>
+        <IRI>https://orcid.org/0009-0004-0088-8633</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:mbox"/>
+        <AnonymousIndividual nodeID="_:genid2147484441"/>
+        <IRI>mailto:doernern@hsu-hh.de</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <AnonymousIndividual nodeID="_:genid2147484441"/>
+        <Literal>Niklas Doerner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
+        <AnonymousIndividual nodeID="_:genid2147484443"/>
+        <IRI>https://orcid.org/0000-0003-3458-4748</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:mbox"/>
+        <AnonymousIndividual nodeID="_:genid2147484443"/>
+        <IRI>mailto:maleshkm@hsu-hh.de</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <AnonymousIndividual nodeID="_:genid2147484443"/>
+        <Literal>Maria Maleshkova</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="time:inXSDDateTime"/>
+        <AnonymousIndividual nodeID="_:genid2147484502"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-28T23:58:44Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="qudt:unit"/>
+        <AnonymousIndividual nodeID="_:genid2147484512"/>
+        <AbbreviatedIRI>unit:Byte</AbbreviatedIRI>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
