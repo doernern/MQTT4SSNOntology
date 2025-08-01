@@ -1,0 +1,941 @@
+@prefix ex: <http://example.org/individuals#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix time: <http://www.w3.org/2006/time#>.
+@prefix qk: <http://qudt.org/vocab/quantitykind/> .
+@prefix mqv: <https://www.w3.org/2019/wot/mqtt#> .
+@prefix mqtt: <http://example.org/mqtt4ssn#> .
+
+@base <http://example.org/mqtt4ssn#> .
+
+<http://example.org/mqtt4ssn#> rdf:type owl:Ontology ;
+
+    dct:title "MQTT4SSN Ontology" ;
+	dct:creator [
+        	rdf:type foaf:Person ;
+	        foaf:name "Niklas Doerner" ;
+        	foaf:mbox <mailto:doernern@hsu-hh.de> ;
+	        foaf:homepage <https://orcid.org/0009-0004-0088-8633>
+    	] ;
+	dct:creator [
+        	rdf:type foaf:Person ;
+	        foaf:name "Maria Maleshkova" ;
+		foaf:mbox <mailto:maleshkm@hsu-hh.de> ;
+        	foaf:homepage <https://orcid.org/0000-0003-3458-4748>
+	] ;
+	dct:created "2025-08-02"^^xsd:date ;
+	rdfs:comment "The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT transport protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT transport protocol component."@en ;
+	############################# ToDo #############################
+    bibo:doi "10.5281/zenodo.15390282" ;
+	dct:bibliographicCitation "Niklas Doerner, Maria Maleshkova (2025): MQTT4SSN Ontology. https://doi.org/10.5281/zenodo.15390282" ; 
+    ############################# ToDo #############################
+	dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+
+	foaf:fundedBy ex:DTEC ;
+
+    owl:imports <http://www.w3.org/ns/ssn/> ,
+        <http://www.w3.org/ns/sosa/> ,
+		<http://qudt.org/schema/qudt/> ,
+		<https://www.w3.org/2019/wot/mqtt> .
+
+ex:DTEC rdf:type foaf:Organization ;
+    rdfs:label "Digitalization and Technology Research Center of the Bundeswehr" ;
+    foaf:homepage <https://dtecbw.de/home> ;
+    rdfs:comment "This research as part of the project EKI is funded by dtec.bw – Digitalization and Technology Research Center of the Bundeswehr which we gratefully acknowledge. dtec.bw is funded by the European Union – NextGenerationEU." .
+
+#############################
+# MQTT4SSN Ontology #
+#############################
+
+###########
+# Classes #
+###########
+
+# Network
+
+# Network
+
+mqtt:NetworkConnection rdf:type owl:Class ;
+    owl:equivalentClass mqv:NetworkConnection ;
+    rdfs:label "Network Connection"@en ;
+    rdfs:comment "A connection between an MQTT client and broker, possibly encrypted via TLS."@en .
+
+mqtt:NetworkParticipant rdf:type owl:Class ;
+    rdfs:label "Network Participant"@en ;
+    rdfs:comment "An entity participating in an MQTT network, such as rdf:type client or broker."@en .
+
+mqtt:Broker rdf:type owl:Class ;
+    owl:equivalentClass mqv:Server ;
+    rdfs:subClassOf mqtt:NetworkParticipant ;
+    rdfs:label "MQTT Broker"@en ;
+    rdfs:comment "An MQTT server that accepts client connections, manages subscriptions, and forwards published messages."@en .
+
+mqtt:Client rdf:type owl:Class ;
+    rdfs:subClassOf mqtt:NetworkParticipant ;
+    owl:equivalentClass mqv:Client ;
+    rdfs:label "MQTT Client"@en ;
+    rdfs:comment "An MQTT client that connects to rdf:type broker and may publish or subscribe to topics. May act as rdf:type SOSA platform hosting sensors or actuators."@en .
+
+# Topic
+
+mqtt:Topic rdf:type owl:Class ;
+    owl:equivalentClass mqv:TopicName ;
+    rdfs:label "MQTT Topic"@en ;
+    rdfs:comment "A hierarchical UTF-8 string to which MQTT clients can publish or subscribe."@en .
+
+mqtt:TopicFilter rdf:type owl:Class ;
+    owl:equivalentClass mqv:TopicFilter ;
+    rdfs:label "Topic Filter"@en ;
+    rdfs:comment "A filter expression used in SUBSCRIBE or UNSUBSCRIBE messages to match MQTT topics."@en .
+
+# Control Packet
+
+mqtt:ControlPacket rdf:type owl:Class ;
+    owl:equivalentClass mqv:ControlPacket ;
+    rdfs:label "MQTT Control Packet"@en ;
+    rdfs:comment "A protocol message used to manage MQTT communication, e.g., PUBLISH, SUBSCRIBE, or UNSUBSCRIBE."@en .
+
+mqtt:SubscribePacket rdf:type owl:Class ;
+    owl:equivalentClass mqv:SUBSCRIBE ;
+    rdfs:subClassOf mqtt:ControlPacket ;
+    rdfs:label "Subscribe Packet"@en ;
+    rdfs:comment "An MQTT control packet used by rdf:type client to subscribe to one or more topic filters."@en .
+
+mqtt:UnsubscribePacket rdf:type owl:Class ;
+    owl:equivalentClass mqv:UNSUBSCRIBE ;
+    rdfs:subClassOf mqtt:ControlPacket ;
+    rdfs:label "Unsubscribe Packet"@en ;
+    rdfs:comment "An MQTT control packet used by rdf:type client to remove topic subscriptions."@en .
+
+mqtt:PublishPacket rdf:type owl:Class ;
+    owl:equivalentClass mqv:PUBLISH ;
+    rdfs:subClassOf mqtt:ControlPacket ;
+    rdfs:label "Publish Packet"@en ;
+    rdfs:comment "An MQTT control packet used by rdf:type client to publish messages to rdf:type specific topic."@en .
+
+# Header
+
+mqtt:FixedHeader rdf:type owl:Class ;
+    rdfs:label "Fixed Header"@en ;
+    rdfs:comment "The header section present in all MQTT control packets, containing flags and packet type."@en .
+
+mqtt:VariableHeader rdf:type owl:Class ;
+    rdfs:label "Variable Header"@en ;
+    rdfs:comment "The header section present in some MQTT control packets, used for additional metadata like packet ID or topic name."@en .
+
+mqtt:PublishFixedHeader rdf:type owl:Class ;
+    rdfs:subClassOf mqtt:FixedHeader ;
+    rdfs:label "Publish Fixed Header"@en ;
+    rdfs:comment "The fixed header used in MQTT PUBLISH control packets."@en .
+
+mqtt:SubscribeFixedHeader rdf:type owl:Class ;
+    rdfs:subClassOf mqtt:FixedHeader ;
+    rdfs:label "Subscribe Fixed Header"@en ;
+    rdfs:comment "The fixed header used in MQTT SUBSCRIBE control packets."@en .
+
+mqtt:UnsubscribeFixedHeader rdf:type owl:Class ;
+    rdfs:subClassOf mqtt:FixedHeader ;
+    rdfs:label "Unsubscribe Fixed Header"@en ;
+    rdfs:comment "The fixed header used in MQTT UNSUBSCRIBE control packets."@en .
+
+mqtt:PublishVariableHeader rdf:type owl:Class ;
+    rdfs:subClassOf mqtt:VariableHeader ;
+    rdfs:label "Publish Variable Header"@en ;
+    rdfs:comment "The variable header in rdf:type PUBLISH packet, including the topic name and optionally rdf:type packet identifier."@en .
+
+mqtt:SubscribeVariableHeader rdf:type owl:Class ;
+    rdfs:subClassOf mqtt:VariableHeader ;
+    rdfs:label "Subscribe Variable Header"@en ;
+    rdfs:comment "The variable header in rdf:type SUBSCRIBE packet, typically containing the packet identifier."@en .
+
+mqtt:UnsubscribeVariableHeader rdf:type owl:Class ;
+    rdfs:subClassOf mqtt:VariableHeader ;
+    rdfs:label "Unsubscribe Variable Header"@en ;
+    rdfs:comment "The variable header in an UNSUBSCRIBE packet, typically containing the packet identifier."@en .
+
+mqtt:SubscriptionEntry rdf:type owl:Class ;
+    rdfs:label "Subscription Entry"@en ;
+    rdfs:comment "An entry in the subscription payload specifying rdf:type topic filter and QoS level."@en .
+
+# Payload
+
+mqtt:Payload rdf:type owl:Class ;
+    rdfs:label "MQTT Payload"@en ;
+    rdfs:comment "The application-specific data section of an MQTT control packet."@en .
+
+mqtt:PublishPayload rdf:type owl:Class ;
+    rdfs:subClassOf mqtt:Payload ;
+    rdfs:label "Publish Payload"@en ;
+    rdfs:comment "The payload contained in an MQTT PUBLISH packet."@en .
+
+mqtt:SubscriptionPayload rdf:type owl:Class ;
+    rdfs:subClassOf mqtt:Payload ;
+    rdfs:label "Subscription Payload"@en ;
+    rdfs:comment "The payload of an MQTT SUBSCRIBE packet, containing rdf:type list of subscription entries."@en .
+
+mqtt:UnsubscriptionPayload rdf:type owl:Class ;
+    rdfs:subClassOf mqtt:Payload ;
+    rdfs:label "Unsubscription Payload"@en ;
+    rdfs:comment "The payload of an MQTT UNSUBSCRIBE packet, containing rdf:type list of topic filters."@en .
+
+#####################
+# Object Properties #
+#####################
+
+# Network Relations
+
+mqtt:usesConnection rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:NetworkParticipant ;
+    rdfs:range mqtt:NetworkConnection ;
+    rdfs:label "Uses Connection"@en ;
+    rdfs:comment "Relates rdf:type network participant (client or broker) to the network connection it uses."@en ;
+    owl:inverseOf mqtt:hasParticipant .
+
+mqtt:hasParticipant rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:NetworkConnection ;
+    rdfs:range mqtt:NetworkParticipant ;
+    rdfs:label "Has Participant"@en ;
+    rdfs:comment "Relates rdf:type network connection to its participants (clients and/or broker)."@en ;
+    owl:inverseOf mqtt:usesConnection .
+
+mqtt:isInitiatedBy rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:NetworkConnection ;
+    rdfs:range mqtt:Client ;
+    rdfs:label "Is Initiated By"@en ;
+    rdfs:comment "Indicates the client that initiated rdf:type connection to the broker."@en .
+
+mqtt:isAcceptedBy rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:NetworkConnection ;
+    rdfs:range mqtt:Broker ;
+    rdfs:label "Is Accepted By"@en ;
+    rdfs:comment "Indicates the broker that accepted rdf:type connection request from rdf:type client."@en .
+
+mqtt:isConnectedToBroker rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:Client ;
+    rdfs:range mqtt:Broker ;
+    rdfs:label "Is Connected To Broker"@en ;
+    rdfs:comment "Links rdf:type client to the broker it is connected to."@en ;
+    owl:inverseOf mqtt:hasConnectedClient .
+
+mqtt:hasConnectedClient rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:Broker ;
+    rdfs:range mqtt:Client ;
+    rdfs:label "Has Connected Client"@en ;
+    rdfs:comment "Links rdf:type broker to rdf:type client that is connected to it."@en ;
+    owl:inverseOf mqtt:isConnectedToBroker .
+
+mqtt:sendsControlPacket rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:Client ;
+    rdfs:range mqtt:ControlPacket ;
+    rdfs:label "Sends Control Packet"@en ;
+    rdfs:comment "Indicates rdf:type control packet sent by the MQTT client."@en ;
+    owl:inverseOf mqtt:isSentBy ;
+    owl:equivalentProperty mqv:sendsControlPacket .
+
+mqtt:isSentBy rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:ControlPacket ;
+    rdfs:range mqtt:Client ;
+    rdfs:label "Is Sent By"@en ;
+    rdfs:comment "Relates rdf:type control packet to the client that sent it."@en ;
+    owl:inverseOf mqtt:sendsControlPacket .
+
+mqtt:publishesPacket rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:Client ;
+    rdfs:range mqtt:PublishPacket ;
+    rdfs:label "Publishes Packet"@en ;
+    rdfs:comment "Indicates rdf:type PUBLISH packet sent by the client."@en ;
+    rdfs:subPropertyOf mqtt:sendsControlPacket .
+
+mqtt:unsubscribesPacket rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:Client ;
+    rdfs:range mqtt:UnsubscribePacket ;
+    rdfs:label "Unsubscribes Packet"@en ;
+    rdfs:comment "Indicates an UNSUBSCRIBE packet sent by the client."@en ;
+    rdfs:subPropertyOf mqtt:sendsControlPacket .
+
+mqtt:subscribesPacket rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:Client ;
+    rdfs:range mqtt:SubscribePacket ;
+    rdfs:label "Subscribes Packet"@en ;
+    rdfs:comment "Indicates rdf:type SUBSCRIBE packet sent by the client."@en ;
+    rdfs:subPropertyOf mqtt:sendsControlPacket .
+
+mqtt:hasTopicFilter rdf:type owl:ObjectProperty ;
+    owl:equivalentProperty mqv:hasTopicFilters ;
+    rdfs:domain [
+        rdf:type owl:Class ;
+        owl:unionOf (
+            mqtt:SubscriptionEntry
+            mqtt:UnsubscriptionPayload
+        )
+    ] ;
+    rdfs:range mqtt:TopicFilter ;
+    rdfs:label "Has Topic Filter"@en ;
+    rdfs:comment "Relates rdf:type subscription entry or unsubscription list to rdf:type topic filter."@en .
+
+mqtt:forwardsPacket rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:Broker ;
+    rdfs:range mqtt:PublishPacket ;
+    rdfs:label "Forwards Packet"@en ;
+    rdfs:comment "Indicates that the broker forwards rdf:type published packet to subscribers."@en .
+
+mqtt:receivesSubscribePacket rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:Broker ;
+    rdfs:range mqtt:SubscribePacket ;
+    rdfs:label "Receives Subscribe Packet"@en ;
+    rdfs:comment "Indicates that the MQTT broker receives rdf:type subscribe packet from rdf:type client."@en .
+
+mqtt:receivesUnsubscribePacket rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:Broker ;
+    rdfs:range mqtt:UnsubscribePacket ;
+    rdfs:label "Receives Unsubscribe Packet"@en ;
+    rdfs:comment "Indicates that the MQTT broker receives an unsubscribe packet from rdf:type client."@en .
+
+mqtt:hosts rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:Client ;
+    rdfs:range sosa:System ;
+    rdfs:subPropertyOf sosa:hosts ;
+    rdfs:inverseOf sosa:isHostedBy ;
+    rdfs:label "Hosts"@en ;
+    rdfs:comment "Links an MQTT client to the sensors or actuators it hosts as rdf:type SOSA platform."@en .
+
+mqtt:isHostedBy rdf:type owl:ObjectProperty ;
+    owl:inverseOf mqtt:hosts ;
+    rdfs:domain sosa:System ;
+    rdfs:range mqtt:Client ;
+    rdfs:subPropertyOf sosa:isHostedBy ;
+    rdfs:inverseOf sosa:hosts ;
+    rdfs:label "Is Hosted By"@en ;
+    rdfs:comment "Inverse of mqtt:hosts; links rdf:type sensor or actuator to the hosting MQTT client."@en .
+
+mqtt:hasClient rdf:type owl:ObjectProperty ;
+    rdfs:domain sosa:Platform ;
+    rdfs:range mqtt:Client ;
+    rdfs:label "Has MQTT Client"@en ;
+    rdfs:comment "Relates rdf:type SOSA platform to the MQTT client running on it."@en .
+
+mqtt:runsOnPlatform rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:Client ;
+    rdfs:range sosa:Platform ;
+    rdfs:label "Runs On Platform"@en ;
+    rdfs:comment "Links an MQTT client to the platform it operates on."@en ;
+    owl:inverseOf mqtt:hasClient .
+
+# Topic Relations
+
+mqtt:observesTopic rdf:type owl:ObjectProperty ;
+    rdfs:domain sosa:Sensor ;
+    rdfs:range mqtt:Topic ;
+    rdfs:label "Observes Topic"@en ;
+    rdfs:comment "The MQTT topic to which this sensor publishes its observations."@en .
+
+mqtt:listensToTopic rdf:type owl:ObjectProperty ;
+    rdfs:domain sosa:Actuator ;
+    rdfs:range mqtt:Topic ;
+    rdfs:label "Listens To Topic"@en ;
+    rdfs:comment "The MQTT topic from which this actuator listens for actuation commands."@en .
+
+mqtt:topicDescribesObservation rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:Topic ;
+    rdfs:range [ owl:unionOf (sosa:Observation sosa:ObservationCollection) ] ;
+    owl:inverseOf mqtt:isDescribedByTopic ;
+    rdfs:label "Topic Describes Observation"@en ;
+    rdfs:comment "Relates an MQTT topic to the SOSA observation or observation collection it describes."@en .
+
+mqtt:isDescribedByTopic rdf:type owl:ObjectProperty ;
+    rdfs:domain [ owl:unionOf (sosa:Observation sosa:ObservationCollection) ] ;
+    rdfs:range mqtt:Topic ;
+    owl:inverseOf mqtt:topicDescribesObservation ;
+    rdfs:label "Is Described By Topic"@en ;
+    rdfs:comment "Indicates that this SOSA observation or collection is described or published under rdf:type specific MQTT topic."@en .
+
+mqtt:isMatchedByFilter rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:Topic ;
+    rdfs:range mqtt:TopicFilter ;
+    owl:inverseOf mqtt:matchesTopic ;
+    rdfs:label "Is Matched By Filter"@en ;
+    rdfs:comment "Indicates that this MQTT topic is matched by rdf:type given topic filter."@en .
+
+mqtt:matchesTopic rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:TopicFilter ;
+    rdfs:range mqtt:Topic ;
+    owl:inverseOf mqtt:isMatchedByFilter ;
+    rdfs:label "Matches Topic"@en ;
+    rdfs:comment "Indicates that this topic filter matches rdf:type specific MQTT topic."@en .
+
+
+# Control Packet Header Relations
+
+mqtt:hasFixedHeader rdf:type owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain mqtt:ControlPacket ;
+    rdfs:range mqtt:FixedHeader ;
+    rdfs:label "Has Fixed Header"@en ;
+    rdfs:comment "Links rdf:type control packet to its fixed header section."@en .
+
+mqtt:hasVariableHeader rdf:type owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain mqtt:ControlPacket ;
+    rdfs:range mqtt:VariableHeader ;
+    rdfs:label "Has Variable Header"@en ;
+    rdfs:comment "Links rdf:type control packet to its variable header section."@en .
+
+mqtt:hasSubscriptions rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:SubscriptionPayload ;
+    rdfs:range mqtt:SubscriptionEntry ;
+    rdfs:label "Has Subscriptions"@en ;
+    rdfs:comment "Links rdf:type subscription payload to one or more subscription entries."@en .
+
+mqtt:isSubscriptionOfPayload rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:SubscriptionEntry ;
+    rdfs:range mqtt:SubscriptionPayload ;
+    owl:inverseOf mqtt:hasSubscriptions ;
+    rdfs:label "Is Subscription Of Payload"@en ;
+    rdfs:comment "Inverse of mqtt:hasSubscriptions; links rdf:type subscription entry to its containing subscription payload."@en .
+
+mqtt:hasTopicName rdf:type owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain mqtt:PublishVariableHeader ;
+    rdfs:range mqtt:Topic ;
+    rdfs:label "Has Topic Name"@en ;
+    rdfs:comment "Links the publish variable header to the topic name the message is published to."@en ;
+    owl:equivalentProperty mqv:hasTopicName .
+
+# Payload Object Properties
+
+mqtt:hasPayload rdf:type owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain mqtt:ControlPacket ;
+    rdfs:range mqtt:Payload ;
+    rdfs:label "Has Payload"@en ;
+    rdfs:comment "Relates rdf:type control packet to its payload."@en ;
+    owl:equivalentProperty mqv:hasPayload .
+
+mqtt:isPayloadOf rdf:type owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain mqtt:Payload ;
+    rdfs:range mqtt:ControlPacket ;
+    rdfs:label "Is Payload Of"@en ;
+    rdfs:comment "Inverse property of hasPayload; links rdf:type payload to its containing control packet."@en ;
+    owl:inverseOf mqtt:hasPayload .
+
+mqtt:hasPublishPayload rdf:type owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:subPropertyOf mqtt:hasPayload ;
+    rdfs:domain mqtt:PublishPacket ;
+    rdfs:range mqtt:PublishPayload ;
+    rdfs:label "Has Publish Payload"@en ;
+    rdfs:comment "Links rdf:type publish packet to its publish payload."@en .
+
+mqtt:hasSubscriptionPayload rdf:type owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:subPropertyOf mqtt:hasPayload ;
+    rdfs:domain mqtt:SubscribePacket ;
+    rdfs:range mqtt:SubscriptionPayload ;
+    rdfs:label "Has Subscription Payload"@en ;
+    rdfs:comment "Links rdf:type subscribe packet to its subscription payload."@en .
+
+mqtt:hasUnsubscriptionPayload rdf:type owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:subPropertyOf mqtt:hasPayload ;
+    rdfs:domain mqtt:UnsubscribePacket ;
+    rdfs:range mqtt:UnsubscriptionPayload ;
+    rdfs:label "Has Unsubscription Payload"@en ;
+    rdfs:comment "Links an unsubscribe packet to its unsubscription payload."@en .
+
+mqtt:hasPayloadEncodesFields rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:PublishPayload ;
+    rdfs:range rdf:List ;
+    rdfs:label "Has Encoded Fields"@en ;
+    rdfs:comment "Lists the field names or identifiers encoded in the payload."@en .
+
+mqtt:payloadEncodesObservation rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:PublishPayload ;
+    rdfs:range sosa:Observation ;
+    rdfs:label "Payload Encodes Observation"@en ;
+    rdfs:comment "Indicates that this payload encodes rdf:type SOSA Observation."@en .
+
+mqtt:payloadEncodesObservationCollection rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:PublishPayload ;
+    rdfs:range sosa:ObservationCollection ;
+    rdfs:label "Payload Encodes Observation Collection"@en ;
+    rdfs:comment "Indicates that this payload encodes rdf:type collection of SOSA Observations."@en .
+
+mqtt:payloadEncodesActuation rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:PublishPayload ;
+    rdfs:range sosa:Actuation ;
+    rdfs:label "Payload Encodes Actuation"@en ;
+    rdfs:comment "Indicates that this payload encodes rdf:type single SOSA Actuation command."@en .
+
+mqtt:payloadEncodesActuationCollection rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:PublishPayload ;
+    rdfs:range sosa:ActuationCollection ;
+    rdfs:label "Payload Encodes Actuation Collection"@en ;
+    rdfs:comment "Indicates that this payload encodes rdf:type collection of actuation commands."@en .
+
+mqtt:hasEncodedFields rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:Payload ;
+    rdfs:range rdf:List ;
+    rdfs:label "Has Encoded Fields"@en ;
+    rdfs:comment "An ordered RDF list of field names encoded in the payload."@en .
+
+mqtt:isEncodedInPayload rdf:type owl:ObjectProperty ;
+    rdfs:domain rdf:List ;
+    rdfs:range mqtt:Payload ;
+    owl:inverseOf mqtt:hasEncodedFields ;
+    rdfs:label "Is Encoded In Payload"@en ;
+    rdfs:comment "Inverse of mqtt:hasEncodedFields; links rdf:type list of encoded fields to the payload that contains them."@en .
+
+mqtt:hasPayloadSizeBytes rdf:type owl:ObjectProperty ;
+    rdfs:domain mqtt:Payload ;
+    rdfs:range qudt:QuantityValue ;
+    rdfs:label "Has Payload Size (Bytes)"@en ;
+    rdfs:comment "Specifies the size of the payload in bytes as rdf:type QUDT quantity value."@en .
+
+#######################
+# Datatype Properties #
+#######################
+
+mqtt:hasHost rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:domain mqtt:Broker ;
+    rdfs:range xsd:string ;
+    rdfs:label "Broker Host"@en ;
+    rdfs:comment "The hostname or IP address of the MQTT broker."@en .
+
+mqtt:hasPortNumber rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:domain mqtt:Broker ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Broker Port"@en ;
+    rdfs:comment "The port number the MQTT broker listens on."@en .
+
+mqtt:usesTLS rdf:type owl:DatatypeProperty ;
+    rdfs:domain mqtt:NetworkConnection ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Uses TLS"@en ;
+    rdfs:comment "Indicates whether the network connection uses TLS encryption."@en .
+
+mqtt:hasClientID rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:domain mqtt:Client ;
+    rdfs:range xsd:string ;
+    rdfs:label "Client ID"@en ;
+    rdfs:comment "The identifier used by the MQTT client when connecting to the broker."@en .
+
+mqtt:hasPayloadContentDelimiter rdf:type owl:DatatypeProperty ;
+    rdfs:domain mqtt:PublishPayload ;
+    rdfs:range xsd:string ;
+    rdfs:label "Payload Content Delimiter"@en ;
+    rdfs:comment "Specifies the delimiter used to separate fields in the payload content."@en .
+
+mqtt:hasPayloadContentType rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:domain mqtt:PublishPayload ;
+    rdfs:range xsd:string ;
+    rdfs:label "Payload Content Type"@en ;
+    rdfs:comment "The MIME type of the payload content, e.g., application/json."@en .
+
+mqtt:hasPayloadContent rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:domain mqtt:PublishPayload ;
+    rdfs:range xsd:string ;
+    rdfs:label "Payload Content"@en ;
+    rdfs:comment "The actual content of the payload, possibly serialized or encoded."@en .
+
+mqtt:hasPayloadEncoding rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:domain mqtt:PublishPayload ;
+    rdfs:range xsd:string ;
+    rdfs:label "Payload Encoding"@en ;
+    rdfs:comment "Specifies the encoding of the payload content, e.g., UTF-8 or Base64."@en .
+
+mqtt:hasFilterPattern rdf:type owl:DatatypeProperty ;
+    rdfs:domain mqtt:TopicFilter ;
+    rdfs:range xsd:string ;
+    rdfs:label "Filter Pattern"@en ;
+    rdfs:comment "The MQTT topic filter pattern as rdf:type string, e.g., 'sensor/+/temp'."@en .
+
+mqtt:hasPacketIdentifier rdf:type owl:DatatypeProperty ;
+    rdfs:domain mqtt:VariableHeader ;
+    rdfs:range xsd:unsignedShort ;
+    rdfs:label "Packet Identifier"@en ;
+    rdfs:comment "A 16-bit identifier used for correlating MQTT messages (QoS > 0)."@en .
+
+mqtt:hasQosLevel rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ owl:unionOf (mqtt:PublishFixedHeader mqtt:SubscriptionEntry) ] ;
+    rdfs:range [
+        rdf:type rdfs:Datatype ;
+        owl:onDatatype xsd:integer ;
+        owl:withRestrictions (
+            [ xsd:minInclusive "0"^^xsd:integer ]
+            [ xsd:maxInclusive "2"^^xsd:integer ]
+        )
+    ] ;
+    rdfs:label "QoS Level"@en ;
+    rdfs:comment "The MQTT Quality of Service level (0 = at most once, 1 = at least once, 2 = exactly once)."@en ;
+    rdfs:comment "Not mapped to mqv:hasQoSFlag because it is modeled as an ObjectProperty in MQV, whereas mqtt:hasQosLevel uses rdf:type DatatypeProperty."@en .
+
+mqtt:isRetained rdf:type owl:DatatypeProperty ;
+    owl:equivalentProperty mqv:hasRetainFlag ;
+    rdfs:domain mqtt:PublishFixedHeader ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Retained Flag"@en ;
+    rdfs:comment "Indicates whether the message should be retained on the broker."@en .
+
+mqtt:hasDupFlag rdf:type owl:DatatypeProperty ;
+    owl:equivalentProperty mqv:hasDUPFlag ;
+    rdfs:domain mqtt:PublishFixedHeader ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Duplicate Delivery Flag"@en ;
+    rdfs:comment "Specifies whether this message is rdf:type duplicate delivery of an earlier PUBLISH message."@en .
+
+##################
+# General Axioms #
+##################
+
+# MQTT superclasses are mutually disjoint
+# NetworkParticipant Broker and Client are not disjoint
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members (
+    mqtt:NetworkParticipant
+    mqtt:ControlPacket
+    mqtt:Payload
+    mqtt:Topic
+    mqtt:TopicFilter
+    mqtt:FixedHeader
+    mqtt:VariableHeader
+  )
+] .
+
+# Payload subclasses are mutually disjoint
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members (
+    mqtt:PublishPayload
+    mqtt:SubscriptionPayload
+    mqtt:UnsubscriptionPayload
+  )
+] .
+
+# ControlPacket subclasses are mutually disjoint
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members (
+    mqtt:PublishPacket
+    mqtt:SubscribePacket
+    mqtt:UnsubscribePacket
+  )
+] .
+
+# Fixed header subclasses are mutually disjoint
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members (
+    mqtt:PublishFixedHeader
+    mqtt:SubscribeFixedHeader
+    mqtt:UnsubscribeFixedHeader
+  )
+] .
+
+# Variable header subclasses are mutually disjoint
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members (
+    mqtt:PublishVariableHeader
+    mqtt:SubscribeVariableHeader
+    mqtt:UnsubscribeVariableHeader
+  )
+] .
+
+###############
+# Individuals #
+###############
+
+# Feature of Interest
+
+:Glasscheibe_00140 rdf:type sosa:FeatureOfInterest ;
+    rdfs:label "RFID-Glasscheibe"@de .
+
+# Platform 
+
+:Zentriereinheit rdf:type sosa:Platform ;
+    sosa:isHostedBy :SensorZentrierung .
+
+# Sensor 
+
+:SensorZentrierung rdf:type sosa:Sensor ;
+    rdfs:label "Sensor an Zentriereinheit"@de ;
+    sosa:hosts :Zentriereinheit ;
+    mqtt:publishesToTopic :topic_zentriereinheit ;
+    mqtt:usesBroker :broker_fabrik ;
+    mqtt:isManagedBy :client_zentriereinheit ;
+    sosa:madeObservation :obs_JobStart , :obs_JobEnde , :obs_Griff_X , :obs_Griff_Y , 
+        :obs_Griff_Z , :obs_Korr_X , :obs_Korr_Y , :obs_RFID , :obsColl_Zentriereinheit_001.
+
+# Observable Property
+
+:Job_Start_ZS rdf:type sosa:Property ;
+    rdfs:label "Job-Start-Zeitstempel"@de .
+
+:Job_Ende_ZS rdf:type sosa:Property ;
+    rdfs:label "Job-Ende-Zeitstempel"@de .
+
+:Griffpunkt_X rdf:type sosa:Property ;
+    rdfs:label "Griffpunkt X"@de .
+
+:Griffpunkt_Y rdf:type sosa:Property ;
+    rdfs:label "Griffpunkt Y"@de .
+
+:Griffpunkt_Z rdf:type sosa:Property ;
+    rdfs:label "Griffpunkt Z"@de .
+
+:Korrekturwert_X rdf:type sosa:Property ;
+    rdfs:label "Korrekturwert X"@de .
+
+:Korrekturwert_Y rdf:type sosa:Property ;
+    rdfs:label "Korrekturwert Y"@de .
+
+:RFID_Code rdf:type sosa:Property ;
+    rdfs:label "RFID Glasscheibe"@de .
+
+# Observations
+
+:obs_JobStart rdf:type sosa:Observation ;
+    sosa:observedProperty :Job_Start_ZS ;
+    sosa:hasFeatureOfInterest :Glasscheibe_00140 ;
+    sosa:madeBySensor :SensorZentrierung ;
+    sosa:isMemberOf :obsColl_Zentriereinheit_001 ;
+    sosa:resultTime "2024-09-28T23:58:44Z"^^xsd:dateTime ;
+    sosa:hasResult [ 
+        rdf:type qudt:QuantityValue ;
+        qudt:hasUnit unit:MilliS ;
+        qudt:value 20240928235844 
+    ] .
+
+:obs_JobEnde rdf:type sosa:Observation ;
+    sosa:observedProperty :Job_Ende_ZS ;
+    sosa:hasFeatureOfInterest :Glasscheibe_00140 ;
+    sosa:madeBySensor :SensorZentrierung ;
+    sosa:isMemberOf :obsColl_Zentriereinheit_001 ;
+    sosa:resultTime "2024-09-28T23:59:53Z"^^xsd:dateTime ;
+    sosa:hasResult [ 
+        rdf:type qudt:QuantityValue ;
+        qudt:hasUnit unit:MilliS ;
+        qudt:value 20240928235953 
+    ] .
+
+:obs_Griff_X rdf:type sosa:Observation ;
+    sosa:observedProperty :Griffpunkt_X ;
+    sosa:hasFeatureOfInterest :Glasscheibe_00140 ;
+    sosa:madeBySensor :SensorZentrierung ;
+    sosa:isMemberOf :obsColl_Zentriereinheit_001 ;
+    sosa:resultTime "2024-09-28T23:58:44Z"^^xsd:dateTime ;
+    sosa:hasResult [ 
+        rdf:type qudt:QuantityValue ;
+        qudt:hasUnit unit:MilliM ;
+        qudt:value 4.35837445 
+    ] .
+
+:obs_Griff_Y rdf:type sosa:Observation ;
+    sosa:observedProperty :Griffpunkt_Y ;
+    sosa:hasFeatureOfInterest :Glasscheibe_00140 ;
+    sosa:madeBySensor :SensorZentrierung ;
+    sosa:isMemberOf :obsColl_Zentriereinheit_001 ;
+    sosa:resultTime "2024-09-28T23:58:44Z"^^xsd:dateTime ;
+    sosa:hasResult [ 
+        rdf:type qudt:QuantityValue ;
+        qudt:hasUnit unit:MilliM ;
+        qudt:value 15.66778745 
+    ] .
+
+:obs_Griff_Z rdf:type sosa:Observation ;
+    sosa:observedProperty :Griffpunkt_Z ;
+    sosa:hasFeatureOfInterest :Glasscheibe_00140 ;
+    sosa:madeBySensor :SensorZentrierung ;
+    sosa:isMemberOf :obsColl_Zentriereinheit_001 ;
+    sosa:resultTime "2024-09-28T23:58:44Z"^^xsd:dateTime ;
+    sosa:hasResult [ 
+        rdf:type qudt:QuantityValue ;
+        qudt:hasUnit unit:MilliM ;
+        qudt:value 8.00612123 
+    ] .
+
+:obs_Korr_X rdf:type sosa:Observation ;
+    sosa:observedProperty :Korrekturwert_X ;
+    sosa:hasFeatureOfInterest :Glasscheibe_00140 ;
+    sosa:madeBySensor :SensorZentrierung ;
+    sosa:isMemberOf :obsColl_Zentriereinheit_001 ;
+    sosa:resultTime "2024-09-28T23:58:44Z"^^xsd:dateTime ;
+    sosa:hasResult [ 
+        rdf:type qudt:QuantityValue ;
+        qudt:hasUnit unit:MilliM ;
+        qudt:value -7.583874 
+    ] .
+
+:obs_Korr_Y rdf:type sosa:Observation ;
+    sosa:observedProperty :Korrekturwert_Y ;
+    sosa:hasFeatureOfInterest :Glasscheibe_00140 ;
+    sosa:madeBySensor :SensorZentrierung ;
+    sosa:isMemberOf :obsColl_Zentriereinheit_001 ;
+    sosa:resultTime "2024-09-28T23:58:44Z"^^xsd:dateTime ;
+    sosa:hasResult [ 
+        rdf:type qudt:QuantityValue ;
+        qudt:hasUnit unit:MilliM ;
+        qudt:value 0.3858398 
+    ] .
+
+:obs_RFID rdf:type sosa:Observation ;
+    sosa:observedProperty :RFID_Code ;
+    sosa:hasFeatureOfInterest :Glasscheibe_00140 ;
+    sosa:madeBySensor :SensorZentrierung ;
+    sosa:isMemberOf :obsColl_Zentriereinheit_001 ;
+    sosa:resultTime "2024-09-28T23:58:44Z"^^xsd:dateTime ;
+    sosa:hasResult [ 
+        rdf:type qudt:QuantityValue ;
+        qudt:value "0014040"^^xsd:string 
+    ] .
+
+
+# ObservationCollection
+
+:obsColl_Zentriereinheit_001 rdf:type sosa:ObservationCollection ;
+    sosa:hasMember 
+        :obs_JobStart, :obs_JobEnde,
+        :obs_Griff_X, :obs_Griff_Y, :obs_Griff_Z,
+        :obs_Korr_X, :obs_Korr_Y,
+        :obs_RFID ;
+    sosa:phenomenonTime [
+        rdf:type time:Instant ;
+        time:inXSDDateTime "2024-09-28T23:58:44Z"^^xsd:dateTime ;
+    ] ;
+    sosa:madeBySensor :SensorZentrierung ;
+    sosa:hasFeatureOfInterest :Glasscheibe_00140 ;
+    mqtt:isDescribedByTopic :topic_zentriereinheit .
+
+# Topic
+
+:topic_zentriereinheit rdf:type mqtt:Topic ;
+    mqtt:topicDescribesObservation :obsColl_Zentriereinheit_001 ;
+    mqtt:isMatchedByFilter :filter_zentriereinheit .
+
+
+# Topic Filter
+
+:filter_zentriereinheit rdf:type mqtt:TopicFilter ;
+    mqtt:hasFilterPattern "fabrik/zentrierung/#" ;
+    mqtt:matchesTopic :topic_zentriereinheit .
+
+
+# Client
+
+:client_zentriereinheit rdf:type mqtt:Client ;
+    mqtt:hasClientID "sensor-client-zentriereinheit" ;
+    mqtt:connectsToBroker :broker_fabrik ;
+    mqtt:publishesPacket :message_zentriereinheit_001 ;
+    mqtt:hosts :SensorZentrierung .
+
+# Broker
+
+:broker_fabrik rdf:type mqtt:Broker ;
+    mqtt:hasHost "mqtt.broker.fabrik.de" ;
+    mqtt:hasPortNumber 1883 ;
+    mqtt:usesTLS false ;
+    mqtt:hasConnectedClient :client_zentriereinheit ;
+    mqtt:forwardsPacket :message_zentriereinheit_001 .
+
+# Payload
+:payload_zentriereinheit_001 rdf:type mqtt:PublishPayload ;
+    mqtt:isPayloadOf :message_zentriereinheit_001 ;
+    mqtt:hasPayloadContentType "text/csv" ;
+    mqtt:hasPayloadEncoding "UTF-8" ;
+    mqtt:hasPayloadContent "20240928235844;20240928235953;4.35837445;15.66778745;8.00612123;-7.583874;0.3858398;00140" ;
+    mqtt:hasPayloadContentDelimiter ";" ;
+    mqtt:hasEncodedFields (
+        "jobStart" "jobEnde" "griffpunktX" "griffpunktY"
+        "griffpunktZ" "korrekturX" "korrekturY" "rfid"
+    ) ;
+    mqtt:hasPayloadSizeBytes [
+        rdf:type qudt:QuantityValue ;
+        qudt:unit unit:Byte ;
+        qudt:value 97
+    ] ;
+    mqtt:payloadEncodesObservationCollection :obsColl_Zentriereinheit_001 .
+
+# Publish Packet
+
+:message_zentriereinheit_001 rdf:type mqtt:PublishPacket ;
+    mqtt:hasTopicName :topic_zentriereinheit ;
+    mqtt:hasPayload :payload_zentriereinheit_001 ;
+    mqtt:isSentBy :client_zentriereinheit ;
+    mqtt:hasFixedHeader :header_fix ;
+    mqtt:hasVariableHeader :header_var .
+
+# Fixed Header
+
+:header_fix rdf:type mqtt:PublishFixedHeader ;
+    mqtt:hasQosLevel 1 ;
+    mqtt:isRetained false .
+
+# Variable Header
+
+:header_var rdf:type mqtt:PublishVariableHeader ;
+    mqtt:hasTopicName :topic_zentriereinheit .
+
+# Subscription Client
+
+:client_auswertung rdf:type mqtt:Client ;
+    mqtt:hasClientID "client-auswertung" ;
+    mqtt:connectsToBroker :broker_fabrik ;
+    mqtt:subscribesPacket :subscribe_zentriereinheit_001 .
+
+# TopicFilter for Subscription
+
+:filter_zentriereinheit_sub rdf:type mqtt:TopicFilter ;
+    mqtt:hasFilterPattern "fabrik/zentrierung/#" ;
+    mqtt:matchesTopic :topic_zentriereinheit .
+
+# Subscription Entry
+
+:subscription_entry_zentriereinheit rdf:type mqtt:SubscriptionEntry ;
+    mqtt:hasTopicFilter :filter_zentriereinheit_sub ;
+    mqtt:hasQosLevel 1 ;
+    mqtt:isSubscriptionOfPayload :sub_payload_zentriereinheit_001 .
+
+# Subscription Payload
+
+:sub_payload_zentriereinheit_001 rdf:type mqtt:SubscriptionPayload ;
+    mqtt:hasSubscriptions :subscription_entry_zentriereinheit .
+
+# Headers
+
+:sub_header_fix rdf:type mqtt:SubscribeFixedHeader .
+:sub_header_var rdf:type mqtt:SubscribeVariableHeader ;
+    mqtt:hasPacketIdentifier 567 .
+
+# Subscribe Packet
+
+:subscribe_zentriereinheit_001 rdf:type mqtt:SubscribePacket ;
+    mqtt:hasPayload :sub_payload_zentriereinheit_001 ;
+    mqtt:hasFixedHeader :sub_header_fix ;
+    mqtt:hasVariableHeader :sub_header_var ;
+    mqtt:isSentBy :client_auswertung .
+
+# Broker received Subscribe Packet
+
+:broker_fabrik mqtt:receivesSubscribePacket :subscribe_zentriereinheit_001 .
+
+# Unsubscription Payload
+
+:unsub_payload_zentriereinheit_001 rdf:type mqtt:UnsubscriptionPayload ;
+    mqtt:hasTopicFilter :filter_zentriereinheit_sub .
+
+# Headers
+
+:unsub_header_fix rdf:type mqtt:UnsubscribeFixedHeader .
+:unsub_header_var rdf:type mqtt:UnsubscribeVariableHeader ;
+    mqtt:hasPacketIdentifier 568 .
+
+# Unsubscribe Packet
+
+:unsubscribe_zentriereinheit_001 rdf:type mqtt:UnsubscribePacket ;
+    mqtt:hasPayload :unsub_payload_zentriereinheit_001 ;
+    mqtt:hasFixedHeader :unsub_header_fix ;
+    mqtt:hasVariableHeader :unsub_header_var ;
+    mqtt:isSentBy :client_auswertung .
+
+# Broker receives Unsubscribe Packet
+
+:broker_fabrik mqtt:receivesUnsubscribePacket :unsubscribe_zentriereinheit_001 .
