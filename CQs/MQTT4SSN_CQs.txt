@@ -1,0 +1,59 @@
+######################################################
+### Competency Questions for the MQTT4SSN Ontology ###
+######################################################
+
+## CQ1 Network & Participants
+CQ1_01 - Which MQTT Clients are connected to which Broker?
+CQ1_02 - Which MQTT NetworkConnections exist, are they TLS-secured, and who initiated/accepted them?
+CQ1_03 - Which MQTT participants (Clients/Brokers) use which MQTT NetworkConnections?
+CQ1_04 - Which MQTT Clients with which ClientIDs run on which SOSA platforms?
+CQ1_05 - Which SOSA systems (sensors/actuators) are hosted by a given MQTT Client?
+CQ1_06 - Which MQTT Clients are connected to a given MQTT Broker?
+CQ1_07 - What host/port is a MQTT Broker configured with?
+
+## CQ2 Topics & Topic Filters
+CQ2_01 - Which SOSA sensors publish to which MQTT Topics (observations)?
+CQ2_02 - Which SOSA actuators listen to which MQTT Topics (commands)?
+CQ2_03 - Which SOSA FeaturesOfInterest, Properties etc. appear as MQTT TopicSubjects and on which MQTT Topics?
+CQ2_04 - Which MQTT Topic Filters match a given MQTT Topic?
+CQ2_05 - Which MQTT Topics are matched by a given MQTT Topic Filter?
+CQ2_06 - Which MQTT filter patterns (with wildcards) are stored?
+
+## CQ3 Control Packets
+CQ3_01 - Which MQTT Clients send which MQTT Control Packets?
+CQ3_02 - Which MQTT PUBLISH/SUBSCRIBE/UNSUBSCRIBE packets were sent (specializations)?
+CQ3_03 - Which MQTT Bokers receive/forward which MQTT Control Packets?
+CQ3_04 - Which MQTT Control Packets were sent by which Client (inverse)?
+
+## CQ4 Header & Variable Header & Payload
+CQ4_01 - Which MQTT Control Packet has which Fixed Header / Variable Header / Payload?
+CQ4_02 - Which MQTT PUBLISH packet has which MQTT Topic (name) in the Variable Header?
+CQ4_03 - Which QoS levels are set (in PUBLISH Fixed Header or SubscriptionEntry)?
+CQ4_04 - Are RETAIN/DUP flags set in PUBLISH?
+CQ4_05 - Which MQTT Control Packets have which PacketIdentifier?
+
+## CQ5 Subscription Structure
+CQ5_01 - Which MQTT SUBSCRIBE payloads contain which SubscriptionEntries?
+CQ5_02 - Which MQTT Topic Filters (with QoS) are requested by a SubscriptionEntry?
+CQ5_03 - Which MQTT UNSUBSCRIBE payloads remove which MQTT TopicFilters?
+
+## CQ6 Payload Content & Semantics
+CQ6_01 - Which MQTT PUBLISH payloads encode SOSA Observations (or Observation Collections)?
+CQ6_02 - Which MQTT PUBLISH payloads encode SOSA Actuations (or Actuation Collections)?
+CQ6_03 - Which fields are encoded in a MQTT payload?
+CQ6_04 - What content, content type, encoding and delimiter does a MQTT PUBLISH payload have?
+CQ6_05 - What is the size of a MQTT payload (as QUDT QuantityValue with unit)?
+
+## CQ7 Consistency/Validation
+CQ7_01 - Does each MQTT ControlPacket instance have exactly one Fixed Header, one Variable Header, and one Payload?
+CQ7_02 - Are the disjoint superclass constraints violated?
+CQ7_03 - Are inverse properties used consistently?
+CQ7_04 - Are QoS levels outside [0..2] present?
+CQ7_05 - Does each MQTT PublishVariableHeader instance have exactly one Topic (functional)?
+CQ7_06 - Are there MQTT payloads without content type/encoding despite having content?
+CQ7_07 - Are there MQTT TopicSubjects without an associated MQTT Topic?
+
+## CQ9 Packet-specific Details
+CQ9_01 - Which MQTT Publish packets carry Observations for a specific SOSA FeatureOfInterest or Property?
+CQ9_02 - Which MQTT SUBSCRIBE packets request QoS=2 and for which filters?
+CQ9_03 - Which MQTT UNSUBSCRIBE packets remove all filters under a certain path (e.g. 'factory/centering/#')?
