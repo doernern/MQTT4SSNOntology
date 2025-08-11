@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#"
+     xml:base="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#">
+     ontologyIRI="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN">
+    <Prefix name="" IRI="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#"/>
     <Prefix name="ex" IRI="http://example.org/individuals#"/>
     <Prefix name="qk" IRI="http://qudt.org/vocab/quantitykind/"/>
     <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
@@ -38,11 +39,11 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:creator"/>
-        <AnonymousIndividual nodeID="_:genid2147484037"/>
+        <AnonymousIndividual nodeID="_:genid2147484045"/>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:creator"/>
-        <AnonymousIndividual nodeID="_:genid2147484038"/>
+        <AnonymousIndividual nodeID="_:genid2147484046"/>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:license"/>
@@ -65,845 +66,485 @@
         <AbbreviatedIRI>ex:DTEC</AbbreviatedIRI>
     </Annotation>
     <Declaration>
-        <Class IRI="Broker"/>
+        <Class IRI="#Broker"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Client"/>
+        <Class IRI="#Client"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ControlPacket"/>
+        <Class IRI="#ControlPacket"/>
     </Declaration>
     <Declaration>
-        <Class IRI="FixedHeader"/>
+        <Class IRI="#FixedHeader"/>
     </Declaration>
     <Declaration>
-        <Class IRI="NetworkConnection"/>
+        <Class IRI="#NetworkConnection"/>
     </Declaration>
     <Declaration>
-        <Class IRI="NetworkParticipant"/>
+        <Class IRI="#NetworkParticipant"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Payload"/>
+        <Class IRI="#Payload"/>
     </Declaration>
     <Declaration>
-        <Class IRI="PublishFixedHeader"/>
+        <Class IRI="#PublishFixedHeader"/>
     </Declaration>
     <Declaration>
-        <Class IRI="PublishPacket"/>
+        <Class IRI="#PublishPacket"/>
     </Declaration>
     <Declaration>
-        <Class IRI="PublishPayload"/>
+        <Class IRI="#PublishPayload"/>
     </Declaration>
     <Declaration>
-        <Class IRI="PublishVariableHeader"/>
+        <Class IRI="#PublishVariableHeader"/>
     </Declaration>
     <Declaration>
-        <Class IRI="SubscribeFixedHeader"/>
+        <Class IRI="#SubscribeFixedHeader"/>
     </Declaration>
     <Declaration>
-        <Class IRI="SubscribePacket"/>
+        <Class IRI="#SubscribePacket"/>
     </Declaration>
     <Declaration>
-        <Class IRI="SubscribeVariableHeader"/>
+        <Class IRI="#SubscribeVariableHeader"/>
     </Declaration>
     <Declaration>
-        <Class IRI="SubscriptionEntry"/>
+        <Class IRI="#SubscriptionEntry"/>
     </Declaration>
     <Declaration>
-        <Class IRI="SubscriptionPayload"/>
+        <Class IRI="#SubscriptionPayload"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Topic"/>
+        <Class IRI="#Topic"/>
     </Declaration>
     <Declaration>
-        <Class IRI="TopicFilter"/>
+        <Class IRI="#TopicFilter"/>
     </Declaration>
     <Declaration>
-        <Class IRI="TopicSubject"/>
+        <Class IRI="#TopicSubject"/>
     </Declaration>
     <Declaration>
-        <Class IRI="UnsubscribeFixedHeader"/>
+        <Class IRI="#UnsubscribeFixedHeader"/>
     </Declaration>
     <Declaration>
-        <Class IRI="UnsubscribePacket"/>
+        <Class IRI="#UnsubscribePacket"/>
     </Declaration>
     <Declaration>
-        <Class IRI="UnsubscribeVariableHeader"/>
+        <Class IRI="#UnsubscribeVariableHeader"/>
     </Declaration>
     <Declaration>
-        <Class IRI="UnsubscriptionPayload"/>
+        <Class IRI="#UnsubscriptionPayload"/>
     </Declaration>
     <Declaration>
-        <Class IRI="VariableHeader"/>
+        <Class IRI="#VariableHeader"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="forwardsPublishPacket"/>
+        <ObjectProperty IRI="#forwardsPublishPacket"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasClient"/>
+        <ObjectProperty IRI="#hasClient"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasConnectedClient"/>
+        <ObjectProperty IRI="#hasConnectedClient"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasEncodedFields"/>
+        <ObjectProperty IRI="#hasEncodedFields"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasFixedHeader"/>
+        <ObjectProperty IRI="#hasFixedHeader"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasParticipant"/>
+        <ObjectProperty IRI="#hasParticipant"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasPayload"/>
+        <ObjectProperty IRI="#hasPayload"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasPayloadSize"/>
+        <ObjectProperty IRI="#hasPayloadSize"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasPublishFixedHeader"/>
+        <ObjectProperty IRI="#hasPublishFixedHeader"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasPublishPayload"/>
+        <ObjectProperty IRI="#hasPublishPayload"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasPublishVariableHeader"/>
+        <ObjectProperty IRI="#hasPublishVariableHeader"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasSubject"/>
+        <ObjectProperty IRI="#hasSubject"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasSubscriptionFixedHeader"/>
+        <ObjectProperty IRI="#hasSubscriptionFixedHeader"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasSubscriptionPayload"/>
+        <ObjectProperty IRI="#hasSubscriptionPayload"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasSubscriptionVariableHeader"/>
+        <ObjectProperty IRI="#hasSubscriptionVariableHeader"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasSubscriptions"/>
+        <ObjectProperty IRI="#hasSubscriptions"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasTopicFilter"/>
+        <ObjectProperty IRI="#hasTopicFilter"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasTopicName"/>
+        <ObjectProperty IRI="#hasTopicName"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasUnsubscriptionFixedHeader"/>
+        <ObjectProperty IRI="#hasUnsubscriptionFixedHeader"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasUnsubscriptionPayload"/>
+        <ObjectProperty IRI="#hasUnsubscriptionPayload"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasUnsubscriptionVariableHeader"/>
+        <ObjectProperty IRI="#hasUnsubscriptionVariableHeader"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasVariableHeader"/>
+        <ObjectProperty IRI="#hasVariableHeader"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hosts"/>
+        <ObjectProperty IRI="#hosts"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isAcceptedBy"/>
+        <ObjectProperty IRI="#isAcceptedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isConnectedToBroker"/>
+        <ObjectProperty IRI="#isConnectedToBroker"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isEncodedInPayload"/>
+        <ObjectProperty IRI="#isEncodedInPayload"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isFixedHeaderOf"/>
+        <ObjectProperty IRI="#isFixedHeaderOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isHostedBy"/>
+        <ObjectProperty IRI="#isHostedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isInitiatedBy"/>
+        <ObjectProperty IRI="#isInitiatedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isMatchedByFilter"/>
+        <ObjectProperty IRI="#isMatchedByFilter"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isPayloadOf"/>
+        <ObjectProperty IRI="#isPayloadOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isPublishFixedHeaderOf"/>
+        <ObjectProperty IRI="#isPublishFixedHeaderOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isPublishPayloadOf"/>
+        <ObjectProperty IRI="#isPublishPayloadOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isPublishVariableHeaderOf"/>
+        <ObjectProperty IRI="#isPublishVariableHeaderOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isSentBy"/>
+        <ObjectProperty IRI="#isSentBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isSubjectOf"/>
+        <ObjectProperty IRI="#isSubjectOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isSubscriptionFixedHeaderOf"/>
+        <ObjectProperty IRI="#isSubscriptionFixedHeaderOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isSubscriptionOf"/>
+        <ObjectProperty IRI="#isSubscriptionOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isSubscriptionPayloadOf"/>
+        <ObjectProperty IRI="#isSubscriptionPayloadOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isSubscriptionVariableHeaderOf"/>
+        <ObjectProperty IRI="#isSubscriptionVariableHeaderOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isTopicFilterOf"/>
+        <ObjectProperty IRI="#isTopicFilterOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isTopicNameOf"/>
+        <ObjectProperty IRI="#isTopicNameOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isUnsubscriptionFixedHeaderOf"/>
+        <ObjectProperty IRI="#isUnsubscriptionFixedHeaderOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isUnsubscriptionPayloadOf"/>
+        <ObjectProperty IRI="#isUnsubscriptionPayloadOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isUnsubscriptionVariableHeaderOf"/>
+        <ObjectProperty IRI="#isUnsubscriptionVariableHeaderOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isVariableHeaderOf"/>
+        <ObjectProperty IRI="#isVariableHeaderOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="listensToTopic"/>
+        <ObjectProperty IRI="#listensToTopic"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="matchesTopic"/>
+        <ObjectProperty IRI="#matchesTopic"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="observesTopic"/>
+        <ObjectProperty IRI="#observesTopic"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="payloadEncodesActuation"/>
+        <ObjectProperty IRI="#payloadEncodesActuation"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="payloadEncodesActuationCollection"/>
+        <ObjectProperty IRI="#payloadEncodesActuationCollection"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="payloadEncodesObservation"/>
+        <ObjectProperty IRI="#payloadEncodesObservation"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="payloadEncodesObservationCollection"/>
+        <ObjectProperty IRI="#payloadEncodesObservationCollection"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="publishesPacket"/>
+        <ObjectProperty IRI="#publishesPacket"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="receivesSubscribePacket"/>
+        <ObjectProperty IRI="#receivesSubscribePacket"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="receivesUnsubscribePacket"/>
+        <ObjectProperty IRI="#receivesUnsubscribePacket"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="runsOnPlatform"/>
+        <ObjectProperty IRI="#runsOnPlatform"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="sendsControlPacket"/>
+        <ObjectProperty IRI="#sendsControlPacket"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="subscribesPacket"/>
+        <ObjectProperty IRI="#subscribesPacket"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="unsubscribesPacket"/>
+        <ObjectProperty IRI="#unsubscribesPacket"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="usesConnection"/>
+        <ObjectProperty IRI="#usesConnection"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasClientID"/>
+        <DataProperty IRI="#hasClientID"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasFilterPattern"/>
+        <DataProperty IRI="#hasFilterPattern"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasHost"/>
+        <DataProperty IRI="#hasHost"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasPacketIdentifier"/>
+        <DataProperty IRI="#hasPacketIdentifier"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasPayloadContent"/>
+        <DataProperty IRI="#hasPayloadContent"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasPayloadContentDelimiter"/>
+        <DataProperty IRI="#hasPayloadContentDelimiter"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasPayloadContentType"/>
+        <DataProperty IRI="#hasPayloadContentType"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasPayloadEncoding"/>
+        <DataProperty IRI="#hasPayloadEncoding"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasPortNumber"/>
+        <DataProperty IRI="#hasPortNumber"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasQosLevel"/>
+        <DataProperty IRI="#hasQosLevel"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="isDUPFlag"/>
+        <DataProperty IRI="#isDUPFlag"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="isRetainedFlag"/>
+        <DataProperty IRI="#isRetainedFlag"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="usesTLS"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#graphName"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#QUDT"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.linkedmodel.org/schema/vaem#CatalogEntry"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/dtype#GMD_DTYPE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ConstraintsGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:BitEncoding"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:ISO8601-UTCDateTime-BasicFormat"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:protocolBuffersName"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:vbName"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://schema.org/Person"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#GMD_VAEM"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CT_FINITE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="mqv:SUBSCRIBE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#GMD_QUDT-SCHEMA"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:ScaleType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="mqv:PUBLISH"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CT_COUNTABLY-INFINITE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ProxyGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ViewGraph"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="foaf:mbox"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#SchemaGraph"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:BigEndian"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:TotallyOrdered"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rdfs:Container"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://schema.org/Organization"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#TransformsGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#CurationGraph"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="sosa:ActuationCollection"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="rdf:predicate"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#RulesGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:Enumeration"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#graphTitle"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CardinalityType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:OctetEncoding"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#VocabularyGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://dbpedia.org/resource/Category:Units_of_angle"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="owl:Class"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="rdf:value"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:BooleanEncoding"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="rdf:first"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="ex:DTEC"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/dtype"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:hasCitation"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gMonth"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:StringEncodingType"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gMonthDay"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:EndianType"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:oracleSQLName"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:cName"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/type/BigEndian"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#website"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:Aspect"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:Unordered"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:SignedIntegerEncoding"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:ansiSQLName"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gYear"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#FunctionsGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#MappingGraph"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gYearMonth"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:Verifiable"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#0"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#2"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#DocumentationGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://voag.linkedmodel.org/voag/CC-SHAREALIKE_3PT0-US"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:fieldCode"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="sosa:ObservationCollection"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:EnumeratedQuantity"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dct:bibliographicCitation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:IEEE754_1985RealEncoding"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://schema.org/affiliation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CT_UNCOUNTABLE"/>
+        <DataProperty IRI="#usesTLS"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="bibo:doi"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:SymmetricRelation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:DerivedUnit"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="rdf:rest"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:DoublePrecisionEncoding"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://qudt.org/vocab/type/LittleEndian"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:hasVocabulary"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:PhysicalConstant"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://schema.org/name"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:SIGNED"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:Quantity"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ScriptGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:LittleEndian"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:ShortUnsignedIntegerEncoding"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rdfs:Resource"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="qudt:bits"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="qudt:length"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#DataGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:PartiallyOrdered"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:LongUnsignedIntegerEncoding"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gDay"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="rdf:language"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:exactMatch"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="rdf:type"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="owl:Ontology"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://voag.linkedmodel.org/schema/voag#QUDT-SchemaCatalogEntry"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="foaf:Person"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:UNSIGNED"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#TopQuadrant"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:SignednessType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:SinglePrecisionRealEncoding"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#isMetadataFor"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#LinkSetGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ControllersGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="mqv:UNSUBSCRIBE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#CollectionGraph"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="rdf:direction"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="xsd:pattern"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:ShortSignedIntegerEncoding"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:pythonName"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rdfs:Class"/>
+        <NamedIndividual abbreviatedIRI="ex:DTEC"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="foaf:Organization"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:EnumeratedQuantity"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="rdf:subject"/>
+        <AnnotationProperty abbreviatedIRI="foaf:mbox"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="rdf:object"/>
+        <Class abbreviatedIRI="sosa:ActuationCollection"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://schema.org/url"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:AngleUnit"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:UnsignedIntegerEncoding"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rdfs:Datatype"/>
+        <Class abbreviatedIRI="foaf:Person"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="sosa:System"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:Aspect"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://schema.org/alternateName"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty abbreviatedIRI="foaf:fundedBy"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:Verifiable"/>
+        <Class abbreviatedIRI="sosa:ObservationCollection"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="sosa:Property"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CharEncoding"/>
+        <AnnotationProperty abbreviatedIRI="dct:bibliographicCitation"/>
     </Declaration>
     <EquivalentClasses>
-        <Class IRI="Broker"/>
+        <Class IRI="#Broker"/>
         <Class abbreviatedIRI="mqv:Server"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="Client"/>
+        <Class IRI="#Client"/>
         <Class abbreviatedIRI="mqv:Client"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="ControlPacket"/>
+        <Class IRI="#ControlPacket"/>
         <Class abbreviatedIRI="mqv:ControlPacket"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="NetworkConnection"/>
+        <Class IRI="#NetworkConnection"/>
         <Class abbreviatedIRI="mqv:NetworkConnection"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="PublishPacket"/>
+        <Class IRI="#PublishPacket"/>
         <Class abbreviatedIRI="mqv:PUBLISH"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="SubscribePacket"/>
+        <Class IRI="#SubscribePacket"/>
         <Class abbreviatedIRI="mqv:SUBSCRIBE"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="Topic"/>
+        <Class IRI="#Topic"/>
         <Class abbreviatedIRI="mqv:TopicName"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="TopicFilter"/>
+        <Class IRI="#TopicFilter"/>
         <Class abbreviatedIRI="mqv:TopicFilter"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="UnsubscribePacket"/>
+        <Class IRI="#UnsubscribePacket"/>
         <Class abbreviatedIRI="mqv:UNSUBSCRIBE"/>
     </EquivalentClasses>
     <SubClassOf>
         <Class abbreviatedIRI="sosa:Actuation"/>
-        <Class IRI="TopicSubject"/>
+        <Class IRI="#TopicSubject"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="sosa:ActuationCollection"/>
-        <Class IRI="TopicSubject"/>
+        <Class IRI="#TopicSubject"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="sosa:FeatureOfInterest"/>
-        <Class IRI="TopicSubject"/>
+        <Class IRI="#TopicSubject"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="sosa:Observation"/>
-        <Class IRI="TopicSubject"/>
+        <Class IRI="#TopicSubject"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="sosa:ObservationCollection"/>
-        <Class IRI="TopicSubject"/>
+        <Class IRI="#TopicSubject"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="sosa:Property"/>
-        <Class IRI="TopicSubject"/>
+        <Class IRI="#TopicSubject"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Broker"/>
-        <Class IRI="NetworkParticipant"/>
+        <Class IRI="#Broker"/>
+        <Class IRI="#NetworkParticipant"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Client"/>
-        <Class IRI="NetworkParticipant"/>
+        <Class IRI="#Client"/>
+        <Class IRI="#NetworkParticipant"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="PublishFixedHeader"/>
-        <Class IRI="FixedHeader"/>
+        <Class IRI="#PublishFixedHeader"/>
+        <Class IRI="#FixedHeader"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="PublishPacket"/>
-        <Class IRI="ControlPacket"/>
+        <Class IRI="#PublishPacket"/>
+        <Class IRI="#ControlPacket"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="PublishPayload"/>
-        <Class IRI="Payload"/>
+        <Class IRI="#PublishPayload"/>
+        <Class IRI="#Payload"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="PublishVariableHeader"/>
-        <Class IRI="VariableHeader"/>
+        <Class IRI="#PublishVariableHeader"/>
+        <Class IRI="#VariableHeader"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="SubscribeFixedHeader"/>
-        <Class IRI="FixedHeader"/>
+        <Class IRI="#SubscribeFixedHeader"/>
+        <Class IRI="#FixedHeader"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="SubscribePacket"/>
-        <Class IRI="ControlPacket"/>
+        <Class IRI="#SubscribePacket"/>
+        <Class IRI="#ControlPacket"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="SubscribeVariableHeader"/>
-        <Class IRI="VariableHeader"/>
+        <Class IRI="#SubscribeVariableHeader"/>
+        <Class IRI="#VariableHeader"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="SubscriptionPayload"/>
-        <Class IRI="Payload"/>
+        <Class IRI="#SubscriptionPayload"/>
+        <Class IRI="#Payload"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="UnsubscribeFixedHeader"/>
-        <Class IRI="FixedHeader"/>
+        <Class IRI="#UnsubscribeFixedHeader"/>
+        <Class IRI="#FixedHeader"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="UnsubscribePacket"/>
-        <Class IRI="ControlPacket"/>
+        <Class IRI="#UnsubscribePacket"/>
+        <Class IRI="#ControlPacket"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="UnsubscribeVariableHeader"/>
-        <Class IRI="VariableHeader"/>
+        <Class IRI="#UnsubscribeVariableHeader"/>
+        <Class IRI="#VariableHeader"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="UnsubscriptionPayload"/>
-        <Class IRI="Payload"/>
+        <Class IRI="#UnsubscriptionPayload"/>
+        <Class IRI="#Payload"/>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="ControlPacket"/>
-        <Class IRI="FixedHeader"/>
-        <Class IRI="NetworkConnection"/>
-        <Class IRI="NetworkParticipant"/>
-        <Class IRI="Payload"/>
-        <Class IRI="SubscriptionEntry"/>
-        <Class IRI="Topic"/>
-        <Class IRI="TopicFilter"/>
-        <Class IRI="TopicSubject"/>
-        <Class IRI="VariableHeader"/>
+        <Class IRI="#ControlPacket"/>
+        <Class IRI="#FixedHeader"/>
+        <Class IRI="#NetworkConnection"/>
+        <Class IRI="#NetworkParticipant"/>
+        <Class IRI="#Payload"/>
+        <Class IRI="#SubscriptionEntry"/>
+        <Class IRI="#Topic"/>
+        <Class IRI="#TopicFilter"/>
+        <Class IRI="#TopicSubject"/>
+        <Class IRI="#VariableHeader"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="PublishFixedHeader"/>
-        <Class IRI="SubscribeFixedHeader"/>
-        <Class IRI="UnsubscribeFixedHeader"/>
+        <Class IRI="#PublishFixedHeader"/>
+        <Class IRI="#SubscribeFixedHeader"/>
+        <Class IRI="#UnsubscribeFixedHeader"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="PublishPacket"/>
-        <Class IRI="SubscribePacket"/>
-        <Class IRI="UnsubscribePacket"/>
+        <Class IRI="#PublishPacket"/>
+        <Class IRI="#SubscribePacket"/>
+        <Class IRI="#UnsubscribePacket"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="PublishPayload"/>
-        <Class IRI="SubscriptionPayload"/>
-        <Class IRI="UnsubscriptionPayload"/>
+        <Class IRI="#PublishPayload"/>
+        <Class IRI="#SubscriptionPayload"/>
+        <Class IRI="#UnsubscriptionPayload"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="PublishVariableHeader"/>
-        <Class IRI="SubscribeVariableHeader"/>
-        <Class IRI="UnsubscribeVariableHeader"/>
+        <Class IRI="#PublishVariableHeader"/>
+        <Class IRI="#SubscribeVariableHeader"/>
+        <Class IRI="#UnsubscribeVariableHeader"/>
     </DisjointClasses>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Organization"/>
@@ -911,915 +552,915 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Person"/>
-        <AnonymousIndividual nodeID="_:genid2147484037"/>
+        <AnonymousIndividual nodeID="_:genid2147484045"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Person"/>
-        <AnonymousIndividual nodeID="_:genid2147484038"/>
+        <AnonymousIndividual nodeID="_:genid2147484046"/>
     </ClassAssertion>
     <EquivalentObjectProperties>
-        <ObjectProperty IRI="hasPayload"/>
+        <ObjectProperty IRI="#hasPayload"/>
         <ObjectProperty abbreviatedIRI="mqv:hasPayload"/>
     </EquivalentObjectProperties>
     <EquivalentObjectProperties>
-        <ObjectProperty IRI="hasTopicFilter"/>
+        <ObjectProperty IRI="#hasTopicFilter"/>
         <ObjectProperty abbreviatedIRI="mqv:hasTopicFilters"/>
     </EquivalentObjectProperties>
     <EquivalentObjectProperties>
-        <ObjectProperty IRI="hasTopicName"/>
+        <ObjectProperty IRI="#hasTopicName"/>
         <ObjectProperty abbreviatedIRI="mqv:hasTopicName"/>
     </EquivalentObjectProperties>
     <EquivalentObjectProperties>
-        <ObjectProperty IRI="sendsControlPacket"/>
+        <ObjectProperty IRI="#sendsControlPacket"/>
         <ObjectProperty abbreviatedIRI="mqv:sendsControlPacket"/>
     </EquivalentObjectProperties>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasPublishFixedHeader"/>
-        <ObjectProperty IRI="hasFixedHeader"/>
+        <ObjectProperty IRI="#hasPublishFixedHeader"/>
+        <ObjectProperty IRI="#hasFixedHeader"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasPublishPayload"/>
-        <ObjectProperty IRI="hasPayload"/>
+        <ObjectProperty IRI="#hasPublishPayload"/>
+        <ObjectProperty IRI="#hasPayload"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasPublishVariableHeader"/>
-        <ObjectProperty IRI="hasVariableHeader"/>
+        <ObjectProperty IRI="#hasPublishVariableHeader"/>
+        <ObjectProperty IRI="#hasVariableHeader"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasSubscriptionFixedHeader"/>
-        <ObjectProperty IRI="hasFixedHeader"/>
+        <ObjectProperty IRI="#hasSubscriptionFixedHeader"/>
+        <ObjectProperty IRI="#hasFixedHeader"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasSubscriptionPayload"/>
-        <ObjectProperty IRI="hasPayload"/>
+        <ObjectProperty IRI="#hasSubscriptionPayload"/>
+        <ObjectProperty IRI="#hasPayload"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasSubscriptionVariableHeader"/>
-        <ObjectProperty IRI="hasVariableHeader"/>
+        <ObjectProperty IRI="#hasSubscriptionVariableHeader"/>
+        <ObjectProperty IRI="#hasVariableHeader"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasUnsubscriptionFixedHeader"/>
-        <ObjectProperty IRI="hasFixedHeader"/>
+        <ObjectProperty IRI="#hasUnsubscriptionFixedHeader"/>
+        <ObjectProperty IRI="#hasFixedHeader"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasUnsubscriptionPayload"/>
-        <ObjectProperty IRI="hasPayload"/>
+        <ObjectProperty IRI="#hasUnsubscriptionPayload"/>
+        <ObjectProperty IRI="#hasPayload"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasUnsubscriptionVariableHeader"/>
-        <ObjectProperty IRI="hasVariableHeader"/>
+        <ObjectProperty IRI="#hasUnsubscriptionVariableHeader"/>
+        <ObjectProperty IRI="#hasVariableHeader"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="hosts"/>
+        <ObjectProperty IRI="#hosts"/>
         <ObjectProperty abbreviatedIRI="sosa:hosts"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="isHostedBy"/>
+        <ObjectProperty IRI="#isHostedBy"/>
         <ObjectProperty abbreviatedIRI="sosa:isHostedBy"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="isPublishFixedHeaderOf"/>
-        <ObjectProperty IRI="isFixedHeaderOf"/>
+        <ObjectProperty IRI="#isPublishFixedHeaderOf"/>
+        <ObjectProperty IRI="#isFixedHeaderOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="isPublishPayloadOf"/>
-        <ObjectProperty IRI="isPayloadOf"/>
+        <ObjectProperty IRI="#isPublishPayloadOf"/>
+        <ObjectProperty IRI="#isPayloadOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="isPublishVariableHeaderOf"/>
-        <ObjectProperty IRI="isVariableHeaderOf"/>
+        <ObjectProperty IRI="#isPublishVariableHeaderOf"/>
+        <ObjectProperty IRI="#isVariableHeaderOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="isSubscriptionFixedHeaderOf"/>
-        <ObjectProperty IRI="isFixedHeaderOf"/>
+        <ObjectProperty IRI="#isSubscriptionFixedHeaderOf"/>
+        <ObjectProperty IRI="#isFixedHeaderOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="isSubscriptionPayloadOf"/>
-        <ObjectProperty IRI="isPayloadOf"/>
+        <ObjectProperty IRI="#isSubscriptionPayloadOf"/>
+        <ObjectProperty IRI="#isPayloadOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="isSubscriptionVariableHeaderOf"/>
-        <ObjectProperty IRI="isVariableHeaderOf"/>
+        <ObjectProperty IRI="#isSubscriptionVariableHeaderOf"/>
+        <ObjectProperty IRI="#isVariableHeaderOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="isUnsubscriptionFixedHeaderOf"/>
-        <ObjectProperty IRI="isFixedHeaderOf"/>
+        <ObjectProperty IRI="#isUnsubscriptionFixedHeaderOf"/>
+        <ObjectProperty IRI="#isFixedHeaderOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="isUnsubscriptionPayloadOf"/>
-        <ObjectProperty IRI="isPayloadOf"/>
+        <ObjectProperty IRI="#isUnsubscriptionPayloadOf"/>
+        <ObjectProperty IRI="#isPayloadOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="isUnsubscriptionVariableHeaderOf"/>
-        <ObjectProperty IRI="isVariableHeaderOf"/>
+        <ObjectProperty IRI="#isUnsubscriptionVariableHeaderOf"/>
+        <ObjectProperty IRI="#isVariableHeaderOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="publishesPacket"/>
-        <ObjectProperty IRI="sendsControlPacket"/>
+        <ObjectProperty IRI="#publishesPacket"/>
+        <ObjectProperty IRI="#sendsControlPacket"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="subscribesPacket"/>
-        <ObjectProperty IRI="sendsControlPacket"/>
+        <ObjectProperty IRI="#subscribesPacket"/>
+        <ObjectProperty IRI="#sendsControlPacket"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="unsubscribesPacket"/>
-        <ObjectProperty IRI="sendsControlPacket"/>
+        <ObjectProperty IRI="#unsubscribesPacket"/>
+        <ObjectProperty IRI="#sendsControlPacket"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasClient"/>
-        <ObjectProperty IRI="runsOnPlatform"/>
+        <ObjectProperty IRI="#hasClient"/>
+        <ObjectProperty IRI="#runsOnPlatform"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasConnectedClient"/>
-        <ObjectProperty IRI="isConnectedToBroker"/>
+        <ObjectProperty IRI="#hasConnectedClient"/>
+        <ObjectProperty IRI="#isConnectedToBroker"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasEncodedFields"/>
-        <ObjectProperty IRI="isEncodedInPayload"/>
+        <ObjectProperty IRI="#hasEncodedFields"/>
+        <ObjectProperty IRI="#isEncodedInPayload"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasFixedHeader"/>
-        <ObjectProperty IRI="isFixedHeaderOf"/>
+        <ObjectProperty IRI="#hasFixedHeader"/>
+        <ObjectProperty IRI="#isFixedHeaderOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasParticipant"/>
-        <ObjectProperty IRI="usesConnection"/>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <ObjectProperty IRI="#usesConnection"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasPayload"/>
-        <ObjectProperty IRI="isPayloadOf"/>
+        <ObjectProperty IRI="#hasPayload"/>
+        <ObjectProperty IRI="#isPayloadOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasPublishFixedHeader"/>
-        <ObjectProperty IRI="isPublishFixedHeaderOf"/>
+        <ObjectProperty IRI="#hasPublishFixedHeader"/>
+        <ObjectProperty IRI="#isPublishFixedHeaderOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasPublishPayload"/>
-        <ObjectProperty IRI="isPublishPayloadOf"/>
+        <ObjectProperty IRI="#hasPublishPayload"/>
+        <ObjectProperty IRI="#isPublishPayloadOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasPublishVariableHeader"/>
-        <ObjectProperty IRI="isPublishVariableHeaderOf"/>
+        <ObjectProperty IRI="#hasPublishVariableHeader"/>
+        <ObjectProperty IRI="#isPublishVariableHeaderOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasSubject"/>
-        <ObjectProperty IRI="isSubjectOf"/>
+        <ObjectProperty IRI="#hasSubject"/>
+        <ObjectProperty IRI="#isSubjectOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasSubscriptionFixedHeader"/>
-        <ObjectProperty IRI="isSubscriptionFixedHeaderOf"/>
+        <ObjectProperty IRI="#hasSubscriptionFixedHeader"/>
+        <ObjectProperty IRI="#isSubscriptionFixedHeaderOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasSubscriptionPayload"/>
-        <ObjectProperty IRI="isSubscriptionPayloadOf"/>
+        <ObjectProperty IRI="#hasSubscriptionPayload"/>
+        <ObjectProperty IRI="#isSubscriptionPayloadOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasSubscriptionVariableHeader"/>
-        <ObjectProperty IRI="isSubscriptionVariableHeaderOf"/>
+        <ObjectProperty IRI="#hasSubscriptionVariableHeader"/>
+        <ObjectProperty IRI="#isSubscriptionVariableHeaderOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasSubscriptions"/>
-        <ObjectProperty IRI="isSubscriptionOf"/>
+        <ObjectProperty IRI="#hasSubscriptions"/>
+        <ObjectProperty IRI="#isSubscriptionOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasTopicFilter"/>
-        <ObjectProperty IRI="isTopicFilterOf"/>
+        <ObjectProperty IRI="#hasTopicFilter"/>
+        <ObjectProperty IRI="#isTopicFilterOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasTopicName"/>
-        <ObjectProperty IRI="isTopicNameOf"/>
+        <ObjectProperty IRI="#hasTopicName"/>
+        <ObjectProperty IRI="#isTopicNameOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasUnsubscriptionFixedHeader"/>
-        <ObjectProperty IRI="isUnsubscriptionFixedHeaderOf"/>
+        <ObjectProperty IRI="#hasUnsubscriptionFixedHeader"/>
+        <ObjectProperty IRI="#isUnsubscriptionFixedHeaderOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasUnsubscriptionPayload"/>
-        <ObjectProperty IRI="isUnsubscriptionPayloadOf"/>
+        <ObjectProperty IRI="#hasUnsubscriptionPayload"/>
+        <ObjectProperty IRI="#isUnsubscriptionPayloadOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasUnsubscriptionVariableHeader"/>
-        <ObjectProperty IRI="isUnsubscriptionVariableHeaderOf"/>
+        <ObjectProperty IRI="#hasUnsubscriptionVariableHeader"/>
+        <ObjectProperty IRI="#isUnsubscriptionVariableHeaderOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasVariableHeader"/>
-        <ObjectProperty IRI="isVariableHeaderOf"/>
+        <ObjectProperty IRI="#hasVariableHeader"/>
+        <ObjectProperty IRI="#isVariableHeaderOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hosts"/>
-        <ObjectProperty IRI="isHostedBy"/>
+        <ObjectProperty IRI="#hosts"/>
+        <ObjectProperty IRI="#isHostedBy"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="isMatchedByFilter"/>
-        <ObjectProperty IRI="matchesTopic"/>
+        <ObjectProperty IRI="#isMatchedByFilter"/>
+        <ObjectProperty IRI="#matchesTopic"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="isSentBy"/>
-        <ObjectProperty IRI="sendsControlPacket"/>
+        <ObjectProperty IRI="#isSentBy"/>
+        <ObjectProperty IRI="#sendsControlPacket"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="hasFixedHeader"/>
+        <ObjectProperty IRI="#hasFixedHeader"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="hasPayload"/>
+        <ObjectProperty IRI="#hasPayload"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="hasPayloadSize"/>
+        <ObjectProperty IRI="#hasPayloadSize"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="hasPublishFixedHeader"/>
+        <ObjectProperty IRI="#hasPublishFixedHeader"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="hasPublishPayload"/>
+        <ObjectProperty IRI="#hasPublishPayload"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="hasPublishVariableHeader"/>
+        <ObjectProperty IRI="#hasPublishVariableHeader"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="hasSubscriptionFixedHeader"/>
+        <ObjectProperty IRI="#hasSubscriptionFixedHeader"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="hasSubscriptionPayload"/>
+        <ObjectProperty IRI="#hasSubscriptionPayload"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="hasSubscriptionVariableHeader"/>
+        <ObjectProperty IRI="#hasSubscriptionVariableHeader"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="hasTopicName"/>
+        <ObjectProperty IRI="#hasTopicName"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="hasUnsubscriptionFixedHeader"/>
+        <ObjectProperty IRI="#hasUnsubscriptionFixedHeader"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="hasUnsubscriptionPayload"/>
+        <ObjectProperty IRI="#hasUnsubscriptionPayload"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="hasUnsubscriptionVariableHeader"/>
+        <ObjectProperty IRI="#hasUnsubscriptionVariableHeader"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="hasVariableHeader"/>
+        <ObjectProperty IRI="#hasVariableHeader"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="isFixedHeaderOf"/>
+        <ObjectProperty IRI="#isFixedHeaderOf"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="isPayloadOf"/>
+        <ObjectProperty IRI="#isPayloadOf"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="isPublishFixedHeaderOf"/>
+        <ObjectProperty IRI="#isPublishFixedHeaderOf"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="isPublishPayloadOf"/>
+        <ObjectProperty IRI="#isPublishPayloadOf"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="isPublishVariableHeaderOf"/>
+        <ObjectProperty IRI="#isPublishVariableHeaderOf"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="isSubscriptionFixedHeaderOf"/>
+        <ObjectProperty IRI="#isSubscriptionFixedHeaderOf"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="isSubscriptionPayloadOf"/>
+        <ObjectProperty IRI="#isSubscriptionPayloadOf"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="isSubscriptionVariableHeaderOf"/>
+        <ObjectProperty IRI="#isSubscriptionVariableHeaderOf"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="isUnsubscriptionFixedHeaderOf"/>
+        <ObjectProperty IRI="#isUnsubscriptionFixedHeaderOf"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="isUnsubscriptionPayloadOf"/>
+        <ObjectProperty IRI="#isUnsubscriptionPayloadOf"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="isUnsubscriptionVariableHeaderOf"/>
+        <ObjectProperty IRI="#isUnsubscriptionVariableHeaderOf"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="isVariableHeaderOf"/>
+        <ObjectProperty IRI="#isVariableHeaderOf"/>
     </FunctionalObjectProperty>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="forwardsPublishPacket"/>
-        <Class IRI="Broker"/>
+        <ObjectProperty IRI="#forwardsPublishPacket"/>
+        <Class IRI="#Broker"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasClient"/>
+        <ObjectProperty IRI="#hasClient"/>
         <Class abbreviatedIRI="sosa:Platform"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasConnectedClient"/>
-        <Class IRI="Broker"/>
+        <ObjectProperty IRI="#hasConnectedClient"/>
+        <Class IRI="#Broker"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasEncodedFields"/>
-        <Class IRI="PublishPayload"/>
+        <ObjectProperty IRI="#hasEncodedFields"/>
+        <Class IRI="#PublishPayload"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasFixedHeader"/>
-        <Class IRI="ControlPacket"/>
+        <ObjectProperty IRI="#hasFixedHeader"/>
+        <Class IRI="#ControlPacket"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasParticipant"/>
-        <Class IRI="NetworkConnection"/>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <Class IRI="#NetworkConnection"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasPayload"/>
-        <Class IRI="ControlPacket"/>
+        <ObjectProperty IRI="#hasPayload"/>
+        <Class IRI="#ControlPacket"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasPayloadSize"/>
-        <Class IRI="Payload"/>
+        <ObjectProperty IRI="#hasPayloadSize"/>
+        <Class IRI="#Payload"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasPublishFixedHeader"/>
-        <Class IRI="PublishPacket"/>
+        <ObjectProperty IRI="#hasPublishFixedHeader"/>
+        <Class IRI="#PublishPacket"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasPublishPayload"/>
-        <Class IRI="PublishPacket"/>
+        <ObjectProperty IRI="#hasPublishPayload"/>
+        <Class IRI="#PublishPacket"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasPublishVariableHeader"/>
-        <Class IRI="PublishPacket"/>
+        <ObjectProperty IRI="#hasPublishVariableHeader"/>
+        <Class IRI="#PublishPacket"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasSubject"/>
-        <Class IRI="Topic"/>
+        <ObjectProperty IRI="#hasSubject"/>
+        <Class IRI="#Topic"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasSubscriptionFixedHeader"/>
-        <Class IRI="SubscribePacket"/>
+        <ObjectProperty IRI="#hasSubscriptionFixedHeader"/>
+        <Class IRI="#SubscribePacket"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasSubscriptionPayload"/>
-        <Class IRI="SubscribePacket"/>
+        <ObjectProperty IRI="#hasSubscriptionPayload"/>
+        <Class IRI="#SubscribePacket"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasSubscriptionVariableHeader"/>
-        <Class IRI="SubscribePacket"/>
+        <ObjectProperty IRI="#hasSubscriptionVariableHeader"/>
+        <Class IRI="#SubscribePacket"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasSubscriptions"/>
-        <Class IRI="SubscriptionPayload"/>
+        <ObjectProperty IRI="#hasSubscriptions"/>
+        <Class IRI="#SubscriptionPayload"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasTopicFilter"/>
+        <ObjectProperty IRI="#hasTopicFilter"/>
         <ObjectUnionOf>
-            <Class IRI="SubscriptionEntry"/>
-            <Class IRI="UnsubscriptionPayload"/>
+            <Class IRI="#SubscriptionEntry"/>
+            <Class IRI="#UnsubscriptionPayload"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasTopicName"/>
-        <Class IRI="PublishVariableHeader"/>
+        <ObjectProperty IRI="#hasTopicName"/>
+        <Class IRI="#PublishVariableHeader"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasUnsubscriptionFixedHeader"/>
-        <Class IRI="UnsubscribePacket"/>
+        <ObjectProperty IRI="#hasUnsubscriptionFixedHeader"/>
+        <Class IRI="#UnsubscribePacket"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasUnsubscriptionPayload"/>
-        <Class IRI="UnsubscribePacket"/>
+        <ObjectProperty IRI="#hasUnsubscriptionPayload"/>
+        <Class IRI="#UnsubscribePacket"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasUnsubscriptionVariableHeader"/>
-        <Class IRI="UnsubscribePacket"/>
+        <ObjectProperty IRI="#hasUnsubscriptionVariableHeader"/>
+        <Class IRI="#UnsubscribePacket"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasVariableHeader"/>
-        <Class IRI="ControlPacket"/>
+        <ObjectProperty IRI="#hasVariableHeader"/>
+        <Class IRI="#ControlPacket"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hosts"/>
-        <Class IRI="Client"/>
+        <ObjectProperty IRI="#hosts"/>
+        <Class IRI="#Client"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isAcceptedBy"/>
-        <Class IRI="NetworkConnection"/>
+        <ObjectProperty IRI="#isAcceptedBy"/>
+        <Class IRI="#NetworkConnection"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isConnectedToBroker"/>
-        <Class IRI="Client"/>
+        <ObjectProperty IRI="#isConnectedToBroker"/>
+        <Class IRI="#Client"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isEncodedInPayload"/>
+        <ObjectProperty IRI="#isEncodedInPayload"/>
         <Class abbreviatedIRI="rdf:List"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isFixedHeaderOf"/>
-        <Class IRI="FixedHeader"/>
+        <ObjectProperty IRI="#isFixedHeaderOf"/>
+        <Class IRI="#FixedHeader"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isHostedBy"/>
+        <ObjectProperty IRI="#isHostedBy"/>
         <Class abbreviatedIRI="sosa:System"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isInitiatedBy"/>
-        <Class IRI="NetworkConnection"/>
+        <ObjectProperty IRI="#isInitiatedBy"/>
+        <Class IRI="#NetworkConnection"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isMatchedByFilter"/>
-        <Class IRI="Topic"/>
+        <ObjectProperty IRI="#isMatchedByFilter"/>
+        <Class IRI="#Topic"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isPayloadOf"/>
-        <Class IRI="Payload"/>
+        <ObjectProperty IRI="#isPayloadOf"/>
+        <Class IRI="#Payload"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isPublishFixedHeaderOf"/>
-        <Class IRI="PublishFixedHeader"/>
+        <ObjectProperty IRI="#isPublishFixedHeaderOf"/>
+        <Class IRI="#PublishFixedHeader"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isPublishPayloadOf"/>
-        <Class IRI="PublishPayload"/>
+        <ObjectProperty IRI="#isPublishPayloadOf"/>
+        <Class IRI="#PublishPayload"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isPublishVariableHeaderOf"/>
-        <Class IRI="PublishVariableHeader"/>
+        <ObjectProperty IRI="#isPublishVariableHeaderOf"/>
+        <Class IRI="#PublishVariableHeader"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isSentBy"/>
-        <Class IRI="ControlPacket"/>
+        <ObjectProperty IRI="#isSentBy"/>
+        <Class IRI="#ControlPacket"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isSubjectOf"/>
-        <Class IRI="TopicSubject"/>
+        <ObjectProperty IRI="#isSubjectOf"/>
+        <Class IRI="#TopicSubject"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isSubscriptionFixedHeaderOf"/>
-        <Class IRI="SubscribeFixedHeader"/>
+        <ObjectProperty IRI="#isSubscriptionFixedHeaderOf"/>
+        <Class IRI="#SubscribeFixedHeader"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isSubscriptionOf"/>
-        <Class IRI="SubscriptionEntry"/>
+        <ObjectProperty IRI="#isSubscriptionOf"/>
+        <Class IRI="#SubscriptionEntry"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isSubscriptionPayloadOf"/>
-        <Class IRI="SubscriptionPayload"/>
+        <ObjectProperty IRI="#isSubscriptionPayloadOf"/>
+        <Class IRI="#SubscriptionPayload"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isSubscriptionVariableHeaderOf"/>
-        <Class IRI="SubscribeVariableHeader"/>
+        <ObjectProperty IRI="#isSubscriptionVariableHeaderOf"/>
+        <Class IRI="#SubscribeVariableHeader"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isTopicFilterOf"/>
-        <Class IRI="TopicFilter"/>
+        <ObjectProperty IRI="#isTopicFilterOf"/>
+        <Class IRI="#TopicFilter"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isTopicNameOf"/>
-        <Class IRI="Topic"/>
+        <ObjectProperty IRI="#isTopicNameOf"/>
+        <Class IRI="#Topic"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isUnsubscriptionFixedHeaderOf"/>
-        <Class IRI="UnsubscribeFixedHeader"/>
+        <ObjectProperty IRI="#isUnsubscriptionFixedHeaderOf"/>
+        <Class IRI="#UnsubscribeFixedHeader"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isUnsubscriptionPayloadOf"/>
-        <Class IRI="UnsubscriptionPayload"/>
+        <ObjectProperty IRI="#isUnsubscriptionPayloadOf"/>
+        <Class IRI="#UnsubscriptionPayload"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isUnsubscriptionVariableHeaderOf"/>
-        <Class IRI="UnsubscribeVariableHeader"/>
+        <ObjectProperty IRI="#isUnsubscriptionVariableHeaderOf"/>
+        <Class IRI="#UnsubscribeVariableHeader"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="isVariableHeaderOf"/>
-        <Class IRI="VariableHeader"/>
+        <ObjectProperty IRI="#isVariableHeaderOf"/>
+        <Class IRI="#VariableHeader"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="listensToTopic"/>
+        <ObjectProperty IRI="#listensToTopic"/>
         <Class abbreviatedIRI="sosa:Actuator"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="matchesTopic"/>
-        <Class IRI="TopicFilter"/>
+        <ObjectProperty IRI="#matchesTopic"/>
+        <Class IRI="#TopicFilter"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="observesTopic"/>
+        <ObjectProperty IRI="#observesTopic"/>
         <Class abbreviatedIRI="sosa:Sensor"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="payloadEncodesActuation"/>
-        <Class IRI="PublishPayload"/>
+        <ObjectProperty IRI="#payloadEncodesActuation"/>
+        <Class IRI="#PublishPayload"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="payloadEncodesActuationCollection"/>
-        <Class IRI="PublishPayload"/>
+        <ObjectProperty IRI="#payloadEncodesActuationCollection"/>
+        <Class IRI="#PublishPayload"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="payloadEncodesObservation"/>
-        <Class IRI="PublishPayload"/>
+        <ObjectProperty IRI="#payloadEncodesObservation"/>
+        <Class IRI="#PublishPayload"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="payloadEncodesObservationCollection"/>
-        <Class IRI="PublishPayload"/>
+        <ObjectProperty IRI="#payloadEncodesObservationCollection"/>
+        <Class IRI="#PublishPayload"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="publishesPacket"/>
-        <Class IRI="Client"/>
+        <ObjectProperty IRI="#publishesPacket"/>
+        <Class IRI="#Client"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="receivesSubscribePacket"/>
-        <Class IRI="Broker"/>
+        <ObjectProperty IRI="#receivesSubscribePacket"/>
+        <Class IRI="#Broker"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="receivesUnsubscribePacket"/>
-        <Class IRI="Broker"/>
+        <ObjectProperty IRI="#receivesUnsubscribePacket"/>
+        <Class IRI="#Broker"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="runsOnPlatform"/>
-        <Class IRI="Client"/>
+        <ObjectProperty IRI="#runsOnPlatform"/>
+        <Class IRI="#Client"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="sendsControlPacket"/>
-        <Class IRI="Client"/>
+        <ObjectProperty IRI="#sendsControlPacket"/>
+        <Class IRI="#Client"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="subscribesPacket"/>
-        <Class IRI="Client"/>
+        <ObjectProperty IRI="#subscribesPacket"/>
+        <Class IRI="#Client"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="unsubscribesPacket"/>
-        <Class IRI="Client"/>
+        <ObjectProperty IRI="#unsubscribesPacket"/>
+        <Class IRI="#Client"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="usesConnection"/>
-        <Class IRI="NetworkParticipant"/>
+        <ObjectProperty IRI="#usesConnection"/>
+        <Class IRI="#NetworkParticipant"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="forwardsPublishPacket"/>
-        <Class IRI="PublishPacket"/>
+        <ObjectProperty IRI="#forwardsPublishPacket"/>
+        <Class IRI="#PublishPacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasClient"/>
-        <Class IRI="Client"/>
+        <ObjectProperty IRI="#hasClient"/>
+        <Class IRI="#Client"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasConnectedClient"/>
-        <Class IRI="Client"/>
+        <ObjectProperty IRI="#hasConnectedClient"/>
+        <Class IRI="#Client"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasEncodedFields"/>
+        <ObjectProperty IRI="#hasEncodedFields"/>
         <Class abbreviatedIRI="rdf:List"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasFixedHeader"/>
-        <Class IRI="FixedHeader"/>
+        <ObjectProperty IRI="#hasFixedHeader"/>
+        <Class IRI="#FixedHeader"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasParticipant"/>
-        <Class IRI="NetworkParticipant"/>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <Class IRI="#NetworkParticipant"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasPayload"/>
-        <Class IRI="Payload"/>
+        <ObjectProperty IRI="#hasPayload"/>
+        <Class IRI="#Payload"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasPayloadSize"/>
+        <ObjectProperty IRI="#hasPayloadSize"/>
         <Class abbreviatedIRI="qudt:QuantityValue"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasPublishFixedHeader"/>
-        <Class IRI="PublishFixedHeader"/>
+        <ObjectProperty IRI="#hasPublishFixedHeader"/>
+        <Class IRI="#PublishFixedHeader"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasPublishPayload"/>
-        <Class IRI="PublishPayload"/>
+        <ObjectProperty IRI="#hasPublishPayload"/>
+        <Class IRI="#PublishPayload"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasPublishVariableHeader"/>
-        <Class IRI="PublishVariableHeader"/>
+        <ObjectProperty IRI="#hasPublishVariableHeader"/>
+        <Class IRI="#PublishVariableHeader"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasSubject"/>
-        <Class IRI="TopicSubject"/>
+        <ObjectProperty IRI="#hasSubject"/>
+        <Class IRI="#TopicSubject"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasSubscriptionFixedHeader"/>
-        <Class IRI="SubscribeFixedHeader"/>
+        <ObjectProperty IRI="#hasSubscriptionFixedHeader"/>
+        <Class IRI="#SubscribeFixedHeader"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasSubscriptionPayload"/>
-        <Class IRI="SubscriptionPayload"/>
+        <ObjectProperty IRI="#hasSubscriptionPayload"/>
+        <Class IRI="#SubscriptionPayload"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasSubscriptionVariableHeader"/>
-        <Class IRI="SubscribeVariableHeader"/>
+        <ObjectProperty IRI="#hasSubscriptionVariableHeader"/>
+        <Class IRI="#SubscribeVariableHeader"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasSubscriptions"/>
-        <Class IRI="SubscriptionEntry"/>
+        <ObjectProperty IRI="#hasSubscriptions"/>
+        <Class IRI="#SubscriptionEntry"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasTopicFilter"/>
-        <Class IRI="TopicFilter"/>
+        <ObjectProperty IRI="#hasTopicFilter"/>
+        <Class IRI="#TopicFilter"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasTopicName"/>
-        <Class IRI="Topic"/>
+        <ObjectProperty IRI="#hasTopicName"/>
+        <Class IRI="#Topic"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasUnsubscriptionFixedHeader"/>
-        <Class IRI="UnsubscribeFixedHeader"/>
+        <ObjectProperty IRI="#hasUnsubscriptionFixedHeader"/>
+        <Class IRI="#UnsubscribeFixedHeader"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasUnsubscriptionPayload"/>
-        <Class IRI="UnsubscriptionPayload"/>
+        <ObjectProperty IRI="#hasUnsubscriptionPayload"/>
+        <Class IRI="#UnsubscriptionPayload"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasUnsubscriptionVariableHeader"/>
-        <Class IRI="UnsubscribeVariableHeader"/>
+        <ObjectProperty IRI="#hasUnsubscriptionVariableHeader"/>
+        <Class IRI="#UnsubscribeVariableHeader"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasVariableHeader"/>
-        <Class IRI="VariableHeader"/>
+        <ObjectProperty IRI="#hasVariableHeader"/>
+        <Class IRI="#VariableHeader"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hosts"/>
+        <ObjectProperty IRI="#hosts"/>
         <Class abbreviatedIRI="sosa:System"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isAcceptedBy"/>
-        <Class IRI="Broker"/>
+        <ObjectProperty IRI="#isAcceptedBy"/>
+        <Class IRI="#Broker"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isConnectedToBroker"/>
-        <Class IRI="Broker"/>
+        <ObjectProperty IRI="#isConnectedToBroker"/>
+        <Class IRI="#Broker"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isEncodedInPayload"/>
-        <Class IRI="PublishPayload"/>
+        <ObjectProperty IRI="#isEncodedInPayload"/>
+        <Class IRI="#PublishPayload"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isFixedHeaderOf"/>
-        <Class IRI="ControlPacket"/>
+        <ObjectProperty IRI="#isFixedHeaderOf"/>
+        <Class IRI="#ControlPacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isHostedBy"/>
-        <Class IRI="Client"/>
+        <ObjectProperty IRI="#isHostedBy"/>
+        <Class IRI="#Client"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isInitiatedBy"/>
-        <Class IRI="Client"/>
+        <ObjectProperty IRI="#isInitiatedBy"/>
+        <Class IRI="#Client"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isMatchedByFilter"/>
-        <Class IRI="TopicFilter"/>
+        <ObjectProperty IRI="#isMatchedByFilter"/>
+        <Class IRI="#TopicFilter"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isPayloadOf"/>
-        <Class IRI="ControlPacket"/>
+        <ObjectProperty IRI="#isPayloadOf"/>
+        <Class IRI="#ControlPacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isPublishFixedHeaderOf"/>
-        <Class IRI="PublishPacket"/>
+        <ObjectProperty IRI="#isPublishFixedHeaderOf"/>
+        <Class IRI="#PublishPacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isPublishPayloadOf"/>
-        <Class IRI="PublishPacket"/>
+        <ObjectProperty IRI="#isPublishPayloadOf"/>
+        <Class IRI="#PublishPacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isPublishVariableHeaderOf"/>
-        <Class IRI="PublishPacket"/>
+        <ObjectProperty IRI="#isPublishVariableHeaderOf"/>
+        <Class IRI="#PublishPacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isSentBy"/>
-        <Class IRI="Client"/>
+        <ObjectProperty IRI="#isSentBy"/>
+        <Class IRI="#Client"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isSubjectOf"/>
-        <Class IRI="Topic"/>
+        <ObjectProperty IRI="#isSubjectOf"/>
+        <Class IRI="#Topic"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isSubscriptionFixedHeaderOf"/>
-        <Class IRI="SubscribePacket"/>
+        <ObjectProperty IRI="#isSubscriptionFixedHeaderOf"/>
+        <Class IRI="#SubscribePacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isSubscriptionOf"/>
-        <Class IRI="SubscriptionPayload"/>
+        <ObjectProperty IRI="#isSubscriptionOf"/>
+        <Class IRI="#SubscriptionPayload"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isSubscriptionPayloadOf"/>
-        <Class IRI="SubscribePacket"/>
+        <ObjectProperty IRI="#isSubscriptionPayloadOf"/>
+        <Class IRI="#SubscribePacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isSubscriptionVariableHeaderOf"/>
-        <Class IRI="SubscribePacket"/>
+        <ObjectProperty IRI="#isSubscriptionVariableHeaderOf"/>
+        <Class IRI="#SubscribePacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isTopicFilterOf"/>
+        <ObjectProperty IRI="#isTopicFilterOf"/>
         <ObjectUnionOf>
-            <Class IRI="SubscriptionEntry"/>
-            <Class IRI="UnsubscriptionPayload"/>
+            <Class IRI="#SubscriptionEntry"/>
+            <Class IRI="#UnsubscriptionPayload"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isTopicNameOf"/>
-        <Class IRI="PublishVariableHeader"/>
+        <ObjectProperty IRI="#isTopicNameOf"/>
+        <Class IRI="#PublishVariableHeader"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isUnsubscriptionFixedHeaderOf"/>
-        <Class IRI="UnsubscribePacket"/>
+        <ObjectProperty IRI="#isUnsubscriptionFixedHeaderOf"/>
+        <Class IRI="#UnsubscribePacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isUnsubscriptionPayloadOf"/>
-        <Class IRI="UnsubscribePacket"/>
+        <ObjectProperty IRI="#isUnsubscriptionPayloadOf"/>
+        <Class IRI="#UnsubscribePacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isUnsubscriptionVariableHeaderOf"/>
-        <Class IRI="UnsubscribePacket"/>
+        <ObjectProperty IRI="#isUnsubscriptionVariableHeaderOf"/>
+        <Class IRI="#UnsubscribePacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isVariableHeaderOf"/>
-        <Class IRI="ControlPacket"/>
+        <ObjectProperty IRI="#isVariableHeaderOf"/>
+        <Class IRI="#ControlPacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="listensToTopic"/>
-        <Class IRI="Topic"/>
+        <ObjectProperty IRI="#listensToTopic"/>
+        <Class IRI="#Topic"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="matchesTopic"/>
-        <Class IRI="Topic"/>
+        <ObjectProperty IRI="#matchesTopic"/>
+        <Class IRI="#Topic"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="observesTopic"/>
-        <Class IRI="Topic"/>
+        <ObjectProperty IRI="#observesTopic"/>
+        <Class IRI="#Topic"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="payloadEncodesActuation"/>
+        <ObjectProperty IRI="#payloadEncodesActuation"/>
         <Class abbreviatedIRI="sosa:Actuation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="payloadEncodesActuationCollection"/>
+        <ObjectProperty IRI="#payloadEncodesActuationCollection"/>
         <Class abbreviatedIRI="sosa:ActuationCollection"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="payloadEncodesObservation"/>
+        <ObjectProperty IRI="#payloadEncodesObservation"/>
         <Class abbreviatedIRI="sosa:Observation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="payloadEncodesObservationCollection"/>
+        <ObjectProperty IRI="#payloadEncodesObservationCollection"/>
         <Class abbreviatedIRI="sosa:ObservationCollection"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="publishesPacket"/>
-        <Class IRI="PublishPacket"/>
+        <ObjectProperty IRI="#publishesPacket"/>
+        <Class IRI="#PublishPacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="receivesSubscribePacket"/>
-        <Class IRI="SubscribePacket"/>
+        <ObjectProperty IRI="#receivesSubscribePacket"/>
+        <Class IRI="#SubscribePacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="receivesUnsubscribePacket"/>
-        <Class IRI="UnsubscribePacket"/>
+        <ObjectProperty IRI="#receivesUnsubscribePacket"/>
+        <Class IRI="#UnsubscribePacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="runsOnPlatform"/>
+        <ObjectProperty IRI="#runsOnPlatform"/>
         <Class abbreviatedIRI="sosa:Platform"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="sendsControlPacket"/>
-        <Class IRI="ControlPacket"/>
+        <ObjectProperty IRI="#sendsControlPacket"/>
+        <Class IRI="#ControlPacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="subscribesPacket"/>
-        <Class IRI="SubscribePacket"/>
+        <ObjectProperty IRI="#subscribesPacket"/>
+        <Class IRI="#SubscribePacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="unsubscribesPacket"/>
-        <Class IRI="UnsubscribePacket"/>
+        <ObjectProperty IRI="#unsubscribesPacket"/>
+        <Class IRI="#UnsubscribePacket"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="usesConnection"/>
-        <Class IRI="NetworkConnection"/>
+        <ObjectProperty IRI="#usesConnection"/>
+        <Class IRI="#NetworkConnection"/>
     </ObjectPropertyRange>
     <EquivalentDataProperties>
-        <DataProperty IRI="isDUPFlag"/>
+        <DataProperty IRI="#isDUPFlag"/>
         <DataProperty abbreviatedIRI="mqv:hasDUPFlag"/>
     </EquivalentDataProperties>
     <EquivalentDataProperties>
-        <DataProperty IRI="isRetainedFlag"/>
+        <DataProperty IRI="#isRetainedFlag"/>
         <DataProperty abbreviatedIRI="mqv:hasRetainFlag"/>
     </EquivalentDataProperties>
     <FunctionalDataProperty>
-        <DataProperty IRI="hasClientID"/>
+        <DataProperty IRI="#hasClientID"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="hasHost"/>
+        <DataProperty IRI="#hasHost"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="hasPacketIdentifier"/>
+        <DataProperty IRI="#hasPacketIdentifier"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="hasPayloadContent"/>
+        <DataProperty IRI="#hasPayloadContent"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="hasPayloadContentDelimiter"/>
+        <DataProperty IRI="#hasPayloadContentDelimiter"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="hasPayloadContentType"/>
+        <DataProperty IRI="#hasPayloadContentType"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="hasPayloadEncoding"/>
+        <DataProperty IRI="#hasPayloadEncoding"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="hasPortNumber"/>
+        <DataProperty IRI="#hasPortNumber"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="hasQosLevel"/>
+        <DataProperty IRI="#hasQosLevel"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="usesTLS"/>
+        <DataProperty IRI="#usesTLS"/>
     </FunctionalDataProperty>
     <DataPropertyDomain>
-        <DataProperty IRI="hasClientID"/>
-        <Class IRI="Client"/>
+        <DataProperty IRI="#hasClientID"/>
+        <Class IRI="#Client"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="hasFilterPattern"/>
-        <Class IRI="TopicFilter"/>
+        <DataProperty IRI="#hasFilterPattern"/>
+        <Class IRI="#TopicFilter"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="hasHost"/>
-        <Class IRI="Broker"/>
+        <DataProperty IRI="#hasHost"/>
+        <Class IRI="#Broker"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="hasPacketIdentifier"/>
-        <Class IRI="VariableHeader"/>
+        <DataProperty IRI="#hasPacketIdentifier"/>
+        <Class IRI="#VariableHeader"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="hasPayloadContent"/>
-        <Class IRI="PublishPayload"/>
+        <DataProperty IRI="#hasPayloadContent"/>
+        <Class IRI="#PublishPayload"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="hasPayloadContentDelimiter"/>
-        <Class IRI="PublishPayload"/>
+        <DataProperty IRI="#hasPayloadContentDelimiter"/>
+        <Class IRI="#PublishPayload"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="hasPayloadContentType"/>
-        <Class IRI="PublishPayload"/>
+        <DataProperty IRI="#hasPayloadContentType"/>
+        <Class IRI="#PublishPayload"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="hasPayloadEncoding"/>
-        <Class IRI="PublishPayload"/>
+        <DataProperty IRI="#hasPayloadEncoding"/>
+        <Class IRI="#PublishPayload"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="hasPortNumber"/>
-        <Class IRI="Broker"/>
+        <DataProperty IRI="#hasPortNumber"/>
+        <Class IRI="#Broker"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="hasQosLevel"/>
+        <DataProperty IRI="#hasQosLevel"/>
         <ObjectUnionOf>
-            <Class IRI="PublishFixedHeader"/>
-            <Class IRI="SubscriptionEntry"/>
+            <Class IRI="#PublishFixedHeader"/>
+            <Class IRI="#SubscriptionEntry"/>
         </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="isDUPFlag"/>
-        <Class IRI="PublishFixedHeader"/>
+        <DataProperty IRI="#isDUPFlag"/>
+        <Class IRI="#PublishFixedHeader"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="isRetainedFlag"/>
-        <Class IRI="PublishFixedHeader"/>
+        <DataProperty IRI="#isRetainedFlag"/>
+        <Class IRI="#PublishFixedHeader"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="usesTLS"/>
-        <Class IRI="NetworkConnection"/>
+        <DataProperty IRI="#usesTLS"/>
+        <Class IRI="#NetworkConnection"/>
     </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="hasClientID"/>
+        <DataProperty IRI="#hasClientID"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="hasFilterPattern"/>
+        <DataProperty IRI="#hasFilterPattern"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="hasHost"/>
+        <DataProperty IRI="#hasHost"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="hasPacketIdentifier"/>
+        <DataProperty IRI="#hasPacketIdentifier"/>
         <Datatype abbreviatedIRI="xsd:unsignedShort"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="hasPayloadContent"/>
+        <DataProperty IRI="#hasPayloadContent"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="hasPayloadContentDelimiter"/>
+        <DataProperty IRI="#hasPayloadContentDelimiter"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="hasPayloadContentType"/>
+        <DataProperty IRI="#hasPayloadContentType"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="hasPayloadEncoding"/>
+        <DataProperty IRI="#hasPayloadEncoding"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="hasPortNumber"/>
+        <DataProperty IRI="#hasPortNumber"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="hasQosLevel"/>
+        <DataProperty IRI="#hasQosLevel"/>
         <DatatypeRestriction>
             <Datatype abbreviatedIRI="xsd:integer"/>
             <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
@@ -1831,15 +1472,15 @@
         </DatatypeRestriction>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="isDUPFlag"/>
+        <DataProperty IRI="#isDUPFlag"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="isRetainedFlag"/>
+        <DataProperty IRI="#isRetainedFlag"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="usesTLS"/>
+        <DataProperty IRI="#usesTLS"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <AnnotationAssertion>
@@ -1859,1017 +1500,1017 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Broker</IRI>
+        <IRI>#Broker</IRI>
         <Literal xml:lang="en">An MQTT Broker that accepts client connections, manages subscriptions, and forwards published messages.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Broker</IRI>
+        <IRI>#Broker</IRI>
         <Literal xml:lang="en">MQTT Broker</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Client</IRI>
+        <IRI>#Client</IRI>
         <Literal xml:lang="en">An MQTT Client that connects to an MQTT Broker and publishes or subscribes to MQTT Topics; may host SOSA systems.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Client</IRI>
+        <IRI>#Client</IRI>
         <Literal xml:lang="en">MQTT Client</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>ControlPacket</IRI>
+        <IRI>#ControlPacket</IRI>
         <Literal xml:lang="en">An MQTT Control Packet such as PUBLISH, SUBSCRIBE, or UNSUBSCRIBE.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ControlPacket</IRI>
+        <IRI>#ControlPacket</IRI>
         <Literal xml:lang="en">MQTT Control Packet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>FixedHeader</IRI>
+        <IRI>#FixedHeader</IRI>
         <Literal xml:lang="en">The header present in all MQTT Control Packets, containing the packet type and flags.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>FixedHeader</IRI>
+        <IRI>#FixedHeader</IRI>
         <Literal xml:lang="en">MQTT Fixed Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>NetworkConnection</IRI>
+        <IRI>#NetworkConnection</IRI>
         <Literal xml:lang="en">A transport-layer connection between an MQTT Client and an MQTT Broker (optionally secured with TLS).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>NetworkConnection</IRI>
+        <IRI>#NetworkConnection</IRI>
         <Literal xml:lang="en">MQTT Network Connection</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>NetworkParticipant</IRI>
+        <IRI>#NetworkParticipant</IRI>
         <Literal xml:lang="en">An entity participating in an MQTT network, such as an MQTT Client or an MQTT Broker.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>NetworkParticipant</IRI>
+        <IRI>#NetworkParticipant</IRI>
         <Literal xml:lang="en">MQTT Network Participant</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Payload</IRI>
+        <IRI>#Payload</IRI>
         <Literal xml:lang="en">The application data carried by an MQTT Control Packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Payload</IRI>
+        <IRI>#Payload</IRI>
         <Literal xml:lang="en">MQTT Payload</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>PublishFixedHeader</IRI>
+        <IRI>#PublishFixedHeader</IRI>
         <Literal xml:lang="en">The Fixed Header used in PUBLISH packets.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PublishFixedHeader</IRI>
+        <IRI>#PublishFixedHeader</IRI>
         <Literal xml:lang="en">MQTT PUBLISH Fixed Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>PublishPacket</IRI>
+        <IRI>#PublishPacket</IRI>
         <Literal xml:lang="en">An MQTT Control Packet used by an MQTT Client to publish an application message to an MQTT Topic.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PublishPacket</IRI>
+        <IRI>#PublishPacket</IRI>
         <Literal xml:lang="en">MQTT PUBLISH Packet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>PublishPayload</IRI>
+        <IRI>#PublishPayload</IRI>
         <Literal xml:lang="en">The payload of a PUBLISH packet (application message body).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PublishPayload</IRI>
+        <IRI>#PublishPayload</IRI>
         <Literal xml:lang="en">MQTT PUBLISH Payload</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>PublishVariableHeader</IRI>
+        <IRI>#PublishVariableHeader</IRI>
         <Literal xml:lang="en">The Variable Header of a PUBLISH packet; includes the MQTT Topic and optionally a packet identifier.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PublishVariableHeader</IRI>
+        <IRI>#PublishVariableHeader</IRI>
         <Literal xml:lang="en">MQTT PUBLISH Variable Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>SubscribeFixedHeader</IRI>
+        <IRI>#SubscribeFixedHeader</IRI>
         <Literal xml:lang="en">The Fixed Header used in SUBSCRIBE packets.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>SubscribeFixedHeader</IRI>
+        <IRI>#SubscribeFixedHeader</IRI>
         <Literal xml:lang="en">MQTT SUBSCRIBE Fixed Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>SubscribePacket</IRI>
+        <IRI>#SubscribePacket</IRI>
         <Literal xml:lang="en">An MQTT Control Packet used by an MQTT Client to subscribe to one or more MQTT Topic Filters.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>SubscribePacket</IRI>
+        <IRI>#SubscribePacket</IRI>
         <Literal xml:lang="en">MQTT SUBSCRIBE Packet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>SubscribeVariableHeader</IRI>
+        <IRI>#SubscribeVariableHeader</IRI>
         <Literal xml:lang="en">The Variable Header of a SUBSCRIBE packet; typically includes the packet identifier.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>SubscribeVariableHeader</IRI>
+        <IRI>#SubscribeVariableHeader</IRI>
         <Literal xml:lang="en">MQTT SUBSCRIBE Variable Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>SubscriptionEntry</IRI>
+        <IRI>#SubscriptionEntry</IRI>
         <Literal xml:lang="en">A single requested subscription consisting of an MQTT Topic Filter and an associated QoS level.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>SubscriptionEntry</IRI>
+        <IRI>#SubscriptionEntry</IRI>
         <Literal xml:lang="en">MQTT Subscription Entry</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>SubscriptionPayload</IRI>
+        <IRI>#SubscriptionPayload</IRI>
         <Literal xml:lang="en">The payload of a SUBSCRIBE packet, listing MQTT Subscription Entries.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>SubscriptionPayload</IRI>
+        <IRI>#SubscriptionPayload</IRI>
         <Literal xml:lang="en">MQTT SUBSCRIBE Payload</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Topic</IRI>
+        <IRI>#Topic</IRI>
         <Literal xml:lang="en">A hierarchical MQTT Topic to which MQTT Clients publish and/or subscribe.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Topic</IRI>
+        <IRI>#Topic</IRI>
         <Literal xml:lang="en">MQTT Topic</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>TopicFilter</IRI>
+        <IRI>#TopicFilter</IRI>
         <Literal xml:lang="en">A filter expression (e.g., with wildcards) used in SUBSCRIBE/UNSUBSCRIBE to match MQTT Topics.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TopicFilter</IRI>
+        <IRI>#TopicFilter</IRI>
         <Literal xml:lang="en">MQTT Topic Filter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>TopicSubject</IRI>
+        <IRI>#TopicSubject</IRI>
         <Literal xml:lang="en">A conceptual subject carried on an MQTT Topic, e.g., an Observation, Actuation, Property, or Feature of Interest.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TopicSubject</IRI>
+        <IRI>#TopicSubject</IRI>
         <Literal xml:lang="en">MQTT Topic Subject</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>UnsubscribeFixedHeader</IRI>
+        <IRI>#UnsubscribeFixedHeader</IRI>
         <Literal xml:lang="en">The Fixed Header used in UNSUBSCRIBE packets.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>UnsubscribeFixedHeader</IRI>
+        <IRI>#UnsubscribeFixedHeader</IRI>
         <Literal xml:lang="en">MQTT UNSUBSCRIBE Fixed Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>UnsubscribePacket</IRI>
+        <IRI>#UnsubscribePacket</IRI>
         <Literal xml:lang="en">An MQTT Control Packet used by an MQTT Client to remove one or more subscriptions.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>UnsubscribePacket</IRI>
+        <IRI>#UnsubscribePacket</IRI>
         <Literal xml:lang="en">MQTT UNSUBSCRIBE Packet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>UnsubscribeVariableHeader</IRI>
+        <IRI>#UnsubscribeVariableHeader</IRI>
         <Literal xml:lang="en">The Variable Header of an UNSUBSCRIBE packet; typically includes the packet identifier.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>UnsubscribeVariableHeader</IRI>
+        <IRI>#UnsubscribeVariableHeader</IRI>
         <Literal xml:lang="en">MQTT UNSUBSCRIBE Variable Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>UnsubscriptionPayload</IRI>
+        <IRI>#UnsubscriptionPayload</IRI>
         <Literal xml:lang="en">The payload of an UNSUBSCRIBE packet, listing MQTT Topic Filters to be removed.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>UnsubscriptionPayload</IRI>
+        <IRI>#UnsubscriptionPayload</IRI>
         <Literal xml:lang="en">MQTT UNSUBSCRIBE Payload</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>VariableHeader</IRI>
+        <IRI>#VariableHeader</IRI>
         <Literal xml:lang="en">The optional header carrying packet-specific metadata (e.g., packet identifier, MQTT Topic name).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>VariableHeader</IRI>
+        <IRI>#VariableHeader</IRI>
         <Literal xml:lang="en">MQTT Variable Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>forwardsPublishPacket</IRI>
+        <IRI>#forwardsPublishPacket</IRI>
         <Literal xml:lang="en">Indicates that an MQTT Broker forwards a PUBLISH packet to subscribers.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>forwardsPublishPacket</IRI>
+        <IRI>#forwardsPublishPacket</IRI>
         <Literal xml:lang="en">forwards PUBLISH Packet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasClient</IRI>
+        <IRI>#hasClient</IRI>
         <Literal xml:lang="en">Relates a SOSA platform to an MQTT Client running on it.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasClient</IRI>
+        <IRI>#hasClient</IRI>
         <Literal xml:lang="en">has MQTT Client</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasClientID</IRI>
+        <IRI>#hasClientID</IRI>
         <Literal xml:lang="en">The MQTT Client identifier used when connecting to an MQTT Broker.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasClientID</IRI>
+        <IRI>#hasClientID</IRI>
         <Literal xml:lang="en">MQTT Client identifier</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasConnectedClient</IRI>
+        <IRI>#hasConnectedClient</IRI>
         <Literal xml:lang="en">Links an MQTT Broker to an MQTT Client that is connected to it.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasConnectedClient</IRI>
+        <IRI>#hasConnectedClient</IRI>
         <Literal xml:lang="en">has connected MQTT Client</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasEncodedFields</IRI>
+        <IRI>#hasEncodedFields</IRI>
         <Literal xml:lang="en">Links an MQTT Payload to an ordered RDF list naming fields encoded within the payload content.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasEncodedFields</IRI>
+        <IRI>#hasEncodedFields</IRI>
         <Literal xml:lang="en">has encoded fields</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasFilterPattern</IRI>
+        <IRI>#hasFilterPattern</IRI>
         <Literal xml:lang="en">The MQTT Topic Filter pattern as a string (e.g., &apos;sensor/+/temp&apos; or &apos;fabrik/zentrierung/#&apos;).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasFilterPattern</IRI>
+        <IRI>#hasFilterPattern</IRI>
         <Literal xml:lang="en">MQTT Topic Filter pattern</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasFixedHeader</IRI>
+        <IRI>#hasFixedHeader</IRI>
         <Literal xml:lang="en">Links an MQTT Control Packet to its Fixed Header.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasFixedHeader</IRI>
+        <IRI>#hasFixedHeader</IRI>
         <Literal xml:lang="en">has Fixed Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasHost</IRI>
+        <IRI>#hasHost</IRI>
         <Literal xml:lang="en">The hostname or IP address of an MQTT Broker.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasHost</IRI>
+        <IRI>#hasHost</IRI>
         <Literal xml:lang="en">MQTT Broker host</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasPacketIdentifier</IRI>
+        <IRI>#hasPacketIdentifier</IRI>
         <Literal xml:lang="en">A 16-bit identifier used to correlate MQTT messages when QoS &gt; 0.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasPacketIdentifier</IRI>
+        <IRI>#hasPacketIdentifier</IRI>
         <Literal xml:lang="en">packet identifier</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasParticipant</IRI>
+        <IRI>#hasParticipant</IRI>
         <Literal xml:lang="en">Relates a network connection to its network participant (MQTT Client or MQTT Broker).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasParticipant</IRI>
+        <IRI>#hasParticipant</IRI>
         <Literal xml:lang="en">has participant</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasPayload</IRI>
+        <IRI>#hasPayload</IRI>
         <Literal xml:lang="en">Links an MQTT Control Packet to its MQTT Payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasPayload</IRI>
+        <IRI>#hasPayload</IRI>
         <Literal xml:lang="en">has MQTT Payload</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasPayloadContent</IRI>
+        <IRI>#hasPayloadContent</IRI>
         <Literal xml:lang="en">The application message body as a string (possibly serialized/encoded).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasPayloadContent</IRI>
+        <IRI>#hasPayloadContent</IRI>
         <Literal xml:lang="en">payload content</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasPayloadContentDelimiter</IRI>
+        <IRI>#hasPayloadContentDelimiter</IRI>
         <Literal xml:lang="en">The delimiter used to separate fields in the payload content.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasPayloadContentDelimiter</IRI>
+        <IRI>#hasPayloadContentDelimiter</IRI>
         <Literal xml:lang="en">payload content delimiter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasPayloadContentType</IRI>
+        <IRI>#hasPayloadContentType</IRI>
         <Literal xml:lang="en">The MIME type of the payload content (e.g., &apos;application/json&apos;).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasPayloadContentType</IRI>
+        <IRI>#hasPayloadContentType</IRI>
         <Literal xml:lang="en">payload content type</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasPayloadEncoding</IRI>
+        <IRI>#hasPayloadEncoding</IRI>
         <Literal xml:lang="en">The character encoding or serialization used for the payload (e.g., &apos;UTF-8&apos;, &apos;Base64&apos;).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasPayloadEncoding</IRI>
+        <IRI>#hasPayloadEncoding</IRI>
         <Literal xml:lang="en">payload encoding</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasPayloadSize</IRI>
+        <IRI>#hasPayloadSize</IRI>
         <Literal xml:lang="en">Specifies the size of an MQTT Payload as a QUDT quantity value (e.g., unit:Byte).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasPayloadSize</IRI>
+        <IRI>#hasPayloadSize</IRI>
         <Literal xml:lang="en">has payload size</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasPortNumber</IRI>
+        <IRI>#hasPortNumber</IRI>
         <Literal xml:lang="en">The TCP port on which an MQTT Broker listens.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasPortNumber</IRI>
+        <IRI>#hasPortNumber</IRI>
         <Literal xml:lang="en">MQTT Broker port</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasPublishFixedHeader</IRI>
+        <IRI>#hasPublishFixedHeader</IRI>
         <Literal xml:lang="en">Links a PUBLISH packet to its specific Fixed Header.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasPublishFixedHeader</IRI>
+        <IRI>#hasPublishFixedHeader</IRI>
         <Literal xml:lang="en">has PUBLISH Fixed Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasPublishPayload</IRI>
+        <IRI>#hasPublishPayload</IRI>
         <Literal xml:lang="en">Links a PUBLISH packet to its MQTT Payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasPublishPayload</IRI>
+        <IRI>#hasPublishPayload</IRI>
         <Literal xml:lang="en">has PUBLISH Payload</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasPublishVariableHeader</IRI>
+        <IRI>#hasPublishVariableHeader</IRI>
         <Literal xml:lang="en">Links a PUBLISH packet to its specific Variable Header.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasPublishVariableHeader</IRI>
+        <IRI>#hasPublishVariableHeader</IRI>
         <Literal xml:lang="en">has PUBLISH Variable Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasQosLevel</IRI>
+        <IRI>#hasQosLevel</IRI>
         <Literal xml:lang="en">Not mapped to mqv:hasQoSFlag because MQV models QoS as an object property, while mqtt:hasQosLevel is a datatype property.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasQosLevel</IRI>
+        <IRI>#hasQosLevel</IRI>
         <Literal xml:lang="en">The MQTT Quality of Service level (0 = at most once, 1 = at least once, 2 = exactly once).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasQosLevel</IRI>
+        <IRI>#hasQosLevel</IRI>
         <Literal xml:lang="en">QoS level</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasSubject</IRI>
+        <IRI>#hasSubject</IRI>
         <Literal xml:lang="en">Links an MQTT Topic to the conceptual subject carried on that topic.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasSubject</IRI>
+        <IRI>#hasSubject</IRI>
         <Literal xml:lang="en">has topic subject</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasSubscriptionFixedHeader</IRI>
+        <IRI>#hasSubscriptionFixedHeader</IRI>
         <Literal xml:lang="en">Links a SUBSCRIBE packet to its specific Fixed Header.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasSubscriptionFixedHeader</IRI>
+        <IRI>#hasSubscriptionFixedHeader</IRI>
         <Literal xml:lang="en">has SUBSCRIBE Fixed Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasSubscriptionPayload</IRI>
+        <IRI>#hasSubscriptionPayload</IRI>
         <Literal xml:lang="en">Links a SUBSCRIBE packet to its MQTT Payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasSubscriptionPayload</IRI>
+        <IRI>#hasSubscriptionPayload</IRI>
         <Literal xml:lang="en">has SUBSCRIBE Payload</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasSubscriptionVariableHeader</IRI>
+        <IRI>#hasSubscriptionVariableHeader</IRI>
         <Literal xml:lang="en">Links a SUBSCRIBE packet to its specific Variable Header.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasSubscriptionVariableHeader</IRI>
+        <IRI>#hasSubscriptionVariableHeader</IRI>
         <Literal xml:lang="en">has SUBSCRIBE Variable Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasSubscriptions</IRI>
+        <IRI>#hasSubscriptions</IRI>
         <Literal xml:lang="en">Links a SUBSCRIBE Payload to one or more MQTT Subscription Entries.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasSubscriptions</IRI>
+        <IRI>#hasSubscriptions</IRI>
         <Literal xml:lang="en">has MQTT Subscription Entries</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasTopicFilter</IRI>
+        <IRI>#hasTopicFilter</IRI>
         <Literal xml:lang="en">Relates a Subscription Entry or an UNSUBSCRIBE payload to an MQTT Topic Filter.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasTopicFilter</IRI>
+        <IRI>#hasTopicFilter</IRI>
         <Literal xml:lang="en">has MQTT Topic Filter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasTopicName</IRI>
+        <IRI>#hasTopicName</IRI>
         <Literal xml:lang="en">Links a PUBLISH Variable Header to the MQTT Topic to which the message is published.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasTopicName</IRI>
+        <IRI>#hasTopicName</IRI>
         <Literal xml:lang="en">has MQTT Topic (name)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasUnsubscriptionFixedHeader</IRI>
+        <IRI>#hasUnsubscriptionFixedHeader</IRI>
         <Literal xml:lang="en">Links an UNSUBSCRIBE packet to its specific Fixed Header.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasUnsubscriptionFixedHeader</IRI>
+        <IRI>#hasUnsubscriptionFixedHeader</IRI>
         <Literal xml:lang="en">has UNSUBSCRIBE Fixed Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasUnsubscriptionPayload</IRI>
+        <IRI>#hasUnsubscriptionPayload</IRI>
         <Literal xml:lang="en">Links an UNSUBSCRIBE packet to its MQTT Payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasUnsubscriptionPayload</IRI>
+        <IRI>#hasUnsubscriptionPayload</IRI>
         <Literal xml:lang="en">has UNSUBSCRIBE Payload</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasUnsubscriptionVariableHeader</IRI>
+        <IRI>#hasUnsubscriptionVariableHeader</IRI>
         <Literal xml:lang="en">Links an UNSUBSCRIBE packet to its specific Variable Header.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasUnsubscriptionVariableHeader</IRI>
+        <IRI>#hasUnsubscriptionVariableHeader</IRI>
         <Literal xml:lang="en">has UNSUBSCRIBE Variable Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasVariableHeader</IRI>
+        <IRI>#hasVariableHeader</IRI>
         <Literal xml:lang="en">Links an MQTT Control Packet to its Variable Header.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasVariableHeader</IRI>
+        <IRI>#hasVariableHeader</IRI>
         <Literal xml:lang="en">has Variable Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hosts</IRI>
+        <IRI>#hosts</IRI>
         <Literal xml:lang="en">Links an MQTT Client (as a SOSA platform) to SOSA systems (sensors/actuators) it hosts.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hosts</IRI>
+        <IRI>#hosts</IRI>
         <Literal xml:lang="en">hosts</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isAcceptedBy</IRI>
+        <IRI>#isAcceptedBy</IRI>
         <Literal xml:lang="en">Indicates the MQTT Broker that accepted the client&apos;s connection request.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isAcceptedBy</IRI>
+        <IRI>#isAcceptedBy</IRI>
         <Literal xml:lang="en">is accepted by</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isConnectedToBroker</IRI>
+        <IRI>#isConnectedToBroker</IRI>
         <Literal xml:lang="en">Links an MQTT Client to the MQTT Broker it is currently connected to.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isConnectedToBroker</IRI>
+        <IRI>#isConnectedToBroker</IRI>
         <Literal xml:lang="en">is connected to MQTT Broker</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isDUPFlag</IRI>
+        <IRI>#isDUPFlag</IRI>
         <Literal xml:lang="en">True if this is a duplicate delivery of an earlier PUBLISH message.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isDUPFlag</IRI>
+        <IRI>#isDUPFlag</IRI>
         <Literal xml:lang="en">DUP flag</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isEncodedInPayload</IRI>
+        <IRI>#isEncodedInPayload</IRI>
         <Literal xml:lang="en">Links an RDF list of field names to the MQTT Payload that contains them.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isEncodedInPayload</IRI>
+        <IRI>#isEncodedInPayload</IRI>
         <Literal xml:lang="en">is encoded in MQTT Payload</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isFixedHeaderOf</IRI>
+        <IRI>#isFixedHeaderOf</IRI>
         <Literal xml:lang="en">Links a Fixed Header to the MQTT Control Packet containing it.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isFixedHeaderOf</IRI>
+        <IRI>#isFixedHeaderOf</IRI>
         <Literal xml:lang="en">is Fixed Header of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isHostedBy</IRI>
+        <IRI>#isHostedBy</IRI>
         <Literal xml:lang="en">Links a SOSA system to the hosting MQTT Client.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isHostedBy</IRI>
+        <IRI>#isHostedBy</IRI>
         <Literal xml:lang="en">is hosted by</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isInitiatedBy</IRI>
+        <IRI>#isInitiatedBy</IRI>
         <Literal xml:lang="en">Indicates the MQTT Client that initiated the connection to the MQTT Broker.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isInitiatedBy</IRI>
+        <IRI>#isInitiatedBy</IRI>
         <Literal xml:lang="en">is initiated by</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isMatchedByFilter</IRI>
+        <IRI>#isMatchedByFilter</IRI>
         <Literal xml:lang="en">Indicates that an MQTT Topic is matched by a given MQTT Topic Filter.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isMatchedByFilter</IRI>
+        <IRI>#isMatchedByFilter</IRI>
         <Literal xml:lang="en">is matched by MQTT Topic Filter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isPayloadOf</IRI>
+        <IRI>#isPayloadOf</IRI>
         <Literal xml:lang="en">Links an MQTT Payload to the MQTT Control Packet containing it.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isPayloadOf</IRI>
+        <IRI>#isPayloadOf</IRI>
         <Literal xml:lang="en">is MQTT Payload of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isPublishFixedHeaderOf</IRI>
+        <IRI>#isPublishFixedHeaderOf</IRI>
         <Literal xml:lang="en">Links a PUBLISH Fixed Header to its MQTT Control Packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isPublishFixedHeaderOf</IRI>
+        <IRI>#isPublishFixedHeaderOf</IRI>
         <Literal xml:lang="en">is PUBLISH Fixed Header of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isPublishPayloadOf</IRI>
+        <IRI>#isPublishPayloadOf</IRI>
         <Literal xml:lang="en">Links a PUBLISH Payload to its MQTT Control Packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isPublishPayloadOf</IRI>
+        <IRI>#isPublishPayloadOf</IRI>
         <Literal xml:lang="en">is PUBLISH Payload of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isPublishVariableHeaderOf</IRI>
+        <IRI>#isPublishVariableHeaderOf</IRI>
         <Literal xml:lang="en">Links a PUBLISH Variable Header to its MQTT Control Packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isPublishVariableHeaderOf</IRI>
+        <IRI>#isPublishVariableHeaderOf</IRI>
         <Literal xml:lang="en">is PUBLISH Variable Header of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isRetainedFlag</IRI>
+        <IRI>#isRetainedFlag</IRI>
         <Literal xml:lang="en">True if the message should be retained on the MQTT Broker.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isRetainedFlag</IRI>
+        <IRI>#isRetainedFlag</IRI>
         <Literal xml:lang="en">RETAIN flag</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isSentBy</IRI>
+        <IRI>#isSentBy</IRI>
         <Literal xml:lang="en">Relates an MQTT Control Packet to the MQTT Client that sent it.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isSentBy</IRI>
+        <IRI>#isSentBy</IRI>
         <Literal xml:lang="en">is sent by MQTT Client</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isSubjectOf</IRI>
+        <IRI>#isSubjectOf</IRI>
         <Literal xml:lang="en">Links a topic subject (e.g., Observation, Actuation) to the MQTT Topic that carries it.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isSubjectOf</IRI>
+        <IRI>#isSubjectOf</IRI>
         <Literal xml:lang="en">is topic subject of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isSubscriptionFixedHeaderOf</IRI>
+        <IRI>#isSubscriptionFixedHeaderOf</IRI>
         <Literal xml:lang="en">Links a SUBSCRIBE Fixed Header to its MQTT Control Packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isSubscriptionFixedHeaderOf</IRI>
+        <IRI>#isSubscriptionFixedHeaderOf</IRI>
         <Literal xml:lang="en">is SUBSCRIBE Fixed Header of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isSubscriptionOf</IRI>
+        <IRI>#isSubscriptionOf</IRI>
         <Literal xml:lang="en">Links an MQTT Subscription Entry to its SUBSCRIBE Payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isSubscriptionOf</IRI>
+        <IRI>#isSubscriptionOf</IRI>
         <Literal xml:lang="en">is MQTT Subscription Entry of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isSubscriptionPayloadOf</IRI>
+        <IRI>#isSubscriptionPayloadOf</IRI>
         <Literal xml:lang="en">Links a SUBSCRIBE Payload to its MQTT Control Packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isSubscriptionPayloadOf</IRI>
+        <IRI>#isSubscriptionPayloadOf</IRI>
         <Literal xml:lang="en">is SUBSCRIBE Payload of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isSubscriptionVariableHeaderOf</IRI>
+        <IRI>#isSubscriptionVariableHeaderOf</IRI>
         <Literal xml:lang="en">Links a SUBSCRIBE Variable Header to its MQTT Control Packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isSubscriptionVariableHeaderOf</IRI>
+        <IRI>#isSubscriptionVariableHeaderOf</IRI>
         <Literal xml:lang="en">is SUBSCRIBE Variable Header of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isTopicFilterOf</IRI>
+        <IRI>#isTopicFilterOf</IRI>
         <Literal xml:lang="en">Relates an MQTT Topic Filter to a Subscription Entry or an UNSUBSCRIBE payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isTopicFilterOf</IRI>
+        <IRI>#isTopicFilterOf</IRI>
         <Literal xml:lang="en">is MQTT Topic Filter of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isTopicNameOf</IRI>
+        <IRI>#isTopicNameOf</IRI>
         <Literal xml:lang="en">Links an MQTT Topic to which the message is published to a PUBLISH Variable Header.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isTopicNameOf</IRI>
+        <IRI>#isTopicNameOf</IRI>
         <Literal xml:lang="en">is MQTT Topic (name) of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isUnsubscriptionFixedHeaderOf</IRI>
+        <IRI>#isUnsubscriptionFixedHeaderOf</IRI>
         <Literal xml:lang="en">Links an UNSUBSCRIBE Fixed Header to its MQTT Control Packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isUnsubscriptionFixedHeaderOf</IRI>
+        <IRI>#isUnsubscriptionFixedHeaderOf</IRI>
         <Literal xml:lang="en">is UNSUBSCRIBE Fixed Header of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isUnsubscriptionPayloadOf</IRI>
+        <IRI>#isUnsubscriptionPayloadOf</IRI>
         <Literal xml:lang="en">Links an UNSUBSCRIBE Payload to its MQTT Control Packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isUnsubscriptionPayloadOf</IRI>
+        <IRI>#isUnsubscriptionPayloadOf</IRI>
         <Literal xml:lang="en">is UNSUBSCRIBE Payload of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isUnsubscriptionVariableHeaderOf</IRI>
+        <IRI>#isUnsubscriptionVariableHeaderOf</IRI>
         <Literal xml:lang="en">Links an UNSUBSCRIBE Variable Header to its MQTT Control Packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isUnsubscriptionVariableHeaderOf</IRI>
+        <IRI>#isUnsubscriptionVariableHeaderOf</IRI>
         <Literal xml:lang="en">is UNSUBSCRIBE Variable Header of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isVariableHeaderOf</IRI>
+        <IRI>#isVariableHeaderOf</IRI>
         <Literal xml:lang="en">Links a Variable Header to the MQTT Control Packet containing it.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isVariableHeaderOf</IRI>
+        <IRI>#isVariableHeaderOf</IRI>
         <Literal xml:lang="en">is Variable Header of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>listensToTopic</IRI>
+        <IRI>#listensToTopic</IRI>
         <Literal xml:lang="en">Links an actuator to the MQTT Topic from which it receives actuation commands.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>listensToTopic</IRI>
+        <IRI>#listensToTopic</IRI>
         <Literal xml:lang="en">listens to MQTT Topic</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>matchesTopic</IRI>
+        <IRI>#matchesTopic</IRI>
         <Literal xml:lang="en">Indicates that an MQTT Topic Filter matches a particular MQTT Topic.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>matchesTopic</IRI>
+        <IRI>#matchesTopic</IRI>
         <Literal xml:lang="en">matches MQTT Topic</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>observesTopic</IRI>
+        <IRI>#observesTopic</IRI>
         <Literal xml:lang="en">Links a sensor to the MQTT Topic to which it publishes observations.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>observesTopic</IRI>
+        <IRI>#observesTopic</IRI>
         <Literal xml:lang="en">observes MQTT Topic</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>payloadEncodesActuation</IRI>
+        <IRI>#payloadEncodesActuation</IRI>
         <Literal xml:lang="en">Indicates that the MQTT Payload encodes a single SOSA Actuation command.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>payloadEncodesActuation</IRI>
+        <IRI>#payloadEncodesActuation</IRI>
         <Literal xml:lang="en">payload encodes SOSA Actuation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>payloadEncodesActuationCollection</IRI>
+        <IRI>#payloadEncodesActuationCollection</IRI>
         <Literal xml:lang="en">Indicates that the MQTT Payload encodes a collection of actuation commands.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>payloadEncodesActuationCollection</IRI>
+        <IRI>#payloadEncodesActuationCollection</IRI>
         <Literal xml:lang="en">payload encodes SOSA Actuation Collection</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>payloadEncodesObservation</IRI>
+        <IRI>#payloadEncodesObservation</IRI>
         <Literal xml:lang="en">Indicates that the MQTT Payload encodes a SOSA Observation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>payloadEncodesObservation</IRI>
+        <IRI>#payloadEncodesObservation</IRI>
         <Literal xml:lang="en">payload encodes SOSA Observation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>payloadEncodesObservationCollection</IRI>
+        <IRI>#payloadEncodesObservationCollection</IRI>
         <Literal xml:lang="en">Indicates that the MQTT Payload encodes a collection of SOSA Observations.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>payloadEncodesObservationCollection</IRI>
+        <IRI>#payloadEncodesObservationCollection</IRI>
         <Literal xml:lang="en">payload encodes SOSA Observation Collection</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>publishesPacket</IRI>
+        <IRI>#publishesPacket</IRI>
         <Literal xml:lang="en">Specializes mqtt:sendsControlPacket for PUBLISH packets.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>publishesPacket</IRI>
+        <IRI>#publishesPacket</IRI>
         <Literal xml:lang="en">publishes PUBLISH Packet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>receivesSubscribePacket</IRI>
+        <IRI>#receivesSubscribePacket</IRI>
         <Literal xml:lang="en">Indicates that an MQTT Broker receives a SUBSCRIBE packet from an MQTT Client.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>receivesSubscribePacket</IRI>
+        <IRI>#receivesSubscribePacket</IRI>
         <Literal xml:lang="en">receives SUBSCRIBE Packet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>receivesUnsubscribePacket</IRI>
+        <IRI>#receivesUnsubscribePacket</IRI>
         <Literal xml:lang="en">Indicates that an MQTT Broker receives an UNSUBSCRIBE packet from an MQTT Client.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>receivesUnsubscribePacket</IRI>
+        <IRI>#receivesUnsubscribePacket</IRI>
         <Literal xml:lang="en">receives UNSUBSCRIBE Packet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>runsOnPlatform</IRI>
+        <IRI>#runsOnPlatform</IRI>
         <Literal xml:lang="en">Links an MQTT Client to the platform on which it operates.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>runsOnPlatform</IRI>
+        <IRI>#runsOnPlatform</IRI>
         <Literal xml:lang="en">runs on platform</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>sendsControlPacket</IRI>
+        <IRI>#sendsControlPacket</IRI>
         <Literal xml:lang="en">Relates an MQTT Client to an MQTT Control Packet it sends.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>sendsControlPacket</IRI>
+        <IRI>#sendsControlPacket</IRI>
         <Literal xml:lang="en">sends MQTT Control Packet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>subscribesPacket</IRI>
+        <IRI>#subscribesPacket</IRI>
         <Literal xml:lang="en">Specializes mqtt:sendsControlPacket for SUBSCRIBE packets.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>subscribesPacket</IRI>
+        <IRI>#subscribesPacket</IRI>
         <Literal xml:lang="en">sends SUBSCRIBE Packet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>unsubscribesPacket</IRI>
+        <IRI>#unsubscribesPacket</IRI>
         <Literal xml:lang="en">Specializes mqtt:sendsControlPacket for UNSUBSCRIBE packets.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>unsubscribesPacket</IRI>
+        <IRI>#unsubscribesPacket</IRI>
         <Literal xml:lang="en">sends UNSUBSCRIBE Packet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>usesConnection</IRI>
+        <IRI>#usesConnection</IRI>
         <Literal xml:lang="en">Relates a network participant (MQTT Client or MQTT Broker) to a network connection it uses.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>usesConnection</IRI>
+        <IRI>#usesConnection</IRI>
         <Literal xml:lang="en">uses connection</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>usesTLS</IRI>
+        <IRI>#usesTLS</IRI>
         <Literal xml:lang="en">True if the Network Connection is protected via TLS, otherwise false.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>usesTLS</IRI>
+        <IRI>#usesTLS</IRI>
         <Literal xml:lang="en">uses TLS</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
-        <AnonymousIndividual nodeID="_:genid2147484037"/>
+        <AnonymousIndividual nodeID="_:genid2147484045"/>
         <IRI>https://orcid.org/0009-0004-0088-8633</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:mbox"/>
-        <AnonymousIndividual nodeID="_:genid2147484037"/>
+        <AnonymousIndividual nodeID="_:genid2147484045"/>
         <IRI>mailto:doernern@hsu-hh.de</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <AnonymousIndividual nodeID="_:genid2147484037"/>
+        <AnonymousIndividual nodeID="_:genid2147484045"/>
         <Literal>Niklas Doerner</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
-        <AnonymousIndividual nodeID="_:genid2147484038"/>
+        <AnonymousIndividual nodeID="_:genid2147484046"/>
         <IRI>https://orcid.org/0000-0003-3458-4748</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:mbox"/>
-        <AnonymousIndividual nodeID="_:genid2147484038"/>
+        <AnonymousIndividual nodeID="_:genid2147484046"/>
         <IRI>mailto:maleshkm@hsu-hh.de</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <AnonymousIndividual nodeID="_:genid2147484038"/>
+        <AnonymousIndividual nodeID="_:genid2147484046"/>
         <Literal>Maria Maleshkova</Literal>
     </AnnotationAssertion>
 </Ontology>
