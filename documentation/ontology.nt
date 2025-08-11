@@ -1,0 +1,1048 @@
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN> <http://www.w3.org/2002/07/owl#imports> <http://qudt.org/schema/qudt/> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Ontology> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/sosa/> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN> <http://www.w3.org/2002/07/owl#imports> <https://www.w3.org/2019/wot/mqtt> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN> <http://purl.org/dc/terms/bibliographicCitation> "Niklas Doerner, Maria Maleshkova (2025): MQTT4SSN Ontology. https://doi.org/10.5281/zenodo.16704302" .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN> <http://purl.org/dc/terms/created> "2025-08-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN> <http://purl.org/dc/terms/creator> _:genid1 .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN> <http://purl.org/dc/terms/creator> _:genid3 .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-nc-sa/4.0/> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN> <http://purl.org/dc/terms/title> "MQTT4SSN Ontology" .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN> <http://purl.org/ontology/bibo/doi> "10.5281/zenodo.16704302" .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN> <http://www.w3.org/2000/01/rdf-schema#comment> "The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT transport protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT transport protocol component."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN> <http://xmlns.com/foaf/0.1/fundedBy> <http://example.org/individuals#DTEC> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/ontology/bibo/doi
+<http://purl.org/ontology/bibo/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/fundedBy
+<http://xmlns.com/foaf/0.1/fundedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/mbox
+<http://xmlns.com/foaf/0.1/mbox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#forwardsPublishPacket
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#forwardsPublishPacket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#forwardsPublishPacket> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#forwardsPublishPacket> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#forwardsPublishPacket> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an MQTT Broker forwards a PUBLISH packet to subscribers."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#forwardsPublishPacket> <http://www.w3.org/2000/01/rdf-schema#label> "forwards PUBLISH Packet"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClient
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClient> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#runsOnPlatform> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClient> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Platform> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClient> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClient> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a SOSA platform to an MQTT Client running on it."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClient> <http://www.w3.org/2000/01/rdf-schema#label> "has MQTT Client"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasConnectedClient
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasConnectedClient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasConnectedClient> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isConnectedToBroker> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasConnectedClient> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasConnectedClient> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasConnectedClient> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an MQTT Broker to an MQTT Client that is connected to it."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasConnectedClient> <http://www.w3.org/2000/01/rdf-schema#label> "has connected MQTT Client"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasEncodedFields
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasEncodedFields> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasEncodedFields> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isEncodedInPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasEncodedFields> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasEncodedFields> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasEncodedFields> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an MQTT Payload to an ordered RDF list naming fields encoded within the payload content."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasEncodedFields> <http://www.w3.org/2000/01/rdf-schema#label> "has encoded fields"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isFixedHeaderOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an MQTT Control Packet to its Fixed Header."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader> <http://www.w3.org/2000/01/rdf-schema#label> "has Fixed Header"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasParticipant
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasParticipant> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesConnection> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkParticipant> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a network connection to its network participant (MQTT Client or MQTT Broker)."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#label> "has participant"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://www.w3.org/2019/wot/mqtt#hasPayload> .
+<https://www.w3.org/2019/wot/mqtt#hasPayload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPayloadOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an MQTT Control Packet to its MQTT Payload."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload> <http://www.w3.org/2000/01/rdf-schema#label> "has MQTT Payload"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadSize
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadSize> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+<http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadSize> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the size of an MQTT Payload as a QUDT quantity value (e.g., unit:Byte)."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadSize> <http://www.w3.org/2000/01/rdf-schema#label> "has payload size"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishFixedHeader
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishFixedHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishFixedHeader> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishFixedHeader> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishFixedHeaderOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishFixedHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishFixedHeader> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishFixedHeader> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishFixedHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a PUBLISH packet to its specific Fixed Header."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishFixedHeader> <http://www.w3.org/2000/01/rdf-schema#label> "has PUBLISH Fixed Header"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishPayload
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishPayload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishPayload> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishPayload> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishPayloadOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishPayload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishPayload> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishPayload> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishPayload> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a PUBLISH packet to its MQTT Payload."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishPayload> <http://www.w3.org/2000/01/rdf-schema#label> "has PUBLISH Payload"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishVariableHeader
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishVariableHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishVariableHeader> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasVariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishVariableHeader> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishVariableHeaderOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishVariableHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishVariableHeader> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishVariableHeader> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishVariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishVariableHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a PUBLISH packet to its specific Variable Header."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishVariableHeader> <http://www.w3.org/2000/01/rdf-schema#label> "has PUBLISH Variable Header"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubject
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubject> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubjectOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubject> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an MQTT Topic to the conceptual subject carried on that topic."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubject> <http://www.w3.org/2000/01/rdf-schema#label> "has topic subject"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionFixedHeader
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionFixedHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionFixedHeader> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionFixedHeader> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionFixedHeaderOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionFixedHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionFixedHeader> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionFixedHeader> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeFixedHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionFixedHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SUBSCRIBE packet to its specific Fixed Header."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionFixedHeader> <http://www.w3.org/2000/01/rdf-schema#label> "has SUBSCRIBE Fixed Header"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionPayload
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionPayload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionPayload> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionPayload> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionPayloadOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionPayload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionPayload> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionPayload> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionPayload> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SUBSCRIBE packet to its MQTT Payload."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionPayload> <http://www.w3.org/2000/01/rdf-schema#label> "has SUBSCRIBE Payload"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionVariableHeader
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionVariableHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionVariableHeader> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasVariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionVariableHeader> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionVariableHeaderOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionVariableHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionVariableHeader> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionVariableHeader> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeVariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionVariableHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SUBSCRIBE packet to its specific Variable Header."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionVariableHeader> <http://www.w3.org/2000/01/rdf-schema#label> "has SUBSCRIBE Variable Header"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptions
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptions> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptions> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptions> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptions> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SUBSCRIBE Payload to one or more MQTT Subscription Entries."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptions> <http://www.w3.org/2000/01/rdf-schema#label> "has MQTT Subscription Entries"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicFilter
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicFilter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicFilter> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://www.w3.org/2019/wot/mqtt#hasTopicFilters> .
+<https://www.w3.org/2019/wot/mqtt#hasTopicFilters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicFilter> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicFilterOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicFilter> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#unionOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicFilter> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicFilter> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Subscription Entry or an UNSUBSCRIBE payload to an MQTT Topic Filter."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicFilter> <http://www.w3.org/2000/01/rdf-schema#label> "has MQTT Topic Filter"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicName
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicName> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://www.w3.org/2019/wot/mqtt#hasTopicName> .
+<https://www.w3.org/2019/wot/mqtt#hasTopicName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicName> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicNameOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishVariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicName> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicName> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a PUBLISH Variable Header to the MQTT Topic to which the message is published."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicName> <http://www.w3.org/2000/01/rdf-schema#label> "has MQTT Topic (name)"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionFixedHeader
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionFixedHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionFixedHeader> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionFixedHeader> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionFixedHeaderOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionFixedHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionFixedHeader> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionFixedHeader> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeFixedHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionFixedHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an UNSUBSCRIBE packet to its specific Fixed Header."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionFixedHeader> <http://www.w3.org/2000/01/rdf-schema#label> "has UNSUBSCRIBE Fixed Header"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionPayload
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionPayload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionPayload> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionPayload> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionPayloadOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionPayload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionPayload> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionPayload> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionPayload> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an UNSUBSCRIBE packet to its MQTT Payload."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionPayload> <http://www.w3.org/2000/01/rdf-schema#label> "has UNSUBSCRIBE Payload"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionVariableHeader
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionVariableHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionVariableHeader> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasVariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionVariableHeader> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionVariableHeaderOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionVariableHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionVariableHeader> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionVariableHeader> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeVariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionVariableHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an UNSUBSCRIBE packet to its specific Variable Header."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionVariableHeader> <http://www.w3.org/2000/01/rdf-schema#label> "has UNSUBSCRIBE Variable Header"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasVariableHeader
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasVariableHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasVariableHeader> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasVariableHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasVariableHeader> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasVariableHeader> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasVariableHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an MQTT Control Packet to its Variable Header."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasVariableHeader> <http://www.w3.org/2000/01/rdf-schema#label> "has Variable Header"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hosts
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hosts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hosts> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/sosa/hosts> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hosts> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isHostedBy> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hosts> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hosts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/System> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hosts> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an MQTT Client (as a SOSA platform) to SOSA systems (sensors/actuators) it hosts."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hosts> <http://www.w3.org/2000/01/rdf-schema#label> "hosts"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isAcceptedBy
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isAcceptedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isAcceptedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isAcceptedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isAcceptedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the MQTT Broker that accepted the client's connection request."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isAcceptedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is accepted by"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isConnectedToBroker
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isConnectedToBroker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isConnectedToBroker> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isConnectedToBroker> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isConnectedToBroker> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an MQTT Client to the MQTT Broker it is currently connected to."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isConnectedToBroker> <http://www.w3.org/2000/01/rdf-schema#label> "is connected to MQTT Broker"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isEncodedInPayload
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isEncodedInPayload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isEncodedInPayload> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isEncodedInPayload> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isEncodedInPayload> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an RDF list of field names to the MQTT Payload that contains them."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isEncodedInPayload> <http://www.w3.org/2000/01/rdf-schema#label> "is encoded in MQTT Payload"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isFixedHeaderOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isFixedHeaderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isFixedHeaderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Fixed Header to the MQTT Control Packet containing it."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Fixed Header of"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isHostedBy
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isHostedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/sosa/isHostedBy> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/System> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SOSA system to the hosting MQTT Client."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is hosted by"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isInitiatedBy
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isInitiatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isInitiatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isInitiatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isInitiatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the MQTT Client that initiated the connection to the MQTT Broker."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isInitiatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is initiated by"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isMatchedByFilter
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isMatchedByFilter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isMatchedByFilter> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#matchesTopic> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isMatchedByFilter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isMatchedByFilter> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isMatchedByFilter> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an MQTT Topic is matched by a given MQTT Topic Filter."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isMatchedByFilter> <http://www.w3.org/2000/01/rdf-schema#label> "is matched by MQTT Topic Filter"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPayloadOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPayloadOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPayloadOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPayloadOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPayloadOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPayloadOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an MQTT Payload to the MQTT Control Packet containing it."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPayloadOf> <http://www.w3.org/2000/01/rdf-schema#label> "is MQTT Payload of"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishFixedHeaderOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishFixedHeaderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isFixedHeaderOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishFixedHeaderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a PUBLISH Fixed Header to its MQTT Control Packet."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#label> "is PUBLISH Fixed Header of"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishPayloadOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishPayloadOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishPayloadOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPayloadOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishPayloadOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishPayloadOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishPayloadOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishPayloadOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a PUBLISH Payload to its MQTT Control Packet."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishPayloadOf> <http://www.w3.org/2000/01/rdf-schema#label> "is PUBLISH Payload of"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishVariableHeaderOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishVariableHeaderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishVariableHeaderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishVariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a PUBLISH Variable Header to its MQTT Control Packet."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#label> "is PUBLISH Variable Header of"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSentBy
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSentBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSentBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#sendsControlPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSentBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSentBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSentBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an MQTT Control Packet to the MQTT Client that sent it."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSentBy> <http://www.w3.org/2000/01/rdf-schema#label> "is sent by MQTT Client"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubjectOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubjectOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubjectOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubjectOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubjectOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a topic subject (e.g., Observation, Actuation) to the MQTT Topic that carries it."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubjectOf> <http://www.w3.org/2000/01/rdf-schema#label> "is topic subject of"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionFixedHeaderOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionFixedHeaderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isFixedHeaderOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionFixedHeaderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeFixedHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SUBSCRIBE Fixed Header to its MQTT Control Packet."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#label> "is SUBSCRIBE Fixed Header of"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an MQTT Subscription Entry to its SUBSCRIBE Payload."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionOf> <http://www.w3.org/2000/01/rdf-schema#label> "is MQTT Subscription Entry of"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionPayloadOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionPayloadOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionPayloadOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPayloadOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionPayloadOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionPayloadOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionPayloadOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionPayloadOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SUBSCRIBE Payload to its MQTT Control Packet."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionPayloadOf> <http://www.w3.org/2000/01/rdf-schema#label> "is SUBSCRIBE Payload of"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionVariableHeaderOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionVariableHeaderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionVariableHeaderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeVariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SUBSCRIBE Variable Header to its MQTT Control Packet."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#label> "is SUBSCRIBE Variable Header of"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicFilterOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicFilterOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicFilterOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicFilterOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#unionOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicFilterOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an MQTT Topic Filter to a Subscription Entry or an UNSUBSCRIBE payload."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicFilterOf> <http://www.w3.org/2000/01/rdf-schema#label> "is MQTT Topic Filter of"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicNameOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicNameOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicNameOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicNameOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishVariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicNameOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an MQTT Topic to which the message is published to a PUBLISH Variable Header."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicNameOf> <http://www.w3.org/2000/01/rdf-schema#label> "is MQTT Topic (name) of"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionFixedHeaderOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionFixedHeaderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isFixedHeaderOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionFixedHeaderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeFixedHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an UNSUBSCRIBE Fixed Header to its MQTT Control Packet."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionFixedHeaderOf> <http://www.w3.org/2000/01/rdf-schema#label> "is UNSUBSCRIBE Fixed Header of"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionPayloadOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionPayloadOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionPayloadOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPayloadOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionPayloadOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionPayloadOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionPayloadOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionPayloadOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an UNSUBSCRIBE Payload to its MQTT Control Packet."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionPayloadOf> <http://www.w3.org/2000/01/rdf-schema#label> "is UNSUBSCRIBE Payload of"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionVariableHeaderOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionVariableHeaderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionVariableHeaderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeVariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an UNSUBSCRIBE Variable Header to its MQTT Control Packet."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#label> "is UNSUBSCRIBE Variable Header of"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Variable Header to the MQTT Control Packet containing it."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Variable Header of"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#listensToTopic
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#listensToTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#listensToTopic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Actuator> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#listensToTopic> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#listensToTopic> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an actuator to the MQTT Topic from which it receives actuation commands."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#listensToTopic> <http://www.w3.org/2000/01/rdf-schema#label> "listens to MQTT Topic"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#matchesTopic
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#matchesTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#matchesTopic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#matchesTopic> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#matchesTopic> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an MQTT Topic Filter matches a particular MQTT Topic."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#matchesTopic> <http://www.w3.org/2000/01/rdf-schema#label> "matches MQTT Topic"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#observesTopic
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#observesTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#observesTopic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Sensor> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#observesTopic> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#observesTopic> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a sensor to the MQTT Topic to which it publishes observations."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#observesTopic> <http://www.w3.org/2000/01/rdf-schema#label> "observes MQTT Topic"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesActuation
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesActuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesActuation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesActuation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Actuation> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesActuation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the MQTT Payload encodes a single SOSA Actuation command."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesActuation> <http://www.w3.org/2000/01/rdf-schema#label> "payload encodes SOSA Actuation"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesActuationCollection
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesActuationCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesActuationCollection> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesActuationCollection> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/ActuationCollection> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesActuationCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the MQTT Payload encodes a collection of actuation commands."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesActuationCollection> <http://www.w3.org/2000/01/rdf-schema#label> "payload encodes SOSA Actuation Collection"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesObservation
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesObservation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesObservation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Observation> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the MQTT Payload encodes a SOSA Observation."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesObservation> <http://www.w3.org/2000/01/rdf-schema#label> "payload encodes SOSA Observation"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesObservationCollection
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesObservationCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesObservationCollection> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesObservationCollection> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/ObservationCollection> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesObservationCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the MQTT Payload encodes a collection of SOSA Observations."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesObservationCollection> <http://www.w3.org/2000/01/rdf-schema#label> "payload encodes SOSA Observation Collection"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#publishesPacket
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#publishesPacket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#publishesPacket> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#sendsControlPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#publishesPacket> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#publishesPacket> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#publishesPacket> <http://www.w3.org/2000/01/rdf-schema#comment> "Specializes mqtt:sendsControlPacket for PUBLISH packets."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#publishesPacket> <http://www.w3.org/2000/01/rdf-schema#label> "publishes PUBLISH Packet"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#receivesSubscribePacket
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#receivesSubscribePacket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#receivesSubscribePacket> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#receivesSubscribePacket> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#receivesSubscribePacket> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an MQTT Broker receives a SUBSCRIBE packet from an MQTT Client."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#receivesSubscribePacket> <http://www.w3.org/2000/01/rdf-schema#label> "receives SUBSCRIBE Packet"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#receivesUnsubscribePacket
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#receivesUnsubscribePacket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#receivesUnsubscribePacket> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#receivesUnsubscribePacket> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#receivesUnsubscribePacket> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an MQTT Broker receives an UNSUBSCRIBE packet from an MQTT Client."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#receivesUnsubscribePacket> <http://www.w3.org/2000/01/rdf-schema#label> "receives UNSUBSCRIBE Packet"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#runsOnPlatform
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#runsOnPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#runsOnPlatform> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#runsOnPlatform> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Platform> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#runsOnPlatform> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an MQTT Client to the platform on which it operates."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#runsOnPlatform> <http://www.w3.org/2000/01/rdf-schema#label> "runs on platform"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#sendsControlPacket
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#sendsControlPacket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#sendsControlPacket> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://www.w3.org/2019/wot/mqtt#sendsControlPacket> .
+<https://www.w3.org/2019/wot/mqtt#sendsControlPacket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#sendsControlPacket> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#sendsControlPacket> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#sendsControlPacket> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an MQTT Client to an MQTT Control Packet it sends."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#sendsControlPacket> <http://www.w3.org/2000/01/rdf-schema#label> "sends MQTT Control Packet"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#subscribesPacket
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#subscribesPacket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#subscribesPacket> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#sendsControlPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#subscribesPacket> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#subscribesPacket> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#subscribesPacket> <http://www.w3.org/2000/01/rdf-schema#comment> "Specializes mqtt:sendsControlPacket for SUBSCRIBE packets."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#subscribesPacket> <http://www.w3.org/2000/01/rdf-schema#label> "sends SUBSCRIBE Packet"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#unsubscribesPacket
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#unsubscribesPacket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#unsubscribesPacket> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#sendsControlPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#unsubscribesPacket> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#unsubscribesPacket> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#unsubscribesPacket> <http://www.w3.org/2000/01/rdf-schema#comment> "Specializes mqtt:sendsControlPacket for UNSUBSCRIBE packets."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#unsubscribesPacket> <http://www.w3.org/2000/01/rdf-schema#label> "sends UNSUBSCRIBE Packet"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesConnection
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesConnection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesConnection> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkParticipant> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesConnection> <http://www.w3.org/2000/01/rdf-schema#range> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesConnection> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a network participant (MQTT Client or MQTT Broker) to a network connection it uses."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesConnection> <http://www.w3.org/2000/01/rdf-schema#label> "uses connection"@en .
+# 
+# https://www.w3.org/2019/wot/mqtt#hasPayload
+# 
+# https://www.w3.org/2019/wot/mqtt#hasTopicFilters
+# 
+# https://www.w3.org/2019/wot/mqtt#hasTopicName
+# 
+# https://www.w3.org/2019/wot/mqtt#sendsControlPacket
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClientID
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClientID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClientID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClientID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClientID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClientID> <http://www.w3.org/2000/01/rdf-schema#comment> "The MQTT Client identifier used when connecting to an MQTT Broker."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClientID> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Client identifier"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFilterPattern
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFilterPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFilterPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFilterPattern> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFilterPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "The MQTT Topic Filter pattern as a string (e.g., 'sensor/+/temp' or 'fabrik/zentrierung/#')."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFilterPattern> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Topic Filter pattern"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost> <http://www.w3.org/2000/01/rdf-schema#comment> "The hostname or IP address of an MQTT Broker."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Broker host"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPacketIdentifier
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPacketIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPacketIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPacketIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPacketIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedShort> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPacketIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A 16-bit identifier used to correlate MQTT messages when QoS > 0."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPacketIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "packet identifier"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContent
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContent> <http://www.w3.org/2000/01/rdf-schema#comment> "The application message body as a string (possibly serialized/encoded)."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContent> <http://www.w3.org/2000/01/rdf-schema#label> "payload content"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentDelimiter
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentDelimiter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentDelimiter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentDelimiter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentDelimiter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentDelimiter> <http://www.w3.org/2000/01/rdf-schema#comment> "The delimiter used to separate fields in the payload content."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentDelimiter> <http://www.w3.org/2000/01/rdf-schema#label> "payload content delimiter"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentType
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentType> <http://www.w3.org/2000/01/rdf-schema#comment> "The MIME type of the payload content (e.g., 'application/json')."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentType> <http://www.w3.org/2000/01/rdf-schema#label> "payload content type"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadEncoding
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadEncoding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadEncoding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadEncoding> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadEncoding> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "The character encoding or serialization used for the payload (e.g., 'UTF-8', 'Base64')."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "payload encoding"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPortNumber
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPortNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPortNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPortNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPortNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPortNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The TCP port on which an MQTT Broker listens."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPortNumber> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Broker port"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasQosLevel
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasQosLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasQosLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasQosLevel> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasQosLevel> <http://www.w3.org/2000/01/rdf-schema#range> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid16 .
+_:genid16 <http://www.w3.org/2001/XMLSchema#maxInclusive> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid18 .
+_:genid18 <http://www.w3.org/2001/XMLSchema#minInclusive> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasQosLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Not mapped to mqv:hasQoSFlag because MQV models QoS as an object property, while mqtt:hasQosLevel is a datatype property."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasQosLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "The MQTT Quality of Service level (0 = at most once, 1 = at least once, 2 = exactly once)."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasQosLevel> <http://www.w3.org/2000/01/rdf-schema#label> "QoS level"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isDUPFlag
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isDUPFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isDUPFlag> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://www.w3.org/2019/wot/mqtt#hasDUPFlag> .
+<https://www.w3.org/2019/wot/mqtt#hasDUPFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isDUPFlag> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isDUPFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isDUPFlag> <http://www.w3.org/2000/01/rdf-schema#comment> "True if this is a duplicate delivery of an earlier PUBLISH message."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isDUPFlag> <http://www.w3.org/2000/01/rdf-schema#label> "DUP flag"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isRetainedFlag
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isRetainedFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isRetainedFlag> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://www.w3.org/2019/wot/mqtt#hasRetainFlag> .
+<https://www.w3.org/2019/wot/mqtt#hasRetainFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isRetainedFlag> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isRetainedFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isRetainedFlag> <http://www.w3.org/2000/01/rdf-schema#comment> "True if the message should be retained on the MQTT Broker."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isRetainedFlag> <http://www.w3.org/2000/01/rdf-schema#label> "RETAIN flag"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesTLS
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesTLS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesTLS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesTLS> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesTLS> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesTLS> <http://www.w3.org/2000/01/rdf-schema#comment> "True if the Network Connection is protected via TLS, otherwise false."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesTLS> <http://www.w3.org/2000/01/rdf-schema#label> "uses TLS"@en .
+# 
+# https://www.w3.org/2019/wot/mqtt#hasDUPFlag
+# 
+# https://www.w3.org/2019/wot/mqtt#hasRetainFlag
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/schema/qudt/QuantityValue
+# 
+# http://www.w3.org/ns/sosa/Actuation
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject> .
+# 
+# http://www.w3.org/ns/sosa/ActuationCollection
+<http://www.w3.org/ns/sosa/ActuationCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/ActuationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject> .
+# 
+# http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject> .
+# 
+# http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject> .
+# 
+# http://www.w3.org/ns/sosa/ObservationCollection
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject> .
+# 
+# http://www.w3.org/ns/sosa/Property
+<http://www.w3.org/ns/sosa/Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject> .
+# 
+# http://www.w3.org/ns/sosa/System
+<http://www.w3.org/ns/sosa/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker> <http://www.w3.org/2002/07/owl#equivalentClass> <https://www.w3.org/2019/wot/mqtt#Server> .
+<https://www.w3.org/2019/wot/mqtt#Server> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkParticipant> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker> <http://www.w3.org/2000/01/rdf-schema#comment> "An MQTT Broker that accepts client connections, manages subscriptions, and forwards published messages."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Broker"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> <http://www.w3.org/2002/07/owl#equivalentClass> <https://www.w3.org/2019/wot/mqtt#Client> .
+<https://www.w3.org/2019/wot/mqtt#Client> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkParticipant> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> <http://www.w3.org/2000/01/rdf-schema#comment> "An MQTT Client that connects to an MQTT Broker and publishes or subscribes to MQTT Topics; may host SOSA systems."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Client"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket> <http://www.w3.org/2002/07/owl#equivalentClass> <https://www.w3.org/2019/wot/mqtt#ControlPacket> .
+<https://www.w3.org/2019/wot/mqtt#ControlPacket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket> <http://www.w3.org/2000/01/rdf-schema#comment> "An MQTT Control Packet such as PUBLISH, SUBSCRIBE, or UNSUBSCRIBE."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Control Packet"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "The header present in all MQTT Control Packets, containing the packet type and flags."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Fixed Header"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection> <http://www.w3.org/2002/07/owl#equivalentClass> <https://www.w3.org/2019/wot/mqtt#NetworkConnection> .
+<https://www.w3.org/2019/wot/mqtt#NetworkConnection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection> <http://www.w3.org/2000/01/rdf-schema#comment> "A transport-layer connection between an MQTT Client and an MQTT Broker (optionally secured with TLS)."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Network Connection"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkParticipant
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkParticipant> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity participating in an MQTT network, such as an MQTT Client or an MQTT Broker."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkParticipant> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Network Participant"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload> <http://www.w3.org/2000/01/rdf-schema#comment> "The application data carried by an MQTT Control Packet."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Payload"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "The Fixed Header used in PUBLISH packets."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT PUBLISH Fixed Header"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket> <http://www.w3.org/2002/07/owl#equivalentClass> <https://www.w3.org/2019/wot/mqtt#PUBLISH> .
+<https://www.w3.org/2019/wot/mqtt#PUBLISH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket> <http://www.w3.org/2000/01/rdf-schema#comment> "An MQTT Control Packet used by an MQTT Client to publish an application message to an MQTT Topic."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT PUBLISH Packet"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> <http://www.w3.org/2000/01/rdf-schema#comment> "The payload of a PUBLISH packet (application message body)."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT PUBLISH Payload"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishVariableHeader
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishVariableHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishVariableHeader> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishVariableHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "The Variable Header of a PUBLISH packet; includes the MQTT Topic and optionally a packet identifier."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishVariableHeader> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT PUBLISH Variable Header"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeFixedHeader
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeFixedHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeFixedHeader> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeFixedHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "The Fixed Header used in SUBSCRIBE packets."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeFixedHeader> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT SUBSCRIBE Fixed Header"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket> <http://www.w3.org/2002/07/owl#equivalentClass> <https://www.w3.org/2019/wot/mqtt#SUBSCRIBE> .
+<https://www.w3.org/2019/wot/mqtt#SUBSCRIBE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket> <http://www.w3.org/2000/01/rdf-schema#comment> "An MQTT Control Packet used by an MQTT Client to subscribe to one or more MQTT Topic Filters."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT SUBSCRIBE Packet"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeVariableHeader
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeVariableHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeVariableHeader> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeVariableHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "The Variable Header of a SUBSCRIBE packet; typically includes the packet identifier."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeVariableHeader> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT SUBSCRIBE Variable Header"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry> <http://www.w3.org/2000/01/rdf-schema#comment> "A single requested subscription consisting of an MQTT Topic Filter and an associated QoS level."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Subscription Entry"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionPayload
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionPayload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionPayload> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionPayload> <http://www.w3.org/2000/01/rdf-schema#comment> "The payload of a SUBSCRIBE packet, listing MQTT Subscription Entries."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionPayload> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT SUBSCRIBE Payload"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic> <http://www.w3.org/2002/07/owl#equivalentClass> <https://www.w3.org/2019/wot/mqtt#TopicName> .
+<https://www.w3.org/2019/wot/mqtt#TopicName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic> <http://www.w3.org/2000/01/rdf-schema#comment> "A hierarchical MQTT Topic to which MQTT Clients publish and/or subscribe."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Topic"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter> <http://www.w3.org/2002/07/owl#equivalentClass> <https://www.w3.org/2019/wot/mqtt#TopicFilter> .
+<https://www.w3.org/2019/wot/mqtt#TopicFilter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter> <http://www.w3.org/2000/01/rdf-schema#comment> "A filter expression (e.g., with wildcards) used in SUBSCRIBE/UNSUBSCRIBE to match MQTT Topics."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Topic Filter"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "A conceptual subject carried on an MQTT Topic, e.g., an Observation, Actuation, Property, or Feature of Interest."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Topic Subject"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeFixedHeader
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeFixedHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeFixedHeader> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeFixedHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "The Fixed Header used in UNSUBSCRIBE packets."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeFixedHeader> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT UNSUBSCRIBE Fixed Header"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket> <http://www.w3.org/2002/07/owl#equivalentClass> <https://www.w3.org/2019/wot/mqtt#UNSUBSCRIBE> .
+<https://www.w3.org/2019/wot/mqtt#UNSUBSCRIBE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket> <http://www.w3.org/2000/01/rdf-schema#comment> "An MQTT Control Packet used by an MQTT Client to remove one or more subscriptions."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT UNSUBSCRIBE Packet"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeVariableHeader
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeVariableHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeVariableHeader> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeVariableHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "The Variable Header of an UNSUBSCRIBE packet; typically includes the packet identifier."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeVariableHeader> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT UNSUBSCRIBE Variable Header"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload> <http://www.w3.org/2000/01/rdf-schema#comment> "The payload of an UNSUBSCRIBE packet, listing MQTT Topic Filters to be removed."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT UNSUBSCRIBE Payload"@en .
+# 
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "The optional header carrying packet-specific metadata (e.g., packet identifier, MQTT Topic name)."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Variable Header"@en .
+# 
+# https://www.w3.org/2019/wot/mqtt#Client
+# 
+# https://www.w3.org/2019/wot/mqtt#ControlPacket
+# 
+# https://www.w3.org/2019/wot/mqtt#NetworkConnection
+# 
+# https://www.w3.org/2019/wot/mqtt#PUBLISH
+# 
+# https://www.w3.org/2019/wot/mqtt#SUBSCRIBE
+# 
+# https://www.w3.org/2019/wot/mqtt#Server
+# 
+# https://www.w3.org/2019/wot/mqtt#TopicFilter
+# 
+# https://www.w3.org/2019/wot/mqtt#TopicName
+# 
+# https://www.w3.org/2019/wot/mqtt#UNSUBSCRIBE
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://example.org/individuals#DTEC
+<http://example.org/individuals#DTEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/individuals#DTEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://example.org/individuals#DTEC> <http://www.w3.org/2000/01/rdf-schema#comment> "This research as part of the project EKI is funded by dtec.bw – Digitalization and Technology Research Center of the Bundeswehr which we gratefully acknowledge. dtec.bw is funded by the European Union – NextGenerationEU." .
+<http://example.org/individuals#DTEC> <http://www.w3.org/2000/01/rdf-schema#label> "Digitalization and Technology Research Center of the Bundeswehr" .
+<http://example.org/individuals#DTEC> <http://xmlns.com/foaf/0.1/homepage> <https://dtecbw.de/home> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid19 <http://www.w3.org/2002/07/owl#members> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkParticipant> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid30 <http://www.w3.org/2002/07/owl#members> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeFixedHeader> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeFixedHeader> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid34 <http://www.w3.org/2002/07/owl#members> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid38 <http://www.w3.org/2002/07/owl#members> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionPayload> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid42 <http://www.w3.org/2002/07/owl#members> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeVariableHeader> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeVariableHeader> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishVariableHeader> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

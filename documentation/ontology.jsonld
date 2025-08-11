@@ -1,0 +1,2045 @@
+[ {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@list" : [ {
+      "@id" : "_:genid18"
+    }, {
+      "@id" : "_:genid16"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkParticipant"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeFixedHeader"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeFixedHeader"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionPayload"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishVariableHeader"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeVariableHeader"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeVariableHeader"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload"
+    } ]
+  } ]
+}, {
+  "@id" : "http://example.org/individuals#DTEC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This research as part of the project EKI is funded by dtec.bw – Digitalization and Technology Research Center of the Bundeswehr which we gratefully acknowledge. dtec.bw is funded by the European Union – NextGenerationEU."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Digitalization and Technology Research Center of the Bundeswehr"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://dtecbw.de/home"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/bibliographicCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/ontology/bibo/doi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/QuantityValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/Actuation",
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/ActuationCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/Observation",
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/ObservationCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/System",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/fundedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/homepage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/mbox",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "Niklas Doerner, Maria Maleshkova (2025): MQTT4SSN Ontology. https://doi.org/10.5281/zenodo.16704302"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-11"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid3"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "MQTT4SSN Ontology"
+  } ],
+  "http://purl.org/ontology/bibo/doi" : [ {
+    "@value" : "10.5281/zenodo.16704302"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT transport protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT transport protocol component."
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://qudt.org/schema/qudt/"
+  }, {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Ontology"
+  }, {
+    "@id" : "http://www.w3.org/ns/sosa/"
+  }, {
+    "@id" : "http://www.w3.org/ns/ssn/"
+  }, {
+    "@id" : "https://www.w3.org/2019/wot/mqtt"
+  } ],
+  "http://xmlns.com/foaf/0.1/fundedBy" : [ {
+    "@id" : "http://example.org/individuals#DTEC"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An MQTT Broker that accepts client connections, manages subscriptions, and forwards published messages."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT Broker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkParticipant"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://www.w3.org/2019/wot/mqtt#Server"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An MQTT Client that connects to an MQTT Broker and publishes or subscribes to MQTT Topics; may host SOSA systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkParticipant"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://www.w3.org/2019/wot/mqtt#Client"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An MQTT Control Packet such as PUBLISH, SUBSCRIBE, or UNSUBSCRIBE."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT Control Packet"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://www.w3.org/2019/wot/mqtt#ControlPacket"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The header present in all MQTT Control Packets, containing the packet type and flags."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT Fixed Header"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A transport-layer connection between an MQTT Client and an MQTT Broker (optionally secured with TLS)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT Network Connection"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://www.w3.org/2019/wot/mqtt#NetworkConnection"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkParticipant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An entity participating in an MQTT network, such as an MQTT Client or an MQTT Broker."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT Network Participant"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The application data carried by an MQTT Control Packet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT Payload"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Fixed Header used in PUBLISH packets."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT PUBLISH Fixed Header"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An MQTT Control Packet used by an MQTT Client to publish an application message to an MQTT Topic."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT PUBLISH Packet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://www.w3.org/2019/wot/mqtt#PUBLISH"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The payload of a PUBLISH packet (application message body)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT PUBLISH Payload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishVariableHeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Variable Header of a PUBLISH packet; includes the MQTT Topic and optionally a packet identifier."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT PUBLISH Variable Header"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeFixedHeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Fixed Header used in SUBSCRIBE packets."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT SUBSCRIBE Fixed Header"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An MQTT Control Packet used by an MQTT Client to subscribe to one or more MQTT Topic Filters."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT SUBSCRIBE Packet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://www.w3.org/2019/wot/mqtt#SUBSCRIBE"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeVariableHeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Variable Header of a SUBSCRIBE packet; typically includes the packet identifier."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT SUBSCRIBE Variable Header"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A single requested subscription consisting of an MQTT Topic Filter and an associated QoS level."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT Subscription Entry"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionPayload",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The payload of a SUBSCRIBE packet, listing MQTT Subscription Entries."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT SUBSCRIBE Payload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A hierarchical MQTT Topic to which MQTT Clients publish and/or subscribe."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT Topic"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://www.w3.org/2019/wot/mqtt#TopicName"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A filter expression (e.g., with wildcards) used in SUBSCRIBE/UNSUBSCRIBE to match MQTT Topics."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT Topic Filter"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://www.w3.org/2019/wot/mqtt#TopicFilter"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A conceptual subject carried on an MQTT Topic, e.g., an Observation, Actuation, Property, or Feature of Interest."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT Topic Subject"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeFixedHeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Fixed Header used in UNSUBSCRIBE packets."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT UNSUBSCRIBE Fixed Header"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An MQTT Control Packet used by an MQTT Client to remove one or more subscriptions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT UNSUBSCRIBE Packet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://www.w3.org/2019/wot/mqtt#UNSUBSCRIBE"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeVariableHeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Variable Header of an UNSUBSCRIBE packet; typically includes the packet identifier."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT UNSUBSCRIBE Variable Header"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The payload of an UNSUBSCRIBE packet, listing MQTT Topic Filters to be removed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT UNSUBSCRIBE Payload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The optional header carrying packet-specific metadata (e.g., packet identifier, MQTT Topic name)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT Variable Header"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#forwardsPublishPacket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that an MQTT Broker forwards a PUBLISH packet to subscribers."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "forwards PUBLISH Packet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a SOSA platform to an MQTT Client running on it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Platform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has MQTT Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#runsOnPlatform"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClientID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The MQTT Client identifier used when connecting to an MQTT Broker."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT Client identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasConnectedClient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an MQTT Broker to an MQTT Client that is connected to it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has connected MQTT Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isConnectedToBroker"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasEncodedFields",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an MQTT Payload to an ordered RDF list naming fields encoded within the payload content."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has encoded fields"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isEncodedInPayload"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFilterPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The MQTT Topic Filter pattern as a string (e.g., 'sensor/+/temp' or 'fabrik/zentrierung/#')."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT Topic Filter pattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an MQTT Control Packet to its Fixed Header."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has Fixed Header"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isFixedHeaderOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The hostname or IP address of an MQTT Broker."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT Broker host"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPacketIdentifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A 16-bit identifier used to correlate MQTT messages when QoS > 0."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "packet identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#unsignedShort"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasParticipant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a network connection to its network participant (MQTT Client or MQTT Broker)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has participant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkParticipant"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesConnection"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an MQTT Control Packet to its MQTT Payload."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has MQTT Payload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://www.w3.org/2019/wot/mqtt#hasPayload"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPayloadOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The application message body as a string (possibly serialized/encoded)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "payload content"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentDelimiter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The delimiter used to separate fields in the payload content."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "payload content delimiter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The MIME type of the payload content (e.g., 'application/json')."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "payload content type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadEncoding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The character encoding or serialization used for the payload (e.g., 'UTF-8', 'Base64')."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "payload encoding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the size of an MQTT Payload as a QUDT quantity value (e.g., unit:Byte)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has payload size"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://qudt.org/schema/qudt/QuantityValue"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPortNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The TCP port on which an MQTT Broker listens."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MQTT Broker port"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishFixedHeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a PUBLISH packet to its specific Fixed Header."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has PUBLISH Fixed Header"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishFixedHeaderOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishPayload",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a PUBLISH packet to its MQTT Payload."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has PUBLISH Payload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishPayloadOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishVariableHeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a PUBLISH packet to its specific Variable Header."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has PUBLISH Variable Header"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishVariableHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasVariableHeader"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishVariableHeaderOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasQosLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Not mapped to mqv:hasQoSFlag because MQV models QoS as an object property, while mqtt:hasQosLevel is a datatype property."
+  }, {
+    "@language" : "en",
+    "@value" : "The MQTT Quality of Service level (0 = at most once, 1 = at least once, 2 = exactly once)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid11"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "QoS level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid14"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an MQTT Topic to the conceptual subject carried on that topic."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has topic subject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubjectOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionFixedHeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a SUBSCRIBE packet to its specific Fixed Header."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has SUBSCRIBE Fixed Header"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeFixedHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionFixedHeaderOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionPayload",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a SUBSCRIBE packet to its MQTT Payload."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has SUBSCRIBE Payload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionPayload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionPayloadOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionVariableHeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a SUBSCRIBE packet to its specific Variable Header."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has SUBSCRIBE Variable Header"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeVariableHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasVariableHeader"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionVariableHeaderOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a SUBSCRIBE Payload to one or more MQTT Subscription Entries."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionPayload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has MQTT Subscription Entries"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicFilter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a Subscription Entry or an UNSUBSCRIBE payload to an MQTT Topic Filter."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has MQTT Topic Filter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://www.w3.org/2019/wot/mqtt#hasTopicFilters"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicFilterOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a PUBLISH Variable Header to the MQTT Topic to which the message is published."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishVariableHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has MQTT Topic (name)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://www.w3.org/2019/wot/mqtt#hasTopicName"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicNameOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionFixedHeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an UNSUBSCRIBE packet to its specific Fixed Header."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has UNSUBSCRIBE Fixed Header"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeFixedHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionFixedHeaderOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionPayload",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an UNSUBSCRIBE packet to its MQTT Payload."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has UNSUBSCRIBE Payload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionPayloadOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionVariableHeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an UNSUBSCRIBE packet to its specific Variable Header."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has UNSUBSCRIBE Variable Header"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeVariableHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasVariableHeader"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionVariableHeaderOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasVariableHeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an MQTT Control Packet to its Variable Header."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has Variable Header"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hosts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an MQTT Client (as a SOSA platform) to SOSA systems (sensors/actuators) it hosts."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hosts"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/hosts"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isHostedBy"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isAcceptedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the MQTT Broker that accepted the client's connection request."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is accepted by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isConnectedToBroker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an MQTT Client to the MQTT Broker it is currently connected to."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is connected to MQTT Broker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isDUPFlag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "True if this is a duplicate delivery of an earlier PUBLISH message."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DUP flag"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://www.w3.org/2019/wot/mqtt#hasDUPFlag"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isEncodedInPayload",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an RDF list of field names to the MQTT Payload that contains them."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is encoded in MQTT Payload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isFixedHeaderOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a Fixed Header to the MQTT Control Packet containing it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is Fixed Header of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isHostedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a SOSA system to the hosting MQTT Client."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is hosted by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/isHostedBy"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isInitiatedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the MQTT Client that initiated the connection to the MQTT Broker."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is initiated by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isMatchedByFilter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that an MQTT Topic is matched by a given MQTT Topic Filter."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is matched by MQTT Topic Filter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#matchesTopic"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPayloadOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an MQTT Payload to the MQTT Control Packet containing it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is MQTT Payload of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishFixedHeaderOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a PUBLISH Fixed Header to its MQTT Control Packet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is PUBLISH Fixed Header of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isFixedHeaderOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishPayloadOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a PUBLISH Payload to its MQTT Control Packet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is PUBLISH Payload of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPayloadOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishVariableHeaderOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a PUBLISH Variable Header to its MQTT Control Packet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishVariableHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is PUBLISH Variable Header of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isRetainedFlag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "True if the message should be retained on the MQTT Broker."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "RETAIN flag"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://www.w3.org/2019/wot/mqtt#hasRetainFlag"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSentBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an MQTT Control Packet to the MQTT Client that sent it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is sent by MQTT Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#sendsControlPacket"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubjectOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a topic subject (e.g., Observation, Actuation) to the MQTT Topic that carries it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicSubject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is topic subject of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionFixedHeaderOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a SUBSCRIBE Fixed Header to its MQTT Control Packet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeFixedHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is SUBSCRIBE Fixed Header of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isFixedHeaderOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an MQTT Subscription Entry to its SUBSCRIBE Payload."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is MQTT Subscription Entry of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionPayload"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionPayloadOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a SUBSCRIBE Payload to its MQTT Control Packet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionPayload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is SUBSCRIBE Payload of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPayloadOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionVariableHeaderOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a SUBSCRIBE Variable Header to its MQTT Control Packet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeVariableHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is SUBSCRIBE Variable Header of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicFilterOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an MQTT Topic Filter to a Subscription Entry or an UNSUBSCRIBE payload."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is MQTT Topic Filter of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid8"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicNameOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an MQTT Topic to which the message is published to a PUBLISH Variable Header."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is MQTT Topic (name) of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishVariableHeader"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionFixedHeaderOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an UNSUBSCRIBE Fixed Header to its MQTT Control Packet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeFixedHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is UNSUBSCRIBE Fixed Header of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isFixedHeaderOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionPayloadOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an UNSUBSCRIBE Payload to its MQTT Control Packet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is UNSUBSCRIBE Payload of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPayloadOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionVariableHeaderOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an UNSUBSCRIBE Variable Header to its MQTT Control Packet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribeVariableHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is UNSUBSCRIBE Variable Header of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a Variable Header to the MQTT Control Packet containing it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is Variable Header of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#listensToTopic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an actuator to the MQTT Topic from which it receives actuation commands."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Actuator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "listens to MQTT Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#matchesTopic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that an MQTT Topic Filter matches a particular MQTT Topic."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "matches MQTT Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#observesTopic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a sensor to the MQTT Topic to which it publishes observations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "observes MQTT Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesActuation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that the MQTT Payload encodes a single SOSA Actuation command."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "payload encodes SOSA Actuation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Actuation"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesActuationCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that the MQTT Payload encodes a collection of actuation commands."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "payload encodes SOSA Actuation Collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ActuationCollection"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that the MQTT Payload encodes a SOSA Observation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "payload encodes SOSA Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesObservationCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that the MQTT Payload encodes a collection of SOSA Observations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "payload encodes SOSA Observation Collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservationCollection"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#publishesPacket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specializes mqtt:sendsControlPacket for PUBLISH packets."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "publishes PUBLISH Packet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#sendsControlPacket"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#receivesSubscribePacket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that an MQTT Broker receives a SUBSCRIBE packet from an MQTT Client."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "receives SUBSCRIBE Packet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#receivesUnsubscribePacket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that an MQTT Broker receives an UNSUBSCRIBE packet from an MQTT Client."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "receives UNSUBSCRIBE Packet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#runsOnPlatform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an MQTT Client to the platform on which it operates."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "runs on platform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Platform"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#sendsControlPacket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an MQTT Client to an MQTT Control Packet it sends."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "sends MQTT Control Packet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://www.w3.org/2019/wot/mqtt#sendsControlPacket"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#subscribesPacket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specializes mqtt:sendsControlPacket for SUBSCRIBE packets."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "sends SUBSCRIBE Packet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#sendsControlPacket"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#unsubscribesPacket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specializes mqtt:sendsControlPacket for UNSUBSCRIBE packets."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "sends UNSUBSCRIBE Packet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#sendsControlPacket"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesConnection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a network participant (MQTT Client or MQTT Broker) to a network connection it uses."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkParticipant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "uses connection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection"
+  } ]
+}, {
+  "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesTLS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "True if the Network Connection is protected via TLS, otherwise false."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#NetworkConnection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "uses TLS"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://www.w3.org/2019/wot/mqtt#Client",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3.org/2019/wot/mqtt#ControlPacket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3.org/2019/wot/mqtt#NetworkConnection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3.org/2019/wot/mqtt#PUBLISH",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3.org/2019/wot/mqtt#SUBSCRIBE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3.org/2019/wot/mqtt#Server",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3.org/2019/wot/mqtt#TopicFilter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3.org/2019/wot/mqtt#TopicName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3.org/2019/wot/mqtt#UNSUBSCRIBE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3.org/2019/wot/mqtt#hasDUPFlag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://www.w3.org/2019/wot/mqtt#hasPayload",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://www.w3.org/2019/wot/mqtt#hasRetainFlag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://www.w3.org/2019/wot/mqtt#hasTopicFilters",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://www.w3.org/2019/wot/mqtt#hasTopicName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://www.w3.org/2019/wot/mqtt#sendsControlPacket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+} ]
