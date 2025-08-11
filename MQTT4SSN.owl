@@ -6,7 +6,6 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#">
-    <Prefix name="" IRI="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#"/>
     <Prefix name="ex" IRI="http://example.org/individuals#"/>
     <Prefix name="qk" IRI="http://qudt.org/vocab/quantitykind/"/>
     <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
