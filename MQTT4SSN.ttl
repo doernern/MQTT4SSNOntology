@@ -649,7 +649,7 @@ mqtt:hasPayloadSize rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
 
 # Network Datatype Properties
 
-mqtt:hasHost rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+mqtt:hasHostAddress rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:domain mqtt:Broker ;
     rdfs:range xsd:string ;
     rdfs:label "MQTT Broker host"@en ;

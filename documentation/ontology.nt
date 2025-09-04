@@ -614,13 +614,13 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFilterPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "The MQTT Topic Filter pattern as a string (e.g., 'sensor/+/temp' or 'fabrik/zentrierung/#')."@en .
 <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFilterPattern> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Topic Filter pattern"@en .
 # 
-# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost
-<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker> .
-<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost> <http://www.w3.org/2000/01/rdf-schema#comment> "The hostname or IP address of an MQTT Broker."@en .
-<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Broker host"@en .
+# https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHostAddress
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHostAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHostAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHostAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHostAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHostAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "The hostname or IP address of an MQTT Broker."@en .
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHostAddress> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Broker host"@en .
 # 
 # https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPacketIdentifier
 <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPacketIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .

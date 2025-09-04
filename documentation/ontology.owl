@@ -999,10 +999,10 @@
     
 
 
-    <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost -->
+    <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHostAddress -->
 
 
-    <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost">
+    <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHostAddress">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>

@@ -1230,7 +1230,7 @@
         } ]
       },
       "comment" : {
-        "undefined" : "This research as part of the project EKI is funded by dtec.bw – Digitalization and Technology Research Center of the Bundeswehr which we gratefully acknowledge. dtec.bw is funded by the European Union – NextGenerationEU."
+        "undefined" : "This research as part of the project EKI is funded by dtec.bw ï¿½ Digitalization and Technology Research Center of the Bundeswehr which we gratefully acknowledge. dtec.bw is funded by the European Union ï¿½ NextGenerationEU."
       },
       "labels" : {
         "IRI-based" : "DTEC",
@@ -2994,11 +2994,11 @@
     "attributes" : [ "external", "datatype" ],
     "id" : "89"
   }, {
-    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost",
+    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHostAddress",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
     "range" : "29",
     "label" : {
-      "IRI-based" : "hasHost",
+      "IRI-based" : "hasHostAddress",
       "en" : "MQTT Broker host"
     },
     "domain" : "61",

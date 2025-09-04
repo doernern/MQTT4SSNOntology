@@ -327,7 +327,7 @@
         <DataProperty IRI="#hasFilterPattern"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasHost"/>
+        <DataProperty IRI="#hasHostAddress"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasPacketIdentifier"/>
@@ -1342,7 +1342,7 @@
         <DataProperty IRI="#hasClientID"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="#hasHost"/>
+        <DataProperty IRI="#hasHostAddress"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasPacketIdentifier"/>
@@ -1377,7 +1377,7 @@
         <Class IRI="#TopicFilter"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasHost"/>
+        <DataProperty IRI="#hasHostAddress"/>
         <Class IRI="#Broker"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -1432,7 +1432,7 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#hasHost"/>
+        <DataProperty IRI="#hasHostAddress"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1810,12 +1810,12 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasHost</IRI>
+        <IRI>#hasHostAddress</IRI>
         <Literal xml:lang="en">The hostname or IP address of an MQTT Broker.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasHost</IRI>
+        <IRI>#hasHostAddress</IRI>
         <Literal xml:lang="en">MQTT Broker host</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>

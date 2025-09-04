@@ -667,8 +667,8 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:label "MQTT Topic Filter pattern"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHost
-:hasHost rdf:type owl:DatatypeProperty ,
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHostAddress
+:hasHostAddress rdf:type owl:DatatypeProperty ,
                   owl:FunctionalProperty ;
          rdfs:domain :Broker ;
          rdfs:range xsd:string ;
