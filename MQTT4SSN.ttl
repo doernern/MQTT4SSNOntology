@@ -239,7 +239,6 @@ mqtt:hasConnectedClient rdf:type owl:ObjectProperty ;
 mqtt:hosts rdf:type owl:ObjectProperty ;
     rdfs:domain mqtt:Client ;
     rdfs:range sosa:System ;
-    rdfs:subPropertyOf sosa:hosts ;
     owl:inverseOf mqtt:isHostedBy ;
     rdfs:label "hosts"@en ;
     rdfs:comment "Links an MQTT Client (as a SOSA platform) to SOSA systems (sensors/actuators) it hosts."@en .
@@ -247,7 +246,6 @@ mqtt:hosts rdf:type owl:ObjectProperty ;
 mqtt:isHostedBy rdf:type owl:ObjectProperty ;
     rdfs:domain sosa:System ;
     rdfs:range mqtt:Client ;
-    rdfs:subPropertyOf sosa:isHostedBy ;
     owl:inverseOf mqtt:hosts ;
     rdfs:label "is hosted by"@en ;
     rdfs:comment "Links a SOSA system to the hosting MQTT Client."@en .
