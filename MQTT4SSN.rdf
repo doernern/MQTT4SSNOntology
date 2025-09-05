@@ -51,7 +51,7 @@
         <dct:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <dct:title>MQTT4SSN Ontology</dct:title>
         <bibo:doi>10.5281/zenodo.16704302</bibo:doi>
-        <rdfs:comment xml:lang="en">The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT transport protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT transport protocol component.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT message protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT message protocol component.</rdfs:comment>
         <foaf:fundedBy rdf:resource="http://example.org/individuals#DTEC"/>
     </owl:Ontology>
     

@@ -39,11 +39,11 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:creator"/>
-        <AnonymousIndividual nodeID="_:genid2147484041"/>
+        <AnonymousIndividual nodeID="_:genid2147484479"/>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:creator"/>
-        <AnonymousIndividual nodeID="_:genid2147484042"/>
+        <AnonymousIndividual nodeID="_:genid2147484480"/>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:license"/>
@@ -59,7 +59,7 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal xml:lang="en">The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT transport protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT transport protocol component.</Literal>
+        <Literal xml:lang="en">The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT message protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT message protocol component.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="foaf:fundedBy"/>
@@ -594,19 +594,19 @@
         <Class abbreviatedIRI="qudt:SymmetricRelation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error6"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error5"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="rdf:rest"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="qudt:DoublePrecisionEncoding"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://org.semanticweb.owlapi/error#Error2"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://org.semanticweb.owlapi/error#Error1"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://org.semanticweb.owlapi/error#Error3"/>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error4"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="qudt:hasVocabulary"/>
@@ -912,11 +912,11 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Person"/>
-        <AnonymousIndividual nodeID="_:genid2147484041"/>
+        <AnonymousIndividual nodeID="_:genid2147484479"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Person"/>
-        <AnonymousIndividual nodeID="_:genid2147484042"/>
+        <AnonymousIndividual nodeID="_:genid2147484480"/>
     </ClassAssertion>
     <EquivalentObjectProperties>
         <ObjectProperty IRI="#hasPayload"/>
@@ -2837,32 +2837,32 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
-        <AnonymousIndividual nodeID="_:genid2147484041"/>
+        <AnonymousIndividual nodeID="_:genid2147484479"/>
         <IRI>https://orcid.org/0009-0004-0088-8633</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:mbox"/>
-        <AnonymousIndividual nodeID="_:genid2147484041"/>
+        <AnonymousIndividual nodeID="_:genid2147484479"/>
         <IRI>mailto:doernern@hsu-hh.de</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <AnonymousIndividual nodeID="_:genid2147484041"/>
+        <AnonymousIndividual nodeID="_:genid2147484479"/>
         <Literal>Niklas Doerner</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
-        <AnonymousIndividual nodeID="_:genid2147484042"/>
+        <AnonymousIndividual nodeID="_:genid2147484480"/>
         <IRI>https://orcid.org/0000-0003-3458-4748</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:mbox"/>
-        <AnonymousIndividual nodeID="_:genid2147484042"/>
+        <AnonymousIndividual nodeID="_:genid2147484480"/>
         <IRI>mailto:maleshkm@hsu-hh.de</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <AnonymousIndividual nodeID="_:genid2147484042"/>
+        <AnonymousIndividual nodeID="_:genid2147484480"/>
         <Literal>Maria Maleshkova</Literal>
     </AnnotationAssertion>
 </Ontology>
