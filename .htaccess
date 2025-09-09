@@ -1,1 +1,4 @@
-RewriteBase /documentation/
+# Rewrite engine setup
+RewriteEngine On
+#Change the path to the folder here
+RewriteBase /documentation/index-en.html 
