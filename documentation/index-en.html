@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN","name":"MQTT4SSN Ontology", "headline":"Document describing the ontology https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN", "dateReleased":"2025-08-11", "license":"https://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Niklas Doerner","url":"https://orcid.org/0009-0004-0088-8633"},{"@type":"Person","name":"Maria Maleshkova","url":"https://orcid.org/0000-0003-3458-4748"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN","name":"MQTT4SSN Ontology", "headline":"Document describing the ontology https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN", "dateReleased":"2025-08-11", "license":"https://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person",},{"@type":"Person",}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -56,12 +56,12 @@ function loadTOC(){
  $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
  };    $(function(){
-      $("#abstract").load("sections/abstract-en.html"); 
-      $("#introduction").load("sections/introduction-en.html"); 
+      $("#abstract").load("X:\MQTT4SSN\documentation\sections\abstract-en.html"); 
+      $("#introduction").load("X:\MQTT4SSN\documentation\sections\introduction-en.html"); 
       $("#nstable").load("sections/ns-en.html"); 
-      $("#overview").load("sections/overview-en.html"); 
-      $("#description").load("sections/description-en.html"); 
-      $("#references").load("sections/references-en.html"); 
+      $("#overview").load("X:\MQTT4SSN\documentation\sections\overview-en.html"); 
+      $("#description").load("X:\MQTT4SSN\documentation\sections\description-en.html"); 
+      $("#references").load("X:\MQTT4SSN\documentation\sections\references-en.html"); 
       $("#crossref").load("sections/crossref-en.html", null, loadHash); 
     });
     </script> 
@@ -79,7 +79,7 @@ function loadTOC(){
 <dt>Latest version:</dt>
 <dd><a href="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN">https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN</a></dd>
 <dt>Authors:</dt>
-<dd><a href="https://orcid.org/0009-0004-0088-8633">Niklas Doerner</a><a href="mailto:doernern@hsu-hh.de">&#9993;</a></dd><dd><a href="https://orcid.org/0000-0003-3458-4748">Maria Maleshkova</a><a href="mailto:maleshkm@hsu-hh.de">&#9993;</a></dd>
+<dd>Agent 1</dd><dd>Agent 2</dd>
 
 <dt>Imported Ontologies:</dt>
 <dd><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#">22-rdf-syntax-ns#</a></dd><dd><a href="http://www.w3.org/ns/sosa/">&lt;http://www.w3.org/ns/sosa/&gt;</a></dd><dd><a href="http://www.w3.org/ns/ssn/">&lt;http://www.w3.org/ns/ssn/&gt;</a></dd>
@@ -89,7 +89,7 @@ function loadTOC(){
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by_nc_sa/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by-nc-sa/4.0/" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
-<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Cite as:</dt>
 <dd>Niklas Doerner, Maria Maleshkova (2025): MQTT4SSN Ontology. https://doi.org/10.5281/zenodo.16704302</dd>
 <dt>DOI:</dt>
 <dd><a href="http://dx.doi.org/10.5281/zenodo.16704302"><img src ="https://img.shields.io/badge/DOI-10.5281/zenodo.16704302-blue.svg" alt="10.5281/zenodo.16704302" /></a></dd>

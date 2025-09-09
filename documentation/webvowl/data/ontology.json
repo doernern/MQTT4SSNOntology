@@ -7,7 +7,7 @@
       "undefined" : "MQTT4SSN Ontology"
     },
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "author" : [ "_:genid2147484046", "_:genid2147484045" ],
+    "author" : [ "_:genid2147483826", "_:genid2147483825" ],
     "comments" : {
       "en" : "The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT transport protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT transport protocol component."
     },
@@ -21,12 +21,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147484045",
+        "value" : "_:genid2147483825",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147484046",
+        "value" : "_:genid2147483826",
         "type" : "label"
       } ],
       "created" : [ {
@@ -141,10 +141,10 @@
     "id" : "68",
     "type" : "owl:Class"
   }, {
-    "id" : "78",
+    "id" : "74",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "21",
+    "id" : "23",
     "type" : "owl:Class"
   }, {
     "id" : "87",
@@ -165,16 +165,16 @@
     "id" : "49",
     "type" : "owl:Class"
   }, {
-    "id" : "122",
+    "id" : "121",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "115",
+    "id" : "114",
+    "type" : "owl:Class"
+  }, {
+    "id" : "137",
     "type" : "owl:Class"
   }, {
     "id" : "138",
-    "type" : "owl:Class"
-  }, {
-    "id" : "139",
     "type" : "owl:Class"
   }, {
     "id" : "19",
@@ -186,13 +186,16 @@
     "id" : "32",
     "type" : "owl:Class"
   }, {
-    "id" : "146",
+    "id" : "148",
     "type" : "owl:Class"
   }, {
-    "id" : "152",
+    "id" : "145",
     "type" : "owl:Class"
   }, {
     "id" : "151",
+    "type" : "owl:Class"
+  }, {
+    "id" : "150",
     "type" : "owl:Class"
   }, {
     "id" : "182",
@@ -228,7 +231,7 @@
     "id" : "200",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "141",
+    "id" : "140",
     "type" : "owl:Class"
   }, {
     "id" : "205",
@@ -249,7 +252,7 @@
     "id" : "214",
     "type" : "owl:Class"
   }, {
-    "id" : "217",
+    "id" : "218",
     "type" : "owl:equivalentClass"
   }, {
     "id" : "203",
@@ -261,13 +264,16 @@
     "id" : "119",
     "type" : "owl:Class"
   }, {
-    "id" : "219",
+    "id" : "136",
     "type" : "owl:Class"
   }, {
-    "id" : "239",
+    "id" : "225",
     "type" : "owl:Class"
   }, {
-    "id" : "133",
+    "id" : "238",
+    "type" : "owl:Class"
+  }, {
+    "id" : "132",
     "type" : "owl:Class"
   }, {
     "id" : "61",
@@ -288,16 +294,19 @@
     "id" : "55",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "132",
+    "id" : "109",
+    "type" : "owl:Class"
+  }, {
+    "id" : "131",
     "type" : "owl:Class"
   }, {
     "id" : "26",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "145",
+    "id" : "144",
     "type" : "owl:Class"
   }, {
-    "id" : "111",
+    "id" : "110",
     "type" : "owl:Class"
   }, {
     "id" : "82",
@@ -309,10 +318,10 @@
     "id" : "50",
     "type" : "owl:Class"
   }, {
-    "id" : "75",
+    "id" : "76",
     "type" : "owl:Class"
   }, {
-    "id" : "23",
+    "id" : "21",
     "type" : "owl:Class"
   }, {
     "id" : "39",
@@ -321,10 +330,10 @@
     "id" : "33",
     "type" : "owl:Class"
   }, {
-    "id" : "97",
+    "id" : "96",
     "type" : "owl:Class"
   }, {
-    "id" : "157",
+    "id" : "156",
     "type" : "owl:Class"
   }, {
     "id" : "66",
@@ -333,16 +342,19 @@
     "id" : "34",
     "type" : "owl:Class"
   }, {
-    "id" : "155",
+    "id" : "154",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "221",
+    "id" : "217",
+    "type" : "owl:Class"
+  }, {
+    "id" : "142",
     "type" : "owl:Class"
   }, {
     "id" : "193",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "102",
+    "id" : "101",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -424,19 +436,6 @@
       "IRI-based" : "boolean"
     }
   }, {
-    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeFixedHeader",
-    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "SubscribeFixedHeader",
-      "en" : "MQTT SUBSCRIBE Fixed Header"
-    },
-    "comment" : {
-      "en" : "The Fixed Header used in SUBSCRIBE packets."
-    },
-    "id" : "20",
-    "superClasses" : [ "21" ]
-  }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
     "instances" : 0,
@@ -446,6 +445,19 @@
     },
     "comment" : {
       "en" : "The payload of an UNSUBSCRIBE packet, listing MQTT Topic Filters to be removed."
+    },
+    "id" : "20",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeFixedHeader",
+    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SubscribeFixedHeader",
+      "en" : "MQTT SUBSCRIBE Fixed Header"
+    },
+    "comment" : {
+      "en" : "The Fixed Header used in SUBSCRIBE packets."
     },
     "id" : "22",
     "superClasses" : [ "23" ]
@@ -553,12 +565,12 @@
     "id" : "40"
   }, {
     "instances" : 0,
-    "union" : [ "8", "22" ],
+    "union" : [ "8", "20" ],
     "attributes" : [ "anonymous", "union" ],
     "id" : "46"
   }, {
     "instances" : 0,
-    "union" : [ "8", "22" ],
+    "union" : [ "8", "20" ],
     "attributes" : [ "anonymous", "union" ],
     "id" : "47"
   }, {
@@ -643,7 +655,7 @@
       "IRI-based" : "SUBSCRIBE"
     },
     "attributes" : [ "equivalent", "external" ],
-    "id" : "78"
+    "id" : "74"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#FixedHeader",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -652,11 +664,11 @@
       "IRI-based" : "FixedHeader",
       "en" : "MQTT Fixed Header"
     },
-    "subClasses" : [ "9", "85", "20" ],
+    "subClasses" : [ "9", "85", "22" ],
     "comment" : {
       "en" : "The header present in all MQTT Control Packets, containing the packet type and flags."
     },
-    "id" : "21"
+    "id" : "23"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/ActuatableProperty",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -718,7 +730,7 @@
       "IRI-based" : "Property",
       "en" : "Property"
     },
-    "subClasses" : [ "97", "87" ],
+    "subClasses" : [ "96", "87" ],
     "comment" : {
       "en" : "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity."
     },
@@ -736,7 +748,7 @@
       "en" : "The Fixed Header used in UNSUBSCRIBE packets."
     },
     "id" : "85",
-    "superClasses" : [ "21" ]
+    "superClasses" : [ "23" ]
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPayload",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -749,7 +761,7 @@
       "en" : "The payload of a PUBLISH packet (application message body)."
     },
     "id" : "72",
-    "superClasses" : [ "23" ]
+    "superClasses" : [ "21" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/ActuationCollection",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -790,7 +802,7 @@
       "IRI-based" : "PUBLISH"
     },
     "attributes" : [ "equivalent", "external" ],
-    "id" : "122"
+    "id" : "121"
   }, {
     "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#CompoundLiteral",
     "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
@@ -817,7 +829,7 @@
       "undefined" : "A class representing a compound literal."
     },
     "attributes" : [ "external" ],
-    "id" : "115",
+    "id" : "114",
     "superClasses" : [ "50" ]
   }, {
     "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq",
@@ -839,8 +851,8 @@
       "undefined" : "The class of ordered containers."
     },
     "attributes" : [ "external" ],
-    "id" : "138",
-    "superClasses" : [ "139" ]
+    "id" : "137",
+    "superClasses" : [ "138" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Container",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
@@ -848,12 +860,12 @@
     "label" : {
       "IRI-based" : "Container"
     },
-    "subClasses" : [ "145", "146", "138" ],
+    "subClasses" : [ "144", "145", "137" ],
     "attributes" : [ "external" ],
-    "id" : "139"
+    "id" : "138"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#ControlPacket",
-    "equivalent" : [ "155" ],
+    "equivalent" : [ "154" ],
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
     "instances" : 0,
     "label" : {
@@ -918,6 +930,34 @@
     "id" : "32",
     "superClasses" : [ "11" ]
   }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/TR/rdf-plain-literal/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PlainLiteral",
+      "undefined" : "PlainLiteral"
+    },
+    "comment" : {
+      "undefined" : "The class of plain (i.e. untyped) literal values, as used in RIF and OWL 2"
+    },
+    "attributes" : [ "external" ],
+    "id" : "148",
+    "superClasses" : [ "110" ]
+  }, {
     "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag",
     "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
     "instances" : 0,
@@ -937,8 +977,8 @@
       "undefined" : "The class of unordered containers."
     },
     "attributes" : [ "external" ],
-    "id" : "146",
-    "superClasses" : [ "139" ]
+    "id" : "145",
+    "superClasses" : [ "138" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/System",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -961,12 +1001,12 @@
       "IRI-based" : "System",
       "en" : "System"
     },
-    "subClasses" : [ "151", "141", "157" ],
+    "subClasses" : [ "150", "140", "156" ],
     "comment" : {
       "en" : "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems."
     },
     "attributes" : [ "external" ],
-    "id" : "152"
+    "id" : "151"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Sensor",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -1004,8 +1044,8 @@
       "en" : "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."
     },
     "attributes" : [ "external" ],
-    "id" : "151",
-    "superClasses" : [ "152" ]
+    "id" : "150",
+    "superClasses" : [ "151" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "id" : "182",
@@ -1060,7 +1100,7 @@
       "en" : "The Fixed Header used in PUBLISH packets."
     },
     "id" : "9",
-    "superClasses" : [ "21" ]
+    "superClasses" : [ "23" ]
   }, {
     "iri" : "http://www.w3.org/2006/time#TemporalEntity",
     "baseIri" : "http://www.w3.org/2006/time",
@@ -1136,8 +1176,8 @@
       "en" : "A device that is used by, or implements, an (Actuation) Procedure that changes the state of the world."
     },
     "attributes" : [ "external" ],
-    "id" : "141",
-    "superClasses" : [ "152" ]
+    "id" : "140",
+    "superClasses" : [ "151" ]
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Agent",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -1185,7 +1225,7 @@
     "id" : "206"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribePacket",
-    "equivalent" : [ "78" ],
+    "equivalent" : [ "74" ],
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
     "instances" : 0,
     "label" : {
@@ -1230,7 +1270,7 @@
         } ]
       },
       "comment" : {
-        "undefined" : "This research as part of the project EKI is funded by dtec.bw ï¿½ Digitalization and Technology Research Center of the Bundeswehr which we gratefully acknowledge. dtec.bw is funded by the European Union ï¿½ NextGenerationEU."
+        "undefined" : "This research as part of the project EKI is funded by dtec.bw – Digitalization and Technology Research Center of the Bundeswehr which we gratefully acknowledge. dtec.bw is funded by the European Union – NextGenerationEU."
       },
       "labels" : {
         "IRI-based" : "DTEC",
@@ -1247,7 +1287,7 @@
       "IRI-based" : "UNSUBSCRIBE"
     },
     "attributes" : [ "equivalent", "external" ],
-    "id" : "217"
+    "id" : "218"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Sampling",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -1288,27 +1328,7 @@
       }, {
         "identifier" : "example",
         "language" : "en",
-        "value" : "Selecting a subset of a population.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "en",
         "value" : "Splitting a piece of drill-core to create two new samples.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Drilling an observation well.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Establishing a station for environmental monitoring.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Sieving a powder to separate the subset finer than 100-mesh.",
         "type" : "label"
       }, {
         "identifier" : "example",
@@ -1318,12 +1338,32 @@
       }, {
         "identifier" : "example",
         "language" : "en",
-        "value" : "Registering an image of the landscape.",
+        "value" : "Drilling an observation well.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Sieving a powder to separate the subset finer than 100-mesh.",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "en",
         "value" : "Dividing a field site into quadrants.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Selecting a subset of a population.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Registering an image of the landscape.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Establishing a station for environmental monitoring.",
         "type" : "label"
       } ]
     },
@@ -1348,7 +1388,7 @@
       "en" : "The payload of a SUBSCRIBE packet, listing MQTT Subscription Entries."
     },
     "id" : "36",
-    "superClasses" : [ "23" ]
+    "superClasses" : [ "21" ]
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#VariableHeader",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -1362,6 +1402,34 @@
       "en" : "The optional header carrying packet-specific metadata (e.g., packet identifier, MQTT Topic name)."
     },
     "id" : "119"
+  }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/TR/rdf11-concepts/#section-html",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HTML",
+      "undefined" : "HTML"
+    },
+    "comment" : {
+      "undefined" : "The datatype of RDF literals storing fragments of HTML content"
+    },
+    "attributes" : [ "external" ],
+    "id" : "136",
+    "superClasses" : [ "110" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/Deployment",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -1394,7 +1462,7 @@
       "en" : "Describes the Deployment of one or more Systems for a particular purpose. Deployment may be done on a Platform."
     },
     "attributes" : [ "external" ],
-    "id" : "219"
+    "id" : "225"
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Person",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -1403,7 +1471,7 @@
       "IRI-based" : "Person"
     },
     "attributes" : [ "external" ],
-    "id" : "239"
+    "id" : "238"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Result",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -1437,12 +1505,12 @@
       "IRI-based" : "Result",
       "en" : "Result"
     },
-    "subClasses" : [ "132" ],
+    "subClasses" : [ "131" ],
     "comment" : {
       "en" : "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."
     },
     "attributes" : [ "external" ],
-    "id" : "133"
+    "id" : "132"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Broker",
     "equivalent" : [ "243" ],
@@ -1460,7 +1528,7 @@
     "superClasses" : [ "60" ]
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishPacket",
-    "equivalent" : [ "122" ],
+    "equivalent" : [ "121" ],
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
     "instances" : 0,
     "label" : {
@@ -1541,7 +1609,7 @@
     "id" : "243"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscribePacket",
-    "equivalent" : [ "217" ],
+    "equivalent" : [ "218" ],
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
     "instances" : 0,
     "label" : {
@@ -1554,6 +1622,28 @@
     "attributes" : [ "equivalent" ],
     "id" : "55",
     "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "XMLLiteral",
+      "undefined" : "XMLLiteral"
+    },
+    "comment" : {
+      "undefined" : "The datatype of XML literal values."
+    },
+    "attributes" : [ "external" ],
+    "id" : "109",
+    "superClasses" : [ "110" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Sample",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -1585,12 +1675,12 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "en",
-        "value" : "A statistical sample is often designed to be characteristic of an entire population, so that observations can be made regarding the sample that provide a good estimate of the properties of the population.",
+        "value" : "A 'station' is essentially an identifiable locality where a sensor system or Procedure may be deployed and an observation made. In the context of the observation model, it connotes the 'world in the vicinity of the station', so the observed properties relate to the physical medium at the station, and not to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc.",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "en",
-        "value" : "A 'station' is essentially an identifiable locality where a sensor system or Procedure may be deployed and an observation made. In the context of the observation model, it connotes the 'world in the vicinity of the station', so the observed properties relate to the physical medium at the station, and not to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc.",
+        "value" : "A statistical sample is often designed to be characteristic of an entire population, so that observations can be made regarding the sample that provide a good estimate of the properties of the population.",
         "type" : "label"
       } ]
     },
@@ -1599,11 +1689,11 @@
       "en" : "Sample"
     },
     "comment" : {
-      "en" : "Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made."
+      "en" : "Samples are artifacts of an observational strategy, and have no significant function outside of their role in the observation process. The characteristics of the samples themselves are of little interest, except perhaps to the manager of a sampling campaign.\n\nA Sample is intended to sample some FatureOfInterest, so there is an expectation of at least one isSampleOf property. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features."
     },
     "attributes" : [ "external" ],
-    "id" : "132",
-    "superClasses" : [ "133", "34" ]
+    "id" : "131",
+    "superClasses" : [ "132", "34" ]
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#TopicFilter",
     "equivalent" : [ "40" ],
@@ -1638,8 +1728,8 @@
       "undefined" : "The class of containers of alternatives."
     },
     "attributes" : [ "external" ],
-    "id" : "145",
-    "superClasses" : [ "139" ]
+    "id" : "144",
+    "superClasses" : [ "138" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
@@ -1647,9 +1737,9 @@
     "label" : {
       "IRI-based" : "Literal"
     },
-    "subClasses" : [ "135", "137", "143", "149", "110" ],
+    "subClasses" : [ "134", "136", "142", "148", "109" ],
     "attributes" : [ "external" ],
-    "id" : "111"
+    "id" : "110"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Topic",
     "equivalent" : [ "200" ],
@@ -1693,7 +1783,7 @@
     "label" : {
       "IRI-based" : "Resource"
     },
-    "subClasses" : [ "49", "64", "115", "268" ],
+    "subClasses" : [ "49", "64", "114", "268" ],
     "attributes" : [ "external" ],
     "id" : "50"
   }, {
@@ -1704,7 +1794,7 @@
       "IRI-based" : "System"
     },
     "attributes" : [ "external" ],
-    "id" : "75"
+    "id" : "76"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#Payload",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -1713,11 +1803,11 @@
       "IRI-based" : "Payload",
       "en" : "MQTT Payload"
     },
-    "subClasses" : [ "36", "72", "22" ],
+    "subClasses" : [ "36", "72", "20" ],
     "comment" : {
       "en" : "The application data carried by an MQTT Control Packet."
     },
-    "id" : "23"
+    "id" : "21"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscribeVariableHeader",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -1778,7 +1868,7 @@
       "en" : "An observable quality (property, characteristic) of a FeatureOfInterest."
     },
     "attributes" : [ "external" ],
-    "id" : "97",
+    "id" : "96",
     "superClasses" : [ "88" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Sampler",
@@ -1817,8 +1907,8 @@
       "en" : "A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples."
     },
     "attributes" : [ "external" ],
-    "id" : "157",
-    "superClasses" : [ "152" ]
+    "id" : "156",
+    "superClasses" : [ "151" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Platform",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -1890,7 +1980,7 @@
       "IRI-based" : "FeatureOfInterest",
       "en" : "Feature Of Interest"
     },
-    "subClasses" : [ "132" ],
+    "subClasses" : [ "131" ],
     "comment" : {
       "en" : "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."
     },
@@ -1905,7 +1995,7 @@
       "IRI-based" : "ControlPacket"
     },
     "attributes" : [ "equivalent", "external" ],
-    "id" : "155"
+    "id" : "154"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/Input",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -1932,7 +2022,35 @@
       "en" : "Any information that is provided to a Procedure for its use."
     },
     "attributes" : [ "external" ],
-    "id" : "221"
+    "id" : "217"
+  }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/TR/json-ld11/#the-rdf-json-datatype",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "JSON",
+      "undefined" : "JSON"
+    },
+    "comment" : {
+      "undefined" : "The datatype of RDF literals storing JSON content."
+    },
+    "attributes" : [ "external" ],
+    "id" : "142",
+    "superClasses" : [ "110" ]
   }, {
     "iri" : "https://www.w3.org/2019/wot/mqtt#Client",
     "baseIri" : "https://www.w3.org/2019/wot/mqtt",
@@ -1950,7 +2068,7 @@
       "IRI-based" : "QuantityValue"
     },
     "attributes" : [ "external" ],
-    "id" : "102"
+    "id" : "101"
   } ],
   "property" : [ {
     "id" : "14",
@@ -2010,7 +2128,7 @@
     "id" : "73",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "74",
+    "id" : "75",
     "type" : "owl:objectProperty"
   }, {
     "id" : "79",
@@ -2029,39 +2147,39 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "91",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "92",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "76",
+    "id" : "77",
     "type" : "owl:objectProperty"
   }, {
     "id" : "57",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "97",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "98",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "99",
+    "id" : "94",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "95",
+    "id" : "100",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "101",
+    "id" : "102",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "103",
-    "type" : "owl:objectProperty"
+    "id" : "105",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "106",
     "type" : "owl:objectProperty"
   }, {
     "id" : "108",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "109",
+    "id" : "111",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "112",
@@ -2070,80 +2188,80 @@
     "id" : "113",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "114",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "116",
+    "id" : "115",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "117",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "118",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "121",
-    "type" : "owl:datatypeProperty"
+    "id" : "122",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "123",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "124",
+    "id" : "126",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "127",
-    "type" : "owl:objectProperty"
+    "id" : "128",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "129",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "130",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "133",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "139",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "131",
+    "id" : "141",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "134",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "136",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "140",
+    "id" : "143",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "142",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "144",
+    "id" : "146",
     "type" : "owl:objectProperty"
   }, {
     "id" : "147",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "149",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "152",
     "type" : "owl:objectProperty"
-  }, {
-    "id" : "148",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "150",
-    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "153",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "154",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "156",
+    "id" : "155",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "157",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "158",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "159",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "120",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "160",
+    "id" : "159",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "161",
     "type" : "rdfs:SubClassOf"
@@ -2173,7 +2291,7 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "170",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "171",
     "type" : "rdfs:SubClassOf"
@@ -2259,13 +2377,13 @@
     "id" : "209",
     "type" : "owl:allValuesFrom"
   }, {
+    "id" : "210",
+    "type" : "owl:allValuesFrom"
+  }, {
     "id" : "211",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "212",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "213",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "215",
@@ -2274,19 +2392,19 @@
     "id" : "216",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "218",
+    "id" : "219",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "220",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "222",
+    "id" : "221",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "126",
+    "id" : "125",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "225",
+    "id" : "224",
     "type" : "owl:objectProperty"
   }, {
     "id" : "226",
@@ -2316,19 +2434,19 @@
     "id" : "233",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "235",
+    "id" : "234",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "236",
+    "id" : "235",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "237",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "240",
+    "id" : "239",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "241",
+    "id" : "240",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "242",
@@ -2346,7 +2464,7 @@
     "id" : "197",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "96",
+    "id" : "95",
     "type" : "owl:objectProperty"
   }, {
     "id" : "246",
@@ -2460,13 +2578,13 @@
     "id" : "260",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "94",
+    "id" : "93",
     "type" : "owl:objectProperty"
   }, {
     "id" : "286",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "104",
+    "id" : "103",
     "type" : "owl:objectProperty"
   }, {
     "id" : "287",
@@ -2502,7 +2620,7 @@
     "id" : "297",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "105",
+    "id" : "104",
     "type" : "owl:objectProperty"
   }, {
     "id" : "298",
@@ -2511,7 +2629,7 @@
     "id" : "299",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "128",
+    "id" : "127",
     "type" : "owl:objectProperty"
   }, {
     "id" : "300",
@@ -2523,7 +2641,7 @@
     "id" : "302",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "100",
+    "id" : "99",
     "type" : "owl:objectProperty"
   }, {
     "id" : "303",
@@ -2565,7 +2683,7 @@
     "id" : "315",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "317",
+    "id" : "316",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "318",
@@ -2580,7 +2698,7 @@
     "id" : "321",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "323",
+    "id" : "322",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "324",
@@ -2595,7 +2713,7 @@
     "id" : "329",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "125",
+    "id" : "124",
     "type" : "owl:objectProperty"
   }, {
     "id" : "330",
@@ -2631,10 +2749,10 @@
     "id" : "340",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "117",
+    "id" : "116",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "224",
+    "id" : "223",
     "type" : "owl:objectProperty"
   }, {
     "id" : "341",
@@ -2706,7 +2824,7 @@
     "attributes" : [ "datatype" ],
     "id" : "25"
   }, {
-    "range" : "22",
+    "range" : "20",
     "domain" : "36",
     "attributes" : [ "anonymous", "object" ],
     "id" : "35"
@@ -2750,11 +2868,6 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       }, {
@@ -2762,16 +2875,21 @@
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
       } ],
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ]
     },
@@ -2821,7 +2939,7 @@
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionPayload",
     "inverse" : "56",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "22",
+    "range" : "20",
     "label" : {
       "IRI-based" : "hasUnsubscriptionPayload",
       "en" : "has UNSUBSCRIBE Payload"
@@ -2831,7 +2949,7 @@
     "comment" : {
       "en" : "Links an UNSUBSCRIBE packet to its MQTT Payload."
     },
-    "attributes" : [ "object", "functional" ],
+    "attributes" : [ "functional", "object" ],
     "id" : "54"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionPayload",
@@ -2847,7 +2965,7 @@
     "comment" : {
       "en" : "Links a SUBSCRIBE packet to its MQTT Payload."
     },
-    "attributes" : [ "object", "functional" ],
+    "attributes" : [ "functional", "object" ],
     "id" : "58"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#publishesPacket",
@@ -2908,26 +3026,26 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "71"
   }, {
-    "range" : "22",
+    "range" : "20",
     "domain" : "72",
     "attributes" : [ "anonymous", "object" ],
     "id" : "73"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hosts",
-    "inverse" : "76",
+    "inverse" : "77",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "75",
+    "range" : "76",
     "label" : {
       "IRI-based" : "hosts",
       "en" : "hosts"
     },
-    "superproperty" : [ "77" ],
+    "superproperty" : [ "78" ],
     "domain" : "15",
     "comment" : {
       "en" : "Links an MQTT Client (as a SOSA platform) to SOSA systems (sensors/actuators) it hosts."
     },
     "attributes" : [ "object" ],
-    "id" : "74"
+    "id" : "75"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicFilter",
     "inverse" : "80",
@@ -2991,22 +3109,8 @@
       "IRI-based" : "hasRetainFlag"
     },
     "domain" : "45",
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "89"
-  }, {
-    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHostAddress",
-    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "29",
-    "label" : {
-      "IRI-based" : "hasHostAddress",
-      "en" : "MQTT Broker host"
-    },
-    "domain" : "61",
-    "comment" : {
-      "en" : "The hostname or IP address of an MQTT Broker."
-    },
-    "attributes" : [ "datatype", "functional" ],
-    "id" : "91"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#matchesTopic",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -3020,7 +3124,7 @@
       "en" : "Indicates that an MQTT Topic Filter matches a particular MQTT Topic."
     },
     "attributes" : [ "object" ],
-    "id" : "92"
+    "id" : "91"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isHostedBy",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -3029,29 +3133,29 @@
       "IRI-based" : "isHostedBy",
       "en" : "is hosted by"
     },
-    "superproperty" : [ "93" ],
-    "domain" : "75",
+    "superproperty" : [ "92" ],
+    "domain" : "76",
     "comment" : {
       "en" : "Links a SOSA system to the hosting MQTT Client."
     },
     "attributes" : [ "object" ],
-    "id" : "76"
+    "id" : "77"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayload",
-    "inverse" : "94",
-    "equivalent" : [ "96" ],
+    "inverse" : "93",
+    "equivalent" : [ "95" ],
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "23",
+    "range" : "21",
     "label" : {
       "IRI-based" : "hasPayload",
       "en" : "has MQTT Payload"
     },
     "domain" : "19",
-    "subproperty" : [ "54", "58", "95" ],
+    "subproperty" : [ "54", "58", "94" ],
     "comment" : {
       "en" : "Links an MQTT Control Packet to its MQTT Payload."
     },
-    "attributes" : [ "object", "functional" ],
+    "attributes" : [ "functional", "object" ],
     "id" : "57"
   }, {
     "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
@@ -3074,7 +3178,7 @@
       "undefined" : "The first item in the subject RDF list."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "98"
+    "id" : "97"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#receivesUnsubscribePacket",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -3088,10 +3192,10 @@
       "en" : "Indicates that an MQTT Broker receives an UNSUBSCRIBE packet from an MQTT Client."
     },
     "attributes" : [ "object" ],
-    "id" : "99"
+    "id" : "98"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishPayload",
-    "inverse" : "100",
+    "inverse" : "99",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
     "range" : "72",
     "label" : {
@@ -3103,54 +3207,38 @@
     "comment" : {
       "en" : "Links a PUBLISH packet to its MQTT Payload."
     },
-    "attributes" : [ "object", "functional" ],
-    "id" : "95"
+    "attributes" : [ "functional", "object" ],
+    "id" : "94"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadSize",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "102",
+    "range" : "101",
     "label" : {
       "IRI-based" : "hasPayloadSize",
       "en" : "has payload size"
     },
-    "domain" : "23",
+    "domain" : "21",
     "comment" : {
       "en" : "Specifies the size of an MQTT Payload as a QUDT quantity value (e.g., unit:Byte)."
     },
-    "attributes" : [ "object", "functional" ],
-    "id" : "101"
+    "attributes" : [ "functional", "object" ],
+    "id" : "100"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionVariableHeader",
-    "inverse" : "104",
+    "inverse" : "103",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
     "range" : "39",
     "label" : {
       "IRI-based" : "hasSubscriptionVariableHeader",
       "en" : "has SUBSCRIBE Variable Header"
     },
-    "superproperty" : [ "105" ],
+    "superproperty" : [ "104" ],
     "domain" : "16",
     "comment" : {
       "en" : "Links a SUBSCRIBE packet to its specific Variable Header."
     },
-    "attributes" : [ "object", "functional" ],
-    "id" : "103"
-  }, {
-    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionVariableHeader",
-    "inverse" : "107",
-    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "42",
-    "label" : {
-      "IRI-based" : "hasUnsubscriptionVariableHeader",
-      "en" : "has UNSUBSCRIBE Variable Header"
-    },
-    "superproperty" : [ "105" ],
-    "domain" : "55",
-    "comment" : {
-      "en" : "Links an UNSUBSCRIBE packet to its specific Variable Header."
-    },
-    "attributes" : [ "object", "functional" ],
-    "id" : "106"
+    "attributes" : [ "functional", "object" ],
+    "id" : "102"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentDelimiter",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -3164,27 +3252,43 @@
       "en" : "The delimiter used to separate fields in the payload content."
     },
     "attributes" : [ "datatype", "functional" ],
-    "id" : "108"
+    "id" : "105"
   }, {
-    "range" : "111",
-    "domain" : "110",
+    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionVariableHeader",
+    "inverse" : "107",
+    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "hasUnsubscriptionVariableHeader",
+      "en" : "has UNSUBSCRIBE Variable Header"
+    },
+    "superproperty" : [ "104" ],
+    "domain" : "55",
+    "comment" : {
+      "en" : "Links an UNSUBSCRIBE packet to its specific Variable Header."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "106"
+  }, {
+    "range" : "110",
+    "domain" : "109",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "109"
+    "id" : "108"
   }, {
     "range" : "50",
     "domain" : "49",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "112"
+    "id" : "111"
   }, {
     "range" : "50",
     "domain" : "64",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "113"
+    "id" : "112"
   }, {
     "range" : "50",
-    "domain" : "115",
+    "domain" : "114",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "114"
+    "id" : "113"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isUnsubscriptionFixedHeaderOf",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -3193,28 +3297,13 @@
       "IRI-based" : "isUnsubscriptionFixedHeaderOf",
       "en" : "is UNSUBSCRIBE Fixed Header of"
     },
-    "superproperty" : [ "117" ],
+    "superproperty" : [ "116" ],
     "domain" : "85",
     "comment" : {
       "en" : "Links an UNSUBSCRIBE Fixed Header to its MQTT Control Packet."
     },
-    "attributes" : [ "object", "functional" ],
-    "id" : "116"
-  }, {
-    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf",
-    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "19",
-    "label" : {
-      "IRI-based" : "isVariableHeaderOf",
-      "en" : "is Variable Header of"
-    },
-    "domain" : "119",
-    "subproperty" : [ "104", "120", "107" ],
-    "comment" : {
-      "en" : "Links a Variable Header to the MQTT Control Packet containing it."
-    },
-    "attributes" : [ "object", "functional" ],
-    "id" : "118"
+    "attributes" : [ "functional", "object" ],
+    "id" : "115"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPortNumber",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -3228,7 +3317,22 @@
       "en" : "The TCP port on which an MQTT Broker listens."
     },
     "attributes" : [ "datatype", "functional" ],
-    "id" : "121"
+    "id" : "117"
+  }, {
+    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isVariableHeaderOf",
+    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "isVariableHeaderOf",
+      "en" : "is Variable Header of"
+    },
+    "domain" : "119",
+    "subproperty" : [ "103", "120", "107" ],
+    "comment" : {
+      "en" : "Links a Variable Header to the MQTT Control Packet containing it."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "118"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#receivesSubscribePacket",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -3242,26 +3346,26 @@
       "en" : "Indicates that an MQTT Broker receives a SUBSCRIBE packet from an MQTT Client."
     },
     "attributes" : [ "object" ],
-    "id" : "123"
+    "id" : "122"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPublishFixedHeader",
-    "inverse" : "125",
+    "inverse" : "124",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
     "range" : "9",
     "label" : {
       "IRI-based" : "hasPublishFixedHeader",
       "en" : "has PUBLISH Fixed Header"
     },
-    "superproperty" : [ "126" ],
+    "superproperty" : [ "125" ],
     "domain" : "63",
     "comment" : {
       "en" : "Links a PUBLISH packet to its specific Fixed Header."
     },
-    "attributes" : [ "object", "functional" ],
-    "id" : "124"
+    "attributes" : [ "functional", "object" ],
+    "id" : "123"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasEncodedFields",
-    "inverse" : "128",
+    "inverse" : "127",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
     "range" : "64",
     "label" : {
@@ -3273,12 +3377,12 @@
       "en" : "Links an MQTT Payload to an ordered RDF list naming fields encoded within the payload content."
     },
     "attributes" : [ "object" ],
-    "id" : "127"
+    "id" : "126"
   }, {
     "range" : "119",
     "domain" : "42",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "129"
+    "id" : "128"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isConnectedToBroker",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -3292,22 +3396,22 @@
       "en" : "Links an MQTT Client to the MQTT Broker it is currently connected to."
     },
     "attributes" : [ "object" ],
+    "id" : "129"
+  }, {
+    "range" : "132",
+    "domain" : "131",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "130"
   }, {
-    "range" : "133",
-    "domain" : "132",
+    "range" : "110",
+    "domain" : "134",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "131"
+    "id" : "133"
   }, {
-    "range" : "111",
-    "domain" : "135",
+    "range" : "110",
+    "domain" : "136",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "134"
-  }, {
-    "range" : "111",
-    "domain" : "137",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "136"
+    "id" : "135"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#listensToTopic",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -3316,17 +3420,17 @@
       "IRI-based" : "listensToTopic",
       "en" : "listens to MQTT Topic"
     },
-    "domain" : "141",
+    "domain" : "140",
     "comment" : {
       "en" : "Links an actuator to the MQTT Topic from which it receives actuation commands."
     },
     "attributes" : [ "object" ],
-    "id" : "140"
+    "id" : "139"
   }, {
-    "range" : "111",
-    "domain" : "143",
+    "range" : "110",
+    "domain" : "142",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "142"
+    "id" : "141"
   }, {
     "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
     "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
@@ -3348,7 +3452,7 @@
       "undefined" : "The object of the subject RDF statement."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "144"
+    "id" : "143"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
     "inverse" : "44",
@@ -3375,15 +3479,26 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
+        "type" : "label"
+      } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
@@ -3393,17 +3508,6 @@
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
-        "type" : "label"
       } ]
     },
     "label" : {
@@ -3416,17 +3520,17 @@
       "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
     },
     "attributes" : [ "object", "external" ],
+    "id" : "146"
+  }, {
+    "range" : "110",
+    "domain" : "148",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "147"
   }, {
-    "range" : "111",
-    "domain" : "149",
+    "range" : "151",
+    "domain" : "150",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "148"
-  }, {
-    "range" : "152",
-    "domain" : "151",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "150"
+    "id" : "149"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionFixedHeaderOf",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -3435,33 +3539,33 @@
       "IRI-based" : "isSubscriptionFixedHeaderOf",
       "en" : "is SUBSCRIBE Fixed Header of"
     },
-    "superproperty" : [ "117" ],
-    "domain" : "20",
+    "superproperty" : [ "116" ],
+    "domain" : "22",
     "comment" : {
       "en" : "Links a SUBSCRIBE Fixed Header to its MQTT Control Packet."
     },
-    "attributes" : [ "object", "functional" ],
+    "attributes" : [ "functional", "object" ],
+    "id" : "152"
+  }, {
+    "range" : "151",
+    "domain" : "140",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "153"
   }, {
-    "range" : "152",
-    "domain" : "141",
+    "range" : "151",
+    "domain" : "156",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "154"
-  }, {
-    "range" : "152",
-    "domain" : "157",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "156"
+    "id" : "155"
   }, {
     "range" : "119",
     "domain" : "39",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "158"
+    "id" : "157"
   }, {
     "range" : "119",
     "domain" : "38",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "159"
+    "id" : "158"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishVariableHeaderOf",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -3475,77 +3579,91 @@
     "comment" : {
       "en" : "Links a PUBLISH Variable Header to its MQTT Control Packet."
     },
-    "attributes" : [ "object", "functional" ],
+    "attributes" : [ "functional", "object" ],
     "id" : "120"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasUnsubscriptionFixedHeader",
-    "inverse" : "116",
+    "inverse" : "115",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
     "range" : "85",
     "label" : {
       "IRI-based" : "hasUnsubscriptionFixedHeader",
       "en" : "has UNSUBSCRIBE Fixed Header"
     },
-    "superproperty" : [ "126" ],
+    "superproperty" : [ "125" ],
     "domain" : "55",
     "comment" : {
       "en" : "Links an UNSUBSCRIBE packet to its specific Fixed Header."
     },
-    "attributes" : [ "object", "functional" ],
+    "attributes" : [ "functional", "object" ],
+    "id" : "159"
+  }, {
+    "range" : "138",
+    "domain" : "145",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "160"
   }, {
-    "range" : "139",
-    "domain" : "146",
+    "range" : "138",
+    "domain" : "137",
     "attributes" : [ "anonymous", "object" ],
     "id" : "161"
-  }, {
-    "range" : "139",
-    "domain" : "138",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "162"
   }, {
     "range" : "19",
     "domain" : "16",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "163"
+    "id" : "162"
   }, {
     "range" : "19",
     "domain" : "63",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "164"
+    "id" : "163"
   }, {
     "range" : "19",
     "domain" : "55",
     "attributes" : [ "anonymous", "object" ],
+    "id" : "164"
+  }, {
+    "range" : "23",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "165"
   }, {
-    "range" : "21",
-    "domain" : "9",
+    "range" : "23",
+    "domain" : "85",
     "attributes" : [ "anonymous", "object" ],
     "id" : "166"
   }, {
-    "range" : "21",
-    "domain" : "85",
+    "range" : "23",
+    "domain" : "22",
     "attributes" : [ "anonymous", "object" ],
     "id" : "167"
   }, {
-    "range" : "21",
-    "domain" : "20",
+    "range" : "88",
+    "domain" : "96",
     "attributes" : [ "anonymous", "object" ],
     "id" : "168"
   }, {
     "range" : "88",
-    "domain" : "97",
+    "domain" : "87",
     "attributes" : [ "anonymous", "object" ],
     "id" : "169"
   }, {
-    "range" : "88",
-    "domain" : "87",
-    "attributes" : [ "anonymous", "object" ],
+    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHostAddress",
+    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "hasHostAddress",
+      "en" : "MQTT Broker host"
+    },
+    "domain" : "61",
+    "comment" : {
+      "en" : "The hostname or IP address of an MQTT Broker."
+    },
+    "attributes" : [ "datatype", "functional" ],
     "id" : "170"
   }, {
-    "range" : "139",
-    "domain" : "145",
+    "range" : "138",
+    "domain" : "144",
     "attributes" : [ "anonymous", "object" ],
     "id" : "171"
   }, {
@@ -3575,7 +3693,7 @@
     "comment" : {
       "en" : "Links an UNSUBSCRIBE Variable Header to its MQTT Control Packet."
     },
-    "attributes" : [ "object", "functional" ],
+    "attributes" : [ "functional", "object" ],
     "id" : "107"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/phenomenonTime",
@@ -3608,12 +3726,12 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
@@ -3720,12 +3838,12 @@
       "IRI-based" : "hasPublishVariableHeader",
       "en" : "has PUBLISH Variable Header"
     },
-    "superproperty" : [ "105" ],
+    "superproperty" : [ "104" ],
     "domain" : "63",
     "comment" : {
       "en" : "Links a PUBLISH packet to its specific Variable Header."
     },
-    "attributes" : [ "object", "functional" ],
+    "attributes" : [ "functional", "object" ],
     "id" : "187"
   }, {
     "range" : "11",
@@ -3750,12 +3868,12 @@
       "IRI-based" : "isUnsubscriptionPayloadOf",
       "en" : "is UNSUBSCRIBE Payload of"
     },
-    "superproperty" : [ "94" ],
-    "domain" : "22",
+    "superproperty" : [ "93" ],
+    "domain" : "20",
     "comment" : {
       "en" : "Links an UNSUBSCRIBE Payload to its MQTT Control Packet."
     },
-    "attributes" : [ "object", "functional" ],
+    "attributes" : [ "functional", "object" ],
     "id" : "56"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#payloadEncodesActuationCollection",
@@ -3787,7 +3905,7 @@
     "id" : "178"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasConnectedClient",
-    "inverse" : "130",
+    "inverse" : "129",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
     "range" : "15",
     "label" : {
@@ -3895,12 +4013,12 @@
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       } ]
     },
@@ -3912,11 +4030,793 @@
     "comment" : {
       "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
     },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "allValues", "object", "external" ],
     "id" : "202"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "iri" : "http://www.w3.org/ns/sosa/madeBySampler",
     "inverse" : "208",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "156",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampler",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeBySampler",
+      "en" : "made by sampler"
+    },
+    "domain" : "203",
+    "comment" : {
+      "en" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "207"
+  }, {
+    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicFilterOf",
+    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "isTopicFilterOf",
+      "en" : "is MQTT Topic Filter of"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Relates an MQTT Topic Filter to a Subscription Entry or an UNSUBSCRIBE payload."
+    },
+    "attributes" : [ "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "inverse" : "44",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "34",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
+        "type" : "label"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasFeatureOfInterest",
+      "en" : "has feature of interest"
+    },
+    "domain" : "203",
+    "comment" : {
+      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "209"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isResultOf",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "203",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Result",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isResultOf",
+      "en" : "is result of"
+    },
+    "domain" : "131",
+    "comment" : {
+      "en" : "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "210"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isSampleOf",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "34",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isSampleOf",
+      "en" : "is sample of"
+    },
+    "domain" : "131",
+    "comment" : {
+      "en" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of."
+    },
+    "attributes" : [ "functional", "allValues", "object", "external" ],
+    "id" : "211"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "inverse" : "213",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "131",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Result",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasResult",
+      "en" : "has result"
+    },
+    "domain" : "203",
+    "comment" : {
+      "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "212"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeSampling",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "203",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Sampler (sampling device or entity) and the Sampling act it performed.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampler",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeSampling",
+      "en" : "made sampling"
+    },
+    "domain" : "156",
+    "comment" : {
+      "en" : "Relation between a Sampler (sampling device or entity) and the Sampling act it performed."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "215"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/hasInput",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "217",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Procedure and an Input to it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasInput",
+      "en" : "has input"
+    },
+    "domain" : "204",
+    "comment" : {
+      "en" : "Relation between a Procedure and an Input to it."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "216"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hosts",
+    "inverse" : "92",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "151",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampler",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Platform",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sensor",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuator",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Platform",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hosts",
+      "en" : "hosts"
+    },
+    "domain" : "66",
+    "subproperty" : [ "75" ],
+    "comment" : {
+      "en" : "Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "219"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/hasOutput",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "28",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Procedure and an Output of it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasOutput",
+      "en" : "has output"
+    },
+    "domain" : "204",
+    "comment" : {
+      "en" : "Relation between a Procedure and an Output of it."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "220"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/implementedBy",
+    "inverse" : "222",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "151",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, the relationship between a scientific measuring Procedure and a sensor that senses via that Procedure.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "implementedBy",
+      "en" : "implemented by"
+    },
+    "domain" : "204",
+    "comment" : {
+      "en" : "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "221"
+  }, {
+    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader",
+    "inverse" : "116",
+    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "hasFixedHeader",
+      "en" : "has Fixed Header"
+    },
+    "domain" : "19",
+    "subproperty" : [ "223", "123", "159" ],
+    "comment" : {
+      "en" : "Links an MQTT Control Packet to its Fixed Header."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "125"
+  }, {
+    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#unsubscribesPacket",
+    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "unsubscribesPacket",
+      "en" : "sends UNSUBSCRIBE Packet"
+    },
+    "superproperty" : [ "17" ],
+    "domain" : "15",
+    "comment" : {
+      "en" : "Specializes mqtt:sendsControlPacket for UNSUBSCRIBE packets."
+    },
+    "attributes" : [ "object" ],
+    "id" : "224"
+  }, {
+    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isRetainedFlag",
+    "equivalent" : [ "89" ],
+    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "isRetainedFlag",
+      "en" : "RETAIN flag"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "True if the message should be retained on the MQTT Broker."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "226"
+  }, {
+    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicName",
+    "inverse" : "172",
+    "equivalent" : [ "179" ],
+    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "hasTopicName",
+      "en" : "has MQTT Topic (name)"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "Links a PUBLISH Variable Header to the MQTT Topic to which the message is published."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "227"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "inverse" : "44",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "34",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
+        "type" : "label"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasFeatureOfInterest",
+      "en" : "has feature of interest"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "228"
+  }, {
+    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubjectOf",
+    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "isSubjectOf",
+      "en" : "is topic subject of"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Links a topic subject (e.g., Observation, Actuation) to the MQTT Topic that carries it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "83"
+  }, {
+    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadEncoding",
+    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasPayloadEncoding",
+      "en" : "payload encoding"
+    },
+    "domain" : "72",
+    "comment" : {
+      "en" : "The character encoding or serialization used for the payload (e.g., 'UTF-8', 'Base64')."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "229"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/observedProperty",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "96",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/ObservableProperty",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "observedProperty",
+      "en" : "observed property"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "230"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/inDeployment",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "225",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are hosted on the Platform.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, a relation between a buoy and a deployment of several Sensors.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "inDeployment",
+      "en" : "in deployment"
+    },
+    "domain" : "66",
+    "comment" : {
+      "en" : "Relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are hosted on the Platform."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "231"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "204",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Procedure",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usedProcedure",
+      "en" : "used procedure"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "232"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "inverse" : "213",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "range" : "132",
     "annotations" : {
@@ -3969,732 +4869,45 @@
       "IRI-based" : "hasResult",
       "en" : "has result"
     },
-    "domain" : "203",
-    "comment" : {
-      "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "207"
-  }, {
-    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicFilterOf",
-    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "47",
-    "label" : {
-      "IRI-based" : "isTopicFilterOf",
-      "en" : "is MQTT Topic Filter of"
-    },
-    "domain" : "26",
-    "comment" : {
-      "en" : "Relates an MQTT Topic Filter to a Subscription Entry or an UNSUBSCRIBE payload."
-    },
-    "attributes" : [ "object" ],
-    "id" : "80"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeBySampler",
-    "inverse" : "210",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "157",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampler",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "madeBySampler",
-      "en" : "made by sampler"
-    },
-    "domain" : "203",
-    "comment" : {
-      "en" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "209"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/isSampleOf",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "34",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isSampleOf",
-      "en" : "is sample of"
-    },
-    "domain" : "132",
-    "comment" : {
-      "en" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of."
-    },
-    "attributes" : [ "object", "external", "allValues", "functional" ],
-    "id" : "211"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/isResultOf",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "203",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isResultOf",
-      "en" : "is result of"
-    },
-    "domain" : "132",
-    "comment" : {
-      "en" : "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "212"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-    "inverse" : "44",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "34",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasFeatureOfInterest",
-      "en" : "has feature of interest"
-    },
-    "domain" : "203",
-    "comment" : {
-      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "213"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeSampling",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "203",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a Sampler (sampling device or entity) and the Sampling act it performed.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampler",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "madeSampling",
-      "en" : "made sampling"
-    },
-    "domain" : "157",
-    "comment" : {
-      "en" : "Relation between a Sampler (sampling device or entity) and the Sampling act it performed."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "215"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasOutput",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "28",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a Procedure and an Output of it.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasOutput",
-      "en" : "has output"
-    },
-    "domain" : "204",
-    "comment" : {
-      "en" : "Relation between a Procedure and an Output of it."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "216"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/inDeployment",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "219",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are hosted on the Platform.",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, a relation between a buoy and a deployment of several Sensors.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "inDeployment",
-      "en" : "in deployment"
-    },
-    "domain" : "66",
-    "comment" : {
-      "en" : "Relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are hosted on the Platform."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "218"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasInput",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "221",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a Procedure and an Input to it.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasInput",
-      "en" : "has input"
-    },
-    "domain" : "204",
-    "comment" : {
-      "en" : "Relation between a Procedure and an Input to it."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "220"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/implementedBy",
-    "inverse" : "223",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "152",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way.",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, the relationship between a scientific measuring Procedure and a sensor that senses via that Procedure.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "implementedBy",
-      "en" : "implemented by"
-    },
-    "domain" : "204",
-    "comment" : {
-      "en" : "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "222"
-  }, {
-    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasFixedHeader",
-    "inverse" : "117",
-    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "21",
-    "label" : {
-      "IRI-based" : "hasFixedHeader",
-      "en" : "has Fixed Header"
-    },
-    "domain" : "19",
-    "subproperty" : [ "224", "124", "160" ],
-    "comment" : {
-      "en" : "Links an MQTT Control Packet to its Fixed Header."
-    },
-    "attributes" : [ "object", "functional" ],
-    "id" : "126"
-  }, {
-    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#unsubscribesPacket",
-    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "55",
-    "label" : {
-      "IRI-based" : "unsubscribesPacket",
-      "en" : "sends UNSUBSCRIBE Packet"
-    },
-    "superproperty" : [ "17" ],
-    "domain" : "15",
-    "comment" : {
-      "en" : "Specializes mqtt:sendsControlPacket for UNSUBSCRIBE packets."
-    },
-    "attributes" : [ "object" ],
-    "id" : "225"
-  }, {
-    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isRetainedFlag",
-    "equivalent" : [ "89" ],
-    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "13",
-    "label" : {
-      "IRI-based" : "isRetainedFlag",
-      "en" : "RETAIN flag"
-    },
-    "domain" : "9",
-    "comment" : {
-      "en" : "True if the message should be retained on the MQTT Broker."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "226"
-  }, {
-    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasTopicName",
-    "inverse" : "172",
-    "equivalent" : [ "179" ],
-    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "82",
-    "label" : {
-      "IRI-based" : "hasTopicName",
-      "en" : "has MQTT Topic (name)"
-    },
-    "domain" : "38",
-    "comment" : {
-      "en" : "Links a PUBLISH Variable Header to the MQTT Topic to which the message is published."
-    },
-    "attributes" : [ "object", "functional" ],
-    "id" : "227"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "208",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "133",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasResult",
-      "en" : "has result"
-    },
     "domain" : "24",
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "228"
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "233"
   }, {
-    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubjectOf",
-    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "82",
-    "label" : {
-      "IRI-based" : "isSubjectOf",
-      "en" : "is topic subject of"
-    },
-    "domain" : "11",
-    "comment" : {
-      "en" : "Links a topic subject (e.g., Observation, Actuation) to the MQTT Topic that carries it."
-    },
-    "attributes" : [ "object" ],
-    "id" : "83"
-  }, {
-    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadEncoding",
-    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "5",
-    "label" : {
-      "IRI-based" : "hasPayloadEncoding",
-      "en" : "payload encoding"
-    },
-    "domain" : "72",
-    "comment" : {
-      "en" : "The character encoding or serialization used for the payload (e.g., 'UTF-8', 'Base64')."
-    },
-    "attributes" : [ "datatype", "functional" ],
-    "id" : "229"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/observedProperty",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "97",
+    "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "206",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
+        "value" : "http://www.w3.org/ns/ssn/",
         "type" : "iri"
       } ],
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation.",
+        "value" : "Relation between an Observation and the Stimulus that originated it.",
         "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/ObservableProperty",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "observedProperty",
-      "en" : "observed property"
+      "IRI-based" : "wasOriginatedBy",
+      "en" : "was originated by"
     },
     "domain" : "24",
     "comment" : {
-      "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
+      "en" : "Relation between an Observation and the Stimulus that originated it."
     },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "230"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hosts",
-    "inverse" : "93",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "152",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampler",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuator",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Platform",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sensor",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Platform",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hosts",
-      "en" : "hosts"
-    },
-    "domain" : "66",
-    "subproperty" : [ "74" ],
-    "comment" : {
-      "en" : "Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "231"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "204",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Procedure",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "usedProcedure",
-      "en" : "used procedure"
-    },
-    "domain" : "24",
-    "comment" : {
-      "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "232"
+    "attributes" : [ "functional", "allValues", "object", "external" ],
+    "id" : "234"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
-    "inverse" : "234",
+    "inverse" : "236",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "151",
+    "range" : "150",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4734,183 +4947,8 @@
     "comment" : {
       "en" : "Relation between an Observation and the Sensor which made the Observation."
     },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "233"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-    "inverse" : "44",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "34",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasFeatureOfInterest",
-      "en" : "has feature of interest"
-    },
-    "domain" : "24",
-    "comment" : {
-      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "allValues", "object", "external" ],
     "id" : "235"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "206",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an Observation and the Stimulus that originated it.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "wasOriginatedBy",
-      "en" : "was originated by"
-    },
-    "domain" : "24",
-    "comment" : {
-      "en" : "Relation between an Observation and the Stimulus that originated it."
-    },
-    "attributes" : [ "object", "external", "allValues", "functional" ],
-    "id" : "236"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/isObservedBy",
-    "inverse" : "238",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "151",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an ObservableProperty and the Sensor able to observe it.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sensor",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/ObservableProperty",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isObservedBy",
-      "en" : "is observed by"
-    },
-    "domain" : "97",
-    "comment" : {
-      "en" : "Relation between an ObservableProperty and the Sensor able to observe it."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "237"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "206",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, the expansion of quicksilver is a stimulus that serves as a proxy for some temperature property. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for the wind speed.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isProxyFor",
-      "en" : "is proxy for"
-    },
-    "domain" : "97",
-    "comment" : {
-      "en" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "240"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/observedProperty",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -4950,12 +4988,92 @@
       "IRI-based" : "observedProperty",
       "en" : "observed property"
     },
-    "domain" : "97",
+    "domain" : "96",
     "comment" : {
       "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
     },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "241"
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "237"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "206",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, the expansion of quicksilver is a stimulus that serves as a proxy for some temperature property. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for the wind speed.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isProxyFor",
+      "en" : "is proxy for"
+    },
+    "domain" : "96",
+    "comment" : {
+      "en" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "239"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isObservedBy",
+    "inverse" : "241",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "150",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an ObservableProperty and the Sensor able to observe it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sensor",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/ObservableProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isObservedBy",
+      "en" : "is observed by"
+    },
+    "domain" : "96",
+    "comment" : {
+      "en" : "Relation between an ObservableProperty and the Sensor able to observe it."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "240"
   }, {
     "range" : "60",
     "domain" : "19",
@@ -4967,7 +5085,7 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "244"
   }, {
-    "range" : "23",
+    "range" : "21",
     "domain" : "19",
     "attributes" : [ "anonymous", "object" ],
     "id" : "245"
@@ -4981,7 +5099,7 @@
       "en" : "sends MQTT Control Packet"
     },
     "domain" : "15",
-    "subproperty" : [ "62", "225", "14" ],
+    "subproperty" : [ "62", "224", "14" ],
     "comment" : {
       "en" : "Relates an MQTT Client to an MQTT Control Packet it sends."
     },
@@ -4995,7 +5113,7 @@
       "IRI-based" : "hasDUPFlag"
     },
     "domain" : "45",
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "197"
   }, {
     "iri" : "https://www.w3.org/2019/wot/mqtt#hasPayload",
@@ -5006,7 +5124,7 @@
     },
     "domain" : "45",
     "attributes" : [ "object", "external" ],
-    "id" : "96"
+    "id" : "95"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#usesTLS",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -5021,78 +5139,6 @@
     },
     "attributes" : [ "datatype", "functional" ],
     "id" : "246"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/implements",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "204",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method).",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, the relationship between a sensor and the scientific measuring Procedure via which it senses.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "implements",
-      "en" : "implements"
-    },
-    "domain" : "152",
-    "comment" : {
-      "en" : "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "247"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "152",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a System and its component parts.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSubSystem",
-      "en" : "has subsystem"
-    },
-    "domain" : "152",
-    "comment" : {
-      "en" : "Relation between a System and its component parts."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "248"
-  }, {
-    "range" : "1",
-    "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "249"
-  }, {
-    "range" : "21",
-    "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "250"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isHostedBy",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -5124,7 +5170,7 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampler",
+        "value" : "http://www.w3.org/ns/sosa/Platform",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
@@ -5134,7 +5180,7 @@
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Platform",
+        "value" : "http://www.w3.org/ns/sosa/Sampler",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
@@ -5147,12 +5193,78 @@
       "IRI-based" : "isHostedBy",
       "en" : "is hosted by"
     },
-    "domain" : "152",
-    "subproperty" : [ "76" ],
+    "domain" : "151",
+    "subproperty" : [ "77" ],
     "comment" : {
       "en" : "Relation between a Sensor, Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by."
     },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "247"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "151",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a System and its component parts.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSubSystem",
+      "en" : "has subsystem"
+    },
+    "domain" : "151",
+    "comment" : {
+      "en" : "Relation between a System and its component parts."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "248"
+  }, {
+    "range" : "1",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "249"
+  }, {
+    "range" : "23",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "250"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "151",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a System and its component parts.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSubSystem",
+      "en" : "has subsystem"
+    },
+    "domain" : "151",
+    "comment" : {
+      "en" : "Relation between a System and its component parts."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
     "id" : "251"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
@@ -5180,12 +5292,61 @@
     "comment" : {
       "en" : "Relation between an Observation and the Stimulus that originated it."
     },
-    "attributes" : [ "object", "external", "allValues", "functional" ],
+    "attributes" : [ "functional", "allValues", "object", "external" ],
     "id" : "252"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/implements",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "204",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method).",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, the relationship between a sensor and the scientific measuring Procedure via which it senses.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "implements",
+      "en" : "implements"
+    },
+    "domain" : "151",
+    "comment" : {
+      "en" : "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "253"
+  }, {
+    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionPayloadOf",
+    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "isSubscriptionPayloadOf",
+      "en" : "is SUBSCRIBE Payload of"
+    },
+    "superproperty" : [ "93" ],
+    "domain" : "36",
+    "comment" : {
+      "en" : "Links a SUBSCRIBE Payload to its MQTT Control Packet."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "59"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasDeployment",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "219",
+    "range" : "225",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5204,54 +5365,11 @@
       "IRI-based" : "hasDeployment",
       "en" : "has deployment"
     },
-    "domain" : "152",
+    "domain" : "151",
     "comment" : {
       "en" : "Relation between a System and a Deployment, recording that the System is deployed in that Deployment."
     },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "253"
-  }, {
-    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isSubscriptionPayloadOf",
-    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "16",
-    "label" : {
-      "IRI-based" : "isSubscriptionPayloadOf",
-      "en" : "is SUBSCRIBE Payload of"
-    },
-    "superproperty" : [ "94" ],
-    "domain" : "36",
-    "comment" : {
-      "en" : "Links a SUBSCRIBE Payload to its MQTT Control Packet."
-    },
-    "attributes" : [ "object", "functional" ],
-    "id" : "59"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "152",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a System and its component parts.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSubSystem",
-      "en" : "has subsystem"
-    },
-    "domain" : "152",
-    "comment" : {
-      "en" : "Relation between a System and its component parts."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "allValues", "object", "external" ],
     "id" : "254"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasClient",
@@ -5269,9 +5387,51 @@
     "attributes" : [ "object" ],
     "id" : "255"
   }, {
+    "iri" : "http://www.w3.org/ns/ssn/detects",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "150",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "detects",
+      "en" : "detects"
+    },
+    "domain" : "206",
+    "comment" : {
+      "en" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "256"
+  }, {
+    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentType",
+    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasPayloadContentType",
+      "en" : "payload content type"
+    },
+    "domain" : "72",
+    "comment" : {
+      "en" : "The MIME type of the payload content (e.g., 'application/json')."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "257"
+  }, {
     "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "97",
+    "range" : "96",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5300,49 +5460,7 @@
     "comment" : {
       "en" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for."
     },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "256"
-  }, {
-    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPayloadContentType",
-    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "hasPayloadContentType",
-      "en" : "payload content type"
-    },
-    "domain" : "72",
-    "comment" : {
-      "en" : "The MIME type of the payload content (e.g., 'application/json')."
-    },
-    "attributes" : [ "datatype", "functional" ],
-    "id" : "257"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/detects",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "151",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "detects",
-      "en" : "detects"
-    },
-    "domain" : "206",
-    "comment" : {
-      "en" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "allValues", "object", "external" ],
     "id" : "258"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasParticipant",
@@ -5399,13 +5517,13 @@
     "comment" : {
       "en" : "Relation between a Property and the entity it belongs to."
     },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "allValues", "object", "external" ],
     "id" : "262"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/deployedSystem",
     "inverse" : "264",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "152",
+    "range" : "151",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5424,11 +5542,11 @@
       "IRI-based" : "deployedSystem",
       "en" : "deployed system"
     },
-    "domain" : "219",
+    "domain" : "225",
     "comment" : {
       "en" : "Relation between a Deployment and a deployed System."
     },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "allValues", "object", "external" ],
     "id" : "263"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/deployedOnPlatform",
@@ -5453,11 +5571,11 @@
       "IRI-based" : "deployedOnPlatform",
       "en" : "deployed on platform"
     },
-    "domain" : "219",
+    "domain" : "225",
     "comment" : {
       "en" : "Relation between a Deployment and the Platform on which the Systems are deployed."
     },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "allValues", "object", "external" ],
     "id" : "265"
   }, {
     "range" : "50",
@@ -5490,10 +5608,10 @@
     "comment" : {
       "en" : "Relation between a Procedure and an Output of it."
     },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "allValues", "object", "external" ],
     "id" : "269"
   }, {
-    "range" : "23",
+    "range" : "21",
     "domain" : "36",
     "attributes" : [ "anonymous", "object" ],
     "id" : "270"
@@ -5519,21 +5637,21 @@
       "IRI-based" : "hasInput",
       "en" : "has input"
     },
-    "domain" : "221",
+    "domain" : "217",
     "comment" : {
       "en" : "Relation between a Procedure and an Input to it."
     },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "allValues", "object", "external" ],
     "id" : "271"
   }, {
-    "range" : "23",
+    "range" : "21",
     "domain" : "72",
     "attributes" : [ "anonymous", "object" ],
     "id" : "272"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/observes",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "97",
+    "range" : "96",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5570,15 +5688,15 @@
       "en" : "observes"
     },
     "superproperty" : [ "274" ],
-    "domain" : "151",
+    "domain" : "150",
     "comment" : {
       "en" : "Relation between a Sensor and an ObservableProperty that it is capable of sensing."
     },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "allValues", "object", "external" ],
     "id" : "273"
   }, {
-    "range" : "23",
-    "domain" : "22",
+    "range" : "21",
+    "domain" : "20",
     "attributes" : [ "anonymous", "object" ],
     "id" : "275"
   }, {
@@ -5620,15 +5738,15 @@
       "IRI-based" : "madeObservation",
       "en" : "made observation"
     },
-    "domain" : "151",
+    "domain" : "150",
     "comment" : {
       "en" : "Relation between a Sensor and an Observation made by the Sensor."
     },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "allValues", "object", "external" ],
     "id" : "276"
   }, {
     "range" : "34",
-    "domain" : "132",
+    "domain" : "131",
     "attributes" : [ "anonymous", "object" ],
     "id" : "277"
   }, {
@@ -5659,12 +5777,12 @@
       "IRI-based" : "forProperty",
       "en" : "for property"
     },
-    "domain" : "219",
-    "subproperty" : [ "238" ],
+    "domain" : "225",
+    "subproperty" : [ "241" ],
     "comment" : {
       "en" : "A relation between some aspect of an entity and a Property."
     },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "allValues", "object", "external" ],
     "id" : "278"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/detects",
@@ -5688,14 +5806,14 @@
       "IRI-based" : "detects",
       "en" : "detects"
     },
-    "domain" : "151",
+    "domain" : "150",
     "comment" : {
       "en" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty."
     },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "allValues", "object", "external" ],
     "id" : "279"
   }, {
-    "range" : "23",
+    "range" : "21",
     "domain" : "60",
     "attributes" : [ "anonymous", "object" ],
     "id" : "280"
@@ -5755,16 +5873,16 @@
       "IRI-based" : "isPayloadOf",
       "en" : "is MQTT Payload of"
     },
-    "domain" : "23",
-    "subproperty" : [ "100", "56", "59" ],
+    "domain" : "21",
+    "subproperty" : [ "99", "56", "59" ],
     "comment" : {
       "en" : "Links an MQTT Payload to the MQTT Control Packet containing it."
     },
-    "attributes" : [ "object", "functional" ],
-    "id" : "94"
+    "attributes" : [ "functional", "object" ],
+    "id" : "93"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isMatchedByFilter",
-    "inverse" : "92",
+    "inverse" : "91",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
     "range" : "26",
     "label" : {
@@ -5790,8 +5908,8 @@
     "comment" : {
       "en" : "Links a SUBSCRIBE Variable Header to its MQTT Control Packet."
     },
-    "attributes" : [ "object", "functional" ],
-    "id" : "104"
+    "attributes" : [ "functional", "object" ],
+    "id" : "103"
   }, {
     "range" : "26",
     "domain" : "1",
@@ -5809,7 +5927,7 @@
     "id" : "289"
   }, {
     "range" : "119",
-    "domain" : "21",
+    "domain" : "23",
     "attributes" : [ "anonymous", "object" ],
     "id" : "290"
   }, {
@@ -5818,7 +5936,7 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "291"
   }, {
-    "range" : "23",
+    "range" : "21",
     "domain" : "1",
     "attributes" : [ "anonymous", "object" ],
     "id" : "292"
@@ -5838,22 +5956,22 @@
     "id" : "293"
   }, {
     "range" : "82",
-    "domain" : "21",
+    "domain" : "23",
     "attributes" : [ "anonymous", "object" ],
     "id" : "294"
   }, {
     "range" : "8",
-    "domain" : "21",
+    "domain" : "23",
     "attributes" : [ "anonymous", "object" ],
     "id" : "295"
   }, {
     "range" : "11",
-    "domain" : "21",
+    "domain" : "23",
     "attributes" : [ "anonymous", "object" ],
     "id" : "296"
   }, {
     "range" : "26",
-    "domain" : "21",
+    "domain" : "23",
     "attributes" : [ "anonymous", "object" ],
     "id" : "297"
   }, {
@@ -5866,12 +5984,12 @@
       "en" : "has Variable Header"
     },
     "domain" : "19",
-    "subproperty" : [ "187", "103", "106" ],
+    "subproperty" : [ "187", "102", "106" ],
     "comment" : {
       "en" : "Links an MQTT Control Packet to its Variable Header."
     },
-    "attributes" : [ "object", "functional" ],
-    "id" : "105"
+    "attributes" : [ "functional", "object" ],
+    "id" : "104"
   }, {
     "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
     "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
@@ -5929,7 +6047,7 @@
       "en" : "Links an RDF list of field names to the MQTT Payload that contains them."
     },
     "attributes" : [ "object" ],
-    "id" : "128"
+    "id" : "127"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPacketIdentifier",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -5946,12 +6064,12 @@
     "id" : "300"
   }, {
     "range" : "60",
-    "domain" : "21",
+    "domain" : "23",
     "attributes" : [ "anonymous", "object" ],
     "id" : "301"
   }, {
     "range" : "1",
-    "domain" : "21",
+    "domain" : "23",
     "attributes" : [ "anonymous", "object" ],
     "id" : "302"
   }, {
@@ -5962,16 +6080,16 @@
       "IRI-based" : "isPublishPayloadOf",
       "en" : "is PUBLISH Payload of"
     },
-    "superproperty" : [ "94" ],
+    "superproperty" : [ "93" ],
     "domain" : "72",
     "comment" : {
       "en" : "Links a PUBLISH Payload to its MQTT Control Packet."
     },
-    "attributes" : [ "object", "functional" ],
-    "id" : "100"
+    "attributes" : [ "functional", "object" ],
+    "id" : "99"
   }, {
-    "range" : "23",
-    "domain" : "21",
+    "range" : "21",
+    "domain" : "23",
     "attributes" : [ "anonymous", "object" ],
     "id" : "303"
   }, {
@@ -6000,7 +6118,7 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "308"
   }, {
-    "range" : "20",
+    "range" : "22",
     "domain" : "9",
     "attributes" : [ "anonymous", "object" ],
     "id" : "309"
@@ -6011,7 +6129,7 @@
     "id" : "310"
   }, {
     "range" : "85",
-    "domain" : "20",
+    "domain" : "22",
     "attributes" : [ "anonymous", "object" ],
     "id" : "311"
   }, {
@@ -6030,450 +6148,10 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "314"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/actsOnProperty",
-    "inverse" : "316",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "87",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/ActuatableProperty",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. ",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "actsOnProperty",
-      "en" : "acts on property"
-    },
-    "domain" : "32",
-    "comment" : {
-      "en" : "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "315"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-    "inverse" : "44",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "34",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasFeatureOfInterest",
-      "en" : "has feature of interest"
-    },
-    "domain" : "32",
-    "comment" : {
-      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "317"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "204",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Procedure",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "usedProcedure",
-      "en" : "used procedure"
-    },
-    "domain" : "32",
-    "comment" : {
-      "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "318"
-  }, {
-    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#observesTopic",
-    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "82",
-    "label" : {
-      "IRI-based" : "observesTopic",
-      "en" : "observes MQTT Topic"
-    },
-    "domain" : "151",
-    "comment" : {
-      "en" : "Links a sensor to the MQTT Topic to which it publishes observations."
-    },
-    "attributes" : [ "object" ],
-    "id" : "319"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeByActuator",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "141",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation linking an Actuation to the Actuator that made that Actuation.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuator",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "madeByActuator",
-      "en" : "made by actuator"
-    },
-    "domain" : "32",
-    "comment" : {
-      "en" : "Relation linking an Actuation to the Actuator that made that Actuation."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "320"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeActuation",
-    "inverse" : "322",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "32",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an Actuator and the Actuation it has made.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuator",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "madeActuation",
-      "en" : "made actuation"
-    },
-    "domain" : "141",
-    "comment" : {
-      "en" : "Relation between an Actuator and the Actuation it has made."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "321"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/forProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "87",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation between some aspect of an entity and a Property.",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a Deployment to the properties it was installed to observe or act on; from a SystemCapability to the Property the capability is described for.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "forProperty",
-      "en" : "for property"
-    },
-    "domain" : "141",
-    "subproperty" : [ "238" ],
-    "comment" : {
-      "en" : "A relation between some aspect of an entity and a Property."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "323"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasProperty",
-    "inverse" : "325",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "88",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an entity and a Property of that entity.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasProperty",
-      "en" : "has property"
-    },
-    "domain" : "34",
-    "comment" : {
-      "en" : "Relation between an entity and a Property of that entity."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "324"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasSample",
-    "inverse" : "327",
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "inverse" : "213",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "range" : "132",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a FeatureOfInterest and the Sample used to represent it.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSample",
-      "en" : "has sample"
-    },
-    "domain" : "34",
-    "comment" : {
-      "en" : "Relation between a FeatureOfInterest and the Sample used to represent it."
-    },
-    "attributes" : [ "object", "external", "inverse functional", "allValues" ],
-    "id" : "326"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/isActedOnBy",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "32",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/ActuatableProperty",
-        "type" : "iri"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. ",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isActedOnBy",
-      "en" : "is acted on by"
-    },
-    "domain" : "87",
-    "comment" : {
-      "en" : "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state."
-    },
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "328"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "208",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "133",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -6528,7 +6206,447 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "315"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/actsOnProperty",
+    "inverse" : "317",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "87",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/ActuatableProperty",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "actsOnProperty",
+      "en" : "acts on property"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "316"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "inverse" : "44",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "34",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
+        "type" : "label"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasFeatureOfInterest",
+      "en" : "has feature of interest"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "318"
+  }, {
+    "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#observesTopic",
+    "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "observesTopic",
+      "en" : "observes MQTT Topic"
+    },
+    "domain" : "150",
+    "comment" : {
+      "en" : "Links a sensor to the MQTT Topic to which it publishes observations."
+    },
+    "attributes" : [ "object" ],
+    "id" : "319"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "204",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Procedure",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usedProcedure",
+      "en" : "used procedure"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "320"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/forProperty",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "87",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation between some aspect of an entity and a Property.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a Deployment to the properties it was installed to observe or act on; from a SystemCapability to the Property the capability is described for.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "forProperty",
+      "en" : "for property"
+    },
+    "domain" : "140",
+    "subproperty" : [ "241" ],
+    "comment" : {
+      "en" : "A relation between some aspect of an entity and a Property."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "321"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeActuation",
+    "inverse" : "323",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "32",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an Actuator and the Actuation it has made.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuator",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeActuation",
+      "en" : "made actuation"
+    },
+    "domain" : "140",
+    "comment" : {
+      "en" : "Relation between an Actuator and the Actuation it has made."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "322"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/hasProperty",
+    "inverse" : "325",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "88",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an entity and a Property of that entity.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasProperty",
+      "en" : "has property"
+    },
+    "domain" : "34",
+    "comment" : {
+      "en" : "Relation between an entity and a Property of that entity."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "324"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasSample",
+    "inverse" : "327",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "131",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a FeatureOfInterest and the Sample used to represent it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSample",
+      "en" : "has sample"
+    },
+    "domain" : "34",
+    "comment" : {
+      "en" : "Relation between a FeatureOfInterest and the Sample used to represent it."
+    },
+    "attributes" : [ "allValues", "inverse functional", "object", "external" ],
+    "id" : "326"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isActedOnBy",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "32",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. ",
+        "type" : "label"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/ActuatableProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isActedOnBy",
+      "en" : "is acted on by"
+    },
+    "domain" : "87",
+    "comment" : {
+      "en" : "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "328"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeByActuator",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "140",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an Actuation to the Actuator that made that Actuation.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuator",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeByActuator",
+      "en" : "made by actuator"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Relation linking an Actuation to the Actuator that made that Actuation."
+    },
+    "attributes" : [ "allValues", "object", "external" ],
     "id" : "329"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isPublishFixedHeaderOf",
@@ -6538,13 +6656,13 @@
       "IRI-based" : "isPublishFixedHeaderOf",
       "en" : "is PUBLISH Fixed Header of"
     },
-    "superproperty" : [ "117" ],
+    "superproperty" : [ "116" ],
     "domain" : "9",
     "comment" : {
       "en" : "Links a PUBLISH Fixed Header to its MQTT Control Packet."
     },
-    "attributes" : [ "object", "functional" ],
-    "id" : "125"
+    "attributes" : [ "functional", "object" ],
+    "id" : "124"
   }, {
     "range" : "26",
     "domain" : "82",
@@ -6580,12 +6698,12 @@
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -6598,7 +6716,7 @@
     "comment" : {
       "en" : "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "331"
   }, {
     "range" : "119",
@@ -6622,7 +6740,7 @@
     "id" : "335"
   }, {
     "range" : "119",
-    "domain" : "23",
+    "domain" : "21",
     "attributes" : [ "anonymous", "object" ],
     "id" : "336"
   }, {
@@ -6637,12 +6755,12 @@
     "id" : "338"
   }, {
     "range" : "11",
-    "domain" : "23",
+    "domain" : "21",
     "attributes" : [ "anonymous", "object" ],
     "id" : "339"
   }, {
     "range" : "26",
-    "domain" : "23",
+    "domain" : "21",
     "attributes" : [ "anonymous", "object" ],
     "id" : "340"
   }, {
@@ -6653,29 +6771,29 @@
       "IRI-based" : "isFixedHeaderOf",
       "en" : "is Fixed Header of"
     },
-    "domain" : "21",
-    "subproperty" : [ "153", "116", "125" ],
+    "domain" : "23",
+    "subproperty" : [ "152", "115", "124" ],
     "comment" : {
       "en" : "Links a Fixed Header to the MQTT Control Packet containing it."
     },
-    "attributes" : [ "object", "functional" ],
-    "id" : "117"
+    "attributes" : [ "functional", "object" ],
+    "id" : "116"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubscriptionFixedHeader",
-    "inverse" : "153",
+    "inverse" : "152",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
-    "range" : "20",
+    "range" : "22",
     "label" : {
       "IRI-based" : "hasSubscriptionFixedHeader",
       "en" : "has SUBSCRIBE Fixed Header"
     },
-    "superproperty" : [ "126" ],
+    "superproperty" : [ "125" ],
     "domain" : "16",
     "comment" : {
       "en" : "Links a SUBSCRIBE packet to its specific Fixed Header."
     },
-    "attributes" : [ "object", "functional" ],
-    "id" : "224"
+    "attributes" : [ "functional", "object" ],
+    "id" : "223"
   }, {
     "iri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isAcceptedBy",
     "baseIri" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN",
@@ -6692,7 +6810,7 @@
     "id" : "341"
   }, {
     "range" : "82",
-    "domain" : "23",
+    "domain" : "21",
     "attributes" : [ "anonymous", "object" ],
     "id" : "342"
   }, {
@@ -6767,7 +6885,7 @@
     "comment" : {
       "en" : "The simple value of an Observation or Actuation or act of Sampling."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "345"
   }, {
     "range" : "26",
@@ -6776,7 +6894,7 @@
     "id" : "346"
   }, {
     "range" : "8",
-    "domain" : "23",
+    "domain" : "21",
     "attributes" : [ "anonymous", "object" ],
     "id" : "347"
   }, {

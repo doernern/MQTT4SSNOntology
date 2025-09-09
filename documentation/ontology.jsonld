@@ -1,40 +1,30 @@
 [ {
-  "@id" : "_:genid11",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader"
-    }, {
-      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
   "http://www.w3.org/2002/07/owl#onDatatype" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
     "@list" : [ {
-      "@id" : "_:genid18"
-    }, {
       "@id" : "_:genid16"
+    }, {
+      "@id" : "_:genid14"
     } ]
   } ]
 }, {
-  "@id" : "_:genid16",
+  "@id" : "_:genid14",
   "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "2"
   } ]
 }, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid16",
   "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "0"
   } ]
 }, {
-  "@id" : "_:genid19",
+  "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -60,7 +50,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid30",
+  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -72,7 +62,17 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid34",
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry"
+    }, {
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -84,7 +84,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -96,7 +96,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid40",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -108,7 +108,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid5",
+  "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -118,13 +118,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid8",
+  "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry"
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#PublishFixedHeader"
     }, {
-      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#UnsubscriptionPayload"
+      "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#SubscriptionEntry"
     } ]
   } ]
 }, {
@@ -218,7 +218,7 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@id" : "_:genid1"
   }, {
-    "@id" : "_:genid3"
+    "@id" : "_:genid2"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by-nc-sa/4.0/"
@@ -970,14 +970,14 @@
     "@value" : "The MQTT Quality of Service level (0 = at most once, 1 = at least once, 2 = exactly once)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid11"
+    "@id" : "_:genid9"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "QoS level"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid14"
+    "@id" : "_:genid12"
   } ]
 }, {
   "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasSubject",
@@ -1096,7 +1096,7 @@
     "@value" : "Relates a Subscription Entry or an UNSUBSCRIBE payload to an MQTT Topic Filter."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid5"
+    "@id" : "_:genid3"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1617,7 +1617,7 @@
     "@value" : "is MQTT Topic Filter of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid8"
+    "@id" : "_:genid6"
   } ]
 }, {
   "@id" : "https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#isTopicNameOf",

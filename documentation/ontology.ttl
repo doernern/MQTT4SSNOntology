@@ -14,13 +14,13 @@
                                                                     <https://www.w3.org/2019/wot/mqtt> ;
                                                         <http://purl.org/dc/terms/bibliographicCitation> "Niklas Doerner, Maria Maleshkova (2025): MQTT4SSN Ontology. https://doi.org/10.5281/zenodo.16704302" ;
                                                         <http://purl.org/dc/terms/created> "2025-08-11"^^xsd:date ;
-                                                        <http://purl.org/dc/terms/creator> _:genid1 ,
-                                                                                           _:genid3 ;
-                                                        <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
-                                                        <http://purl.org/dc/terms/title> "MQTT4SSN Ontology" ;
-                                                        <http://purl.org/ontology/bibo/doi> "10.5281/zenodo.16704302" ;
-                                                        rdfs:comment "The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT transport protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT transport protocol component."@en ;
-                                                        <http://xmlns.com/foaf/0.1/fundedBy> <http://example.org/individuals#DTEC> .
+                                                        <http://purl.org/dc/terms/creator> [ ] ,
+[ ] ;
+<http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+<http://purl.org/dc/terms/title> "MQTT4SSN Ontology" ;
+<http://purl.org/ontology/bibo/doi> "10.5281/zenodo.16704302" ;
+rdfs:comment "The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT transport protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT transport protocol component."@en ;
+<http://xmlns.com/foaf/0.1/fundedBy> <http://example.org/individuals#DTEC> .
 
 #################################################################
 #    Annotation properties
@@ -669,11 +669,11 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasHostAddress
 :hasHostAddress rdf:type owl:DatatypeProperty ,
-                  owl:FunctionalProperty ;
-         rdfs:domain :Broker ;
-         rdfs:range xsd:string ;
-         rdfs:comment "The hostname or IP address of an MQTT Broker."@en ;
-         rdfs:label "MQTT Broker host"@en .
+                         owl:FunctionalProperty ;
+                rdfs:domain :Broker ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The hostname or IP address of an MQTT Broker."@en ;
+                rdfs:label "MQTT Broker host"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#hasPacketIdentifier

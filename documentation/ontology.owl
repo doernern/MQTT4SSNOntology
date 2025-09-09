@@ -21,16 +21,18 @@
         <owl:imports rdf:resource="https://www.w3.org/2019/wot/mqtt"/>
         <terms:bibliographicCitation>Niklas Doerner, Maria Maleshkova (2025): MQTT4SSN Ontology. https://doi.org/10.5281/zenodo.16704302</terms:bibliographicCitation>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-11</terms:created>
-        <terms:creator rdf:nodeID="genid1"/>
-        <terms:creator rdf:nodeID="genid3"/>
+        <terms:creator>
+            <rdf:Description/>
+        </terms:creator>
+        <terms:creator>
+            <rdf:Description/>
+        </terms:creator>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <terms:title>MQTT4SSN Ontology</terms:title>
         <bibo:doi>10.5281/zenodo.16704302</bibo:doi>
         <rdfs:comment xml:lang="en">The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT transport protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT transport protocol component.</rdfs:comment>
         <foaf:fundedBy rdf:resource="http://example.org/individuals#DTEC"/>
     </owl:Ontology>
-    <rdf:Description rdf:nodeID="genid1"/>
-    <rdf:Description rdf:nodeID="genid3"/>
     
 
 
