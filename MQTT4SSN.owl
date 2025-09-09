@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN"
+     xml:base="https://doernern.github.io/MQTT4SSNOntology/documentation/index-en.html"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN">
-    <Prefix name="" IRI="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#"/>
+     ontologyIRI="https://doernern.github.io/MQTT4SSNOntology/documentation/index-en.html">
+    <Prefix name="" IRI="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="ex" IRI="http://example.org/individuals#"/>
     <Prefix name="qk" IRI="http://qudt.org/vocab/quantitykind/"/>
     <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
@@ -21,17 +22,40 @@
     <Prefix name="mqtt" IRI="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN#"/>
     <Prefix name="qudt" IRI="http://qudt.org/schema/qudt/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
     <Prefix name="sosa" IRI="http://www.w3.org/ns/sosa/"/>
     <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
     <Prefix name="unit" IRI="http://qudt.org/vocab/unit/"/>
+    <Prefix name="vaem" IRI="http://www.linkedmodel.org/schema/vaem#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="dtype" IRI="http://www.linkedmodel.org/schema/dtype#"/>
+    <Prefix name="schema" IRI="http://schema.org/"/>
     <Import>http://qudt.org/schema/qudt/</Import>
-    <Import>http://www.w3.org/1999/02/22-rdf-syntax-ns#Ontology</Import>
     <Import>http://www.w3.org/ns/sosa/</Import>
-    <Import>http://www.w3.org/ns/ssn/</Import>
     <Import>https://www.w3.org/2019/wot/mqtt</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:abstract"/>
+        <Literal xml:lang="en">In the Web of Things community, the SSN/SOSA ontology, a W3C recommendation, has established itself as a foundational framework for representing semantic sensor networks, modeling sensors, observations, and actuations. However, an explicit representation of message protocols is missing, which limits semantic interoperability in machine-to-machine communication scenarios. We propose MQTT4SSN as an extension of SSN/SOSA that semantically models the MQTT protocol to address this gap. If SSN/SOSA is not used, the proposed ontology can also be used independently for the semantic modeling of the MQTT message protocol. MQTT4SSN represents MQTT entities such as brokers, clients, control packets, topics, and payload metadata, linking them to SSN/SOSA concepts to enable end-to-end traceability between sensing semantics and communication semantics. The ontology captures heterogeneous payload formats, encodings, and transport metadata, enabling machine-interpretable description and integration of transmitted content. MQTT4SSN represents an extensible and reusable resource that is accessible according to the FAIR principles and documented as an Ontology Specification Draft.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:author"/>
+        <IRI>https://orcid.org/0000-0003-3458-4748</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:author"/>
+        <IRI>https://orcid.org/0009-0004-0088-8633</IRI>
+    </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:bibliographicCitation"/>
         <Literal>Niklas Doerner, Maria Maleshkova (2025): MQTT4SSN Ontology. https://doi.org/10.5281/zenodo.16704302</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:contributor"/>
+        <IRI>https://orcid.org/0000-0003-3458-4748</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:contributor"/>
+        <IRI>https://orcid.org/0009-0004-0088-8633</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:created"/>
@@ -39,19 +63,31 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:creator"/>
-        <AnonymousIndividual nodeID="_:genid2147484479"/>
+        <IRI>https://orcid.org/0000-0003-3458-4748</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:creator"/>
-        <AnonymousIndividual nodeID="_:genid2147484480"/>
+        <IRI>https://orcid.org/0009-0004-0088-8633</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <Literal xml:lang="en">In the Web of Things community, the SSN/SOSA ontology, a W3C recommendation, has established itself as a foundational framework for representing semantic sensor networks, modeling sensors, observations, and actuations. However, an explicit representation of message protocols is missing, which limits semantic interoperability in machine-to-machine communication scenarios. We propose MQTT4SSN as an extension of SSN/SOSA that semantically models the MQTT protocol to address this gap. If SSN/SOSA is not used, the proposed ontology can also be used independently for the semantic modeling of the MQTT message protocol. MQTT4SSN represents MQTT entities such as brokers, clients, control packets, topics, and payload metadata, linking them to SSN/SOSA concepts to enable end-to-end traceability between sensing semantics and communication semantics. The ontology captures heterogeneous payload formats, encodings, and transport metadata, enabling machine-interpretable description and integration of transmitted content. MQTT4SSN represents an extensible and reusable resource that is accessible according to the FAIR principles and documented as an Ontology Specification Draft.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:license"/>
         <IRI>https://creativecommons.org/licenses/by-nc-sa/4.0/</IRI>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2025-09-08</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:subject"/>
+        <Literal xml:lang="en">MQTT, Ontology Engineering, Sensor Ontology, Semantic Sensor Network, Message Protocol, Smart Sensor</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:title"/>
-        <Literal>MQTT4SSN Ontology</Literal>
+        <Literal xml:lang="en">MQTT4SSN Ontology</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="bibo:doi"/>
@@ -63,8 +99,98 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="foaf:fundedBy"/>
-        <AbbreviatedIRI>ex:DTEC</AbbreviatedIRI>
+        <IRI>https://dtecbw.de/</IRI>
     </Annotation>
+    <Declaration>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error4"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error5"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error6"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="qudt:Aspect"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="qudt:EnumeratedQuantity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="qudt:SignednessType"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="qudt:StringEncodingType"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="qudt:SymmetricRelation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="qudt:Verifiable"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:Person"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="vaem:CatalogEntry"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdf:List"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdfs:Class"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdfs:Container"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdfs:Datatype"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdfs:Resource"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xsd:gDay"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xsd:gMonth"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xsd:gMonthDay"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xsd:gYear"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xsd:gYearMonth"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl:Class"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl:Ontology"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sosa:ActuationCollection"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sosa:ObservationCollection"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sosa:Property"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sosa:System"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </Declaration>
     <Declaration>
         <Class IRI="#Broker"/>
     </Declaration>
@@ -136,6 +262,57 @@
     </Declaration>
     <Declaration>
         <Class IRI="#VariableHeader"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#0"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#2"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="qudt:ansiSQLName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="qudt:cName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="qudt:oracleSQLName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="qudt:protocolBuffersName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="qudt:pythonName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="qudt:vbName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rdf:first"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rdf:object"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rdf:predicate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rdf:rest"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rdf:subject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rdf:type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rdf:value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#forwardsPublishPacket"/>
@@ -321,6 +498,12 @@
         <ObjectProperty IRI="#usesConnection"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="qudt:bits"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="qudt:length"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasClientID"/>
     </Declaration>
     <Declaration>
@@ -360,403 +543,271 @@
         <DataProperty IRI="#usesTLS"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#graphName"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#QUDT"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.linkedmodel.org/schema/vaem#CatalogEntry"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="owl:maxCardinality"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/dtype#GMD_DTYPE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:Signed"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ConstraintsGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:BitEncoding"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:ISO8601-UTCDateTime-BasicFormat"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:protocolBuffersName"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:vbName"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://schema.org/Person"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#GMD_VAEM"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CT_FINITE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="mqv:SUBSCRIBE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#GMD_QUDT-SCHEMA"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:ScaleType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="mqv:PUBLISH"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CT_COUNTABLY-INFINITE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ProxyGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ViewGraph"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="foaf:mbox"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#SchemaGraph"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:BigEndian"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:TotallyOrdered"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rdfs:Container"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://schema.org/Organization"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#TransformsGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#CurationGraph"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="sosa:ActuationCollection"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="rdf:predicate"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#RulesGraph"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#graphTitle"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CardinalityType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:OctetEncoding"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#VocabularyGraph"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="http://dbpedia.org/resource/Category:Units_of_angle"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="owl:Class"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="rdf:value"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:BooleanEncoding"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="rdf:first"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="ex:DTEC"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/dtype"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:hasCitation"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gMonth"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:StringEncodingType"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gMonthDay"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:EndianType"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:oracleSQLName"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:cName"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#website"/>
+        <NamedIndividual abbreviatedIRI="qudt:AngleUnit"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="qudt:Aspect"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:Unordered"/>
+        <NamedIndividual abbreviatedIRI="qudt:BigEndian"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:hasReciprocalUnit"/>
+        <NamedIndividual abbreviatedIRI="qudt:BitEncoding"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:SignedIntegerEncoding"/>
+        <NamedIndividual abbreviatedIRI="qudt:BooleanEncoding"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:ansiSQLName"/>
+        <NamedIndividual abbreviatedIRI="qudt:CT_COUNTABLY-INFINITE"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="xsd:gYear"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#FunctionsGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#MappingGraph"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gYearMonth"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:Verifiable"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#0"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#2"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#DocumentationGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://voag.linkedmodel.org/voag/CC-SHAREALIKE_3PT0-US"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:fieldCode"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="sosa:ObservationCollection"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:EnumeratedQuantity"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dct:bibliographicCitation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:IEEE754_1985RealEncoding"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://schema.org/affiliation"/>
+        <NamedIndividual abbreviatedIRI="qudt:CT_FINITE"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="qudt:CT_UNCOUNTABLE"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="bibo:doi"/>
+        <NamedIndividual abbreviatedIRI="qudt:CardinalityType"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:SymmetricRelation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://org.semanticweb.owlapi/error#Error6"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://org.semanticweb.owlapi/error#Error5"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="rdf:rest"/>
+        <NamedIndividual abbreviatedIRI="qudt:CharEncoding"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="qudt:DoublePrecisionEncoding"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://org.semanticweb.owlapi/error#Error4"/>
+        <NamedIndividual abbreviatedIRI="qudt:EndianType"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:hasVocabulary"/>
+        <NamedIndividual abbreviatedIRI="qudt:EnumeratedQuantity"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://schema.org/name"/>
+        <NamedIndividual abbreviatedIRI="qudt:IEEE754_1985RealEncoding"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ScriptGraph"/>
+        <NamedIndividual abbreviatedIRI="qudt:ISO8601-UTCDateTime-BasicFormat"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="qudt:LittleEndian"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:ShortUnsignedIntegerEncoding"/>
+        <NamedIndividual abbreviatedIRI="qudt:LongUnsignedIntegerEncoding"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="rdfs:Resource"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="qudt:bits"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="qudt:length"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#DataGraph"/>
+        <NamedIndividual abbreviatedIRI="qudt:OctetEncoding"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="qudt:PartiallyOrdered"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:LongUnsignedIntegerEncoding"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gDay"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="rdf:language"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:exactMatch"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="rdf:type"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="owl:Ontology"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://voag.linkedmodel.org/schema/voag#QUDT-SchemaCatalogEntry"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="foaf:Person"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:UNSIGNED"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#TopQuadrant"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:SignednessType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:SinglePrecisionRealEncoding"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#isMetadataFor"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#LinkSetGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ControllersGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="mqv:UNSUBSCRIBE"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="owl:minCardinality"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#CollectionGraph"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="rdf:direction"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="xsd:pattern"/>
+        <NamedIndividual abbreviatedIRI="qudt:ScaleType"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="qudt:ShortSignedIntegerEncoding"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:pythonName"/>
+        <NamedIndividual abbreviatedIRI="qudt:ShortUnsignedIntegerEncoding"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="rdfs:Class"/>
+        <NamedIndividual abbreviatedIRI="qudt:Signed"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="foaf:Organization"/>
+        <NamedIndividual abbreviatedIRI="qudt:SignedIntegerEncoding"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:EnumeratedQuantity"/>
+        <NamedIndividual abbreviatedIRI="qudt:SinglePrecisionRealEncoding"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="rdf:subject"/>
+        <NamedIndividual abbreviatedIRI="qudt:TotallyOrdered"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <NamedIndividual abbreviatedIRI="qudt:UNSIGNED"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="rdf:object"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://schema.org/url"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:AngleUnit"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <NamedIndividual abbreviatedIRI="qudt:Unordered"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="qudt:UnsignedIntegerEncoding"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="rdfs:Datatype"/>
+        <NamedIndividual abbreviatedIRI="qudt:Verifiable"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="sosa:System"/>
+        <NamedIndividual abbreviatedIRI="qudt:exactMatch"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:Aspect"/>
+        <NamedIndividual abbreviatedIRI="qudt:fieldCode"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://schema.org/alternateName"/>
+        <NamedIndividual abbreviatedIRI="qudt:hasCitation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:hasReciprocalUnit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="qudt:hasVocabulary"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/schema/voag#QUDT-SchemaCatalogEntry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/voag/CC-SHAREALIKE_3PT0-US"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/dtype"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="dtype:GMD_DTYPE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:CollectionGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:ConstraintsGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:ControllersGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:CurationGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:DataGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:DocumentationGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:FunctionsGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:GMD_QUDT-SCHEMA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:GMD_VAEM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:LinkSetGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:MappingGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:ProxyGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:QUDT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:RulesGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:SchemaGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:ScriptGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:TopQuadrant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:TransformsGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:ViewGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="vaem:VocabularyGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://dtecbw.de/"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://orcid.org/0000-0003-3458-4748"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://orcid.org/0009-0004-0088-8633"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="mqv:PUBLISH"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="mqv:SUBSCRIBE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="mqv:UNSUBSCRIBE"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:bibliographicCitation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="bibo:doi"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="schema:affiliation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="schema:alternateName"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="schema:name"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="schema:url"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vaem:graphName"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vaem:graphTitle"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vaem:isMetadataFor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vaem:website"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdf:direction"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdf:language"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="xsd:pattern"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:maxCardinality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:minCardinality"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="foaf:fundedBy"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="qudt:Verifiable"/>
+        <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="sosa:Property"/>
+        <AnnotationProperty abbreviatedIRI="foaf:mbox"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CharEncoding"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Broker"/>
@@ -911,12 +962,16 @@
         <NamedIndividual abbreviatedIRI="ex:DTEC"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="foaf:Person"/>
-        <AnonymousIndividual nodeID="_:genid2147484479"/>
+        <Class abbreviatedIRI="foaf:Organization"/>
+        <NamedIndividual IRI="https://dtecbw.de/"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Person"/>
-        <AnonymousIndividual nodeID="_:genid2147484480"/>
+        <NamedIndividual IRI="https://orcid.org/0000-0003-3458-4748"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="https://orcid.org/0009-0004-0088-8633"/>
     </ClassAssertion>
     <EquivalentObjectProperties>
         <ObjectProperty IRI="#hasPayload"/>
@@ -2836,34 +2891,54 @@
         <Literal xml:lang="en">uses TLS</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
-        <AnonymousIndividual nodeID="_:genid2147484479"/>
-        <IRI>https://orcid.org/0009-0004-0088-8633</IRI>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://dtecbw.de/</IRI>
+        <Literal>This research as part of the project SmartShip is funded by dtec.bw – Digitalization and Technology Research Center of the Bundeswehr which we gratefully acknowledge. dtec.bw is funded by the European Union – NextGenerationEU.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:mbox"/>
-        <AnonymousIndividual nodeID="_:genid2147484479"/>
-        <IRI>mailto:doernern@hsu-hh.de</IRI>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://dtecbw.de/</IRI>
+        <Literal>Digitalization and Technology Research Center of the Bundeswehr</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
+        <IRI>https://dtecbw.de/</IRI>
+        <IRI>https://dtecbw.de</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <AnonymousIndividual nodeID="_:genid2147484479"/>
-        <Literal>Niklas Doerner</Literal>
+        <IRI>https://dtecbw.de/</IRI>
+        <Literal>dtec.bw</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
-        <AnonymousIndividual nodeID="_:genid2147484480"/>
+        <IRI>https://orcid.org/0000-0003-3458-4748</IRI>
         <IRI>https://orcid.org/0000-0003-3458-4748</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:mbox"/>
-        <AnonymousIndividual nodeID="_:genid2147484480"/>
+        <IRI>https://orcid.org/0000-0003-3458-4748</IRI>
         <IRI>mailto:maleshkm@hsu-hh.de</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <AnonymousIndividual nodeID="_:genid2147484480"/>
+        <IRI>https://orcid.org/0000-0003-3458-4748</IRI>
         <Literal>Maria Maleshkova</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
+        <IRI>https://orcid.org/0009-0004-0088-8633</IRI>
+        <IRI>https://orcid.org/0009-0004-0088-8633</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:mbox"/>
+        <IRI>https://orcid.org/0009-0004-0088-8633</IRI>
+        <IRI>mailto:doernern@hsu-hh.de</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://orcid.org/0009-0004-0088-8633</IRI>
+        <Literal>Niklas Doerner</Literal>
     </AnnotationAssertion>
 </Ontology>
 
