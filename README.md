@@ -13,6 +13,12 @@ The ontology captures the essential elements of MQTT, such as the network entiti
 * Alignment with the well-established W3C SSN/SOSA ontology
 * Models the relation between MQTT topic naming and SOSA elements such as FeatureOfInterest, Property, Actuation, ActuationCollection, Observation, and ObservationCollection
 
+## Documentation
+
+An Ontology Specification Draft was automatically generated with the help of the WIDOCO wizard.
+
+[![Documantation](https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg)](https://doernern.github.io/MQTT4SSNOntology/documentation/index-en.html)
+
 ## Visualization
 
 [![Visualize with](https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg)](https://doernern.github.io/MQTT4SSNOntology/documentation/webvowl/index.html#)
