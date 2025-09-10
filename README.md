@@ -17,7 +17,7 @@ The ontology captures the essential elements of MQTT, such as the network entiti
 
 An Ontology Specification Draft was automatically generated with the help of the WIDOCO wizard.
 
-[![Documentation](https://img.shields.io/badge/Documentation-blue.svg)](https://doernern.github.io/MQTT4SSNOntology/documentation/index-en.html)
+[![Documentation](https://img.shields.io/badge/Documentation-Ontology_Specification_Draft-blue.svg)](https://doernern.github.io/MQTT4SSNOntology/documentation/index-en.html)
 
 ## Visualization
 
