@@ -42,10 +42,22 @@ This section provides details for each class and property defined by MQTT4SSN On
     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#TopicSubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#TopicSubject">MQTT Topic Subject</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf">is topic subject (Actuation, Actuation collection, Observation or Observation Collection) of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesActuationCollection" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesActuationCollection">payload encodes SOSA Actuation Collection</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject">has topic subject (Actuation, Actuation collection, Observation or Observation Collection)</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesActuationCollection" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesActuationCollection">payload encodes SOSA Actuation Collection</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/Actuation" target="_blank" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/FeatureOfInterest" target="_blank" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature Of Interest</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/Observation" target="_blank" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/sosa/ObservationCollection" title="http://www.w3.org/ns/sosa/ObservationCollection">Observation Collection</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/sosa/Property" title="http://www.w3.org/ns/sosa/Property">Property</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -603,16 +615,20 @@ This section provides details for each class and property defined by MQTT4SSN On
     <a href="https://www.w3.org/2019/wot/mqtt#TopicName" target="_blank" title="https://www.w3.org/2019/wot/mqtt#TopicName">Topic Name</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject">has topic subject</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isTopicNameOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isTopicNameOf">is MQTT Topic (name) of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isMatchedByFilter" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isMatchedByFilter">is matched by MQTT Topic Filter</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject">has topic subject</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject">has topic subject (Actuation, Actuation collection, Observation or Observation Collection)</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject">has topic subject (Feature of Interest)</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject">has topic subject (Property)</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isTopicNameOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isTopicNameOf">is MQTT Topic (name) of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isMatchedByFilter" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isMatchedByFilter">is matched by MQTT Topic Filter</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicName" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicName">has MQTT Topic (name)</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf">is topic subject of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#listensToTopic" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#listensToTopic">listens to MQTT Topic</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#matchesTopic" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#matchesTopic">matches MQTT Topic</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#observesTopic" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#observesTopic">observes MQTT Topic</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicName" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicName">has MQTT Topic (name)</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf">is topic subject (Actuation, Actuation collection, Observation or Observation Collection) of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf">is topic subject (Feature of Interest) of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf">is topic subject (Property) of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf">is topic subject of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#listensToTopic" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#listensToTopic">listens to MQTT Topic</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#matchesTopic" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#matchesTopic">matches MQTT Topic</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#observesTopic" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#observesTopic">observes MQTT Topic</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is disjoint with
@@ -870,10 +886,22 @@ This section provides details for each class and property defined by MQTT4SSN On
     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#TopicSubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#TopicSubject">MQTT Topic Subject</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf">is topic subject (Actuation, Actuation collection, Observation or Observation Collection) of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesObservationCollection" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesObservationCollection">payload encodes SOSA Observation Collection</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject">has topic subject (Actuation, Actuation collection, Observation or Observation Collection)</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesObservationCollection" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesObservationCollection">payload encodes SOSA Observation Collection</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/Actuation" target="_blank" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/sosa/ActuationCollection" title="http://www.w3.org/ns/sosa/ActuationCollection">Actuation Collection</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/FeatureOfInterest" target="_blank" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature Of Interest</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/Observation" target="_blank" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/sosa/Property" title="http://www.w3.org/ns/sosa/Property">Property</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -886,6 +914,24 @@ This section provides details for each class and property defined by MQTT4SSN On
    </dt>
    <dd>
     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#TopicSubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#TopicSubject">MQTT Topic Subject</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf">is topic subject (Property) of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject">has topic subject (Property)</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/Actuation" target="_blank" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/sosa/ActuationCollection" title="http://www.w3.org/ns/sosa/ActuationCollection">Actuation Collection</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/FeatureOfInterest" target="_blank" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature Of Interest</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/Observation" target="_blank" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/sosa/ObservationCollection" title="http://www.w3.org/ns/sosa/ObservationCollection">Observation Collection</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -910,6 +956,9 @@ This section provides details for each class and property defined by MQTT4SSN On
   <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionPayload" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionPayload">has SUBSCRIBE Payload</a></li>
   <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionVariableHeader" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionVariableHeader">has SUBSCRIBE Variable Header</a></li>
   <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject">has topic subject</a></li>
+  <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject">has topic subject (Actuation, Actuation collection, Observation or Observation Collection)</a></li>
+  <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject">has topic subject (Feature of Interest)</a></li>
+  <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject">has topic subject (Property)</a></li>
   <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscriptionFixedHeader" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscriptionFixedHeader">has UNSUBSCRIBE Fixed Header</a></li>
   <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscriptionPayload" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscriptionPayload">has UNSUBSCRIBE Payload</a></li>
   <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscriptionVariableHeader" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscriptionVariableHeader">has UNSUBSCRIBE Variable Header</a></li>
@@ -933,6 +982,9 @@ This section provides details for each class and property defined by MQTT4SSN On
   <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionFixedHeaderOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionFixedHeaderOf">is SUBSCRIBE Fixed Header of</a></li>
   <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionPayloadOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionPayloadOf">is SUBSCRIBE Payload of</a></li>
   <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionVariableHeaderOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionVariableHeaderOf">is SUBSCRIBE Variable Header of</a></li>
+  <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf">is topic subject (Actuation, Actuation collection, Observation or Observation Collection) of</a></li>
+  <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf">is topic subject (Feature of Interest) of</a></li>
+  <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf">is topic subject (Property) of</a></li>
   <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf">is topic subject of</a></li>
   <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscriptionFixedHeaderOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscriptionFixedHeaderOf">is UNSUBSCRIBE Fixed Header of</a></li>
   <li><a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscriptionPayloadOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscriptionPayloadOf">is UNSUBSCRIBE Payload of</a></li>
@@ -1502,6 +1554,12 @@ This section provides details for each class and property defined by MQTT4SSN On
   <div class="description">
    <dl>
     <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject">has topic subject (Actuation, Actuation collection, Observation or Observation Collection)</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject">has topic subject (Feature of Interest)</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject">has topic subject (Property)</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
      has domain
     </dt>
     <dd>
@@ -1518,6 +1576,111 @@ This section provides details for each class and property defined by MQTT4SSN On
     </dt>
     <dd>
      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf">is topic subject of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject">
+  <h3>has topic subject (Actuation, Actuation collection, Observation or Observation Collection)<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject</p>
+  <div class="comment">
+   <span class="markdown">Links an MQTT Topic to the subject (Actuation, Actuation collection, Observation or Observation Collection).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject">has topic subject</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic">MQTT Topic</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/sosa/Actuation" target="_blank" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/sosa/ActuationCollection" title="http://www.w3.org/ns/sosa/ActuationCollection">Actuation Collection</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="http://www.w3.org/ns/sosa/Observation" target="_blank" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/sosa/ObservationCollection" title="http://www.w3.org/ns/sosa/ObservationCollection">Observation Collection</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf">is topic subject (Actuation, Actuation collection, Observation or Observation Collection) of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject">
+  <h3>has topic subject (Feature of Interest)<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject</p>
+  <div class="comment">
+   <span class="markdown">Links an MQTT Topic to the subject (Feature of Interest).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject">has topic subject</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic">MQTT Topic</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/sosa/FeatureOfInterest" target="_blank" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature Of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf">is topic subject (Feature of Interest) of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject">
+  <h3>has topic subject (Property)<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject</p>
+  <div class="comment">
+   <span class="markdown">Links an MQTT Topic to the subject (Property).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject">has topic subject</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic">MQTT Topic</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Property" title="http://www.w3.org/ns/sosa/Property">Property</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf">is topic subject (Property) of</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -2261,6 +2424,111 @@ This section provides details for each class and property defined by MQTT4SSN On
    </dl>
   </div>
  </div>
+ <div class="entity" id="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf">
+  <h3>is topic subject (Actuation, Actuation collection, Observation or Observation Collection) of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf</p>
+  <div class="comment">
+   <span class="markdown">Links a topic subject (Actuation, Actuation collection, Observation or Observation Collection) to the MQTT Topic that carries it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf">is topic subject of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/sosa/Actuation" target="_blank" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/sosa/ActuationCollection" title="http://www.w3.org/ns/sosa/ActuationCollection">Actuation Collection</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="http://www.w3.org/ns/sosa/Observation" target="_blank" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/sosa/ObservationCollection" title="http://www.w3.org/ns/sosa/ObservationCollection">Observation Collection</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic">MQTT Topic</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject">has topic subject (Actuation, Actuation collection, Observation or Observation Collection)</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf">
+  <h3>is topic subject (Feature of Interest) of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf</p>
+  <div class="comment">
+   <span class="markdown">Links a topic subject (Feature of Interest) to the MQTT Topic that carries it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf">is topic subject of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/sosa/FeatureOfInterest" target="_blank" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature Of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic">MQTT Topic</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject">has topic subject (Feature of Interest)</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf">
+  <h3>is topic subject (Property) of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf</p>
+  <div class="comment">
+   <span class="markdown">Links a topic subject (Property) to the MQTT Topic that carries it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf">is topic subject of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Property" title="http://www.w3.org/ns/sosa/Property">Property</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic">MQTT Topic</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject">has topic subject (Property)</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf">
   <h3>is topic subject of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf</p>
@@ -2269,6 +2537,12 @@ This section provides details for each class and property defined by MQTT4SSN On
   </div>
   <div class="description">
    <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf">is topic subject (Actuation, Actuation collection, Observation or Observation Collection) of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf">is topic subject (Feature of Interest) of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf" title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf">is topic subject (Property) of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
     <dt>
      has domain
     </dt>
@@ -3155,43 +3429,19 @@ This section provides details for each class and property defined by MQTT4SSN On
  <h3 id="annotationproperties" class="list">Annotation Properties</h3>
  <ul class="hlist">
   <li><a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract"> <span>abstract</span> </a></li>
-  <li><a href="#http://schema.org/affiliation" title="http://schema.org/affiliation"> <span>affiliation</span> </a></li>
-  <li><a href="#http://schema.org/alternateName" title="http://schema.org/alternateName"> <span>alternate Name</span> </a></li>
   <li><a href="#http://purl.org/dc/terms/author" title="http://purl.org/dc/terms/author"> <span>author</span> </a></li>
   <li><a href="#http://purl.org/dc/terms/bibliographicCitation" title="http://purl.org/dc/terms/bibliographicCitation"> <span>bibliographic Citation</span> </a></li>
   <li><a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor"> <span>contributor</span> </a></li>
-  <li><a href="#http://purl.org/dc/elements/1.1/date" title="http://purl.org/dc/elements/1.1/date"> <span>date</span> </a></li>
-  <li><a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description"> <span>description</span> </a></li>
-  <li><a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#direction" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#direction"> <span>direction</span> </a></li>
   <li><a href="#http://purl.org/ontology/bibo/doi" title="http://purl.org/ontology/bibo/doi"> <span>doi</span> </a></li>
   <li><a href="#http://xmlns.com/foaf/0.1/fundedBy" title="http://xmlns.com/foaf/0.1/fundedBy"> <span>funded By</span> </a></li>
-  <li><a href="#http://www.linkedmodel.org/schema/vaem#graphName" title="http://www.linkedmodel.org/schema/vaem#graphName"> <span>graph Name</span> </a></li>
-  <li><a href="#http://www.linkedmodel.org/schema/vaem#graphTitle" title="http://www.linkedmodel.org/schema/vaem#graphTitle"> <span>graph Title</span> </a></li>
   <li><a href="#http://xmlns.com/foaf/0.1/homepage" title="http://xmlns.com/foaf/0.1/homepage"> <span>homepage</span> </a></li>
-  <li><a href="#http://www.linkedmodel.org/schema/vaem#isMetadataFor" title="http://www.linkedmodel.org/schema/vaem#isMetadataFor"> <span>is Metadata For</span> </a></li>
-  <li><a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#language" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#language"> <span>language</span> </a></li>
-  <li><a href="#http://www.w3.org/2002/07/owl#maxCardinality" title="http://www.w3.org/2002/07/owl#maxCardinality"> <span>max Cardinality</span> </a></li>
   <li><a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox"> <span>mbox</span> </a></li>
-  <li><a href="#http://www.w3.org/2002/07/owl#minCardinality" title="http://www.w3.org/2002/07/owl#minCardinality"> <span>min Cardinality</span> </a></li>
   <li><a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified"> <span>modified</span> </a></li>
-  <li><a href="#http://schema.org/name" title="http://schema.org/name"> <span>name</span> </a></li>
-  <li><a href="#http://www.w3.org/2001/XMLSchema#pattern" title="http://www.w3.org/2001/XMLSchema#pattern"> <span>pattern</span> </a></li>
   <li><a href="#http://purl.org/dc/terms/subject" title="http://purl.org/dc/terms/subject"> <span>subject</span> </a></li>
-  <li><a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title"> <span>title</span> </a></li>
-  <li><a href="#http://schema.org/url" title="http://schema.org/url"> <span>url</span> </a></li>
-  <li><a href="#http://www.linkedmodel.org/schema/vaem#website" title="http://www.linkedmodel.org/schema/vaem#website"> <span>website</span> </a></li>
  </ul>
  <div class="entity" id="http://purl.org/dc/terms/abstract">
   <h3>abstract<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/abstract</p>
- </div>
- <div class="entity" id="http://schema.org/affiliation">
-  <h3>affiliation<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://schema.org/affiliation</p>
- </div>
- <div class="entity" id="http://schema.org/alternateName">
-  <h3>alternate Name<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://schema.org/alternateName</p>
  </div>
  <div class="entity" id="http://purl.org/dc/terms/author">
   <h3>author<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
@@ -3205,18 +3455,6 @@ This section provides details for each class and property defined by MQTT4SSN On
   <h3>contributor<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/contributor</p>
  </div>
- <div class="entity" id="http://purl.org/dc/elements/1.1/date">
-  <h3>date<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/date</p>
- </div>
- <div class="entity" id="http://purl.org/dc/elements/1.1/description">
-  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/description</p>
- </div>
- <div class="entity" id="http://www.w3.org/1999/02/22-rdf-syntax-ns#direction">
-  <h3>direction<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#direction</p>
- </div>
  <div class="entity" id="http://purl.org/ontology/bibo/doi">
   <h3>doi<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/ontology/bibo/doi</p>
@@ -3225,65 +3463,21 @@ This section provides details for each class and property defined by MQTT4SSN On
   <h3>funded By<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/fundedBy</p>
  </div>
- <div class="entity" id="http://www.linkedmodel.org/schema/vaem#graphName">
-  <h3>graph Name<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.linkedmodel.org/schema/vaem#graphName</p>
- </div>
- <div class="entity" id="http://www.linkedmodel.org/schema/vaem#graphTitle">
-  <h3>graph Title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.linkedmodel.org/schema/vaem#graphTitle</p>
- </div>
  <div class="entity" id="http://xmlns.com/foaf/0.1/homepage">
   <h3>homepage<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/homepage</p>
- </div>
- <div class="entity" id="http://www.linkedmodel.org/schema/vaem#isMetadataFor">
-  <h3>is Metadata For<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.linkedmodel.org/schema/vaem#isMetadataFor</p>
- </div>
- <div class="entity" id="http://www.w3.org/1999/02/22-rdf-syntax-ns#language">
-  <h3>language<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#language</p>
- </div>
- <div class="entity" id="http://www.w3.org/2002/07/owl#maxCardinality">
-  <h3>max Cardinality<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2002/07/owl#maxCardinality</p>
  </div>
  <div class="entity" id="http://xmlns.com/foaf/0.1/mbox">
   <h3>mbox<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/mbox</p>
  </div>
- <div class="entity" id="http://www.w3.org/2002/07/owl#minCardinality">
-  <h3>min Cardinality<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2002/07/owl#minCardinality</p>
- </div>
  <div class="entity" id="http://purl.org/dc/terms/modified">
   <h3>modified<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
  </div>
- <div class="entity" id="http://schema.org/name">
-  <h3>name<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://schema.org/name</p>
- </div>
- <div class="entity" id="http://www.w3.org/2001/XMLSchema#pattern">
-  <h3>pattern<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2001/XMLSchema#pattern</p>
- </div>
  <div class="entity" id="http://purl.org/dc/terms/subject">
   <h3>subject<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/subject</p>
- </div>
- <div class="entity" id="http://purl.org/dc/elements/1.1/title">
-  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/title</p>
- </div>
- <div class="entity" id="http://schema.org/url">
-  <h3>url<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://schema.org/url</p>
- </div>
- <div class="entity" id="http://www.linkedmodel.org/schema/vaem#website">
-  <h3>website<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.linkedmodel.org/schema/vaem#website</p>
  </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
  <h3 id="namedindividuals" class="list">Named Individuals</h3>

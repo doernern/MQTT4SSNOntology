@@ -7,42 +7,32 @@
 @base <https://doernern.github.io/MQTT4SSNOntology/documentation/index-en.html#> .
 
 <https://doernern.github.io/MQTT4SSNOntology/documentation/index-en.html> rdf:type owl:Ontology ;
-                                                                           owl:imports <http://qudt.org/schema/qudt/> ,
-                                                                                       <http://www.w3.org/ns/sosa/> ,
-                                                                                       <https://www.w3.org/2019/wot/mqtt> ;
-                                                                           <http://purl.org/dc/terms/abstract> "In the Web of Things community, the SSN/SOSA ontology, a W3C recommendation, has established itself as a foundational framework for representing semantic sensor networks, modeling sensors, observations, and actuations. However, an explicit representation of message protocols is missing, which limits semantic interoperability in machine-to-machine communication scenarios. We propose MQTT4SSN as an extension of SSN/SOSA that semantically models the MQTT protocol to address this gap. If SSN/SOSA is not used, the proposed ontology can also be used independently for the semantic modeling of the MQTT message protocol. MQTT4SSN represents MQTT entities such as brokers, clients, control packets, topics, and payload metadata, linking them to SSN/SOSA concepts to enable end-to-end traceability between sensing semantics and communication semantics. The ontology captures heterogeneous payload formats, encodings, and transport metadata, enabling machine-interpretable description and integration of transmitted content. MQTT4SSN represents an extensible and reusable resource that is accessible according to the FAIR principles and documented as an Ontology Specification Draft."@en ;
-                                                                           <http://purl.org/dc/terms/author> <https://orcid.org/0000-0003-3458-4748> ,
-                                                                                                             <https://orcid.org/0009-0004-0088-8633> ;
-                                                                           <http://purl.org/dc/terms/bibliographicCitation> "Niklas Doerner, Maria Maleshkova (2025): MQTT4SSN Ontology. https://doi.org/10.5281/zenodo.16704302" ;
-                                                                           <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0003-3458-4748> ,
-                                                                                                                  <https://orcid.org/0009-0004-0088-8633> ;
-                                                                           <http://purl.org/dc/terms/created> "2025-08-11"^^xsd:date ;
-                                                                           <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0003-3458-4748> ,
-                                                                                                              <https://orcid.org/0009-0004-0088-8633> ;
-                                                                           <http://purl.org/dc/terms/description> "In the Web of Things community, the SSN/SOSA ontology, a W3C recommendation, has established itself as a foundational framework for representing semantic sensor networks, modeling sensors, observations, and actuations. However, an explicit representation of message protocols is missing, which limits semantic interoperability in machine-to-machine communication scenarios. We propose MQTT4SSN as an extension of SSN/SOSA that semantically models the MQTT protocol to address this gap. If SSN/SOSA is not used, the proposed ontology can also be used independently for the semantic modeling of the MQTT message protocol. MQTT4SSN represents MQTT entities such as brokers, clients, control packets, topics, and payload metadata, linking them to SSN/SOSA concepts to enable end-to-end traceability between sensing semantics and communication semantics. The ontology captures heterogeneous payload formats, encodings, and transport metadata, enabling machine-interpretable description and integration of transmitted content. MQTT4SSN represents an extensible and reusable resource that is accessible according to the FAIR principles and documented as an Ontology Specification Draft."@en ;
-                                                                           <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
-                                                                           <http://purl.org/dc/terms/modified> "2025-09-08"^^xsd:date ;
-                                                                           <http://purl.org/dc/terms/subject> "MQTT, Ontology Engineering, Sensor Ontology, Semantic Sensor Network, Message Protocol, Smart Sensor"@en ;
-                                                                           <http://purl.org/dc/terms/title> "MQTT4SSN Ontology"@en ;
-                                                                           <http://purl.org/ontology/bibo/doi> "10.5281/zenodo.16704302" ;
-                                                                           rdfs:comment "The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT message protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT message protocol component."@en ;
-                                                                           <http://xmlns.com/foaf/0.1/fundedBy> <https://dtecbw.de/> .
+                                                         owl:versionIRI <https://doernern.github.io/MQTT4SSNOntology/documentation/index-en.html> ;
+                                                         owl:imports <http://qudt.org/schema/qudt/> ,
+                                                                     <http://www.w3.org/ns/sosa/> ,
+                                                                     <http://www.w3.org/ns/ssn/> ,
+                                                                     <https://www.w3.org/2019/wot/mqtt> ;
+                                                         <http://purl.org/dc/terms/abstract> "In the Web of Things community, the SSN/SOSA ontology, a W3C recommendation, has established itself as a foundational framework for representing semantic sensor networks, modeling sensors, observations, and actuations. However, an explicit representation of message protocols is missing, which limits semantic interoperability in machine-to-machine communication scenarios. We propose MQTT4SSN as an extension of SSN/SOSA that semantically models the MQTT protocol to address this gap. If SSN/SOSA is not used, the proposed ontology can also be used independently for the semantic modeling of the MQTT message protocol. MQTT4SSN represents MQTT entities such as brokers, clients, control packets, topics, and payload metadata, linking them to SSN/SOSA concepts to enable end-to-end traceability between sensing semantics and communication semantics. The ontology captures heterogeneous payload formats, encodings, and transport metadata, enabling machine-interpretable description and integration of transmitted content. MQTT4SSN represents an extensible and reusable resource that is accessible according to the FAIR principles and documented as an Ontology Specification Draft."@en ;
+                                                         <http://purl.org/dc/terms/author> <https://orcid.org/0000-0003-3458-4748> ,
+                                                                                           <https://orcid.org/0009-0004-0088-8633> ;
+                                                         <http://purl.org/dc/terms/bibliographicCitation> "Niklas Doerner, Maria Maleshkova (2025): MQTT4SSN Ontology. https://doi.org/10.5281/zenodo.16704302" ;
+                                                         <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0003-3458-4748> ,
+                                                                                                <https://orcid.org/0009-0004-0088-8633> ;
+                                                         <http://purl.org/dc/terms/created> "2025-08-11"^^xsd:date ;
+                                                         <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0003-3458-4748> ,
+                                                                                            <https://orcid.org/0009-0004-0088-8633> ;
+                                                         <http://purl.org/dc/terms/description> "In the Web of Things community, the SSN/SOSA ontology, a W3C recommendation, has established itself as a foundational framework for representing semantic sensor networks, modeling sensors, observations, and actuations. However, an explicit representation of message protocols is missing, which limits semantic interoperability in machine-to-machine communication scenarios. We propose MQTT4SSN as an extension of SSN/SOSA that semantically models the MQTT protocol to address this gap. If SSN/SOSA is not used, the proposed ontology can also be used independently for the semantic modeling of the MQTT message protocol. MQTT4SSN represents MQTT entities such as brokers, clients, control packets, topics, and payload metadata, linking them to SSN/SOSA concepts to enable end-to-end traceability between sensing semantics and communication semantics. The ontology captures heterogeneous payload formats, encodings, and transport metadata, enabling machine-interpretable description and integration of transmitted content. MQTT4SSN represents an extensible and reusable resource that is accessible according to the FAIR principles and documented as an Ontology Specification Draft."@en ;
+                                                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+                                                         <http://purl.org/dc/terms/modified> "2025-09-10" ;
+                                                         <http://purl.org/dc/terms/subject> "MQTT, Ontology Engineering, Sensor Ontology, Semantic Sensor Network, Message Protocol, Smart Sensor"@en ;
+                                                         <http://purl.org/dc/terms/title> "MQTT4SSN Ontology"@en ;
+                                                         <http://purl.org/ontology/bibo/doi> "10.5281/zenodo.16704302" ;
+                                                         rdfs:comment "The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT message protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT message protocol component."@en ;
+                                                         <http://xmlns.com/foaf/0.1/fundedBy> <https://dtecbw.de/> .
 
 #################################################################
 #    Annotation properties
 #################################################################
-
-###  http://purl.org/dc/elements/1.1/date
-<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/description
-<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
-
 
 ###  http://purl.org/dc/terms/abstract
 <http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
@@ -72,58 +62,6 @@
 <http://purl.org/ontology/bibo/doi> rdf:type owl:AnnotationProperty .
 
 
-###  http://schema.org/affiliation
-<http://schema.org/affiliation> rdf:type owl:AnnotationProperty .
-
-
-###  http://schema.org/alternateName
-<http://schema.org/alternateName> rdf:type owl:AnnotationProperty .
-
-
-###  http://schema.org/name
-<http://schema.org/name> rdf:type owl:AnnotationProperty .
-
-
-###  http://schema.org/url
-<http://schema.org/url> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.linkedmodel.org/schema/vaem#graphName
-<http://www.linkedmodel.org/schema/vaem#graphName> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.linkedmodel.org/schema/vaem#graphTitle
-<http://www.linkedmodel.org/schema/vaem#graphTitle> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.linkedmodel.org/schema/vaem#isMetadataFor
-<http://www.linkedmodel.org/schema/vaem#isMetadataFor> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.linkedmodel.org/schema/vaem#website
-<http://www.linkedmodel.org/schema/vaem#website> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#direction
-rdf:direction rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#language
-rdf:language rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2001/XMLSchema#pattern
-xsd:pattern rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2002/07/owl#maxCardinality
-owl:maxCardinality rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2002/07/owl#minCardinality
-owl:minCardinality rdf:type owl:AnnotationProperty .
-
-
 ###  http://xmlns.com/foaf/0.1/fundedBy
 <http://xmlns.com/foaf/0.1/fundedBy> rdf:type owl:AnnotationProperty .
 
@@ -148,68 +86,28 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://qudt.org/schema/qudt/ansiSQLName
-<http://qudt.org/schema/qudt/ansiSQLName> rdf:type owl:ObjectProperty .
-
-
-###  http://qudt.org/schema/qudt/cName
-<http://qudt.org/schema/qudt/cName> rdf:type owl:ObjectProperty .
-
-
-###  http://qudt.org/schema/qudt/oracleSQLName
-<http://qudt.org/schema/qudt/oracleSQLName> rdf:type owl:ObjectProperty .
-
-
-###  http://qudt.org/schema/qudt/protocolBuffersName
-<http://qudt.org/schema/qudt/protocolBuffersName> rdf:type owl:ObjectProperty .
-
-
-###  http://qudt.org/schema/qudt/pythonName
-<http://qudt.org/schema/qudt/pythonName> rdf:type owl:ObjectProperty .
-
-
-###  http://qudt.org/schema/qudt/vbName
-<http://qudt.org/schema/qudt/vbName> rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#first
-rdf:first rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#object
-rdf:object rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate
-rdf:predicate rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#rest
-rdf:rest rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#subject
-rdf:subject rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#type
-rdf:type rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#value
-rdf:value rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/ns/prov#wasDerivedFrom
-<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:ObjectProperty .
-
-
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#forwardsPublishPacket
 <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#forwardsPublishPacket> rdf:type owl:ObjectProperty ;
                                                                                  rdfs:domain <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Broker> ;
                                                                                  rdfs:range <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishPacket> ;
                                                                                  rdfs:comment "Indicates that an MQTT Broker forwards a PUBLISH packet to subscribers."@en ;
                                                                                  rdfs:label "forwards PUBLISH Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject> rdf:type owl:ObjectProperty ;
+                                                                            rdfs:subPropertyOf <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject> ;
+                                                                            owl:inverseOf <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf> ;
+                                                                            rdfs:domain <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic> ;
+                                                                            rdfs:range [ rdf:type owl:Class ;
+                                                                                         owl:unionOf ( <http://www.w3.org/ns/sosa/Actuation>
+                                                                                                       <http://www.w3.org/ns/sosa/ActuationCollection>
+                                                                                                       <http://www.w3.org/ns/sosa/Observation>
+                                                                                                       <http://www.w3.org/ns/sosa/ObservationCollection>
+                                                                                                     )
+                                                                                       ] ;
+                                                                            rdfs:comment "Links an MQTT Topic to the subject (Actuation, Actuation collection, Observation or Observation Collection)."@en ;
+                                                                            rdfs:label "has topic subject (Actuation, Actuation collection, Observation or Observation Collection)"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasClient
@@ -249,6 +147,16 @@ rdf:value rdf:type owl:ObjectProperty .
                                                                           rdfs:label "has Fixed Header"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:subPropertyOf <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject> ;
+                                                                         owl:inverseOf <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf> ;
+                                                                         rdfs:domain <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic> ;
+                                                                         rdfs:range <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+                                                                         rdfs:comment "Links an MQTT Topic to the subject (Feature of Interest)."@en ;
+                                                                         rdfs:label "has topic subject (Feature of Interest)"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasParticipant
 <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasParticipant> rdf:type owl:ObjectProperty ;
                                                                           owl:inverseOf <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#usesConnection> ;
@@ -275,6 +183,16 @@ rdf:value rdf:type owl:ObjectProperty .
                                                                           rdfs:range <http://qudt.org/schema/qudt/QuantityValue> ;
                                                                           rdfs:comment "Specifies the size of an MQTT Payload as a QUDT quantity value (e.g., unit:Byte)."@en ;
                                                                           rdfs:label "has payload size"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject> rdf:type owl:ObjectProperty ;
+                                                                              rdfs:subPropertyOf <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject> ;
+                                                                              owl:inverseOf <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf> ;
+                                                                              rdfs:domain <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic> ;
+                                                                              rdfs:range <http://www.w3.org/ns/sosa/Property> ;
+                                                                              rdfs:comment "Links an MQTT Topic to the subject (Property)."@en ;
+                                                                              rdfs:label "has topic subject (Property)"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishFixedHeader
@@ -444,6 +362,21 @@ rdf:value rdf:type owl:ObjectProperty .
                                                                         rdfs:label "is accepted by"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf> rdf:type owl:ObjectProperty ;
+                                                                             rdfs:subPropertyOf <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf> ;
+                                                                             rdfs:domain [ rdf:type owl:Class ;
+                                                                                           owl:unionOf ( <http://www.w3.org/ns/sosa/Actuation>
+                                                                                                         <http://www.w3.org/ns/sosa/ActuationCollection>
+                                                                                                         <http://www.w3.org/ns/sosa/Observation>
+                                                                                                         <http://www.w3.org/ns/sosa/ObservationCollection>
+                                                                                                       )
+                                                                                         ] ;
+                                                                             rdfs:range <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic> ;
+                                                                             rdfs:comment "Links a topic subject (Actuation, Actuation collection, Observation or Observation Collection) to the MQTT Topic that carries it."@en ;
+                                                                             rdfs:label "is topic subject (Actuation, Actuation collection, Observation or Observation Collection) of"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectedToBroker
 <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectedToBroker> rdf:type owl:ObjectProperty ;
                                                                                rdfs:domain <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Client> ;
@@ -458,6 +391,15 @@ rdf:value rdf:type owl:ObjectProperty .
                                                                               rdfs:range <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishPayload> ;
                                                                               rdfs:comment "Links an RDF list of field names to the MQTT Payload that contains them."@en ;
                                                                               rdfs:label "is encoded in MQTT Payload"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:subPropertyOf <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf> ;
+                                                                          rdfs:domain <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+                                                                          rdfs:range <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic> ;
+                                                                          rdfs:comment "Links a topic subject (Feature of Interest) to the MQTT Topic that carries it."@en ;
+                                                                          rdfs:label "is topic subject (Feature of Interest) of"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFixedHeaderOf
@@ -501,6 +443,15 @@ rdf:value rdf:type owl:ObjectProperty .
                                                                        rdfs:range <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ControlPacket> ;
                                                                        rdfs:comment "Links an MQTT Payload to the MQTT Control Packet containing it."@en ;
                                                                        rdfs:label "is MQTT Payload of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf
+<https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf> rdf:type owl:ObjectProperty ;
+                                                                               rdfs:subPropertyOf <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf> ;
+                                                                               rdfs:domain <http://www.w3.org/ns/sosa/Property> ;
+                                                                               rdfs:range <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic> ;
+                                                                               rdfs:comment "Links a topic subject (Property) to the MQTT Topic that carries it."@en ;
+                                                                               rdfs:label "is topic subject (Property) of"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishFixedHeaderOf
@@ -774,14 +725,6 @@ rdf:value rdf:type owl:ObjectProperty .
 #    Data properties
 #################################################################
 
-###  http://qudt.org/schema/qudt/bits
-<http://qudt.org/schema/qudt/bits> rdf:type owl:DatatypeProperty .
-
-
-###  http://qudt.org/schema/qudt/length
-<http://qudt.org/schema/qudt/length> rdf:type owl:DatatypeProperty .
-
-
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasClientID
 <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasClientID> rdf:type owl:DatatypeProperty ,
                                                                                 owl:FunctionalProperty ;
@@ -912,104 +855,12 @@ rdf:value rdf:type owl:ObjectProperty .
 #    Classes
 #################################################################
 
-###  http://org.semanticweb.owlapi/error#Error4
-<http://org.semanticweb.owlapi/error#Error4> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error5
-<http://org.semanticweb.owlapi/error#Error5> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error6
-<http://org.semanticweb.owlapi/error#Error6> rdf:type owl:Class .
-
-
-###  http://qudt.org/schema/qudt/Aspect
-<http://qudt.org/schema/qudt/Aspect> rdf:type owl:Class .
-
-
-###  http://qudt.org/schema/qudt/EnumeratedQuantity
-<http://qudt.org/schema/qudt/EnumeratedQuantity> rdf:type owl:Class .
-
-
 ###  http://qudt.org/schema/qudt/QuantityValue
 <http://qudt.org/schema/qudt/QuantityValue> rdf:type owl:Class .
 
 
-###  http://qudt.org/schema/qudt/SignednessType
-<http://qudt.org/schema/qudt/SignednessType> rdf:type owl:Class .
-
-
-###  http://qudt.org/schema/qudt/StringEncodingType
-<http://qudt.org/schema/qudt/StringEncodingType> rdf:type owl:Class .
-
-
-###  http://qudt.org/schema/qudt/SymmetricRelation
-<http://qudt.org/schema/qudt/SymmetricRelation> rdf:type owl:Class .
-
-
-###  http://qudt.org/schema/qudt/Verifiable
-<http://qudt.org/schema/qudt/Verifiable> rdf:type owl:Class .
-
-
-###  http://schema.org/Organization
-<http://schema.org/Organization> rdf:type owl:Class .
-
-
-###  http://schema.org/Person
-<http://schema.org/Person> rdf:type owl:Class .
-
-
-###  http://www.linkedmodel.org/schema/vaem#CatalogEntry
-<http://www.linkedmodel.org/schema/vaem#CatalogEntry> rdf:type owl:Class .
-
-
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
 rdf:List rdf:type owl:Class .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#Class
-rdfs:Class rdf:type owl:Class .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#Container
-rdfs:Container rdf:type owl:Class .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#Datatype
-rdfs:Datatype rdf:type owl:Class .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#Resource
-rdfs:Resource rdf:type owl:Class .
-
-
-###  http://www.w3.org/2001/XMLSchema#gDay
-xsd:gDay rdf:type owl:Class .
-
-
-###  http://www.w3.org/2001/XMLSchema#gMonth
-xsd:gMonth rdf:type owl:Class .
-
-
-###  http://www.w3.org/2001/XMLSchema#gMonthDay
-xsd:gMonthDay rdf:type owl:Class .
-
-
-###  http://www.w3.org/2001/XMLSchema#gYear
-xsd:gYear rdf:type owl:Class .
-
-
-###  http://www.w3.org/2001/XMLSchema#gYearMonth
-xsd:gYearMonth rdf:type owl:Class .
-
-
-###  http://www.w3.org/2002/07/owl#Class
-owl:Class rdf:type owl:Class .
-
-
-###  http://www.w3.org/2002/07/owl#Ontology
-owl:Ontology rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/sosa/Actuation
@@ -1166,6 +1017,25 @@ owl:Ontology rdf:type owl:Class .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic
 <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic> rdf:type owl:Class ;
                                                                  owl:equivalentClass <https://www.w3.org/2019/wot/mqtt#TopicName> ;
+                                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject> ;
+                                                                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass [ rdf:type owl:Class ;
+                                                                                                 owl:unionOf ( <http://www.w3.org/ns/sosa/Actuation>
+                                                                                                               <http://www.w3.org/ns/sosa/ActuationCollection>
+                                                                                                               <http://www.w3.org/ns/sosa/Observation>
+                                                                                                               <http://www.w3.org/ns/sosa/ObservationCollection>
+                                                                                                             )
+                                                                                               ]
+                                                                                 ] ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject> ;
+                                                                                   owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                                 ] ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject> ;
+                                                                                   owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                                 ] ;
                                                                  rdfs:comment "A hierarchical MQTT Topic to which MQTT Clients publish and/or subscribe."@en ;
                                                                  rdfs:label "MQTT Topic"@en .
 
@@ -1254,25 +1124,9 @@ owl:Ontology rdf:type owl:Class .
 <https://www.w3.org/2019/wot/mqtt#UNSUBSCRIBE> rdf:type owl:Class .
 
 
-###  https://www.w3.org/2019/wot/mqtt/qualitfyOfService#0
-<https://www.w3.org/2019/wot/mqtt/qualitfyOfService#0> rdf:type owl:Class .
-
-
-###  https://www.w3.org/2019/wot/mqtt/qualitfyOfService#1
-<https://www.w3.org/2019/wot/mqtt/qualitfyOfService#1> rdf:type owl:Class .
-
-
-###  https://www.w3.org/2019/wot/mqtt/qualitfyOfService#2
-<https://www.w3.org/2019/wot/mqtt/qualitfyOfService#2> rdf:type owl:Class .
-
-
 #################################################################
 #    Individuals
 #################################################################
-
-###  http://dbpedia.org/resource/Category:Units_of_angle
-<http://dbpedia.org/resource/Category:Units_of_angle> rdf:type owl:NamedIndividual .
-
 
 ###  http://example.org/individuals#DTEC
 <http://example.org/individuals#DTEC> rdf:type owl:NamedIndividual ,
@@ -1280,242 +1134,6 @@ owl:Ontology rdf:type owl:Class .
                                       rdfs:comment "This research as part of the project EKI is funded by dtec.bw – Digitalization and Technology Research Center of the Bundeswehr which we gratefully acknowledge. dtec.bw is funded by the European Union – NextGenerationEU." ;
                                       rdfs:label "Digitalization and Technology Research Center of the Bundeswehr" ;
                                       <http://xmlns.com/foaf/0.1/homepage> <https://dtecbw.de/home> .
-
-
-###  http://qudt.org/schema/qudt/AngleUnit
-<http://qudt.org/schema/qudt/AngleUnit> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/Aspect
-<http://qudt.org/schema/qudt/Aspect> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/BigEndian
-<http://qudt.org/schema/qudt/BigEndian> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/BitEncoding
-<http://qudt.org/schema/qudt/BitEncoding> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/BooleanEncoding
-<http://qudt.org/schema/qudt/BooleanEncoding> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/CT_COUNTABLY-INFINITE
-<http://qudt.org/schema/qudt/CT_COUNTABLY-INFINITE> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/CT_FINITE
-<http://qudt.org/schema/qudt/CT_FINITE> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/CT_UNCOUNTABLE
-<http://qudt.org/schema/qudt/CT_UNCOUNTABLE> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/CardinalityType
-<http://qudt.org/schema/qudt/CardinalityType> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/CharEncoding
-<http://qudt.org/schema/qudt/CharEncoding> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/DoublePrecisionEncoding
-<http://qudt.org/schema/qudt/DoublePrecisionEncoding> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/EndianType
-<http://qudt.org/schema/qudt/EndianType> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/EnumeratedQuantity
-<http://qudt.org/schema/qudt/EnumeratedQuantity> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/IEEE754_1985RealEncoding
-<http://qudt.org/schema/qudt/IEEE754_1985RealEncoding> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/ISO8601-UTCDateTime-BasicFormat
-<http://qudt.org/schema/qudt/ISO8601-UTCDateTime-BasicFormat> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/LittleEndian
-<http://qudt.org/schema/qudt/LittleEndian> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/LongUnsignedIntegerEncoding
-<http://qudt.org/schema/qudt/LongUnsignedIntegerEncoding> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/OctetEncoding
-<http://qudt.org/schema/qudt/OctetEncoding> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/PartiallyOrdered
-<http://qudt.org/schema/qudt/PartiallyOrdered> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/ScaleType
-<http://qudt.org/schema/qudt/ScaleType> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/ShortSignedIntegerEncoding
-<http://qudt.org/schema/qudt/ShortSignedIntegerEncoding> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/ShortUnsignedIntegerEncoding
-<http://qudt.org/schema/qudt/ShortUnsignedIntegerEncoding> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/Signed
-<http://qudt.org/schema/qudt/Signed> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/SignedIntegerEncoding
-<http://qudt.org/schema/qudt/SignedIntegerEncoding> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/SinglePrecisionRealEncoding
-<http://qudt.org/schema/qudt/SinglePrecisionRealEncoding> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/TotallyOrdered
-<http://qudt.org/schema/qudt/TotallyOrdered> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/UNSIGNED
-<http://qudt.org/schema/qudt/UNSIGNED> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/Unordered
-<http://qudt.org/schema/qudt/Unordered> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/UnsignedIntegerEncoding
-<http://qudt.org/schema/qudt/UnsignedIntegerEncoding> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/Verifiable
-<http://qudt.org/schema/qudt/Verifiable> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/exactMatch
-<http://qudt.org/schema/qudt/exactMatch> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/fieldCode
-<http://qudt.org/schema/qudt/fieldCode> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/hasCitation
-<http://qudt.org/schema/qudt/hasCitation> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/hasReciprocalUnit
-<http://qudt.org/schema/qudt/hasReciprocalUnit> rdf:type owl:NamedIndividual .
-
-
-###  http://qudt.org/schema/qudt/hasVocabulary
-<http://qudt.org/schema/qudt/hasVocabulary> rdf:type owl:NamedIndividual .
-
-
-###  http://voag.linkedmodel.org/schema/voag#QUDT-SchemaCatalogEntry
-<http://voag.linkedmodel.org/schema/voag#QUDT-SchemaCatalogEntry> rdf:type owl:NamedIndividual .
-
-
-###  http://voag.linkedmodel.org/voag/CC-SHAREALIKE_3PT0-US
-<http://voag.linkedmodel.org/voag/CC-SHAREALIKE_3PT0-US> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/dtype
-<http://www.linkedmodel.org/schema/dtype> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/dtype#GMD_DTYPE
-<http://www.linkedmodel.org/schema/dtype#GMD_DTYPE> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#CollectionGraph
-<http://www.linkedmodel.org/schema/vaem#CollectionGraph> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#ConstraintsGraph
-<http://www.linkedmodel.org/schema/vaem#ConstraintsGraph> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#ControllersGraph
-<http://www.linkedmodel.org/schema/vaem#ControllersGraph> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#CurationGraph
-<http://www.linkedmodel.org/schema/vaem#CurationGraph> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#DataGraph
-<http://www.linkedmodel.org/schema/vaem#DataGraph> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#DocumentationGraph
-<http://www.linkedmodel.org/schema/vaem#DocumentationGraph> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#FunctionsGraph
-<http://www.linkedmodel.org/schema/vaem#FunctionsGraph> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#GMD_QUDT-SCHEMA
-<http://www.linkedmodel.org/schema/vaem#GMD_QUDT-SCHEMA> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#GMD_VAEM
-<http://www.linkedmodel.org/schema/vaem#GMD_VAEM> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#LinkSetGraph
-<http://www.linkedmodel.org/schema/vaem#LinkSetGraph> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#MappingGraph
-<http://www.linkedmodel.org/schema/vaem#MappingGraph> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#ProxyGraph
-<http://www.linkedmodel.org/schema/vaem#ProxyGraph> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#QUDT
-<http://www.linkedmodel.org/schema/vaem#QUDT> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#RulesGraph
-<http://www.linkedmodel.org/schema/vaem#RulesGraph> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#SchemaGraph
-<http://www.linkedmodel.org/schema/vaem#SchemaGraph> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#ScriptGraph
-<http://www.linkedmodel.org/schema/vaem#ScriptGraph> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#TopQuadrant
-<http://www.linkedmodel.org/schema/vaem#TopQuadrant> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#TransformsGraph
-<http://www.linkedmodel.org/schema/vaem#TransformsGraph> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#ViewGraph
-<http://www.linkedmodel.org/schema/vaem#ViewGraph> rdf:type owl:NamedIndividual .
-
-
-###  http://www.linkedmodel.org/schema/vaem#VocabularyGraph
-<http://www.linkedmodel.org/schema/vaem#VocabularyGraph> rdf:type owl:NamedIndividual .
 
 
 ###  https://dtecbw.de/
@@ -1543,21 +1161,20 @@ owl:Ontology rdf:type owl:Class .
                                         <http://xmlns.com/foaf/0.1/name> "Niklas Doerner" .
 
 
-###  https://www.w3.org/2019/wot/mqtt#PUBLISH
-<https://www.w3.org/2019/wot/mqtt#PUBLISH> rdf:type owl:NamedIndividual .
-
-
-###  https://www.w3.org/2019/wot/mqtt#SUBSCRIBE
-<https://www.w3.org/2019/wot/mqtt#SUBSCRIBE> rdf:type owl:NamedIndividual .
-
-
-###  https://www.w3.org/2019/wot/mqtt#UNSUBSCRIBE
-<https://www.w3.org/2019/wot/mqtt#UNSUBSCRIBE> rdf:type owl:NamedIndividual .
-
-
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.w3.org/ns/sosa/Actuation>
+                <http://www.w3.org/ns/sosa/ActuationCollection>
+                <http://www.w3.org/ns/sosa/FeatureOfInterest>
+                <http://www.w3.org/ns/sosa/Observation>
+                <http://www.w3.org/ns/sosa/ObservationCollection>
+                <http://www.w3.org/ns/sosa/Property>
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( <https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ControlPacket>

@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://doernern.github.io/MQTT4SSNOntology/documentation/index-en.html#"
      xml:base="https://doernern.github.io/MQTT4SSNOntology/documentation/index-en.html"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,13 +9,14 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="https://doernern.github.io/MQTT4SSNOntology/documentation/index-en.html">
+        <owl:versionIRI rdf:resource="https://doernern.github.io/MQTT4SSNOntology/documentation/index-en.html"/>
         <owl:imports rdf:resource="http://qudt.org/schema/qudt/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
         <owl:imports rdf:resource="https://www.w3.org/2019/wot/mqtt"/>
         <terms:abstract xml:lang="en">In the Web of Things community, the SSN/SOSA ontology, a W3C recommendation, has established itself as a foundational framework for representing semantic sensor networks, modeling sensors, observations, and actuations. However, an explicit representation of message protocols is missing, which limits semantic interoperability in machine-to-machine communication scenarios. We propose MQTT4SSN as an extension of SSN/SOSA that semantically models the MQTT protocol to address this gap. If SSN/SOSA is not used, the proposed ontology can also be used independently for the semantic modeling of the MQTT message protocol. MQTT4SSN represents MQTT entities such as brokers, clients, control packets, topics, and payload metadata, linking them to SSN/SOSA concepts to enable end-to-end traceability between sensing semantics and communication semantics. The ontology captures heterogeneous payload formats, encodings, and transport metadata, enabling machine-interpretable description and integration of transmitted content. MQTT4SSN represents an extensible and reusable resource that is accessible according to the FAIR principles and documented as an Ontology Specification Draft.</terms:abstract>
         <terms:author rdf:resource="https://orcid.org/0000-0003-3458-4748"/>
@@ -29,7 +29,7 @@
         <terms:creator rdf:resource="https://orcid.org/0009-0004-0088-8633"/>
         <terms:description xml:lang="en">In the Web of Things community, the SSN/SOSA ontology, a W3C recommendation, has established itself as a foundational framework for representing semantic sensor networks, modeling sensors, observations, and actuations. However, an explicit representation of message protocols is missing, which limits semantic interoperability in machine-to-machine communication scenarios. We propose MQTT4SSN as an extension of SSN/SOSA that semantically models the MQTT protocol to address this gap. If SSN/SOSA is not used, the proposed ontology can also be used independently for the semantic modeling of the MQTT message protocol. MQTT4SSN represents MQTT entities such as brokers, clients, control packets, topics, and payload metadata, linking them to SSN/SOSA concepts to enable end-to-end traceability between sensing semantics and communication semantics. The ontology captures heterogeneous payload formats, encodings, and transport metadata, enabling machine-interpretable description and integration of transmitted content. MQTT4SSN represents an extensible and reusable resource that is accessible according to the FAIR principles and documented as an Ontology Specification Draft.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-09-08</terms:modified>
+        <terms:modified>2025-09-10</terms:modified>
         <terms:subject xml:lang="en">MQTT, Ontology Engineering, Sensor Ontology, Semantic Sensor Network, Message Protocol, Smart Sensor</terms:subject>
         <terms:title xml:lang="en">MQTT4SSN Ontology</terms:title>
         <bibo:doi>10.5281/zenodo.16704302</bibo:doi>
@@ -48,27 +48,6 @@
      -->
 
 
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/date -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/description -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/title -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 
@@ -118,97 +97,6 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/doi"/>
-    
-
-
-    <!-- http://schema.org/affiliation -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/affiliation"/>
-    
-
-
-    <!-- http://schema.org/alternateName -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/alternateName"/>
-    
-
-
-    <!-- http://schema.org/name -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/name"/>
-    
-
-
-    <!-- http://schema.org/url -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/url"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#graphName -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.linkedmodel.org/schema/vaem#graphName"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#graphTitle -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.linkedmodel.org/schema/vaem#graphTitle"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#isMetadataFor -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.linkedmodel.org/schema/vaem#isMetadataFor"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#website -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.linkedmodel.org/schema/vaem#website"/>
-    
-
-
-    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#direction -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#direction"/>
-    
-
-
-    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#language -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#language"/>
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#pattern -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2001/XMLSchema#pattern"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#maxCardinality -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxCardinality"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#minCardinality -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minCardinality"/>
     
 
 
@@ -264,104 +152,6 @@
     
 
 
-    <!-- http://qudt.org/schema/qudt/ansiSQLName -->
-
-
-    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/ansiSQLName"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/cName -->
-
-
-    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/cName"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/oracleSQLName -->
-
-
-    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/oracleSQLName"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/protocolBuffersName -->
-
-
-    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/protocolBuffersName"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/pythonName -->
-
-
-    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/pythonName"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/vbName -->
-
-
-    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/vbName"/>
-    
-
-
-    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#first -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#first"/>
-    
-
-
-    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#object -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#object"/>
-    
-
-
-    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate"/>
-    
-
-
-    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#rest -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"/>
-    
-
-
-    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#subject -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"/>
-    
-
-
-    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#type -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
-    
-
-
-    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#value -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
-    
-
-
     <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#forwardsPublishPacket -->
 
 
@@ -370,6 +160,29 @@
         <rdfs:range rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishPacket"/>
         <rdfs:comment xml:lang="en">Indicates that an MQTT Broker forwards a PUBLISH packet to subscribers.</rdfs:comment>
         <rdfs:label xml:lang="en">forwards PUBLISH Packet</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject -->
+
+
+    <owl:ObjectProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject">
+        <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject"/>
+        <owl:inverseOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf"/>
+        <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuation"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ActuationCollection"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservationCollection"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Links an MQTT Topic to the subject (Actuation, Actuation collection, Observation or Observation Collection).</rdfs:comment>
+        <rdfs:label xml:lang="en">has topic subject (Actuation, Actuation collection, Observation or Observation Collection)</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -427,6 +240,20 @@
     
 
 
+    <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject -->
+
+
+    <owl:ObjectProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject">
+        <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject"/>
+        <owl:inverseOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf"/>
+        <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:comment xml:lang="en">Links an MQTT Topic to the subject (Feature of Interest).</rdfs:comment>
+        <rdfs:label xml:lang="en">has topic subject (Feature of Interest)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasParticipant -->
 
 
@@ -463,6 +290,20 @@
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
         <rdfs:comment xml:lang="en">Specifies the size of an MQTT Payload as a QUDT quantity value (e.g., unit:Byte).</rdfs:comment>
         <rdfs:label xml:lang="en">has payload size</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject -->
+
+
+    <owl:ObjectProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject">
+        <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject"/>
+        <owl:inverseOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf"/>
+        <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+        <rdfs:comment xml:lang="en">Links an MQTT Topic to the subject (Property).</rdfs:comment>
+        <rdfs:label xml:lang="en">has topic subject (Property)</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -701,6 +542,28 @@
     
 
 
+    <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf">
+        <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuation"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ActuationCollection"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservationCollection"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic"/>
+        <rdfs:comment xml:lang="en">Links a topic subject (Actuation, Actuation collection, Observation or Observation Collection) to the MQTT Topic that carries it.</rdfs:comment>
+        <rdfs:label xml:lang="en">is topic subject (Actuation, Actuation collection, Observation or Observation Collection) of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectedToBroker -->
 
 
@@ -721,6 +584,19 @@
         <rdfs:range rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishPayload"/>
         <rdfs:comment xml:lang="en">Links an RDF list of field names to the MQTT Payload that contains them.</rdfs:comment>
         <rdfs:label xml:lang="en">is encoded in MQTT Payload</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf">
+        <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:range rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic"/>
+        <rdfs:comment xml:lang="en">Links a topic subject (Feature of Interest) to the MQTT Topic that carries it.</rdfs:comment>
+        <rdfs:label xml:lang="en">is topic subject (Feature of Interest) of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -784,6 +660,19 @@
         <rdfs:range rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ControlPacket"/>
         <rdfs:comment xml:lang="en">Links an MQTT Payload to the MQTT Control Packet containing it.</rdfs:comment>
         <rdfs:label xml:lang="en">is MQTT Payload of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf">
+        <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+        <rdfs:range rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic"/>
+        <rdfs:comment xml:lang="en">Links a topic subject (Property) to the MQTT Topic that carries it.</rdfs:comment>
+        <rdfs:label xml:lang="en">is topic subject (Property) of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1190,20 +1079,6 @@
     
 
 
-    <!-- http://qudt.org/schema/qudt/bits -->
-
-
-    <owl:DatatypeProperty rdf:about="http://qudt.org/schema/qudt/bits"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/length -->
-
-
-    <owl:DatatypeProperty rdf:about="http://qudt.org/schema/qudt/length"/>
-    
-
-
     <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasClientID -->
 
 
@@ -1402,41 +1277,6 @@
     
 
 
-    <!-- http://org.semanticweb.owlapi/error#Error4 -->
-
-
-    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error4"/>
-    
-
-
-    <!-- http://org.semanticweb.owlapi/error#Error5 -->
-
-
-    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error5"/>
-    
-
-
-    <!-- http://org.semanticweb.owlapi/error#Error6 -->
-
-
-    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error6"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/Aspect -->
-
-
-    <owl:Class rdf:about="http://qudt.org/schema/qudt/Aspect"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/EnumeratedQuantity -->
-
-
-    <owl:Class rdf:about="http://qudt.org/schema/qudt/EnumeratedQuantity"/>
-    
-
-
     <!-- http://qudt.org/schema/qudt/QuantityValue -->
 
 
@@ -1444,136 +1284,10 @@
     
 
 
-    <!-- http://qudt.org/schema/qudt/SignednessType -->
-
-
-    <owl:Class rdf:about="http://qudt.org/schema/qudt/SignednessType"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/StringEncodingType -->
-
-
-    <owl:Class rdf:about="http://qudt.org/schema/qudt/StringEncodingType"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/SymmetricRelation -->
-
-
-    <owl:Class rdf:about="http://qudt.org/schema/qudt/SymmetricRelation"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/Verifiable -->
-
-
-    <owl:Class rdf:about="http://qudt.org/schema/qudt/Verifiable"/>
-    
-
-
-    <!-- http://schema.org/Organization -->
-
-
-    <owl:Class rdf:about="http://schema.org/Organization"/>
-    
-
-
-    <!-- http://schema.org/Person -->
-
-
-    <owl:Class rdf:about="http://schema.org/Person"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#CatalogEntry -->
-
-
-    <owl:Class rdf:about="http://www.linkedmodel.org/schema/vaem#CatalogEntry"/>
-    
-
-
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#List -->
 
 
     <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#Class -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#Container -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Container"/>
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#Datatype -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#gDay -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#gDay"/>
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#gMonth -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#gMonth"/>
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#gMonthDay -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#gMonthDay"/>
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#gYearMonth -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#Class -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Class"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#Ontology -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Ontology"/>
     
 
 
@@ -1833,6 +1547,34 @@
 
     <owl:Class rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic">
         <owl:equivalentClass rdf:resource="https://www.w3.org/2019/wot/mqtt#TopicName"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuation"/>
+                            <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ActuationCollection"/>
+                            <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation"/>
+                            <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservationCollection"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A hierarchical MQTT Topic to which MQTT Clients publish and/or subscribe.</rdfs:comment>
         <rdfs:label xml:lang="en">MQTT Topic</rdfs:label>
     </owl:Class>
@@ -1978,27 +1720,6 @@
     
 
 
-    <!-- https://www.w3.org/2019/wot/mqtt/qualitfyOfService#0 -->
-
-
-    <owl:Class rdf:about="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#0"/>
-    
-
-
-    <!-- https://www.w3.org/2019/wot/mqtt/qualitfyOfService#1 -->
-
-
-    <owl:Class rdf:about="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#1"/>
-    
-
-
-    <!-- https://www.w3.org/2019/wot/mqtt/qualitfyOfService#2 -->
-
-
-    <owl:Class rdf:about="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#2"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2011,13 +1732,6 @@
     
 
 
-    <!-- http://dbpedia.org/resource/Category:Units_of_angle -->
-
-
-    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Category:Units_of_angle"/>
-    
-
-
     <!-- http://example.org/individuals#DTEC -->
 
 
@@ -2027,419 +1741,6 @@
         <rdfs:label>Digitalization and Technology Research Center of the Bundeswehr</rdfs:label>
         <foaf:homepage rdf:resource="https://dtecbw.de/home"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/AngleUnit -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/AngleUnit"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/Aspect -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/Aspect"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/BigEndian -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/BigEndian"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/BitEncoding -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/BitEncoding"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/BooleanEncoding -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/BooleanEncoding"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/CT_COUNTABLY-INFINITE -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/CT_COUNTABLY-INFINITE"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/CT_FINITE -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/CT_FINITE"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/CT_UNCOUNTABLE -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/CT_UNCOUNTABLE"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/CardinalityType -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/CardinalityType"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/CharEncoding -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/CharEncoding"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/DoublePrecisionEncoding -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/DoublePrecisionEncoding"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/EndianType -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/EndianType"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/EnumeratedQuantity -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/EnumeratedQuantity"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/IEEE754_1985RealEncoding -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/IEEE754_1985RealEncoding"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/ISO8601-UTCDateTime-BasicFormat -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/ISO8601-UTCDateTime-BasicFormat"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/LittleEndian -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/LittleEndian"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/LongUnsignedIntegerEncoding -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/LongUnsignedIntegerEncoding"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/OctetEncoding -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/OctetEncoding"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/PartiallyOrdered -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/PartiallyOrdered"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/ScaleType -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/ScaleType"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/ShortSignedIntegerEncoding -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/ShortSignedIntegerEncoding"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/ShortUnsignedIntegerEncoding -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/ShortUnsignedIntegerEncoding"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/Signed -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/Signed"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/SignedIntegerEncoding -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/SignedIntegerEncoding"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/SinglePrecisionRealEncoding -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/SinglePrecisionRealEncoding"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/TotallyOrdered -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/TotallyOrdered"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/UNSIGNED -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/UNSIGNED"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/Unordered -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/Unordered"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/UnsignedIntegerEncoding -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/UnsignedIntegerEncoding"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/Verifiable -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/Verifiable"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/exactMatch -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/exactMatch"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/fieldCode -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/fieldCode"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/hasCitation -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/hasCitation"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/hasReciprocalUnit -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/hasReciprocalUnit"/>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/hasVocabulary -->
-
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/hasVocabulary"/>
-    
-
-
-    <!-- http://voag.linkedmodel.org/schema/voag#QUDT-SchemaCatalogEntry -->
-
-
-    <owl:NamedIndividual rdf:about="http://voag.linkedmodel.org/schema/voag#QUDT-SchemaCatalogEntry"/>
-    
-
-
-    <!-- http://voag.linkedmodel.org/voag/CC-SHAREALIKE_3PT0-US -->
-
-
-    <owl:NamedIndividual rdf:about="http://voag.linkedmodel.org/voag/CC-SHAREALIKE_3PT0-US"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/dtype -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/dtype"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/dtype#GMD_DTYPE -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/dtype#GMD_DTYPE"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#CollectionGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#CollectionGraph"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#ConstraintsGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#ConstraintsGraph"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#ControllersGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#ControllersGraph"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#CurationGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#CurationGraph"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#DataGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#DataGraph"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#DocumentationGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#DocumentationGraph"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#FunctionsGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#FunctionsGraph"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#GMD_QUDT-SCHEMA -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#GMD_QUDT-SCHEMA"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#GMD_VAEM -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#GMD_VAEM"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#LinkSetGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#LinkSetGraph"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#MappingGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#MappingGraph"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#ProxyGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#ProxyGraph"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#QUDT -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#QUDT"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#RulesGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#RulesGraph"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#SchemaGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#SchemaGraph"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#ScriptGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#ScriptGraph"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#TopQuadrant -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#TopQuadrant"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#TransformsGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#TransformsGraph"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#ViewGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#ViewGraph"/>
-    
-
-
-    <!-- http://www.linkedmodel.org/schema/vaem#VocabularyGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#VocabularyGraph"/>
     
 
 
@@ -2480,27 +1781,6 @@
     
 
 
-    <!-- https://www.w3.org/2019/wot/mqtt#PUBLISH -->
-
-
-    <owl:NamedIndividual rdf:about="https://www.w3.org/2019/wot/mqtt#PUBLISH"/>
-    
-
-
-    <!-- https://www.w3.org/2019/wot/mqtt#SUBSCRIBE -->
-
-
-    <owl:NamedIndividual rdf:about="https://www.w3.org/2019/wot/mqtt#SUBSCRIBE"/>
-    
-
-
-    <!-- https://www.w3.org/2019/wot/mqtt#UNSUBSCRIBE -->
-
-
-    <owl:NamedIndividual rdf:about="https://www.w3.org/2019/wot/mqtt#UNSUBSCRIBE"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2510,6 +1790,17 @@
      -->
 
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuation"/>
+            <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ActuationCollection"/>
+            <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+            <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation"/>
+            <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservationCollection"/>
+            <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Property"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
