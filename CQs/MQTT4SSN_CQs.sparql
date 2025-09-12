@@ -1,0 +1,498 @@
+# CQ1_01 - Which MQTT Clients are connected to which Broker?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?client ?broker WHERE {
+  ?client a mqtt:Client ; mqtt:isConnectedToBroker ?broker .
+}
+
+# CQ1_02 - Which MQTT NetworkConnections exist, are they TLS-secured, and who initiated/accepted them?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?conn ?client ?broker ?tls WHERE {
+  ?conn a mqtt:NetworkConnection ;
+        mqtt:isInitiatedBy ?client ;
+        mqtt:isAcceptedBy ?broker ;
+        mqtt:usesTLS ?tls .
+}
+
+# CQ1_03 - Which MQTT participants (Clients/Brokers) use which MQTT NetworkConnections?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?participant ?conn WHERE { ?participant mqtt:usesConnection ?conn . }
+
+# CQ1_04 - Which MQTT Clients with which ClientIDs run on which SOSA platforms?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?client ?id ?platform WHERE {
+  ?client a mqtt:Client ;
+          mqtt:hasClientID ?id ;
+          mqtt:runsOnPlatform ?platform .
+}
+
+# CQ1_05 - Which SOSA systems (sensors/actuators) are hosted by a given MQTT Client?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?client ?system WHERE { ?client mqtt:hosts ?system . }
+
+# CQ1_06 - Which MQTT Clients are connected to a given MQTT Broker?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?client WHERE { ?broker a mqtt:Broker ; mqtt:hasConnectedClient ?client . }
+
+# CQ1_07 - What host/port is a MQTT Broker configured with?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?host ?port WHERE { ?b a mqtt:Broker ; mqtt:hasHostAddress ?host ; mqtt:hasPortNumber ?port . }
+
+# CQ2_01 - Which SOSA sensors publish to which MQTT Topics (observations)?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?sensor ?topic WHERE { ?sensor a sosa:Sensor ; mqtt:observesTopic ?topic . }
+
+# CQ2_02 - Which SOSA actuators listen to which MQTT Topics (commands)?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?actuator ?topic WHERE { ?actuator a sosa:Actuator ; mqtt:listensToTopic ?topic . }
+
+# CQ2_03 - Which SOSA FeaturesOfInterest, Properties etc. appear as MQTT TopicSubjects and on which MQTT Topics?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?topic ?subject WHERE { ?topic a mqtt:Topic ; mqtt:hasSubject ?subject . }
+
+# CQ2_04 - Which MQTT Topic Filters match a given MQTT Topic?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?filter WHERE { ?topic a mqtt:Topic ; mqtt:isMatchedByFilter ?filter . }
+
+# CQ2_05 - Which MQTT Topics are matched by a given MQTT Topic Filter?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?topic WHERE { ?filter a mqtt:TopicFilter ; mqtt:matchesTopic ?topic . }
+
+# CQ2_06 - Which MQTT filter patterns (with wildcards) are stored?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?filter ?pattern WHERE { ?filter a mqtt:TopicFilter ; mqtt:hasFilterPattern ?pattern . }
+
+# CQ3_01 - Which MQTT Clients send which MQTT Control Packets?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?client ?pkt WHERE { ?client mqtt:sendsControlPacket ?pkt . }
+
+# CQ3_02 - Which MQTT PUBLISH/SUBSCRIBE/UNSUBSCRIBE packets were sent (specializations)?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?client ?pub WHERE { ?client mqtt:publishesPacket ?pub . }
+SELECT ?client ?sub WHERE { ?client mqtt:subscribesPacket ?sub . }
+SELECT ?client ?unsub WHERE { ?client mqtt:unsubscribesPacket ?unsub . }
+
+# CQ3_03 - Which MQTT Brokers receive/forward which MQTT Control Packets?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?broker ?pub WHERE { ?broker mqtt:forwardsPublishPacket ?pub . }
+SELECT ?broker ?sub WHERE { ?broker mqtt:receivesSubscribePacket ?sub . }
+
+# CQ3_04 - Which MQTT Control Packets were sent by which Client (inverse)?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?pkt ?client WHERE { ?pkt a mqtt:ControlPacket ; mqtt:isSentBy ?client . }
+
+# CQ4_01 - Which MQTT Control Packet has which Fixed Header / Variable Header / Payload?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?pkt ?fixed ?var ?payload WHERE {
+  ?pkt a mqtt:ControlPacket ;
+       mqtt:hasFixedHeader ?fixed ;
+       mqtt:hasVariableHeader ?var ;
+       mqtt:hasPayload ?payload .
+}
+
+# CQ4_02 - Which MQTT PUBLISH packet has which MQTT Topic (name) in the Variable Header?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?pub ?topic WHERE {
+  ?pub a mqtt:PublishPacket ;
+       mqtt:hasPublishVariableHeader ?vh .
+  ?vh  mqtt:hasTopicName ?topic .
+}
+
+# CQ4_03 - Which QoS levels are set (in PUBLISH Fixed Header or SubscriptionEntry)?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?pub ?qos WHERE {
+  ?pub a mqtt:PublishPacket ; mqtt:hasPublishFixedHeader ?fh .
+  ?fh  mqtt:hasQosLevel ?qos .
+}
+SELECT ?entry ?qos WHERE { ?entry a mqtt:SubscriptionEntry ; mqtt:hasQosLevel ?qos . }
+
+# CQ4_04 - Are RETAIN/DUP flags set in PUBLISH?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?pub ?retain ?dup WHERE {
+  ?pub a mqtt:PublishPacket ; mqtt:hasPublishFixedHeader ?fh .
+  OPTIONAL { ?fh mqtt:isRetainedFlag ?retain . }
+  OPTIONAL { ?fh mqtt:isDUPFlag ?dup . }
+}
+
+# CQ4_05 - Which MQTT Control Packets have which PacketIdentifier?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?pkt ?pid WHERE {
+  ?pkt a ?t ; mqtt:hasVariableHeader ?vh .
+  VALUES ?t { mqtt:SubscribePacket mqtt:UnsubscribePacket }
+  ?vh mqtt:hasPacketIdentifier ?pid .
+}
+
+# CQ5_01 - Which MQTT SUBSCRIBE payloads contain which SubscriptionEntries?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?sub ?payload ?entry WHERE {
+  ?sub a mqtt:SubscribePacket ; mqtt:hasSubscriptionPayload ?payload .
+  ?payload mqtt:hasSubscriptions ?entry .
+}
+
+# CQ5_02 - Which MQTT Topic Filters (with QoS) are requested by a SubscriptionEntry?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?entry ?filter ?qos WHERE {
+  ?entry a mqtt:SubscriptionEntry ;
+         mqtt:hasTopicFilter ?filter ;
+         mqtt:hasQosLevel ?qos .
+}
+
+# CQ5_03 - Which MQTT UNSUBSCRIBE payloads remove which MQTT TopicFilters?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?unsub ?payload ?filter WHERE {
+  ?unsub a mqtt:UnsubscribePacket ; mqtt:hasUnsubscriptionPayload ?payload .
+  ?payload mqtt:hasTopicFilter ?filter .
+}
+
+# CQ6_01 - Which MQTT PUBLISH payloads encode SOSA Observations (or Observation Collections)?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?pub ?obs WHERE {
+  ?pub a mqtt:PublishPacket ; mqtt:hasPublishPayload ?pp .
+  ?pp  mqtt:payloadEncodesObservation ?obs .
+}
+
+# CQ6_02 - Which MQTT PUBLISH payloads encode SOSA Actuations (or Actuation Collections)?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?pub ?act WHERE {
+  ?pub a mqtt:PublishPacket ; mqtt:hasPublishPayload ?pp .
+  ?pp  mqtt:payloadEncodesActuation ?act .
+}
+
+# CQ6_03 - Which fields are encoded in a MQTT payload?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?pub ?fields WHERE {
+  ?pub a mqtt:PublishPacket ; mqtt:hasPublishPayload ?pp .
+  ?pp  mqtt:hasEncodedFields ?fields .
+}
+
+# CQ6_04 - What content, content type, encoding and delimiter does a MQTT PUBLISH payload have?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?pub ?content ?type ?enc ?delim WHERE {
+  ?pub a mqtt:PublishPacket ; mqtt:hasPublishPayload ?pp .
+  OPTIONAL { ?pp mqtt:hasPayloadContent ?content . }
+  OPTIONAL { ?pp mqtt:hasPayloadContentType ?type . }
+  OPTIONAL { ?pp mqtt:hasPayloadEncoding ?enc . }
+  OPTIONAL { ?pp mqtt:hasPayloadContentDelimiter ?delim . }
+}
+
+# CQ6_05 - What is the size of a MQTT payload (as QUDT QuantityValue with unit)?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?payload ?qv WHERE {
+  ?payload a mqtt:Payload ; mqtt:hasPayloadSize ?qv .
+}
+
+# CQ7_01 - Does each MQTT ControlPacket instance have exactly one Fixed Header, one Variable Header, and one Payload?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+ASK {
+  ?pkt a mqtt:ControlPacket .
+  FILTER NOT EXISTS { ?pkt mqtt:hasFixedHeader ?fh . }
+  FILTER NOT EXISTS { ?pkt mqtt:hasVariableHeader ?vh . }
+  FILTER NOT EXISTS { ?pkt mqtt:hasPayload ?pl . }
+}
+
+# CQ7_02 - Are the disjoint superclass constraints violated?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?x WHERE {
+  ?x a mqtt:PublishPayload, mqtt:SubscriptionPayload .
+}
+
+# CQ7_03 - Are inverse properties used consistently?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+ASK {
+  ?p a mqtt:NetworkParticipant ; mqtt:usesConnection ?c .
+  FILTER NOT EXISTS { ?c mqtt:hasParticipant ?p }
+}
+
+# CQ7_04 - Are QoS levels outside [0..2] present?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?thing ?q WHERE {
+  { ?fh a mqtt:PublishFixedHeader ; mqtt:hasQosLevel ?q . BIND(?fh AS ?thing) }
+  UNION
+  { ?e a mqtt:SubscriptionEntry ; mqtt:hasQosLevel ?q . BIND(?e AS ?thing) }
+  FILTER(?q < 0 || ?q > 2)
+}
+
+# CQ7_05 - Does each MQTT PublishVariableHeader instance have exactly one Topic (functional)?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?vh (COUNT(?topic) AS ?n) WHERE {
+  ?vh a mqtt:PublishVariableHeader ; mqtt:hasTopicName ?topic .
+} GROUP BY ?vh HAVING (COUNT(?topic) != 1)
+
+# CQ7_06 - Are there MQTT payloads without content type/encoding despite having content?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?pp WHERE {
+  ?pp a mqtt:PublishPayload ; mqtt:hasPayloadContent ?c .
+  FILTER NOT EXISTS { ?pp mqtt:hasPayloadContentType ?t }
+  FILTER NOT EXISTS { ?pp mqtt:hasPayloadEncoding ?e }
+}
+
+# CQ7_07 - Are there MQTT TopicSubjects without an associated MQTT Topic?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?subj WHERE {
+  ?subj a mqtt:TopicSubject .
+  FILTER NOT EXISTS { ?subj mqtt:isSubjectOf ?topic }
+}
+
+# CQ9_01 - Which MQTT Publish packets carry Observations for a specific SOSA FeatureOfInterest or Property?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?pub ?obs ?foi WHERE {
+  ?pub a mqtt:PublishPacket ; mqtt:hasPublishPayload ?pp .
+  ?pp  mqtt:payloadEncodesObservation ?obs .
+  OPTIONAL { ?obs sosa:hasFeatureOfInterest ?foi . }
+}
+
+# CQ9_02 - Which MQTT SUBSCRIBE packets request QoS=2 and for which filters?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?sub ?filter WHERE {
+  ?sub a mqtt:SubscribePacket ; mqtt:hasSubscriptionPayload ?pl .
+  ?pl  mqtt:hasSubscriptions ?e .
+  ?e   mqtt:hasQosLevel 2 ; mqtt:hasTopicFilter ?filter .
+}
+
+# CQ9_03 - Which MQTT UNSUBSCRIBE packets remove all filters under a certain path (e.g. 'factory/centering/#')?
+PREFIX mqtt: <http://example.org/mqtt4ssn#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn:  <http://www.w3.org/ns/ssn/>
+PREFIX mqv:  <https://www.w3.org/2019/wot/mqtt#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?unsub WHERE {
+  ?unsub a mqtt:UnsubscribePacket ; mqtt:hasUnsubscriptionPayload ?pl .
+  ?pl    mqtt:hasTopicFilter ?f .
+  ?f     mqtt:hasFilterPattern ?pat .
+  FILTER(STRSTARTS(?pat, "factory/centering/") || ?pat = "factory/centering/#")
+}
