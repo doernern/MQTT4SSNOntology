@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="User Entered Import Resolution" name="https://www.w3.org/2019/wot/mqtt" uri="wot_mqtt.ttl"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1757495184521" name="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl" uri="MQTT4SSN.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1757495184521" name="https://doernern.github.io/MQTT4SSNOntology/documentation/index-en.html" uri="MQTT4SSN.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1757495184521" name="shadowed:https://doernern.github.io/MQTT4SSNOntology/documentation/index-en.html" uri="documentation/ontology.owl"/>
-    </group>
-</catalog>
