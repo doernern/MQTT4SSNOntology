@@ -6,9 +6,27 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
+      <a href="#http://www.w3.org/ns/sosa/ActuatableProperty" title="http://www.w3.org/ns/sosa/ActuatableProperty">Actuatable Property</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Actuation" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a>
+   </li>
+   <li>
       <a href="#http://www.w3.org/ns/sosa/ActuationCollection" title="http://www.w3.org/ns/sosa/ActuationCollection">
          <span>Actuation Collection</span>
       </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Actuator" title="http://www.w3.org/ns/sosa/Actuator">Actuator</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/Deployment" title="http://www.w3.org/ns/ssn/Deployment">Deployment</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/FeatureOfInterest" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature Of Interest</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/Input" title="http://www.w3.org/ns/ssn/Input">Input</a>
    </li>
    <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Broker"
@@ -107,18 +125,72 @@ This ontology has the following classes and properties.</span>
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#VariableHeader">MQTT Variable Header</a>
    </li>
    <li>
+      <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">Observable Property</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a>
+   </li>
+   <li>
       <a href="#http://www.w3.org/ns/sosa/ObservationCollection" title="http://www.w3.org/ns/sosa/ObservationCollection">
          <span>Observation Collection</span>
       </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/Output" title="http://www.w3.org/ns/ssn/Output">Output</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Platform" title="http://www.w3.org/ns/sosa/Platform">Platform</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Procedure" title="http://www.w3.org/ns/sosa/Procedure">Procedure</a>
    </li>
    <li>
       <a href="#http://www.w3.org/ns/sosa/Property" title="http://www.w3.org/ns/sosa/Property">
          <span>Property</span>
       </a>
    </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/Property" title="http://www.w3.org/ns/ssn/Property">Property</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Result" title="http://www.w3.org/ns/sosa/Result">Result</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Sample" title="http://www.w3.org/ns/sosa/Sample">Sample</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Sampler" title="http://www.w3.org/ns/sosa/Sampler">Sampler</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Sampling" title="http://www.w3.org/ns/sosa/Sampling">Sampling</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/Stimulus" title="http://www.w3.org/ns/ssn/Stimulus">Stimulus</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/System" title="http://www.w3.org/ns/ssn/System">System</a>
+   </li>
 </ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/actsOnProperty" title="http://www.w3.org/ns/sosa/actsOnProperty">acts on property</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/deployedOnPlatform" title="http://www.w3.org/ns/ssn/deployedOnPlatform">deployed on platform</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/deployedSystem" title="http://www.w3.org/ns/ssn/deployedSystem">deployed system</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/detects" title="http://www.w3.org/ns/ssn/detects">detects</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/forProperty" title="http://www.w3.org/ns/ssn/forProperty">for property</a>
+   </li>
    <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#forwardsPublishPacket"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#forwardsPublishPacket">forwards PUBLISH Packet</a>
@@ -128,12 +200,21 @@ This ontology has the following classes and properties.</span>
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectedClient">has connected MQTT Client</a>
    </li>
    <li>
+      <a href="#http://www.w3.org/ns/ssn/hasDeployment" title="http://www.w3.org/ns/ssn/hasDeployment">has deployment</a>
+   </li>
+   <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasEncodedFields"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasEncodedFields">has encoded fields</a>
    </li>
    <li>
+      <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a>
+   </li>
+   <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFixedHeader"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFixedHeader">has Fixed Header</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/hasInput" title="http://www.w3.org/ns/ssn/hasInput">has input</a>
    </li>
    <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasClient"
@@ -156,12 +237,18 @@ This ontology has the following classes and properties.</span>
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicFilter">has MQTT Topic Filter</a>
    </li>
    <li>
+      <a href="#http://www.w3.org/ns/ssn/hasOutput" title="http://www.w3.org/ns/ssn/hasOutput">has output</a>
+   </li>
+   <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasParticipant"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasParticipant">has participant</a>
    </li>
    <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadSize"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadSize">has payload size</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/hasProperty" title="http://www.w3.org/ns/ssn/hasProperty">has property</a>
    </li>
    <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishFixedHeader"
@@ -176,6 +263,12 @@ This ontology has the following classes and properties.</span>
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishVariableHeader">has PUBLISH Variable Header</a>
    </li>
    <li>
+      <a href="#http://www.w3.org/ns/sosa/hasResult" title="http://www.w3.org/ns/sosa/hasResult">has result</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/hasSample" title="http://www.w3.org/ns/sosa/hasSample">has sample</a>
+   </li>
+   <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionFixedHeader"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionFixedHeader">has SUBSCRIBE Fixed Header</a>
    </li>
@@ -186,6 +279,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionVariableHeader"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionVariableHeader">has SUBSCRIBE Variable Header</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/hasSubSystem" title="http://www.w3.org/ns/ssn/hasSubSystem">has subsystem</a>
    </li>
    <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject"
@@ -220,12 +316,27 @@ This ontology has the following classes and properties.</span>
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasVariableHeader">has Variable Header</a>
    </li>
    <li>
+      <a href="#http://www.w3.org/ns/sosa/hosts" title="http://www.w3.org/ns/sosa/hosts">hosts</a>
+   </li>
+   <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hosts"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hosts">hosts</a>
    </li>
    <li>
+      <a href="#http://www.w3.org/ns/ssn/implementedBy" title="http://www.w3.org/ns/ssn/implementedBy">implemented by</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/implements" title="http://www.w3.org/ns/ssn/implements">implements</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/inDeployment" title="http://www.w3.org/ns/ssn/inDeployment">in deployment</a>
+   </li>
+   <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isAcceptedBy"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isAcceptedBy">is accepted by</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/isActedOnBy" title="http://www.w3.org/ns/sosa/isActedOnBy">is acted on by</a>
    </li>
    <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectedToBroker"
@@ -236,8 +347,14 @@ This ontology has the following classes and properties.</span>
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isEncodedInPayload">is encoded in MQTT Payload</a>
    </li>
    <li>
+      <a href="#http://www.w3.org/ns/sosa/isFeatureOfInterestOf" title="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">is feature of interest of</a>
+   </li>
+   <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFixedHeaderOf"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFixedHeaderOf">is Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/isHostedBy" title="http://www.w3.org/ns/sosa/isHostedBy">is hosted by</a>
    </li>
    <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isHostedBy"
@@ -268,6 +385,15 @@ This ontology has the following classes and properties.</span>
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isTopicFilterOf">is MQTT Topic Filter of</a>
    </li>
    <li>
+      <a href="#http://www.w3.org/ns/sosa/isObservedBy" title="http://www.w3.org/ns/sosa/isObservedBy">is observed by</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/isPropertyOf" title="http://www.w3.org/ns/ssn/isPropertyOf">is property of</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/isProxyFor" title="http://www.w3.org/ns/ssn/isProxyFor">is proxy for</a>
+   </li>
+   <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishFixedHeaderOf"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishFixedHeaderOf">is PUBLISH Fixed Header of</a>
    </li>
@@ -278,6 +404,12 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishVariableHeaderOf"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishVariableHeaderOf">is PUBLISH Variable Header of</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/isResultOf" title="http://www.w3.org/ns/sosa/isResultOf">is result of</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/isSampleOf" title="http://www.w3.org/ns/sosa/isSampleOf">is sample of</a>
    </li>
    <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSentBy"
@@ -332,8 +464,32 @@ This ontology has the following classes and properties.</span>
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#listensToTopic">listens to MQTT Topic</a>
    </li>
    <li>
+      <a href="#http://www.w3.org/ns/sosa/madeActuation" title="http://www.w3.org/ns/sosa/madeActuation">made actuation</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/madeByActuator" title="http://www.w3.org/ns/sosa/madeByActuator">made by actuator</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/madeBySampler" title="http://www.w3.org/ns/sosa/madeBySampler">made by sampler</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/madeBySensor" title="http://www.w3.org/ns/sosa/madeBySensor">made by sensor</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/madeObservation" title="http://www.w3.org/ns/sosa/madeObservation">made observation</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/madeSampling" title="http://www.w3.org/ns/sosa/madeSampling">made sampling</a>
+   </li>
+   <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#matchesTopic"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#matchesTopic">matches MQTT Topic</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/observedProperty" title="http://www.w3.org/ns/sosa/observedProperty">observed property</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/observes" title="http://www.w3.org/ns/sosa/observes">observes</a>
    </li>
    <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#observesTopic"
@@ -354,6 +510,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesObservationCollection"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesObservationCollection">payload encodes SOSA Observation Collection</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/phenomenonTime" title="http://www.w3.org/ns/sosa/phenomenonTime">phenomenon time</a>
    </li>
    <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#publishesPacket"
@@ -384,8 +543,14 @@ This ontology has the following classes and properties.</span>
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#unsubscribesPacket">sends UNSUBSCRIBE Packet</a>
    </li>
    <li>
+      <a href="#http://www.w3.org/ns/sosa/usedProcedure" title="http://www.w3.org/ns/sosa/usedProcedure">used procedure</a>
+   </li>
+   <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#usesConnection"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#usesConnection">uses connection</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/wasOriginatedBy" title="http://www.w3.org/ns/ssn/wasOriginatedBy">was originated by</a>
    </li>
 </ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -393,6 +558,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isDUPFlag"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isDUPFlag">DUP flag</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/hasSimpleResult" title="http://www.w3.org/ns/sosa/hasSimpleResult">has simple result</a>
    </li>
    <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasHostAddress"
@@ -435,6 +603,9 @@ This ontology has the following classes and properties.</span>
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasQosLevel">QoS level</a>
    </li>
    <li>
+      <a href="#http://www.w3.org/ns/sosa/resultTime" title="http://www.w3.org/ns/sosa/resultTime">result time</a>
+   </li>
+   <li>
       <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isRetainedFlag"
          title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isRetainedFlag">RETAIN flag</a>
    </li>
@@ -466,8 +637,38 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition">
+         <span>definition</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
       <a href="#http://purl.org/ontology/bibo/doi" title="http://purl.org/ontology/bibo/doi">
          <span>doi</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/domainIncludes" title="http://schema.org/domainIncludes">
+         <span>domain Includes</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#example" title="http://www.w3.org/2004/02/skos/core#example">
+         <span>example</span>
       </a>
    </li>
    <li>
@@ -481,6 +682,11 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
       <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">
          <span>mbox</span>
       </a>
@@ -491,8 +697,54 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">
+         <span>name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#note" title="http://www.w3.org/2004/02/skos/core#note">
+         <span>note</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred Namespace Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/rangeIncludes" title="http://schema.org/rangeIncludes">
+         <span>range Includes</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/references" title="http://purl.org/dc/terms/references">
+         <span>references</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/rights" title="http://purl.org/dc/terms/rights">
+         <span>rights</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source">
+         <span>source</span>
+      </a>
+   </li>
+   <li>
       <a href="#http://purl.org/dc/terms/subject" title="http://purl.org/dc/terms/subject">
          <span>subject</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
       </a>
    </li>
 </ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
@@ -509,9 +761,16 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#http://example.org/individuals#DTEC" title="http://example.org/individuals#DTEC">Digitalization and Technology Research Center of the Bundeswehr</a>
+      <a href="#https://dtecbw.de/" title="https://dtecbw.de/">Digitalization and Technology Research Center of the Bundeswehr</a>
    </li>
    <li>
-      <a href="#https://dtecbw.de/" title="https://dtecbw.de/">Digitalization and Technology Research Center of the Bundeswehr</a>
+      <a href="#http://www.w3.org/ns/sosa/" title="http://www.w3.org/ns/sosa/">
+         <span>sosa:</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/" title="http://www.w3.org/ns/ssn/">
+         <span>ssn:</span>
+      </a>
    </li>
 </ul><iframe src="webvowl/index.html"></iframe> 

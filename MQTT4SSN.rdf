@@ -2,7 +2,6 @@
 <rdf:RDF xmlns="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#"
      xml:base="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ex="http://example.org/individuals#"
      xmlns:qk="http://qudt.org/vocab/quantitykind/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:mqv="https://www.w3.org/2019/wot/mqtt#"
@@ -29,23 +28,29 @@
         <owl:imports rdf:resource="http://qudt.org/schema/qudt/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <owl:imports rdf:resource="https://www.w3.org/2019/wot/mqtt"/>
-        <dct:abstract xml:lang="en">    In the Web of Things community, the SSN/SOSA ontology, a W3C recommendation, has established itself as a foundational framework for representing semantic sensor networks, modeling sensors, observations, and actuations. However, an explicit representation of message protocols is missing, which limits semantic interoperability in machine-to-machine communication scenarios. To close this gap, we propose MQTT4SSN as an extension to SSN/SOSA that semantically models the MQTT protocol. Furthermore, the ontology addresses use cases without SSN/SOSA implementations by exclusively describing the MQTT messaging protocol. MQTT4SSN represents MQTT entities such as brokers, clients, control packets, topics, and payload metadata, linking them to SSN/SOSA concepts to enable end-to-end traceability between sensing semantics and communication semantics. The ontology captures heterogeneous payload formats, encodings, and transport metadata, enabling machine-interpretable description and integration of transmitted content. MQTT4SSN represents an extensible and reusable resource that is accessible according to the FAIR principles and documented as an Ontology Specification Draft.</dct:abstract>
+        <owl:imports rdf:resource="https://www.w3.org/2019/wot/mqtt#"/>
+        <dct:abstract xml:lang="en">In the Web of Things community, the SSN/SOSA ontology, a W3C recommendation, has established itself as a foundational framework for representing semantic sensor networks, modeling sensors, observations, and actuations. However, an explicit representation of message protocols is missing, which limits semantic interoperability in machine-to-machine communication scenarios. To close this gap, we propose MQTT4SSN as an extension to SSN/SOSA that semantically models the MQTT protocol. Furthermore, the ontology addresses use cases without SSN/SOSA implementations by exclusively describing the MQTT messaging protocol. MQTT4SSN represents MQTT entities such as brokers, clients, control packets, topics, and payload metadata, linking them to SSN/SOSA concepts to enable end-to-end traceability between sensing semantics and communication semantics. The ontology captures heterogeneous payload formats, encodings, and transport metadata, enabling machine-interpretable description and integration of transmitted content. MQTT4SSN represents an extensible and reusable resource that is accessible according to the FAIR principles and documented as an Ontology Specification Draft.</dct:abstract>
         <dct:author rdf:resource="https://orcid.org/0000-0003-3458-4748"/>
         <dct:author rdf:resource="https://orcid.org/0009-0004-0088-8633"/>
-        <dct:bibliographicCitation>Niklas Doerner, Maria Maleshkova (2025): MQTT4SSN Ontology. https://doi.org/10.5281/zenodo.16704302</dct:bibliographicCitation>
+        <dct:bibliographicCitation>Doerner, N., &amp; Maleshkova, M. (2025). MQTT4SSN: An Ontology for the MQTT Message Protocol. In F. Novakazi &amp; A. S. Dalal (Eds.), Joint Proceedings of the 16th Workshop on Ontology Design and Patterns (WOP 2025) and the 1st Workshop on Bridging Hybrid Intelligence and the Semantic Web (HAIBRIDGE 2025), co-located with ISWC 2025 (CEUR Workshop Proceedings, Vol. 4093, pp. 57–70). CEUR-WS.org. https://doi.org/10.5281/zenodo.16704302</dct:bibliographicCitation>
         <dct:contributor rdf:resource="https://orcid.org/0000-0003-3458-4748"/>
         <dct:contributor rdf:resource="https://orcid.org/0009-0004-0088-8633"/>
         <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-11</dct:created>
         <dct:creator rdf:resource="https://orcid.org/0000-0003-3458-4748"/>
         <dct:creator rdf:resource="https://orcid.org/0009-0004-0088-8633"/>
-        <dct:description xml:lang="en">    In the Web of Things community, the SSN/SOSA ontology, a W3C recommendation, has established itself as a foundational framework for representing semantic sensor networks, modeling sensors, observations, and actuations. However, an explicit representation of message protocols is missing, which limits semantic interoperability in machine-to-machine communication scenarios. To close this gap, we propose MQTT4SSN as an extension to SSN/SOSA that semantically models the MQTT protocol. Furthermore, the ontology addresses use cases without SSN/SOSA implementations by exclusively describing the MQTT messaging protocol. MQTT4SSN represents MQTT entities such as brokers, clients, control packets, topics, and payload metadata, linking them to SSN/SOSA concepts to enable end-to-end traceability between sensing semantics and communication semantics. The ontology captures heterogeneous payload formats, encodings, and transport metadata, enabling machine-interpretable description and integration of transmitted content. MQTT4SSN represents an extensible and reusable resource that is accessible according to the FAIR principles and documented as an Ontology Specification Draft.</dct:description>
+        <dct:description xml:lang="en">In the Web of Things community, the SSN/SOSA ontology, a W3C recommendation, has established itself as a foundational framework for representing semantic sensor networks, modeling sensors, observations, and actuations. However, an explicit representation of message protocols is missing, which limits semantic interoperability in machine-to-machine communication scenarios. To close this gap, we propose MQTT4SSN as an extension to SSN/SOSA that semantically models the MQTT protocol. Furthermore, the ontology addresses use cases without SSN/SOSA implementations by exclusively describing the MQTT messaging protocol. MQTT4SSN represents MQTT entities such as brokers, clients, control packets, topics, and payload metadata, linking them to SSN/SOSA concepts to enable end-to-end traceability between sensing semantics and communication semantics. The ontology captures heterogeneous payload formats, encodings, and transport metadata, enabling machine-interpretable description and integration of transmitted content. MQTT4SSN represents an extensible and reusable resource that is accessible according to the FAIR principles and documented as an Ontology Specification Draft.</dct:description>
         <dct:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
-        <dct:modified>2025-09-10</dct:modified>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-25</dct:modified>
+        <dct:references rdf:resource="https://ceur-ws.org/Vol-4093/paper7.pdf"/>
+        <dct:references rdf:resource="https://doi.org/10.5281/zenodo.16704302"/>
+        <dct:source rdf:resource="http://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html"/>
         <dct:subject xml:lang="en">MQTT, Ontology Engineering, Sensor Ontology, Semantic Sensor Network, Message Protocol, Smart Sensor</dct:subject>
         <dct:title xml:lang="en">MQTT4SSN Ontology</dct:title>
         <bibo:doi>10.5281/zenodo.16704302</bibo:doi>
         <rdfs:comment xml:lang="en">The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT message protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT message protocol component.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html"/>
+        <owl:priorVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</owl:priorVersion>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
         <foaf:fundedBy rdf:resource="https://dtecbw.de/"/>
     </owl:Ontology>
     
@@ -65,6 +70,12 @@
     <!-- http://purl.org/dc/terms/bibliographicCitation -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/references -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/references"/>
     
 
 
@@ -972,6 +983,30 @@
     
 
 
+    <!-- https://www.w3.org/2019/wot/mqtt#hasPayload -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/2019/wot/mqtt#hasPayload"/>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/mqtt#hasTopicFilters -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/2019/wot/mqtt#hasTopicFilters"/>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/mqtt#hasTopicName -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/2019/wot/mqtt#hasTopicName"/>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/mqtt#sendsControlPacket -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/2019/wot/mqtt#sendsControlPacket"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1155,6 +1190,18 @@
         <rdfs:comment xml:lang="en">True if the Network Connection is protected via TLS, otherwise false.</rdfs:comment>
         <rdfs:label xml:lang="en">uses TLS</rdfs:label>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/mqtt#hasDUPFlag -->
+
+    <owl:DatatypeProperty rdf:about="https://www.w3.org/2019/wot/mqtt#hasDUPFlag"/>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/mqtt#hasRetainFlag -->
+
+    <owl:DatatypeProperty rdf:about="https://www.w3.org/2019/wot/mqtt#hasRetainFlag"/>
     
 
 
@@ -1508,6 +1555,60 @@
     
 
 
+    <!-- https://www.w3.org/2019/wot/mqtt#Client -->
+
+    <owl:Class rdf:about="https://www.w3.org/2019/wot/mqtt#Client"/>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/mqtt#ControlPacket -->
+
+    <owl:Class rdf:about="https://www.w3.org/2019/wot/mqtt#ControlPacket"/>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/mqtt#NetworkConnection -->
+
+    <owl:Class rdf:about="https://www.w3.org/2019/wot/mqtt#NetworkConnection"/>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/mqtt#PUBLISH -->
+
+    <owl:Class rdf:about="https://www.w3.org/2019/wot/mqtt#PUBLISH"/>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/mqtt#SUBSCRIBE -->
+
+    <owl:Class rdf:about="https://www.w3.org/2019/wot/mqtt#SUBSCRIBE"/>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/mqtt#Server -->
+
+    <owl:Class rdf:about="https://www.w3.org/2019/wot/mqtt#Server"/>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/mqtt#TopicFilter -->
+
+    <owl:Class rdf:about="https://www.w3.org/2019/wot/mqtt#TopicFilter"/>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/mqtt#TopicName -->
+
+    <owl:Class rdf:about="https://www.w3.org/2019/wot/mqtt#TopicName"/>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/mqtt#UNSUBSCRIBE -->
+
+    <owl:Class rdf:about="https://www.w3.org/2019/wot/mqtt#UNSUBSCRIBE"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1519,22 +1620,11 @@
     
 
 
-    <!-- http://example.org/individuals#DTEC -->
-
-    <owl:NamedIndividual rdf:about="http://example.org/individuals#DTEC">
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-        <rdfs:comment>This research as part of the project EKI is funded by dtec.bw – Digitalization and Technology Research Center of the Bundeswehr which we gratefully acknowledge. dtec.bw is funded by the European Union – NextGenerationEU.</rdfs:comment>
-        <rdfs:label>Digitalization and Technology Research Center of the Bundeswehr</rdfs:label>
-        <foaf:homepage rdf:resource="https://dtecbw.de/home"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://dtecbw.de/ -->
 
     <owl:NamedIndividual rdf:about="https://dtecbw.de/">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-        <rdfs:comment>This research as part of the project SmartShip is funded by dtec.bw – Digitalization and Technology Research Center of the Bundeswehr which we gratefully acknowledge. dtec.bw is funded by the European Union – NextGenerationEU.</rdfs:comment>
+        <rdfs:comment>This research as part of the project EKI is funded by dtec.bw – Digitalization and Technology Research Center of the Bundeswehr which we gratefully acknowledge. dtec.bw is funded by the European Union – NextGenerationEU.</rdfs:comment>
         <rdfs:label>Digitalization and Technology Research Center of the Bundeswehr</rdfs:label>
         <foaf:homepage rdf:resource="https://dtecbw.de"/>
         <foaf:name>dtec.bw</foaf:name>

@@ -21,7 +21,7 @@ CQ2_06 - Which MQTT filter patterns (with wildcards) are stored?
 ## CQ3 Control Packets
 CQ3_01 - Which MQTT Clients send which MQTT Control Packets?
 CQ3_02 - Which MQTT PUBLISH/SUBSCRIBE/UNSUBSCRIBE packets were sent (specializations)?
-CQ3_03 - Which MQTT Bokers receive/forward which MQTT Control Packets?
+CQ3_03 - Which MQTT Brokers receive/forward which MQTT Control Packets?
 CQ3_04 - Which MQTT Control Packets were sent by which Client (inverse)?
 CQ3_05 - Which MQTT Publish packets carry Observations for a specific SOSA FeatureOfInterest or Property?
 CQ3_06 - Which MQTT SUBSCRIBE packets request QoS=2 and for which filters?

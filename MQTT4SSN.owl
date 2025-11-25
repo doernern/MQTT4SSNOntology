@@ -8,7 +8,6 @@
      ontologyIRI="https://doernern.github.io/MQTT4SSNOntology/documentation/index-en.html"
      versionIRI="https://doernern.github.io/MQTT4SSNOntology/documentation/index-en.html">
     <Prefix name="" IRI="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#"/>
-    <Prefix name="ex" IRI="http://example.org/individuals#"/>
     <Prefix name="qk" IRI="http://qudt.org/vocab/quantitykind/"/>
     <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
     <Prefix name="mqv" IRI="https://www.w3.org/2019/wot/mqtt#"/>
@@ -28,10 +27,10 @@
     <Import>http://qudt.org/schema/qudt/</Import>
     <Import>http://www.w3.org/ns/sosa/</Import>
     <Import>http://www.w3.org/ns/ssn/</Import>
-    <Import>https://www.w3.org/2019/wot/mqtt</Import>
+    <Import>https://www.w3.org/2019/wot/mqtt#</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:abstract"/>
-        <Literal xml:lang="en">    In the Web of Things community, the SSN/SOSA ontology, a W3C recommendation, has established itself as a foundational framework for representing semantic sensor networks, modeling sensors, observations, and actuations. However, an explicit representation of message protocols is missing, which limits semantic interoperability in machine-to-machine communication scenarios. To close this gap, we propose MQTT4SSN as an extension to SSN/SOSA that semantically models the MQTT protocol. Furthermore, the ontology addresses use cases without SSN/SOSA implementations by exclusively describing the MQTT messaging protocol. MQTT4SSN represents MQTT entities such as brokers, clients, control packets, topics, and payload metadata, linking them to SSN/SOSA concepts to enable end-to-end traceability between sensing semantics and communication semantics. The ontology captures heterogeneous payload formats, encodings, and transport metadata, enabling machine-interpretable description and integration of transmitted content. MQTT4SSN represents an extensible and reusable resource that is accessible according to the FAIR principles and documented as an Ontology Specification Draft.</Literal>
+        <Literal xml:lang="en">In the Web of Things community, the SSN/SOSA ontology, a W3C recommendation, has established itself as a foundational framework for representing semantic sensor networks, modeling sensors, observations, and actuations. However, an explicit representation of message protocols is missing, which limits semantic interoperability in machine-to-machine communication scenarios. To close this gap, we propose MQTT4SSN as an extension to SSN/SOSA that semantically models the MQTT protocol. Furthermore, the ontology addresses use cases without SSN/SOSA implementations by exclusively describing the MQTT messaging protocol. MQTT4SSN represents MQTT entities such as brokers, clients, control packets, topics, and payload metadata, linking them to SSN/SOSA concepts to enable end-to-end traceability between sensing semantics and communication semantics. The ontology captures heterogeneous payload formats, encodings, and transport metadata, enabling machine-interpretable description and integration of transmitted content. MQTT4SSN represents an extensible and reusable resource that is accessible according to the FAIR principles and documented as an Ontology Specification Draft.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:author"/>
@@ -43,7 +42,7 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:bibliographicCitation"/>
-        <Literal>Niklas Doerner, Maria Maleshkova (2025): MQTT4SSN Ontology. https://doi.org/10.5281/zenodo.16704302</Literal>
+        <Literal>Doerner, N., &amp; Maleshkova, M. (2025). MQTT4SSN: An Ontology for the MQTT Message Protocol. In F. Novakazi &amp; A. S. Dalal (Eds.), Joint Proceedings of the 16th Workshop on Ontology Design and Patterns (WOP 2025) and the 1st Workshop on Bridging Hybrid Intelligence and the Semantic Web (HAIBRIDGE 2025), co-located with ISWC 2025 (CEUR Workshop Proceedings, Vol. 4093, pp. 57–70). CEUR-WS.org. https://doi.org/10.5281/zenodo.16704302</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:contributor"/>
@@ -67,7 +66,7 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:description"/>
-        <Literal xml:lang="en">    In the Web of Things community, the SSN/SOSA ontology, a W3C recommendation, has established itself as a foundational framework for representing semantic sensor networks, modeling sensors, observations, and actuations. However, an explicit representation of message protocols is missing, which limits semantic interoperability in machine-to-machine communication scenarios. To close this gap, we propose MQTT4SSN as an extension to SSN/SOSA that semantically models the MQTT protocol. Furthermore, the ontology addresses use cases without SSN/SOSA implementations by exclusively describing the MQTT messaging protocol. MQTT4SSN represents MQTT entities such as brokers, clients, control packets, topics, and payload metadata, linking them to SSN/SOSA concepts to enable end-to-end traceability between sensing semantics and communication semantics. The ontology captures heterogeneous payload formats, encodings, and transport metadata, enabling machine-interpretable description and integration of transmitted content. MQTT4SSN represents an extensible and reusable resource that is accessible according to the FAIR principles and documented as an Ontology Specification Draft.</Literal>
+        <Literal xml:lang="en">In the Web of Things community, the SSN/SOSA ontology, a W3C recommendation, has established itself as a foundational framework for representing semantic sensor networks, modeling sensors, observations, and actuations. However, an explicit representation of message protocols is missing, which limits semantic interoperability in machine-to-machine communication scenarios. To close this gap, we propose MQTT4SSN as an extension to SSN/SOSA that semantically models the MQTT protocol. Furthermore, the ontology addresses use cases without SSN/SOSA implementations by exclusively describing the MQTT messaging protocol. MQTT4SSN represents MQTT entities such as brokers, clients, control packets, topics, and payload metadata, linking them to SSN/SOSA concepts to enable end-to-end traceability between sensing semantics and communication semantics. The ontology captures heterogeneous payload formats, encodings, and transport metadata, enabling machine-interpretable description and integration of transmitted content. MQTT4SSN represents an extensible and reusable resource that is accessible according to the FAIR principles and documented as an Ontology Specification Draft.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:license"/>
@@ -75,7 +74,19 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:modified"/>
-        <Literal>2025-09-10</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2025-11-25</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:references"/>
+        <IRI>https://ceur-ws.org/Vol-4093/paper7.pdf</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:references"/>
+        <IRI>https://doi.org/10.5281/zenodo.16704302</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:source"/>
+        <IRI>http://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:subject"/>
@@ -92,6 +103,18 @@
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal xml:lang="en">The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT message protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT message protocol component.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="foaf:fundedBy"/>
@@ -431,9 +454,6 @@
         <DataProperty abbreviatedIRI=":usesTLS"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual abbreviatedIRI="ex:DTEC"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="https://dtecbw.de/"/>
     </Declaration>
     <Declaration>
@@ -459,6 +479,54 @@
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mqv:ControlPacket"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="mqv:hasDUPFlag"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mqv:Server"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mqv:TopicFilter"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:references"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="mqv:hasRetainFlag"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mqv:Client"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="mqv:hasPayload"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mqv:SUBSCRIBE"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="mqv:sendsControlPacket"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mqv:NetworkConnection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="mqv:hasTopicName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="mqv:hasTopicFilters"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mqv:UNSUBSCRIBE"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mqv:TopicName"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mqv:PUBLISH"/>
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI=":Broker"/>
@@ -640,10 +708,6 @@
         <Class abbreviatedIRI=":SubscribeVariableHeader"/>
         <Class abbreviatedIRI=":UnsubscribeVariableHeader"/>
     </DisjointClasses>
-    <ClassAssertion>
-        <Class abbreviatedIRI="foaf:Organization"/>
-        <NamedIndividual abbreviatedIRI="ex:DTEC"/>
-    </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Organization"/>
         <NamedIndividual IRI="https://dtecbw.de/"/>
@@ -1667,21 +1731,6 @@
         <DataProperty abbreviatedIRI=":usesTLS"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>ex:DTEC</AbbreviatedIRI>
-        <Literal>This research as part of the project EKI is funded by dtec.bw – Digitalization and Technology Research Center of the Bundeswehr which we gratefully acknowledge. dtec.bw is funded by the European Union – NextGenerationEU.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ex:DTEC</AbbreviatedIRI>
-        <Literal>Digitalization and Technology Research Center of the Bundeswehr</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:homepage"/>
-        <AbbreviatedIRI>ex:DTEC</AbbreviatedIRI>
-        <IRI>https://dtecbw.de/home</IRI>
-    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:Broker</AbbreviatedIRI>
@@ -2730,7 +2779,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>https://dtecbw.de/</IRI>
-        <Literal>This research as part of the project SmartShip is funded by dtec.bw – Digitalization and Technology Research Center of the Bundeswehr which we gratefully acknowledge. dtec.bw is funded by the European Union – NextGenerationEU.</Literal>
+        <Literal>This research as part of the project EKI is funded by dtec.bw – Digitalization and Technology Research Center of the Bundeswehr which we gratefully acknowledge. dtec.bw is funded by the European Union – NextGenerationEU.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

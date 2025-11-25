@@ -8,7 +8,7 @@ MQTT4SSN is an ontology representing the MQTT transport protocol, containing the
 
 The ontology captures the essential elements of MQTT, such as the network entities broker and client, the various control packets and their payloads, the topics that organize communication, and the interrelations between these components. The ontology covers the following key features:
 
-* Supports main MQTT control packets: PUBLISH, SUBSCRUBE and UNSUBSCRIBE
+* Supports main MQTT control packets: PUBLISH, SUBSCRIBE and UNSUBSCRIBE
 * Enables representation of heterogeneous payload formats and character encodings
 * Alignment with the well-established W3C SSN/SOSA ontology
 * Models the relation between MQTT topic naming and SOSA elements such as FeatureOfInterest, Property, Actuation, ActuationCollection, Observation, and ObservationCollection
@@ -29,10 +29,30 @@ An Ontology Specification Draft was automatically generated with the help of the
 <img src="./figures/TopicSubjects.png" width="30%">
 
 ## How to cite
-Please cite the MQTT4SSN ontology as follows:
-
-Niklas Doerner, Maria Maleshkova (2025): MQTT4SSN Ontology. https://doi.org/10.5281/zenodo.16704302
-
+In case you want to use this ontology in your own research, please cite as:
+```
+Doerner, N., & Maleshkova, M. (2025). MQTT4SSN: An Ontology for the MQTT Message Protocol. In F. Novakazi & A. S. Dalal (Eds.), Joint Proceedings of the 16th Workshop on Ontology Design and Patterns (WOP 2025) and the 1st Workshop on Bridging Hybrid Intelligence and the Semantic Web (HAIBRIDGE 2025), co-located with ISWC 2025 (CEUR Workshop Proceedings, Vol. 4093, pp. 57–70). CEUR-WS.org. https://doi.org/10.5281/zenodo.16704302
+```
+If you are using a BiBTex-file, you can copy the following:
+```
+@inproceedings{DoernerMaleshkova2025MQTT4SSN,
+  author    = {Niklas Doerner and Maria Maleshkova},
+  title     = {MQTT4SSN: An Ontology for the MQTT Message Protocol},
+  booktitle = {Joint Proceedings of the 16th Workshop on Ontology Design and Patterns (WOP 2025)
+               and the 1st Workshop on Bridging Hybrid Intelligence and the Semantic Web (HAIBRIDGE 2025),
+               co-located with the 24th International Semantic Web Conference (ISWC 2025)},
+  editor    = {Fjoll{\"e} Novakazi and Aryan Singh Dalal},
+  series    = {CEUR Workshop Proceedings},
+  volume    = {4093},
+  pages     = {57--70},
+  year      = {2025},
+  address   = {Nara, Japan},
+  month     = nov,
+  publisher = {CEUR-WS.org},
+  doi       = {10.5281/zenodo.16704302},
+  url       = {https://ceur-ws.org/Vol-4093/paper7.pdf}
+}
+```
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16805970.svg)](https://doi.org/10.5281/zenodo.16704302) 
 
 ## License
