@@ -1,40 +1,18 @@
-# This CITATION.cff reference content was generated from Zotero.
-references:
-  - title: >-
-      MQTT4SSNOntology: MQTT4SSN v1.0: CEUR Workshop Proceedings release
-    type: computerProgram
-    license: Creative Commons Attribution 4.0 International
-    version: v1.0
-    copyright: Creative Commons Attribution 4.0 International
-    database: DOI.org (Datacite)
-    date-accessed: 2025-12-05T13:53:14Z
-    url: https://zenodo.org/doi/10.5281/zenodo.16704302
-    authors: 
-      - family-names: Niklas Dörner
-      - family-names: Maleshkova
-        given-names: Maria
-      - family-names: Doerner
-        given-names: Niklas
-    editors: 
-      - family-names: Niklas Dörner
-      - family-names: Maleshkova
-        given-names: Maria
-      - family-names: Doerner
-        given-names: Niklas
-    recipients: 
-      - family-names: Niklas Dörner
-      - family-names: Maleshkova
-        given-names: Maria
-      - family-names: Doerner
-        given-names: Niklas
-    translators: 
-      - family-names: Niklas Dörner
-      - family-names: Maleshkova
-        given-names: Maria
-      - family-names: Doerner
-        given-names: Niklas
-    date-released: 2025-11-25
-    date-published: 2025-11-25
-    identifiers: 
-      - type: doi
-        value: 10.5281/ZENODO.16704302
+# This CITATION.cff file was generated with Zotero.
+
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite it using the metadata from this file.
+title:  >-
+  MQTT4SSNOntology: MQTT4SSN v1.0: CEUR Workshop Proceedings release
+type: software
+license: Creative Commons Attribution 4.0 International
+version: v1.0
+url: https://zenodo.org/doi/10.5281/zenodo.16704302
+authors: 
+  - family-names: Niklas Dörner
+date-released: 2025-11-25
+identifiers: 
+  - type: doi
+    value: 10.5281/ZENODO.16704302
+
