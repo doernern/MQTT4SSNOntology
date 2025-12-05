@@ -949,12 +949,6 @@
         <DataProperty abbreviatedIRI=":hasConnectFlag"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI=":hasContent"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI=":hasContentDelimiter"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI=":hasContentType"/>
     </Declaration>
     <Declaration>
@@ -968,9 +962,6 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI=":hasDisconnectReasonCode"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI=":hasEncoding"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI=":hasFilterPattern"/>
@@ -989,6 +980,18 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI=":hasMaximumQoS"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":hasMessageContent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":hasMessageContentDelimiter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":hasMessageContentType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":hasMessageEncoding"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI=":hasMessageExpiryInterval"/>
@@ -4205,10 +4208,6 @@
         <ObjectProperty abbreviatedIRI=":sendsUnsubscribePacket"/>
     </DisjointObjectProperties>
     <EquivalentDataProperties>
-        <DataProperty abbreviatedIRI=":hasContent"/>
-        <DataProperty abbreviatedIRI=":hasPayloadContent"/>
-    </EquivalentDataProperties>
-    <EquivalentDataProperties>
         <DataProperty abbreviatedIRI=":hasDUPFlag"/>
         <DataProperty abbreviatedIRI="mqv:hasDUPFlag"/>
     </EquivalentDataProperties>
@@ -4271,6 +4270,10 @@
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI=":hasMaximumQoS"/>
         <DataProperty abbreviatedIRI=":hasProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI=":hasMessageContentType"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI=":hasMessageExpiryInterval"/>
@@ -4440,19 +4443,19 @@
         <DataProperty abbreviatedIRI=":hasClientID"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty abbreviatedIRI=":hasContentDelimiter"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
         <DataProperty abbreviatedIRI=":hasContentType"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty abbreviatedIRI=":hasControlPacketType"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty abbreviatedIRI=":hasEncoding"/>
+        <DataProperty abbreviatedIRI=":hasHostAddress"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty abbreviatedIRI=":hasHostAddress"/>
+        <DataProperty abbreviatedIRI=":hasMessageContentDelimiter"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI=":hasMessageEncoding"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty abbreviatedIRI=":hasPacketIdentifier"/>
@@ -4526,18 +4529,6 @@
         <Class abbreviatedIRI=":ConnectVariableHeader"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty abbreviatedIRI=":hasContent"/>
-        <Class abbreviatedIRI=":ApplicationMessage"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI=":hasContentDelimiter"/>
-        <Class abbreviatedIRI=":ApplicationMessage"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI=":hasContentType"/>
-        <Class abbreviatedIRI=":ApplicationMessage"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty abbreviatedIRI=":hasContentType"/>
         <ObjectUnionOf>
             <Class abbreviatedIRI=":PublishProperties"/>
@@ -4562,10 +4553,6 @@
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI=":hasDisconnectReasonCode"/>
         <Class abbreviatedIRI=":DisconnectVariableHeader"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI=":hasEncoding"/>
-        <Class abbreviatedIRI=":ApplicationMessage"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI=":hasFilterPattern"/>
@@ -4593,6 +4580,22 @@
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI=":hasMaximumQoS"/>
         <Class abbreviatedIRI=":ConnackProperties"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasMessageContent"/>
+        <Class abbreviatedIRI=":ApplicationMessage"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasMessageContentDelimiter"/>
+        <Class abbreviatedIRI=":ApplicationMessage"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasMessageContentType"/>
+        <Class abbreviatedIRI=":ApplicationMessage"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasMessageEncoding"/>
+        <Class abbreviatedIRI=":ApplicationMessage"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI=":hasMessageExpiryInterval"/>
@@ -4877,10 +4880,6 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty abbreviatedIRI=":hasContentDelimiter"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasContentType"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -4896,10 +4895,6 @@
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty abbreviatedIRI=":hasEncoding"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasFilterPattern"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -4909,6 +4904,22 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasHostAddress"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasMessageContent"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasMessageContentDelimiter"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasMessageContentType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasMessageEncoding"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -5895,6 +5906,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:hasAuthReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:hasAuthReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">has Auth Reason Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasAuthVariableHeader</AbbreviatedIRI>
         <Literal xml:lang="en">Links a AUTH packet to its specific Variable Header.</Literal>
     </AnnotationAssertion>
@@ -5985,6 +6006,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:hasConnackReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:hasConnackReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">has Connack Reason Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasConnackVariableHeader</AbbreviatedIRI>
         <Literal xml:lang="en">Links a CONNACK packet to its specific Variable Header.</Literal>
     </AnnotationAssertion>
@@ -6054,36 +6085,6 @@
         <Literal xml:lang="en">has connected MQTT Client</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:hasContent</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:hasContent</AbbreviatedIRI>
-        <Literal xml:lang="en">has Application Message content</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:hasContentDelimiter</AbbreviatedIRI>
-        <Literal xml:lang="en">The delimiter used to separate fields in the Application Message content.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:hasContentDelimiter</AbbreviatedIRI>
-        <Literal xml:lang="en">Application Message content delimiter</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:hasContentType</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:hasContentType</AbbreviatedIRI>
-        <Literal xml:lang="en">The MIME type of the Application Message content (e.g., &apos;application/json&apos;).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:hasContentType</AbbreviatedIRI>
         <Literal xml:lang="en">Application Message content type</Literal>
@@ -6145,6 +6146,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:hasDisconnectReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:hasDisconnectReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">has Dissconnect Reason Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasDisconnectVariableHeader</AbbreviatedIRI>
         <Literal xml:lang="en">Links a DISCONNECT packet to its specific Variable Header.</Literal>
     </AnnotationAssertion>
@@ -6162,16 +6173,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:hasEncodedFields</AbbreviatedIRI>
         <Literal xml:lang="en">has encoded fields</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:hasEncoding</AbbreviatedIRI>
-        <Literal xml:lang="en">The character encoding or serialization used for the Application Message (e.g., &apos;UTF-8&apos;, &apos;Base64&apos;).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:hasEncoding</AbbreviatedIRI>
-        <Literal xml:lang="en">Application Message encoding</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6252,6 +6253,46 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:hasMaximumQoS</AbbreviatedIRI>
         <Literal xml:lang="en">has Maximum QoS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:hasMessageContent</AbbreviatedIRI>
+        <Literal xml:lang="en">.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:hasMessageContent</AbbreviatedIRI>
+        <Literal xml:lang="en">has Application Message content</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:hasMessageContentDelimiter</AbbreviatedIRI>
+        <Literal xml:lang="en">The delimiter used to separate fields in the Application Message content.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:hasMessageContentDelimiter</AbbreviatedIRI>
+        <Literal xml:lang="en">Application Message content delimiter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:hasMessageContentType</AbbreviatedIRI>
+        <Literal xml:lang="en">The MIME type of the Application Message content (e.g., &apos;application/json&apos;).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:hasMessageContentType</AbbreviatedIRI>
+        <Literal xml:lang="en">has Message Content Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:hasMessageEncoding</AbbreviatedIRI>
+        <Literal xml:lang="en">The character encoding or serialization used for the Application Message (e.g., &apos;UTF-8&apos;, &apos;Base64&apos;).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:hasMessageEncoding</AbbreviatedIRI>
+        <Literal xml:lang="en">Application Message encoding</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6475,6 +6516,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:hasPubackReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:hasPubackReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">has Puback  Reason Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPubackVariableHeader</AbbreviatedIRI>
         <Literal xml:lang="en">Links a PUBACK packet to its specific Variable Header.</Literal>
     </AnnotationAssertion>
@@ -6502,6 +6553,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:hasPubcompProperties</AbbreviatedIRI>
         <Literal xml:lang="en">has Pubcomp Properties</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:hasPubcompReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:hasPubcompReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">has Pubcomp Reason Code</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6575,6 +6636,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:hasPubrecReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:hasPubrecReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">has Pubrec Reason Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPubrecVariableHeader</AbbreviatedIRI>
         <Literal xml:lang="en">Links a PUBREC packet to its specific Variable Header.</Literal>
     </AnnotationAssertion>
@@ -6602,6 +6673,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:hasPubrelProperties</AbbreviatedIRI>
         <Literal xml:lang="en">has Pubrel Properties</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:hasPubrelReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:hasPubrelReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">has Pubrel Reason Code</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6830,6 +6911,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:hasSubackReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">,</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:hasSubackReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">has Suback Reason Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasSubackVariableHeader</AbbreviatedIRI>
         <Literal xml:lang="en">Links a SUBACK packet to its specific Variable Header.</Literal>
     </AnnotationAssertion>
@@ -7000,6 +7091,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:hasUnsubackReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:hasUnsubackReasonCode</AbbreviatedIRI>
+        <Literal xml:lang="en">has Unsuback Reason Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasUnsubackVariableHeader</AbbreviatedIRI>
         <Literal xml:lang="en">Links a UNSUBACK packet to its specific Variable Header.</Literal>
     </AnnotationAssertion>
@@ -7167,6 +7268,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:hasWillPayload</AbbreviatedIRI>
         <Literal xml:lang="en">has Will Payload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:hasWillProperties</AbbreviatedIRI>
+        <Literal xml:lang="en">.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:hasWillProperties</AbbreviatedIRI>
+        <Literal xml:lang="en">has Will Properties</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8179,14 +8290,14 @@
         <Literal>Niklas Doerner</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="xsd:maxInclusive"/>
+        <AnnotationProperty abbreviatedIRI="xsd:minInclusive"/>
         <AnonymousIndividual nodeID="_:genid2147484043"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">15</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">0</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="xsd:minInclusive"/>
+        <AnnotationProperty abbreviatedIRI="xsd:maxInclusive"/>
         <AnonymousIndividual nodeID="_:genid2147484044"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">0</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">15</Literal>
     </AnnotationAssertion>
 </Ontology>
 

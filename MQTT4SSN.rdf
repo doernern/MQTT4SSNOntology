@@ -1161,6 +1161,8 @@
     <owl:ObjectProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillProperties">
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectPayload"/>
         <rdfs:range rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#WillProperties"/>
+        <rdfs:comment xml:lang="en">.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Will Properties</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2472,6 +2474,8 @@
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthReasonCode">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasVariableHeaderReasonCode"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#AuthVariableHeader"/>
+        <rdfs:comment xml:lang="en">.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Auth Reason Code</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2552,6 +2556,8 @@
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackReasonCode">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasVariableHeaderReasonCode"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackVariableHeader"/>
+        <rdfs:comment xml:lang="en">.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Connack Reason Code</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2566,36 +2572,12 @@
     
 
 
-    <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasContent -->
-
-    <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasContent">
-        <owl:equivalentProperty rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadContent"/>
-        <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ApplicationMessage"/>
-        <rdfs:comment xml:lang="en">.</rdfs:comment>
-        <rdfs:label xml:lang="en">has Application Message content</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasContentDelimiter -->
-
-    <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasContentDelimiter">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ApplicationMessage"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">The delimiter used to separate fields in the Application Message content.</rdfs:comment>
-        <rdfs:label xml:lang="en">Application Message content delimiter</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasContentType -->
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasContentType">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperty"/>
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ApplicationMessage"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -2605,8 +2587,6 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The MIME type of the Application Message content (e.g., &apos;application/json&apos;).</rdfs:comment>
         <rdfs:label xml:lang="en">Application Message content type</rdfs:label>
         <rdfs:label xml:lang="en">has Content Type</rdfs:label>
     </owl:DatatypeProperty>
@@ -2669,18 +2649,8 @@
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDisconnectReasonCode">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasVariableHeaderReasonCode"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#DisconnectVariableHeader"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasEncoding -->
-
-    <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasEncoding">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ApplicationMessage"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">The character encoding or serialization used for the Application Message (e.g., &apos;UTF-8&apos;, &apos;Base64&apos;).</rdfs:comment>
-        <rdfs:label xml:lang="en">Application Message encoding</rdfs:label>
+        <rdfs:comment xml:lang="en">.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Dissconnect Reason Code</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2754,6 +2724,53 @@
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackProperties"/>
         <rdfs:comment xml:lang="en">.</rdfs:comment>
         <rdfs:label xml:lang="en">has Maximum QoS</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageContent -->
+
+    <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageContent">
+        <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ApplicationMessage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Application Message content</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageContentDelimiter -->
+
+    <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageContentDelimiter">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ApplicationMessage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The delimiter used to separate fields in the Application Message content.</rdfs:comment>
+        <rdfs:label xml:lang="en">Application Message content delimiter</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageContentType -->
+
+    <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageContentType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ApplicationMessage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The MIME type of the Application Message content (e.g., &apos;application/json&apos;).</rdfs:comment>
+        <rdfs:label xml:lang="en">has Message Content Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageEncoding -->
+
+    <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageEncoding">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ApplicationMessage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The character encoding or serialization used for the Application Message (e.g., &apos;UTF-8&apos;, &apos;Base64&apos;).</rdfs:comment>
+        <rdfs:label xml:lang="en">Application Message encoding</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2951,6 +2968,8 @@
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubackReasonCode">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasVariableHeaderReasonCode"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubackVariableHeader"/>
+        <rdfs:comment xml:lang="en">.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Puback  Reason Code</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2960,6 +2979,8 @@
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubcompReasonCode">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasVariableHeaderReasonCode"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubcompVariableHeader"/>
+        <rdfs:comment xml:lang="en">.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Pubcomp Reason Code</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2969,6 +2990,8 @@
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrecReasonCode">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasVariableHeaderReasonCode"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrecVariableHeader"/>
+        <rdfs:comment xml:lang="en">.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Pubrec Reason Code</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2978,6 +3001,8 @@
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrelReasonCode">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasVariableHeaderReasonCode"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrelVariableHeader"/>
+        <rdfs:comment xml:lang="en">.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Pubrel Reason Code</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3235,6 +3260,8 @@
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackReasonCode">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadReasonCode"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackPayload"/>
+        <rdfs:comment xml:lang="en">,</rdfs:comment>
+        <rdfs:label xml:lang="en">has Suback Reason Code</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3320,6 +3347,8 @@
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackReasonCode">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadReasonCode"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackPayload"/>
+        <rdfs:comment xml:lang="en">.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Unsuback Reason Code</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -4517,10 +4546,10 @@
         <foaf:name>Niklas Doerner</foaf:name>
     </owl:NamedIndividual>
     <rdf:Description>
-        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedByte">15</xsd:maxInclusive>
+        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedByte">0</xsd:minInclusive>
     </rdf:Description>
     <rdf:Description>
-        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedByte">0</xsd:minInclusive>
+        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedByte">15</xsd:maxInclusive>
     </rdf:Description>
     
 

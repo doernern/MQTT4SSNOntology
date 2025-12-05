@@ -877,7 +877,9 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillProperties
 :hasWillProperties rdf:type owl:ObjectProperty ;
                    rdfs:domain :ConnectPayload ;
-                   rdfs:range :WillProperties .
+                   rdfs:range :WillProperties ;
+                   rdfs:comment "."@en ;
+                   rdfs:label "has Will Properties"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillTopic
@@ -1834,7 +1836,9 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthReasonCode
 :hasAuthReasonCode rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
-                   rdfs:domain :AuthVariableHeader .
+                   rdfs:domain :AuthVariableHeader ;
+                   rdfs:comment "."@en ;
+                   rdfs:label "has Auth Reason Code"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthentificationData
@@ -1890,7 +1894,9 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackReasonCode
 :hasConnackReasonCode rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
-                      rdfs:domain :ConnackVariableHeader .
+                      rdfs:domain :ConnackVariableHeader ;
+                      rdfs:comment "."@en ;
+                      rdfs:label "has Connack Reason Code"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectFlag
@@ -1900,37 +1906,17 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                 rdfs:label "has Connect Flags"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasContent
-:hasContent rdf:type owl:DatatypeProperty ;
-            owl:equivalentProperty :hasPayloadContent ;
-            rdfs:domain :ApplicationMessage ;
-            rdfs:comment "."@en ;
-            rdfs:label "has Application Message content"@en .
-
-
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasContentDelimiter
-:hasContentDelimiter rdf:type owl:DatatypeProperty ,
-                              owl:FunctionalProperty ;
-                     rdfs:domain :ApplicationMessage ;
-                     rdfs:range xsd:string ;
-                     rdfs:comment "The delimiter used to separate fields in the Application Message content."@en ;
-                     rdfs:label "Application Message content delimiter"@en .
-
-
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasContentType
 :hasContentType rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf :hasProperty ,
                                    :hasWillProperty ;
                 rdf:type owl:FunctionalProperty ;
-                rdfs:domain :ApplicationMessage ,
-                            [ rdf:type owl:Class ;
+                rdfs:domain [ rdf:type owl:Class ;
                               owl:unionOf ( :PublishProperties
                                             :WillProperties
                                           )
                             ] ;
                 rdfs:range xsd:string ;
-                rdfs:comment "."@en ,
-                             "The MIME type of the Application Message content (e.g., 'application/json')."@en ;
                 rdfs:label "Application Message content type"@en ,
                            "has Content Type"@en .
 
@@ -1974,16 +1960,9 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDisconnectReasonCode
 :hasDisconnectReasonCode rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
-                         rdfs:domain :DisconnectVariableHeader .
-
-
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasEncoding
-:hasEncoding rdf:type owl:DatatypeProperty ,
-                      owl:FunctionalProperty ;
-             rdfs:domain :ApplicationMessage ;
-             rdfs:range xsd:string ;
-             rdfs:comment "The character encoding or serialization used for the Application Message (e.g., 'UTF-8', 'Base64')."@en ;
-             rdfs:label "Application Message encoding"@en .
+                         rdfs:domain :DisconnectVariableHeader ;
+                         rdfs:comment "."@en ;
+                         rdfs:label "has Dissconnect Reason Code"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFilterPattern
@@ -2036,6 +2015,41 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                rdfs:domain :ConnackProperties ;
                rdfs:comment "."@en ;
                rdfs:label "has Maximum QoS"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageContent
+:hasMessageContent rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :ApplicationMessage ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "."@en ;
+                   rdfs:label "has Application Message content"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageContentDelimiter
+:hasMessageContentDelimiter rdf:type owl:DatatypeProperty ,
+                                     owl:FunctionalProperty ;
+                            rdfs:domain :ApplicationMessage ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "The delimiter used to separate fields in the Application Message content."@en ;
+                            rdfs:label "Application Message content delimiter"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageContentType
+:hasMessageContentType rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :ApplicationMessage ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "The MIME type of the Application Message content (e.g., 'application/json')."@en ;
+                       rdfs:label "has Message Content Type"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageEncoding
+:hasMessageEncoding rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain :ApplicationMessage ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "The character encoding or serialization used for the Application Message (e.g., 'UTF-8', 'Base64')."@en ;
+                    rdfs:label "Application Message encoding"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageExpiryInterval
@@ -2175,25 +2189,33 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubackReasonCode
 :hasPubackReasonCode rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
-                     rdfs:domain :PubackVariableHeader .
+                     rdfs:domain :PubackVariableHeader ;
+                     rdfs:comment "."@en ;
+                     rdfs:label "has Puback  Reason Code"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubcompReasonCode
 :hasPubcompReasonCode rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
-                      rdfs:domain :PubcompVariableHeader .
+                      rdfs:domain :PubcompVariableHeader ;
+                      rdfs:comment "."@en ;
+                      rdfs:label "has Pubcomp Reason Code"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrecReasonCode
 :hasPubrecReasonCode rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
-                     rdfs:domain :PubrecVariableHeader .
+                     rdfs:domain :PubrecVariableHeader ;
+                     rdfs:comment "."@en ;
+                     rdfs:label "has Pubrec Reason Code"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrelReasonCode
 :hasPubrelReasonCode rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
-                     rdfs:domain :PubrelVariableHeader .
+                     rdfs:domain :PubrelVariableHeader ;
+                     rdfs:comment "."@en ;
+                     rdfs:label "has Pubrel Reason Code"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasQoSLevel
@@ -2376,7 +2398,9 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackReasonCode
 :hasSubackReasonCode rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :hasPayloadReasonCode ;
-                     rdfs:domain :SubackPayload .
+                     rdfs:domain :SubackPayload ;
+                     rdfs:comment ","@en ;
+                     rdfs:label "has Suback Reason Code"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionIdentifier
@@ -2434,7 +2458,9 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackReasonCode
 :hasUnsubackReasonCode rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :hasPayloadReasonCode ;
-                       rdfs:domain :UnsubackPayload .
+                       rdfs:domain :UnsubackPayload ;
+                       rdfs:comment "."@en ;
+                       rdfs:label "has Unsuback Reason Code"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserName
@@ -3261,10 +3287,10 @@ mqv:UNSUBSCRIBE rdf:type owl:Class .
                                         foaf:name "Niklas Doerner" .
 
 
-[ xsd:maxInclusive "15"^^xsd:unsignedByte
+[ xsd:minInclusive "0"^^xsd:unsignedByte
 ] .
 
-[ xsd:minInclusive "0"^^xsd:unsignedByte
+[ xsd:maxInclusive "15"^^xsd:unsignedByte
  ] .
 
 #################################################################
