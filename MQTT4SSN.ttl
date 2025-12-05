@@ -43,8 +43,8 @@
                                                                            bibo:doi "10.5281/zenodo.16704302" ;
                                                                            rdfs:comment "The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT message protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT message protocol component."@en ;
                                                                            rdfs:isDefinedBy <http://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html> ;
-                                                                           owl:priorVersion 0.5 ;
-                                                                           owl:versionInfo 1.0 ;
+                                                                           owl:priorVersion 1.0 ;
+                                                                           owl:versionInfo 2.0 ;
                                                                            foaf:fundedBy <https://dtecbw.de/> .
 
 #################################################################
@@ -61,6 +61,14 @@ dct:references rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/ontology/bibo/doi
 bibo:doi rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2001/XMLSchema#maxInclusive
+xsd:maxInclusive rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2001/XMLSchema#minInclusive
+xsd:minInclusive rdf:type owl:AnnotationProperty .
 
 
 ###  http://xmlns.com/foaf/0.1/fundedBy
@@ -87,12 +95,67 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#forwardsPublishPacket
-:forwardsPublishPacket rdf:type owl:ObjectProperty ;
-                       rdfs:domain :Broker ;
-                       rdfs:range :PublishPacket ;
-                       rdfs:comment "Indicates that an MQTT Broker forwards a PUBLISH packet to subscribers."@en ;
-                       rdfs:label "forwards PUBLISH Packet"@en .
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#applicationMessageEncodesActivity
+:applicationMessageEncodesActivity rdf:type owl:ObjectProperty ;
+                                   rdfs:domain :ApplicationMessage ;
+                                   rdfs:range :Activity ;
+                                   rdfs:comment "Indicates that the Application Message encodes a SOSA Activity (Observation, ObservationCollection, Actuation, ActuationCollection) command."@en ;
+                                   rdfs:label "Application Message encodes Activity"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#applicationMessageEncodesActuation
+:applicationMessageEncodesActuation rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf :applicationMessageEncodesActivity ;
+                                    rdfs:domain :ApplicationMessage ;
+                                    rdfs:range sosa:Actuation ;
+                                    rdfs:comment "Indicates that the Application Message encodes a single SOSA Actuation command."@en ;
+                                    rdfs:label "Application Message encodes SOSA Actuation"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#applicationMessageEncodesActuationCollection
+:applicationMessageEncodesActuationCollection rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf :applicationMessageEncodesActivity ;
+                                              rdfs:domain :ApplicationMessage ;
+                                              rdfs:range sosa:ActuationCollection ;
+                                              rdfs:comment "Indicates that the Application Message encodes a collection of actuation commands."@en ;
+                                              rdfs:label "Application Message encodes SOSA Actuation Collection"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#applicationMessageEncodesObservation
+:applicationMessageEncodesObservation rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :applicationMessageEncodesActivity ;
+                                      rdfs:domain :ApplicationMessage ;
+                                      rdfs:range sosa:Observation ;
+                                      rdfs:comment "Indicates that the Application Message encodes a SOSA Observation."@en ;
+                                      rdfs:label "Application Message encodes SOSA Observation"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#applicationMessageEncodesObservationCollection
+:applicationMessageEncodesObservationCollection rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf :applicationMessageEncodesActivity ;
+                                                rdfs:domain :ApplicationMessage ;
+                                                rdfs:range sosa:ObservationCollection ;
+                                                rdfs:comment "Indicates that the Application Message encodes a collection of SOSA Observations."@en ;
+                                                rdfs:label "Application Message encodes SOSA Observation Collection"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#establishedByNetworkConnection
+:establishedByNetworkConnection rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf owl:topObjectProperty ;
+                                owl:inverseOf :establishesSession ;
+                                rdfs:domain :NetworkSession ;
+                                rdfs:range :NetworkConnection ;
+                                rdfs:comment "A Network Session is established by a Network Connection." ;
+                                rdfs:label "established By MQTT Network Connection"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#establishesSession
+:establishesSession rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain :NetworkConnection ;
+                    rdfs:range :NetworkSession ;
+                    rdfs:comment "A Network Connection establishes a Network Session."@en ;
+                    rdfs:label "establishes Network Session"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject
@@ -111,6 +174,46 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:label "has topic subject (Actuation, Actuation collection, Observation or Observation Collection)"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasApplicationMessage
+:hasApplicationMessage rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :isApplicationMessageOf ;
+                       rdfs:domain :PublishPayload ;
+                       rdfs:range :ApplicationMessage ;
+                       rdfs:comment "."@en ;
+                       rdfs:label "has Application Message"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthFixedHeader
+:hasAuthFixedHeader rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hasFixedHeader ;
+                    owl:inverseOf :isAuthFixedHeaderOf ;
+                    rdf:type owl:FunctionalProperty ;
+                    rdfs:domain :AuthPacket ;
+                    rdfs:range :AuthFixedHeader ;
+                    rdfs:comment "Links a AUTH packet to its specific Fixed Header."@en ;
+                    rdfs:label "has AUTH Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthProperties
+:hasAuthProperties rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasProperties ;
+                   rdfs:domain :AuthVariableHeader ;
+                   rdfs:range :AuthProperties ;
+                   rdfs:comment "."@en ;
+                   rdfs:label "has Auth Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthVariableHeader
+:hasAuthVariableHeader rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasVariableHeader ;
+                       owl:inverseOf :isAuthVariableHeaderOf ;
+                       rdf:type owl:FunctionalProperty ;
+                       rdfs:domain :AuthPacket ;
+                       rdfs:range :AuthVariableHeader ;
+                       rdfs:comment "Links a AUTH packet to its specific Variable Header."@en ;
+                       rdfs:label "has AUTH Variable Header"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasClient
 :hasClient rdf:type owl:ObjectProperty ;
            owl:inverseOf :runsOnPlatform ;
@@ -118,6 +221,79 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:range :Client ;
            rdfs:comment "Relates a SOSA platform to an MQTT Client running on it."@en ;
            rdfs:label "has MQTT Client"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackFixedHeader
+:hasConnackFixedHeader rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasFixedHeader ;
+                       owl:inverseOf :isConnackFixedHeaderOf ;
+                       rdf:type owl:FunctionalProperty ;
+                       rdfs:domain :ConnackPacket ;
+                       rdfs:range :ConnackFixedHeader ;
+                       rdfs:comment "Links a CONNACK packet to its specific Fixed Header."@en ;
+                       rdfs:label "has CONNACK Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackProperties
+:hasConnackProperties rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasProperties ;
+                      rdfs:domain :ConnackVariableHeader ;
+                      rdfs:range :ConnackProperties ;
+                      rdfs:comment "."@en ;
+                      rdfs:label "has Connack Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackVariableHeader
+:hasConnackVariableHeader rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :hasVariableHeader ;
+                          owl:inverseOf :isConnackVariableHeaderOf ;
+                          rdf:type owl:FunctionalProperty ;
+                          rdfs:domain :ConnackPacket ;
+                          rdfs:range :ConnackVariableHeader ;
+                          rdfs:comment "Links a CONNACK packet to its specific Variable Header."@en ;
+                          rdfs:label "has CONNACK Variable Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectFixedHeader
+:hasConnectFixedHeader rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasFixedHeader ;
+                       owl:inverseOf :isConnectFixedHeaderOf ;
+                       rdf:type owl:FunctionalProperty ;
+                       rdfs:domain :ConnectPacket ;
+                       rdfs:range :ConnectFixedHeader ;
+                       rdfs:comment "Links a CONNECT packet to its specific Fixed Header."@en ;
+                       rdfs:label "has CONNECT Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectPayload
+:hasConnectPayload rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasPayload ;
+                   owl:inverseOf :isConnectPayloadOf ;
+                   rdf:type owl:FunctionalProperty ;
+                   rdfs:domain :ConnectPacket ;
+                   rdfs:range :ConnectPayload ;
+                   rdfs:comment "Links a CONNECT packet to its MQTT Payload."@en ;
+                   rdfs:label "has CONNECT Payload"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectProperties
+:hasConnectProperties rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasProperties ;
+                      rdfs:domain :ConnectVariableHeader ;
+                      rdfs:range :ConnectProperties ;
+                      rdfs:comment "."@en ;
+                      rdfs:label "has Connect Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectVariableHeader
+:hasConnectVariableHeader rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :hasVariableHeader ;
+                          owl:inverseOf :isConnectVariableHeaderOf ;
+                          rdf:type owl:FunctionalProperty ;
+                          rdfs:domain :ConnectPacket ;
+                          rdfs:range :ConnectVariableHeader ;
+                          rdfs:comment "Links a CONNECT packet to its specific Variable Header."@en ;
+                          rdfs:label "has CONNECT Variable Header"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectedClient
@@ -129,12 +305,43 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:label "has connected MQTT Client"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDisconnectFixedHeader
+:hasDisconnectFixedHeader rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :hasFixedHeader ;
+                          owl:inverseOf :isDisconnectFixedHeaderOf ;
+                          rdf:type owl:FunctionalProperty ;
+                          rdfs:domain :DisconnectPacket ;
+                          rdfs:range :DisconnectFixedHeader ;
+                          rdfs:comment "Links a DISCONNECT packet to its specific Fixed Header."@en ;
+                          rdfs:label "has DISCONNECT Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDisconnectProperties
+:hasDisconnectProperties rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :hasProperties ;
+                         rdfs:domain :DisconnectVariableHeader ;
+                         rdfs:range :DisconnectProperties ;
+                         rdfs:comment "."@en ;
+                         rdfs:label "has Disconnect Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDisconnectVariableHeader
+:hasDisconnectVariableHeader rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :hasVariableHeader ;
+                             owl:inverseOf :isDisconnectVariableHeaderOf ;
+                             rdf:type owl:FunctionalProperty ;
+                             rdfs:domain :DisconnectPacket ;
+                             rdfs:range :DisconnectVariableHeader ;
+                             rdfs:comment "Links a DISCONNECT packet to its specific Variable Header."@en ;
+                             rdfs:label "has DISCONNECT Variable Header"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasEncodedFields
 :hasEncodedFields rdf:type owl:ObjectProperty ;
-                  owl:inverseOf :isEncodedInPayload ;
-                  rdfs:domain :PublishPayload ;
+                  owl:inverseOf :isEncodedInMessage ;
+                  rdfs:domain :ApplicationMessage ;
                   rdfs:range rdf:List ;
-                  rdfs:comment "Links an MQTT Payload to an ordered RDF list naming fields encoded within the payload content."@en ;
+                  rdfs:comment "Links an MQTT Payload to an ordered RDF list naming fields encoded within the Application Message content."@en ;
                   rdfs:label "has encoded fields"@en .
 
 
@@ -187,6 +394,51 @@ xsd:date rdf:type rdfs:Datatype .
                 rdfs:label "has payload size"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPingreqFixedHeader
+:hasPingreqFixedHeader rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasFixedHeader ;
+                       owl:inverseOf :isPingreqFixedHeaderOf ;
+                       rdf:type owl:FunctionalProperty ;
+                       rdfs:domain :PingreqPacket ;
+                       rdfs:range :PingreqFixedHeader ;
+                       rdfs:comment "Links a PINGREQ packet to its specific Fixed Header."@en ;
+                       rdfs:label "has PINGREQ Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPingrespFixedHeader
+:hasPingrespFixedHeader rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :hasFixedHeader ;
+                        owl:inverseOf :isPingrespFixedHeaderOf ;
+                        rdf:type owl:FunctionalProperty ;
+                        rdfs:domain :PingrespPacket ;
+                        rdfs:range :PingrespFixedHeader ;
+                        rdfs:comment "Links a PINGRESP packet to its specific Fixed Header."@en ;
+                        rdfs:label "has PINGRESP Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperties
+:hasProperties rdf:type owl:ObjectProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :AuthVariableHeader
+                                           :ConnackVariableHeader
+                                           :ConnectVariableHeader
+                                           :DisconnectVariableHeader
+                                           :PubackVariableHeader
+                                           :PubcompVariableHeader
+                                           :PublishVariableHeader
+                                           :PubrecVariableHeader
+                                           :PubrelVariableHeader
+                                           :SubackVariableHeader
+                                           :SubscribeVariableHeader
+                                           :UnsubackVariableHeader
+                                           :UnsubscribeVariableHeader
+                                         )
+                           ] ;
+               rdfs:range :Properties ;
+               rdfs:comment "."@en ;
+               rdfs:label "has Properties"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject
 :hasPropertySubject rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :hasSubject ;
@@ -195,6 +447,68 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:range sosa:Property ;
                     rdfs:comment "Links an MQTT Topic to the subject (Property)."@en ;
                     rdfs:label "has topic subject (Property)"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubackFixedHeader
+:hasPubackFixedHeader rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasFixedHeader ;
+                      owl:inverseOf :isPubackFixedHeaderOf ;
+                      rdf:type owl:FunctionalProperty ;
+                      rdfs:domain :PubackPacket ;
+                      rdfs:range :PubackFixedHeader ;
+                      rdfs:comment "Links a PUBACK packet to its specific Fixed Header."@en ;
+                      rdfs:label "has PUBACK Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubackProperties
+:hasPubackProperties rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasProperties ;
+                     rdfs:domain :PubackVariableHeader ;
+                     rdfs:range :PubackProperties ;
+                     rdfs:comment "."@en ;
+                     rdfs:label "has Puback Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubackVariableHeader
+:hasPubackVariableHeader rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :hasVariableHeader ;
+                         owl:inverseOf :isPubackVariableHeaderOf ;
+                         rdf:type owl:FunctionalProperty ;
+                         rdfs:domain :PubackPacket ;
+                         rdfs:range :PubackVariableHeader ;
+                         rdfs:comment "Links a PUBACK packet to its specific Variable Header."@en ;
+                         rdfs:label "has PUBACK Variable Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubcompFixedHeader
+:hasPubcompFixedHeader rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasFixedHeader ;
+                       owl:inverseOf :isPubcompFixedHeaderOf ;
+                       rdf:type owl:FunctionalProperty ;
+                       rdfs:domain :PubcompPacket ;
+                       rdfs:range :PubcompFixedHeader ;
+                       rdfs:comment "Links a PUBCOMP packet to its specific Fixed Header."@en ;
+                       rdfs:label "has PUBCOMP Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubcompProperties
+:hasPubcompProperties rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasProperties ;
+                      rdfs:domain :PubcompVariableHeader ;
+                      rdfs:range :PubcompProperties ;
+                      rdfs:comment "."@en ;
+                      rdfs:label "has Pubcomp Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubcompVariableHeader
+:hasPubcompVariableHeader rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :hasVariableHeader ;
+                          owl:inverseOf :isPubcompVariableHeaderOf ;
+                          rdf:type owl:FunctionalProperty ;
+                          rdfs:domain :PubcompPacket ;
+                          rdfs:range :PubcompVariableHeader ;
+                          rdfs:comment "Links a PUBCOMP packet to its specific Variable Header."@en ;
+                          rdfs:label "has PUBCOMP Variable Header"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishFixedHeader
@@ -215,8 +529,17 @@ xsd:date rdf:type rdfs:Datatype .
                    rdf:type owl:FunctionalProperty ;
                    rdfs:domain :PublishPacket ;
                    rdfs:range :PublishPayload ;
-                   rdfs:comment "Links a PUBLISH packet to its MQTT Payload."@en ;
+                   rdfs:comment ""@en ;
                    rdfs:label "has PUBLISH Payload"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishProperties
+:hasPublishProperties rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasProperties ;
+                      rdfs:domain :PublishVariableHeader ;
+                      rdfs:range :PublishProperties ;
+                      rdfs:comment "."@en ;
+                      rdfs:label "has Publish Properties"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishVariableHeader
@@ -230,6 +553,124 @@ xsd:date rdf:type rdfs:Datatype .
                           rdfs:label "has PUBLISH Variable Header"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrecFixedHeader
+:hasPubrecFixedHeader rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasFixedHeader ;
+                      owl:inverseOf :isPubrecFixedHeaderOf ;
+                      rdf:type owl:FunctionalProperty ;
+                      rdfs:domain :PubrecPacket ;
+                      rdfs:range :PubrecFixedHeader ;
+                      rdfs:comment "Links a PUBREC packet to its specific Fixed Header."@en ;
+                      rdfs:label "has PUBREC Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrecProperties
+:hasPubrecProperties rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasProperties ;
+                     rdfs:domain :PubrecVariableHeader ;
+                     rdfs:range :PubrecProperties ;
+                     rdfs:comment "."@en ;
+                     rdfs:label "has Pubrec Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrecVariableHeader
+:hasPubrecVariableHeader rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :hasVariableHeader ;
+                         owl:inverseOf :isPubrecVariableHeaderOf ;
+                         rdf:type owl:FunctionalProperty ;
+                         rdfs:domain :PubrecPacket ;
+                         rdfs:range :PubrecVariableHeader ;
+                         rdfs:comment "Links a PUBREC packet to its specific Variable Header."@en ;
+                         rdfs:label "has PUBREC Variable Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrelFixedHeader
+:hasPubrelFixedHeader rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasFixedHeader ;
+                      owl:inverseOf :isPubrelFixedHeaderOf ;
+                      rdf:type owl:FunctionalProperty ;
+                      rdfs:domain :PubrelPacket ;
+                      rdfs:range :PubrelFixedHeader ;
+                      rdfs:comment "Links a PUBREL packet to its specific Fixed Header."@en ;
+                      rdfs:label "has PUBREL Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrelProperties
+:hasPubrelProperties rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasProperties ;
+                     rdfs:domain :PubrelVariableHeader ;
+                     rdfs:range :PubrelProperties ;
+                     rdfs:comment "."@en ;
+                     rdfs:label "has Pubrel Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrelVariableHeader
+:hasPubrelVariableHeader rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :hasVariableHeader ;
+                         owl:inverseOf :isPubrelVariableHeaderOf ;
+                         rdf:type owl:FunctionalProperty ;
+                         rdfs:domain :PubrelPacket ;
+                         rdfs:range :PubrelVariableHeader ;
+                         rdfs:comment "Links a PUBREL packet to its specific Variable Header."@en ;
+                         rdfs:label "has PUBREL Variable Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasResponseTopic
+:hasResponseTopic rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :isResponseTopicOf ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( :PublishProperties
+                                              :WillProperties
+                                            )
+                              ] ;
+                  rdfs:range :Topic ;
+                  rdfs:comment ""@en ;
+                  rdfs:label "has MQTT Response Topic (name)"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackFixedHeader
+:hasSubackFixedHeader rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasFixedHeader ;
+                      owl:inverseOf :isSubackFixedHeaderOf ;
+                      rdf:type owl:FunctionalProperty ;
+                      rdfs:domain :SubackPacket ;
+                      rdfs:range :SubackFixedHeader ;
+                      rdfs:comment "Links a SUBACK packet to its specific Fixed Header."@en ;
+                      rdfs:label "has SUBACK Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackPayload
+:hasSubackPayload rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasPayload ;
+                  owl:inverseOf :isSubackPayloadOf ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain :SubackPacket ;
+                  rdfs:range :SubackPayload ;
+                  rdfs:comment "Links a SUBACK packet to its MQTT Payload."@en ;
+                  rdfs:label "has SUBACK Payload"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackProperties
+:hasSubackProperties rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasProperties ;
+                     rdfs:domain :SubackVariableHeader ;
+                     rdfs:range :SubackProperties ;
+                     rdfs:comment "."@en ;
+                     rdfs:label "has Suback Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackVariableHeader
+:hasSubackVariableHeader rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :hasVariableHeader ;
+                         owl:inverseOf :isSubackVariableHeaderOf ;
+                         rdf:type owl:FunctionalProperty ;
+                         rdfs:domain :SubackPacket ;
+                         rdfs:range :SubackVariableHeader ;
+                         rdfs:comment "Links a SUBACK packet to its specific Variable Header."@en ;
+                         rdfs:label "has SUBACK Variable Header"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject
 :hasSubject rdf:type owl:ObjectProperty ;
             owl:inverseOf :isSubjectOf ;
@@ -239,43 +680,52 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:label "has topic subject"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionFixedHeader
-:hasSubscriptionFixedHeader rdf:type owl:ObjectProperty ;
-                            rdfs:subPropertyOf :hasFixedHeader ;
-                            owl:inverseOf :isSubscriptionFixedHeaderOf ;
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscribeFixedHeader
+:hasSubscribeFixedHeader rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :hasFixedHeader ;
+                         owl:inverseOf :isSubscribeFixedHeaderOf ;
+                         rdf:type owl:FunctionalProperty ;
+                         rdfs:domain :SubscribePacket ;
+                         rdfs:range :SubscribeFixedHeader ;
+                         rdfs:comment "Links a SUBSCRIBE packet to its specific Fixed Header."@en ;
+                         rdfs:label "has SUBSCRIBE Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscribePayload
+:hasSubscribePayload rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasPayload ;
+                     owl:inverseOf :isSubscribePayloadOf ;
+                     rdf:type owl:FunctionalProperty ;
+                     rdfs:domain :SubscribePacket ;
+                     rdfs:range :SubscribePayload ;
+                     rdfs:comment "Links a SUBSCRIBE packet to its MQTT Payload."@en ;
+                     rdfs:label "has SUBSCRIBE Payload"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscribeProperties
+:hasSubscribeProperties rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :hasProperties ;
+                        rdfs:domain :SubscribeVariableHeader ;
+                        rdfs:range :SubscribeProperties ;
+                        rdfs:comment "."@en ;
+                        rdfs:label "has Subscribe Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscribeVariableHeader
+:hasSubscribeVariableHeader rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :hasVariableHeader ;
+                            owl:inverseOf :isSubscribeVariableHeaderOf ;
                             rdf:type owl:FunctionalProperty ;
                             rdfs:domain :SubscribePacket ;
-                            rdfs:range :SubscribeFixedHeader ;
-                            rdfs:comment "Links a SUBSCRIBE packet to its specific Fixed Header."@en ;
-                            rdfs:label "has SUBSCRIBE Fixed Header"@en .
-
-
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionPayload
-:hasSubscriptionPayload rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :hasPayload ;
-                        owl:inverseOf :isSubscriptionPayloadOf ;
-                        rdf:type owl:FunctionalProperty ;
-                        rdfs:domain :SubscribePacket ;
-                        rdfs:range :SubscriptionPayload ;
-                        rdfs:comment "Links a SUBSCRIBE packet to its MQTT Payload."@en ;
-                        rdfs:label "has SUBSCRIBE Payload"@en .
-
-
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionVariableHeader
-:hasSubscriptionVariableHeader rdf:type owl:ObjectProperty ;
-                               rdfs:subPropertyOf :hasVariableHeader ;
-                               owl:inverseOf :isSubscriptionVariableHeaderOf ;
-                               rdf:type owl:FunctionalProperty ;
-                               rdfs:domain :SubscribePacket ;
-                               rdfs:range :SubscribeVariableHeader ;
-                               rdfs:comment "Links a SUBSCRIBE packet to its specific Variable Header."@en ;
-                               rdfs:label "has SUBSCRIBE Variable Header"@en .
+                            rdfs:range :SubscribeVariableHeader ;
+                            rdfs:comment "Links a SUBSCRIBE packet to its specific Variable Header."@en ;
+                            rdfs:label "has SUBSCRIBE Variable Header"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptions
 :hasSubscriptions rdf:type owl:ObjectProperty ;
                   owl:inverseOf :isSubscriptionOf ;
-                  rdfs:domain :SubscriptionPayload ;
+                  rdfs:domain :SubscribePayload ;
                   rdfs:range :SubscriptionEntry ;
                   rdfs:comment "Links a SUBSCRIBE Payload to one or more MQTT Subscription Entries."@en ;
                   rdfs:label "has MQTT Subscription Entries"@en .
@@ -287,7 +737,7 @@ xsd:date rdf:type rdfs:Datatype .
                 owl:inverseOf :isTopicFilterOf ;
                 rdfs:domain [ rdf:type owl:Class ;
                               owl:unionOf ( :SubscriptionEntry
-                                            :UnsubscriptionPayload
+                                            :UnsubscribePayload
                                           )
                             ] ;
                 rdfs:range :TopicFilter ;
@@ -306,37 +756,112 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:label "has MQTT Topic (name)"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscriptionFixedHeader
-:hasUnsubscriptionFixedHeader rdf:type owl:ObjectProperty ;
-                              rdfs:subPropertyOf :hasFixedHeader ;
-                              owl:inverseOf :isUnsubscriptionFixedHeaderOf ;
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackFixedHeader
+:hasUnsubackFixedHeader rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :hasFixedHeader ;
+                        owl:inverseOf :isUnsubackFixedHeaderOf ;
+                        rdf:type owl:FunctionalProperty ;
+                        rdfs:domain :UnsubackPacket ;
+                        rdfs:range :UnsubackFixedHeader ;
+                        rdfs:comment "Links a UNSUBACK packet to its specific Fixed Header."@en ;
+                        rdfs:label "has UNSUBACK Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackPayload
+:hasUnsubackPayload rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hasPayload ;
+                    owl:inverseOf :isUnsubackPayloadOf ;
+                    rdf:type owl:FunctionalProperty ;
+                    rdfs:domain :UnsubackPacket ;
+                    rdfs:range :UnsubackPayload ;
+                    rdfs:comment "Links a UNSUBACK packet to its MQTT Payload."@en ;
+                    rdfs:label "has UNSUBACK Payload"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackProperties
+:hasUnsubackProperties rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasProperties ;
+                       rdfs:domain :UnsubackVariableHeader ;
+                       rdfs:range :UnsubackProperties ;
+                       rdfs:comment "."@en ;
+                       rdfs:label "has Unsuback Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackVariableHeader
+:hasUnsubackVariableHeader rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :hasVariableHeader ;
+                           owl:inverseOf :isUnsubackVariableHeaderOf ;
+                           rdf:type owl:FunctionalProperty ;
+                           rdfs:domain :UnsubackPacket ;
+                           rdfs:range :UnsubackVariableHeader ;
+                           rdfs:comment "Links a UNSUBACK packet to its specific Variable Header."@en ;
+                           rdfs:label "has UNSUBACK Variable Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscribeFixedHeader
+:hasUnsubscribeFixedHeader rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :hasFixedHeader ;
+                           owl:inverseOf :isUnsubscribeFixedHeaderOf ;
+                           rdf:type owl:FunctionalProperty ;
+                           rdfs:domain :UnsubscribePacket ;
+                           rdfs:range :UnsubscribeFixedHeader ;
+                           rdfs:comment "Links an UNSUBSCRIBE packet to its specific Fixed Header."@en ;
+                           rdfs:label "has UNSUBSCRIBE Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscribePayload
+:hasUnsubscribePayload rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasPayload ;
+                       owl:inverseOf :isUnsubscribePayloadOf ;
+                       rdf:type owl:FunctionalProperty ;
+                       rdfs:domain :UnsubscribePacket ;
+                       rdfs:range :UnsubscribePayload ;
+                       rdfs:comment "Links an UNSUBSCRIBE packet to its MQTT Payload."@en ;
+                       rdfs:label "has UNSUBSCRIBE Payload"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscribeProperties
+:hasUnsubscribeProperties rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :hasProperties ;
+                          rdfs:domain :UnsubscribeVariableHeader ;
+                          rdfs:range :UnsubscribeProperties ;
+                          rdfs:comment "."@en ;
+                          rdfs:label "has Unsubscribe Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscribeVariableHeader
+:hasUnsubscribeVariableHeader rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :hasVariableHeader ;
+                              owl:inverseOf :isUnsubscribeVariableHeaderOf ;
                               rdf:type owl:FunctionalProperty ;
                               rdfs:domain :UnsubscribePacket ;
-                              rdfs:range :UnsubscribeFixedHeader ;
-                              rdfs:comment "Links an UNSUBSCRIBE packet to its specific Fixed Header."@en ;
-                              rdfs:label "has UNSUBSCRIBE Fixed Header"@en .
+                              rdfs:range :UnsubscribeVariableHeader ;
+                              rdfs:comment "Links an UNSUBSCRIBE packet to its specific Variable Header."@en ;
+                              rdfs:label "has UNSUBSCRIBE Variable Header"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscriptionPayload
-:hasUnsubscriptionPayload rdf:type owl:ObjectProperty ;
-                          rdfs:subPropertyOf :hasPayload ;
-                          owl:inverseOf :isUnsubscriptionPayloadOf ;
-                          rdf:type owl:FunctionalProperty ;
-                          rdfs:domain :UnsubscribePacket ;
-                          rdfs:range :UnsubscriptionPayload ;
-                          rdfs:comment "Links an UNSUBSCRIBE packet to its MQTT Payload."@en ;
-                          rdfs:label "has UNSUBSCRIBE Payload"@en .
-
-
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscriptionVariableHeader
-:hasUnsubscriptionVariableHeader rdf:type owl:ObjectProperty ;
-                                 rdfs:subPropertyOf :hasVariableHeader ;
-                                 owl:inverseOf :isUnsubscriptionVariableHeaderOf ;
-                                 rdf:type owl:FunctionalProperty ;
-                                 rdfs:domain :UnsubscribePacket ;
-                                 rdfs:range :UnsubscribeVariableHeader ;
-                                 rdfs:comment "Links an UNSUBSCRIBE packet to its specific Variable Header."@en ;
-                                 rdfs:label "has UNSUBSCRIBE Variable Header"@en .
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserProperty
+:hasUserProperty rdf:type owl:ObjectProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :AuthProperties
+                                             :ConnackProperties
+                                             :ConnectProperties
+                                             :DisconnectProperties
+                                             :PubackProperties
+                                             :PubcompProperties
+                                             :PublishProperties
+                                             :PubrecProperties
+                                             :PubrelProperties
+                                             :SubackProperties
+                                             :SubscribeProperties
+                                             :UnsubackProperties
+                                             :UnsubscribeProperties
+                                             :WillProperties
+                                           )
+                             ] ;
+                 rdfs:range :UserProperty ;
+                 rdfs:comment "."@en ;
+                 rdfs:label "has User Property"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasVariableHeader
@@ -347,6 +872,21 @@ xsd:date rdf:type rdfs:Datatype .
                    rdfs:range :VariableHeader ;
                    rdfs:comment "Links an MQTT Control Packet to its Variable Header."@en ;
                    rdfs:label "has Variable Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillProperties
+:hasWillProperties rdf:type owl:ObjectProperty ;
+                   rdfs:domain :ConnectPayload ;
+                   rdfs:range :WillProperties .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillTopic
+:hasWillTopic rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isWillTopicOf ;
+              rdfs:domain :ConnectPayload ;
+              rdfs:range :Topic ;
+              rdfs:comment "."@en ;
+              rdfs:label "has Will Topic"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hosts
@@ -381,6 +921,85 @@ xsd:date rdf:type rdfs:Datatype .
                    rdfs:label "is topic subject (Actuation, Actuation collection, Observation or Observation Collection) of"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isApplicationMessageOf
+:isApplicationMessageOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain :ApplicationMessage ;
+                        rdfs:range :PublishPayload ;
+                        rdfs:comment "."@en ;
+                        rdfs:label "is Application Message of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isAuthFixedHeaderOf
+:isAuthFixedHeaderOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :isFixedHeaderOf ;
+                     rdf:type owl:FunctionalProperty ;
+                     rdfs:domain :AuthFixedHeader ;
+                     rdfs:range :AuthPacket ;
+                     rdfs:comment "Links a AUTH Fixed Header to its MQTT Control Packet."@en ;
+                     rdfs:label "is AUTH Fixed Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isAuthVariableHeaderOf
+:isAuthVariableHeaderOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :isVariableHeaderOf ;
+                        rdf:type owl:FunctionalProperty ;
+                        rdfs:domain :AuthVariableHeader ;
+                        rdfs:range :AuthPacket ;
+                        rdfs:comment "Links a AUTH Variable Header to its MQTT Control Packet."@en ;
+                        rdfs:label "is AUTH Variable Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnackFixedHeaderOf
+:isConnackFixedHeaderOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :isFixedHeaderOf ;
+                        rdf:type owl:FunctionalProperty ;
+                        rdfs:domain :ConnackFixedHeader ;
+                        rdfs:range :ConnackPacket ;
+                        rdfs:comment "Links a CONNACK Fixed Header to its MQTT Control Packet."@en ;
+                        rdfs:label "is CONNACK Fixed Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnackVariableHeaderOf
+:isConnackVariableHeaderOf rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :isVariableHeaderOf ;
+                           rdf:type owl:FunctionalProperty ;
+                           rdfs:domain :ConnackVariableHeader ;
+                           rdfs:range :ConnackPacket ;
+                           rdfs:comment "Links a CONNACK Variable Header to its MQTT Control Packet."@en ;
+                           rdfs:label "is CONNACK Variable Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectFixedHeaderOf
+:isConnectFixedHeaderOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :isFixedHeaderOf ;
+                        rdf:type owl:FunctionalProperty ;
+                        rdfs:domain :ConnectFixedHeader ;
+                        rdfs:range :ConnectPacket ;
+                        rdfs:comment "Links a CONNECT Fixed Header to its MQTT Control Packet."@en ;
+                        rdfs:label "is CONNECT Fixed Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectPayloadOf
+:isConnectPayloadOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :isPayloadOf ;
+                    rdf:type owl:FunctionalProperty ;
+                    rdfs:domain :ConnectPayload ;
+                    rdfs:range :ConnectPacket ;
+                    rdfs:comment ""@en ;
+                    rdfs:label "is CONNECT Payload of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectVariableHeaderOf
+:isConnectVariableHeaderOf rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :isVariableHeaderOf ;
+                           rdf:type owl:FunctionalProperty ;
+                           rdfs:domain :ConnectVariableHeader ;
+                           rdfs:range :ConnectPacket ;
+                           rdfs:comment "Links a CONNECT Variable Header to its MQTT Control Packet."@en ;
+                           rdfs:label "is CONNECT Variable Header of"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectedToBroker
 :isConnectedToBroker rdf:type owl:ObjectProperty ;
                      rdfs:domain :Client ;
@@ -389,12 +1008,32 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:label "is connected to MQTT Broker"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isEncodedInPayload
-:isEncodedInPayload rdf:type owl:ObjectProperty ;
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isDisconnectFixedHeaderOf
+:isDisconnectFixedHeaderOf rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :isFixedHeaderOf ;
+                           rdf:type owl:FunctionalProperty ;
+                           rdfs:domain :DisconnectFixedHeader ;
+                           rdfs:range :DisconnectPacket ;
+                           rdfs:comment "Links a DISCONNECT Fixed Header to its MQTT Control Packet."@en ;
+                           rdfs:label "is DISCONNECT Fixed Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isDisconnectVariableHeaderOf
+:isDisconnectVariableHeaderOf rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :isVariableHeaderOf ;
+                              rdf:type owl:FunctionalProperty ;
+                              rdfs:domain :DisconnectVariableHeader ;
+                              rdfs:range :DisconnectPacket ;
+                              rdfs:comment "Links a DISCONNECT Variable Header to its MQTT Control Packet."@en ;
+                              rdfs:label "is DISCONNECT Variable Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isEncodedInMessage
+:isEncodedInMessage rdf:type owl:ObjectProperty ;
                     rdfs:domain rdf:List ;
-                    rdfs:range :PublishPayload ;
-                    rdfs:comment "Links an RDF list of field names to the MQTT Payload that contains them."@en ;
-                    rdfs:label "is encoded in MQTT Payload"@en .
+                    rdfs:range :ApplicationMessage ;
+                    rdfs:comment "Links an RDF list of field names to the MQTTAapplication Message that contains them."@en ;
+                    rdfs:label "is encoded in MQTT Message"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf
@@ -449,6 +1088,26 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "is MQTT Payload of"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPingreqFixedHeaderOf
+:isPingreqFixedHeaderOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :isFixedHeaderOf ;
+                        rdf:type owl:FunctionalProperty ;
+                        rdfs:domain :PingreqFixedHeader ;
+                        rdfs:range :PingreqPacket ;
+                        rdfs:comment "Links a PINGREQ Fixed Header to its MQTT Control Packet."@en ;
+                        rdfs:label "is PINGREQ Fixed Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPingrespFixedHeaderOf
+:isPingrespFixedHeaderOf rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :isFixedHeaderOf ;
+                         rdf:type owl:FunctionalProperty ;
+                         rdfs:domain :PingrespFixedHeader ;
+                         rdfs:range :PingrespPacket ;
+                         rdfs:comment "Links a PINGRESP Fixed Header to its MQTT Control Packet."@en ;
+                         rdfs:label "is PINGRESP Fixed Header of"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf
 :isPropertySubjectOf rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :isSubjectOf ;
@@ -456,6 +1115,46 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:range :Topic ;
                      rdfs:comment "Links a topic subject (Property) to the MQTT Topic that carries it."@en ;
                      rdfs:label "is topic subject (Property) of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubackFixedHeaderOf
+:isPubackFixedHeaderOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :isFixedHeaderOf ;
+                       rdf:type owl:FunctionalProperty ;
+                       rdfs:domain :PubackFixedHeader ;
+                       rdfs:range :PubackPacket ;
+                       rdfs:comment "Links a PUBACK Fixed Header to its MQTT Control Packet."@en ;
+                       rdfs:label "is PUBACK Fixed Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubackVariableHeaderOf
+:isPubackVariableHeaderOf rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :isVariableHeaderOf ;
+                          rdf:type owl:FunctionalProperty ;
+                          rdfs:domain :PubackVariableHeader ;
+                          rdfs:range :PubackPacket ;
+                          rdfs:comment "Links a PUBACK Variable Header to its MQTT Control Packet."@en ;
+                          rdfs:label "is PUBACK Variable Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubcompFixedHeaderOf
+:isPubcompFixedHeaderOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :isFixedHeaderOf ;
+                        rdf:type owl:FunctionalProperty ;
+                        rdfs:domain :PubcompFixedHeader ;
+                        rdfs:range :PubcompPacket ;
+                        rdfs:comment "Links a PUBCOMP Fixed Header to its MQTT Control Packet."@en ;
+                        rdfs:label "is PUBCOMP Fixed Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubcompVariableHeaderOf
+:isPubcompVariableHeaderOf rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :isVariableHeaderOf ;
+                           rdf:type owl:FunctionalProperty ;
+                           rdfs:domain :PubcompVariableHeader ;
+                           rdfs:range :PubcompPacket ;
+                           rdfs:comment "Links a PUBCOMP Variable Header to its MQTT Control Packet."@en ;
+                           rdfs:label "is PUBCOMP Variable Header of"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishFixedHeaderOf
@@ -488,13 +1187,86 @@ xsd:date rdf:type rdfs:Datatype .
                            rdfs:label "is PUBLISH Variable Header of"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSentBy
-:isSentBy rdf:type owl:ObjectProperty ;
-          owl:inverseOf :sendsControlPacket ;
-          rdfs:domain :ControlPacket ;
-          rdfs:range :Client ;
-          rdfs:comment "Relates an MQTT Control Packet to the MQTT Client that sent it."@en ;
-          rdfs:label "is sent by MQTT Client"@en .
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubrecFixedHeaderOf
+:isPubrecFixedHeaderOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :isFixedHeaderOf ;
+                       rdf:type owl:FunctionalProperty ;
+                       rdfs:domain :PubrecFixedHeader ;
+                       rdfs:range :PubrecPacket ;
+                       rdfs:comment "Links a PUBREC Fixed Header to its MQTT Control Packet."@en ;
+                       rdfs:label "is PUBREC Fixed Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubrecVariableHeaderOf
+:isPubrecVariableHeaderOf rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :isVariableHeaderOf ;
+                          rdf:type owl:FunctionalProperty ;
+                          rdfs:domain :PubrecVariableHeader ;
+                          rdfs:range :PubrecPacket ;
+                          rdfs:comment "Links a PUBREC Variable Header to its MQTT Control Packet."@en ;
+                          rdfs:label "is PUBREC Variable Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubrelFixedHeaderOf
+:isPubrelFixedHeaderOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :isFixedHeaderOf ;
+                       rdf:type owl:FunctionalProperty ;
+                       rdfs:domain :PubrelFixedHeader ;
+                       rdfs:range :PubrelPacket ;
+                       rdfs:comment "Links a PUBREL Fixed Header to its MQTT Control Packet."@en ;
+                       rdfs:label "is PUBREL Fixed Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubrelVariableHeaderOf
+:isPubrelVariableHeaderOf rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :isVariableHeaderOf ;
+                          rdf:type owl:FunctionalProperty ;
+                          rdfs:domain :PubrelVariableHeader ;
+                          rdfs:range :PubrelPacket ;
+                          rdfs:comment "Links a PUBREL Variable Header to its MQTT Control Packet."@en ;
+                          rdfs:label "is PUBREL Variable Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isResponseTopicOf
+:isResponseTopicOf rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Topic ;
+                   rdfs:range [ rdf:type owl:Class ;
+                                owl:unionOf ( :PublishProperties
+                                              :WillProperties
+                                            )
+                              ] ;
+                   rdfs:comment "."@en ;
+                   rdfs:label "is MQTT Response Topic (name) of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubackFixedHeaderOf
+:isSubackFixedHeaderOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :isFixedHeaderOf ;
+                       rdf:type owl:FunctionalProperty ;
+                       rdfs:domain :SubackFixedHeader ;
+                       rdfs:range :SubackPacket ;
+                       rdfs:comment "Links a SUBACK Fixed Header to its MQTT Control Packet."@en ;
+                       rdfs:label "is SUBACK Fixed Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubackPayloadOf
+:isSubackPayloadOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :isPayloadOf ;
+                   rdf:type owl:FunctionalProperty ;
+                   rdfs:domain :SubackPayload ;
+                   rdfs:range :SubackPacket ;
+                   rdfs:comment ""@en ;
+                   rdfs:label "is SUBACK Payload of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubackVariableHeaderOf
+:isSubackVariableHeaderOf rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :isVariableHeaderOf ;
+                          rdf:type owl:FunctionalProperty ;
+                          rdfs:domain :SubackVariableHeader ;
+                          rdfs:range :SubackPacket ;
+                          rdfs:comment "Links a SUBACK Variable Header to its MQTT Control Packet."@en ;
+                          rdfs:label "is SUBACK Variable Header of"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf
@@ -505,42 +1277,42 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "is topic subject of"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionFixedHeaderOf
-:isSubscriptionFixedHeaderOf rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf :isFixedHeaderOf ;
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscribeFixedHeaderOf
+:isSubscribeFixedHeaderOf rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :isFixedHeaderOf ;
+                          rdf:type owl:FunctionalProperty ;
+                          rdfs:domain :SubscribeFixedHeader ;
+                          rdfs:range :SubscribePacket ;
+                          rdfs:comment "Links a SUBSCRIBE Fixed Header to its MQTT Control Packet."@en ;
+                          rdfs:label "is SUBSCRIBE Fixed Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscribePayloadOf
+:isSubscribePayloadOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :isPayloadOf ;
+                      rdf:type owl:FunctionalProperty ;
+                      rdfs:domain :SubscribePayload ;
+                      rdfs:range :SubscribePacket ;
+                      rdfs:comment "Links a SUBSCRIBE Payload to its MQTT Control Packet."@en ;
+                      rdfs:label "is SUBSCRIBE Payload of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscribeVariableHeaderOf
+:isSubscribeVariableHeaderOf rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :isVariableHeaderOf ;
                              rdf:type owl:FunctionalProperty ;
-                             rdfs:domain :SubscribeFixedHeader ;
+                             rdfs:domain :SubscribeVariableHeader ;
                              rdfs:range :SubscribePacket ;
-                             rdfs:comment "Links a SUBSCRIBE Fixed Header to its MQTT Control Packet."@en ;
-                             rdfs:label "is SUBSCRIBE Fixed Header of"@en .
+                             rdfs:comment "Links a SUBSCRIBE Variable Header to its MQTT Control Packet."@en ;
+                             rdfs:label "is SUBSCRIBE Variable Header of"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionOf
 :isSubscriptionOf rdf:type owl:ObjectProperty ;
                   rdfs:domain :SubscriptionEntry ;
-                  rdfs:range :SubscriptionPayload ;
+                  rdfs:range :SubscribePayload ;
                   rdfs:comment "Links an MQTT Subscription Entry to its SUBSCRIBE Payload."@en ;
                   rdfs:label "is MQTT Subscription Entry of"@en .
-
-
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionPayloadOf
-:isSubscriptionPayloadOf rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf :isPayloadOf ;
-                         rdf:type owl:FunctionalProperty ;
-                         rdfs:domain :SubscriptionPayload ;
-                         rdfs:range :SubscribePacket ;
-                         rdfs:comment "Links a SUBSCRIBE Payload to its MQTT Control Packet."@en ;
-                         rdfs:label "is SUBSCRIBE Payload of"@en .
-
-
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionVariableHeaderOf
-:isSubscriptionVariableHeaderOf rdf:type owl:ObjectProperty ;
-                                rdfs:subPropertyOf :isVariableHeaderOf ;
-                                rdf:type owl:FunctionalProperty ;
-                                rdfs:domain :SubscribeVariableHeader ;
-                                rdfs:range :SubscribePacket ;
-                                rdfs:comment "Links a SUBSCRIBE Variable Header to its MQTT Control Packet."@en ;
-                                rdfs:label "is SUBSCRIBE Variable Header of"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isTopicFilterOf
@@ -548,7 +1320,7 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:domain :TopicFilter ;
                  rdfs:range [ rdf:type owl:Class ;
                               owl:unionOf ( :SubscriptionEntry
-                                            :UnsubscriptionPayload
+                                            :UnsubscribePayload
                                           )
                             ] ;
                  rdfs:comment "Relates an MQTT Topic Filter to a Subscription Entry or an UNSUBSCRIBE payload."@en ;
@@ -563,34 +1335,64 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "is MQTT Topic (name) of"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscriptionFixedHeaderOf
-:isUnsubscriptionFixedHeaderOf rdf:type owl:ObjectProperty ;
-                               rdfs:subPropertyOf :isFixedHeaderOf ;
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubackFixedHeaderOf
+:isUnsubackFixedHeaderOf rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :isFixedHeaderOf ;
+                         rdf:type owl:FunctionalProperty ;
+                         rdfs:domain :UnsubackFixedHeader ;
+                         rdfs:range :UnsubackPacket ;
+                         rdfs:comment "Links a UNSUBACK Fixed Header to its MQTT Control Packet."@en ;
+                         rdfs:label "is UNSUBACK Fixed Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubackPayloadOf
+:isUnsubackPayloadOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :isPayloadOf ;
+                     rdf:type owl:FunctionalProperty ;
+                     rdfs:domain :UnsubackPayload ;
+                     rdfs:range :UnsubackPacket ;
+                     rdfs:comment ""@en ;
+                     rdfs:label "is UNSUBACK Payload of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubackVariableHeaderOf
+:isUnsubackVariableHeaderOf rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :isVariableHeaderOf ;
+                            rdf:type owl:FunctionalProperty ;
+                            rdfs:domain :UnsubackVariableHeader ;
+                            rdfs:range :UnsubackPacket ;
+                            rdfs:comment "Links a UNSUBACK Variable Header to its MQTT Control Packet."@en ;
+                            rdfs:label "is UNSUBACK Variable Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscribeFixedHeaderOf
+:isUnsubscribeFixedHeaderOf rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :isFixedHeaderOf ;
+                            rdf:type owl:FunctionalProperty ;
+                            rdfs:domain :UnsubscribeFixedHeader ;
+                            rdfs:range :UnsubscribePacket ;
+                            rdfs:comment "Links an UNSUBSCRIBE Fixed Header to its MQTT Control Packet."@en ;
+                            rdfs:label "is UNSUBSCRIBE Fixed Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscribePayloadOf
+:isUnsubscribePayloadOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :isPayloadOf ;
+                        rdf:type owl:FunctionalProperty ;
+                        rdfs:domain :UnsubscribePayload ;
+                        rdfs:range :UnsubscribePacket ;
+                        rdfs:comment "Links an UNSUBSCRIBE Payload to its MQTT Control Packet."@en ;
+                        rdfs:label "is UNSUBSCRIBE Payload of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscribeVariableHeaderOf
+:isUnsubscribeVariableHeaderOf rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :isVariableHeaderOf ;
                                rdf:type owl:FunctionalProperty ;
-                               rdfs:domain :UnsubscribeFixedHeader ;
+                               rdfs:domain :UnsubscribeVariableHeader ;
                                rdfs:range :UnsubscribePacket ;
-                               rdfs:comment "Links an UNSUBSCRIBE Fixed Header to its MQTT Control Packet."@en ;
-                               rdfs:label "is UNSUBSCRIBE Fixed Header of"@en .
-
-
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscriptionPayloadOf
-:isUnsubscriptionPayloadOf rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf :isPayloadOf ;
-                           rdf:type owl:FunctionalProperty ;
-                           rdfs:domain :UnsubscriptionPayload ;
-                           rdfs:range :UnsubscribePacket ;
-                           rdfs:comment "Links an UNSUBSCRIBE Payload to its MQTT Control Packet."@en ;
-                           rdfs:label "is UNSUBSCRIBE Payload of"@en .
-
-
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscriptionVariableHeaderOf
-:isUnsubscriptionVariableHeaderOf rdf:type owl:ObjectProperty ;
-                                  rdfs:subPropertyOf :isVariableHeaderOf ;
-                                  rdf:type owl:FunctionalProperty ;
-                                  rdfs:domain :UnsubscribeVariableHeader ;
-                                  rdfs:range :UnsubscribePacket ;
-                                  rdfs:comment "Links an UNSUBSCRIBE Variable Header to its MQTT Control Packet."@en ;
-                                  rdfs:label "is UNSUBSCRIBE Variable Header of"@en .
+                               rdfs:comment "Links an UNSUBSCRIBE Variable Header to its MQTT Control Packet."@en ;
+                               rdfs:label "is UNSUBSCRIBE Variable Header of"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isVariableHeaderOf
@@ -600,6 +1402,14 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:range :ControlPacket ;
                     rdfs:comment "Links a Variable Header to the MQTT Control Packet containing it."@en ;
                     rdfs:label "is Variable Header of"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isWillTopicOf
+:isWillTopicOf rdf:type owl:ObjectProperty ;
+               rdfs:domain :Topic ;
+               rdfs:range :ConnectPayload ;
+               rdfs:comment "."@en ;
+               rdfs:label "is Will Topic of"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#listensToTopic
@@ -626,61 +1436,179 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "observes MQTT Topic"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesActuation
-:payloadEncodesActuation rdf:type owl:ObjectProperty ;
-                         rdfs:domain :PublishPayload ;
-                         rdfs:range sosa:Actuation ;
-                         rdfs:comment "Indicates that the MQTT Payload encodes a single SOSA Actuation command."@en ;
-                         rdfs:label "payload encodes SOSA Actuation"@en .
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesAuthPacket
+:receivesAuthPacket rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :receivesControlPacket ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Broker
+                                                :Client
+                                              )
+                                ] ;
+                    rdfs:range :AuthPacket ;
+                    rdfs:comment "Client/Broker receives AUTH Packet from Broker/Client"@en ;
+                    rdfs:label "receives MQTT AUTH Packet"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesActuationCollection
-:payloadEncodesActuationCollection rdf:type owl:ObjectProperty ;
-                                   rdfs:domain :PublishPayload ;
-                                   rdfs:range sosa:ActuationCollection ;
-                                   rdfs:comment "Indicates that the MQTT Payload encodes a collection of actuation commands."@en ;
-                                   rdfs:label "payload encodes SOSA Actuation Collection"@en .
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesConnackPacket
+:receivesConnackPacket rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :receivesControlPacket ;
+                       rdfs:domain :Client ;
+                       rdfs:range :ConnackPacket ;
+                       rdfs:comment "Client receives CONNACK Packet from Broker"@en ;
+                       rdfs:label "receives MQTT CONNACK Packet"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesObservation
-:payloadEncodesObservation rdf:type owl:ObjectProperty ;
-                           rdfs:domain :PublishPayload ;
-                           rdfs:range sosa:Observation ;
-                           rdfs:comment "Indicates that the MQTT Payload encodes a SOSA Observation."@en ;
-                           rdfs:label "payload encodes SOSA Observation"@en .
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesConnectPacket
+:receivesConnectPacket rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :receivesControlPacket ;
+                       rdfs:domain :Broker ;
+                       rdfs:range :ConnectPacket ;
+                       rdfs:comment "Broker receives CONNECT Packet from Client"@en ;
+                       rdfs:label "receives MQTT CONNECT Packet"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesObservationCollection
-:payloadEncodesObservationCollection rdf:type owl:ObjectProperty ;
-                                     rdfs:domain :PublishPayload ;
-                                     rdfs:range sosa:ObservationCollection ;
-                                     rdfs:comment "Indicates that the MQTT Payload encodes a collection of SOSA Observations."@en ;
-                                     rdfs:label "payload encodes SOSA Observation Collection"@en .
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesControlPacket
+:receivesControlPacket rdf:type owl:ObjectProperty ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( :Broker
+                                                   :Client
+                                                 )
+                                   ] ;
+                       rdfs:range :ControlPacket ;
+                       rdfs:comment "Client/Broker receives Control Packet from Broker/Client."@en ;
+                       rdfs:label "receives MQTT Control Packet"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#publishesPacket
-:publishesPacket rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :sendsControlPacket ;
-                 rdfs:domain :Client ;
-                 rdfs:range :PublishPacket ;
-                 rdfs:comment "Specializes mqtt:sendsControlPacket for PUBLISH packets."@en ;
-                 rdfs:label "publishes PUBLISH Packet"@en .
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesDisconnectPacket
+:receivesDisconnectPacket rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :receivesControlPacket ;
+                          rdfs:domain [ rdf:type owl:Class ;
+                                        owl:unionOf ( :Broker
+                                                      :Client
+                                                    )
+                                      ] ;
+                          rdfs:range :DisconnectPacket ;
+                          rdfs:comment "Client/Broker receives DISCONNECT Packet from Broker/Client"@en ;
+                          rdfs:label "receives MQTT DISCONNECT Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPingreqPacket
+:receivesPingreqPacket rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :receivesControlPacket ;
+                       rdfs:domain :Client ;
+                       rdfs:range :PingreqPacket ;
+                       rdfs:comment "Client receives PINGREQ Packet from Broker"@en ;
+                       rdfs:label "receives MQTT PINGREQ Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPingrespPacket
+:receivesPingrespPacket rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :receivesControlPacket ;
+                        rdfs:domain :Broker ;
+                        rdfs:range :PingrespPacket ;
+                        rdfs:comment "Broker receives PINGRESP Packet from Client"@en ;
+                        rdfs:label "receives MQTT PINGRESP Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPubackPacket
+:receivesPubackPacket rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :receivesControlPacket ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :Broker
+                                                  :Client
+                                                )
+                                  ] ;
+                      rdfs:range :PubackPacket ;
+                      rdfs:comment "Client/Broker receives PUBACK Packet from Broker/Client"@en ;
+                      rdfs:label "receives MQTT PUBACK Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPubcompPacket
+:receivesPubcompPacket rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :receivesControlPacket ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( :Broker
+                                                   :Client
+                                                 )
+                                   ] ;
+                       rdfs:range :PubcompPacket ;
+                       rdfs:comment "Client/Broker receives PUBCOMP Packet from Broker/Client"@en ;
+                       rdfs:label "receives MQTT PUBCOMP Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPublishPacket
+:receivesPublishPacket rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :receivesControlPacket ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( :Broker
+                                                   :Client
+                                                 )
+                                   ] ;
+                       rdfs:range :PublishPacket ;
+                       rdfs:comment "Client/Broker receives PUBLISH Packet from Broker/Client"@en ;
+                       rdfs:label "receives MQTT PUBLISH Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPubrecPacket
+:receivesPubrecPacket rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :receivesControlPacket ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :Broker
+                                                  :Client
+                                                )
+                                  ] ;
+                      rdfs:range :PubrecPacket ;
+                      rdfs:comment "Client/Broker receives PUBREC Packet from Broker/Client"@en ;
+                      rdfs:label "receives MQTT PUBREC Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPubrelPacket
+:receivesPubrelPacket rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :receivesControlPacket ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :Broker
+                                                  :Client
+                                                )
+                                  ] ;
+                      rdfs:range :PubrelPacket ;
+                      rdfs:comment "Client/Broker receives PUBREL Packet from Broker/Client"@en ;
+                      rdfs:label "receives MQTT PUBREL Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesSubackPacket
+:receivesSubackPacket rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :receivesControlPacket ;
+                      rdfs:domain :Client ;
+                      rdfs:range :SubackPacket ;
+                      rdfs:comment "Client receives SUBACK Packet from Broker"@en ;
+                      rdfs:label "receives MQTT SUBACK Packet"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesSubscribePacket
 :receivesSubscribePacket rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :receivesControlPacket ;
                          rdfs:domain :Broker ;
                          rdfs:range :SubscribePacket ;
-                         rdfs:comment "Indicates that an MQTT Broker receives a SUBSCRIBE packet from an MQTT Client."@en ;
-                         rdfs:label "receives SUBSCRIBE Packet"@en .
+                         rdfs:comment "Broker receives SUBSCRIBE Packet from Client"@en ;
+                         rdfs:label "receives MQTT SUBSCRIBE Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesUnsubackPacket
+:receivesUnsubackPacket rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :receivesControlPacket ;
+                        rdfs:domain :Client ;
+                        rdfs:range :UnsubackPacket ;
+                        rdfs:comment "Client receives UNSUBACK Packet from Broker"@en ;
+                        rdfs:label "receives MQTT UNSUBACK Packet"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesUnsubscribePacket
 :receivesUnsubscribePacket rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :receivesControlPacket ;
                            rdfs:domain :Broker ;
                            rdfs:range :UnsubscribePacket ;
-                           rdfs:comment "Indicates that an MQTT Broker receives an UNSUBSCRIBE packet from an MQTT Client."@en ;
-                           rdfs:label "receives UNSUBSCRIBE Packet"@en .
+                           rdfs:comment "Broker receives UNSUBSCRIBE Packet from Client"@en ;
+                           rdfs:label "receives MQTT UNSUBSCRIBE Packet"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#runsOnPlatform
@@ -691,31 +1619,180 @@ xsd:date rdf:type rdfs:Datatype .
                 rdfs:label "runs on platform"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsAuthPacket
+:sendsAuthPacket rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :sendsControlPacket ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :Broker
+                                             :Client
+                                           )
+                             ] ;
+                 rdfs:range :AuthPacket ;
+                 rdfs:comment "Client/Broker sends AUTH Packet to Broker/Client"@en ;
+                 rdfs:label "sends MQTT AUTH Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsConnackPacket
+:sendsConnackPacket rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :sendsControlPacket ;
+                    rdfs:domain :Broker ;
+                    rdfs:range :ConnackPacket ;
+                    rdfs:comment "Broker sends CONNACK Packet to Client"@en ;
+                    rdfs:label "sends MQTT CONNACK Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsConnectPacket
+:sendsConnectPacket rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :sendsControlPacket ;
+                    rdfs:domain :Client ;
+                    rdfs:range :ConnectPacket ;
+                    rdfs:comment "Client sends CONNECT Packet to Broker"@en ;
+                    rdfs:label "sends MQTT CONNECT Packet"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsControlPacket
 :sendsControlPacket rdf:type owl:ObjectProperty ;
                     owl:equivalentProperty mqv:sendsControlPacket ;
-                    rdfs:domain :Client ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Broker
+                                                :Client
+                                              )
+                                ] ;
                     rdfs:range :ControlPacket ;
-                    rdfs:comment "Relates an MQTT Client to an MQTT Control Packet it sends."@en ;
+                    rdfs:comment "Client/Broker sends Control Packet to Broker/Client."@en ;
                     rdfs:label "sends MQTT Control Packet"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#subscribesPacket
-:subscribesPacket rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf :sendsControlPacket ;
-                  rdfs:domain :Client ;
-                  rdfs:range :SubscribePacket ;
-                  rdfs:comment "Specializes mqtt:sendsControlPacket for SUBSCRIBE packets."@en ;
-                  rdfs:label "sends SUBSCRIBE Packet"@en .
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsDisconnectPacket
+:sendsDisconnectPacket rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :sendsControlPacket ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( :Broker
+                                                   :Client
+                                                 )
+                                   ] ;
+                       rdfs:range :DisconnectPacket ;
+                       rdfs:comment "Client/Broker sends DISCONNECT Packet to Broker/Client"@en ;
+                       rdfs:label "sends MQTT DISCONNECT Packet"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#unsubscribesPacket
-:unsubscribesPacket rdf:type owl:ObjectProperty ;
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPingreqPacket
+:sendsPingreqPacket rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :sendsControlPacket ;
                     rdfs:domain :Client ;
-                    rdfs:range :UnsubscribePacket ;
-                    rdfs:comment "Specializes mqtt:sendsControlPacket for UNSUBSCRIBE packets."@en ;
-                    rdfs:label "sends UNSUBSCRIBE Packet"@en .
+                    rdfs:range :PingreqPacket ;
+                    rdfs:comment "Client sends PINGREQ Packet to Broker"@en ;
+                    rdfs:label "sends MQTT PINGREQ Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPingrespPacket
+:sendsPingrespPacket rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :sendsControlPacket ;
+                     rdfs:domain :Broker ;
+                     rdfs:range :PingrespPacket ;
+                     rdfs:comment "Broker sends PINGRESP Packet to Client"@en ;
+                     rdfs:label "sends MQTT PINGRESP Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPubackPacket
+:sendsPubackPacket rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :sendsControlPacket ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :Broker
+                                               :Client
+                                             )
+                               ] ;
+                   rdfs:range :PubackPacket ;
+                   rdfs:comment "Client/Broker sends PUBACK Packet to Broker/Client"@en ;
+                   rdfs:label "sends MQTT PUBACK Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPubcompPacket
+:sendsPubcompPacket rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :sendsControlPacket ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Broker
+                                                :Client
+                                              )
+                                ] ;
+                    rdfs:range :PubcompPacket ;
+                    rdfs:comment "Client/Broker sends PUBCOMP Packet to Broker/Client"@en ;
+                    rdfs:label "sends MQTT PUBCOMP Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPublishPacket
+:sendsPublishPacket rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :sendsControlPacket ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Broker
+                                                :Client
+                                              )
+                                ] ;
+                    rdfs:range :PublishPacket ;
+                    rdfs:comment "Client/Broker sends PUBLISH Packet to Broker/Client"@en ;
+                    rdfs:label "sends MQTT PUBLISH Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPubrecPacket
+:sendsPubrecPacket rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :sendsControlPacket ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :Broker
+                                               :Client
+                                             )
+                               ] ;
+                   rdfs:range :PubrecPacket ;
+                   rdfs:comment "Client/Broker sends PUBREC Packet to Broker/Client"@en ;
+                   rdfs:label "sends MQTT PUBREC Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPubrelPacket
+:sendsPubrelPacket rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :sendsControlPacket ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :Broker
+                                               :Client
+                                             )
+                               ] ;
+                   rdfs:range :PubrelPacket ;
+                   rdfs:comment "Client/Broker sends PUBREL Packet to Broker/Client"@en ;
+                   rdfs:label "sends MQTT PUBREL Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsSubackPacket
+:sendsSubackPacket rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :sendsControlPacket ;
+                   rdfs:domain :Broker ;
+                   rdfs:range :SubackPacket ;
+                   rdfs:comment "Broker sends SUBACK Packet to Client"@en ;
+                   rdfs:label "sends MQTT SUBACK Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsSubscribePacket
+:sendsSubscribePacket rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :sendsControlPacket ;
+                      rdfs:domain :Client ;
+                      rdfs:range :SubscribePacket ;
+                      rdfs:comment "Client sends SUBSCRIBE Packet to Broker"@en ;
+                      rdfs:label "sends MQTT SUBSCRIBE Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsUnsubackPacket
+:sendsUnsubackPacket rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :sendsControlPacket ;
+                     rdfs:domain :Broker ;
+                     rdfs:range :UnsubackPacket ;
+                     rdfs:comment "Broker sends UNSUBACK Packet to Client"@en ;
+                     rdfs:label "sends MQTT UNSUBACK Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsUnsubscribePacket
+:sendsUnsubscribePacket rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :sendsControlPacket ;
+                        rdfs:domain :Client ;
+                        rdfs:range :UnsubscribePacket ;
+                        rdfs:comment "Client sends UNSUBSCRIBE Packet to Broker"@en ;
+                        rdfs:label "sends MQTT UNSUBSCRIBE Packet"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#usesConnection
@@ -746,6 +1823,54 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 #    Data properties
 #################################################################
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAssignedClientIdentifier
+:hasAssignedClientIdentifier rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf :hasProperty ;
+                             rdfs:domain :ConnackProperties ;
+                             rdfs:comment "."@en ;
+                             rdfs:label "has Assigned Client Identifier"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthReasonCode
+:hasAuthReasonCode rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
+                   rdfs:domain :AuthVariableHeader .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthentificationData
+:hasAuthentificationData rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :hasProperty ;
+                         rdfs:domain [ rdf:type owl:Class ;
+                                       owl:unionOf ( :AuthProperties
+                                                     :ConnackProperties
+                                                     :ConnectProperties
+                                                   )
+                                     ] ;
+                         rdfs:comment "."@en ;
+                         rdfs:label "has Authentification Data"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthentificationMethod
+:hasAuthentificationMethod rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf :hasProperty ;
+                           rdfs:domain [ rdf:type owl:Class ;
+                                         owl:unionOf ( :AuthProperties
+                                                       :ConnackProperties
+                                                       :ConnectProperties
+                                                     )
+                                       ] ;
+                           rdfs:comment "."@en ;
+                           rdfs:label "has Authentification Method"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasCleanStart
+:hasCleanStart rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasConnectFlag ;
+               rdfs:domain :ConnectVariableHeader ;
+               rdfs:comment "."@en ;
+               rdfs:label "has Clean Start"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasClientID
 :hasClientID rdf:type owl:DatatypeProperty ,
                       owl:FunctionalProperty ;
@@ -755,12 +1880,126 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
              rdfs:label "MQTT Client identifier"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackFlag
+:hasConnackFlag rdf:type owl:DatatypeProperty ;
+                rdfs:domain :ConnackVariableHeader ;
+                rdfs:comment "."@en ;
+                rdfs:label "has Connack Flag"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackReasonCode
+:hasConnackReasonCode rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
+                      rdfs:domain :ConnackVariableHeader .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectFlag
+:hasConnectFlag rdf:type owl:DatatypeProperty ;
+                rdfs:domain :ConnectVariableHeader ;
+                rdfs:comment "."@en ;
+                rdfs:label "has Connect Flags"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasContent
+:hasContent rdf:type owl:DatatypeProperty ;
+            owl:equivalentProperty :hasPayloadContent ;
+            rdfs:domain :ApplicationMessage ;
+            rdfs:comment "."@en ;
+            rdfs:label "has Application Message content"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasContentDelimiter
+:hasContentDelimiter rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain :ApplicationMessage ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "The delimiter used to separate fields in the Application Message content."@en ;
+                     rdfs:label "Application Message content delimiter"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasContentType
+:hasContentType rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasProperty ,
+                                   :hasWillProperty ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:domain :ApplicationMessage ,
+                            [ rdf:type owl:Class ;
+                              owl:unionOf ( :PublishProperties
+                                            :WillProperties
+                                          )
+                            ] ;
+                rdfs:range xsd:string ;
+                rdfs:comment "."@en ,
+                             "The MIME type of the Application Message content (e.g., 'application/json')."@en ;
+                rdfs:label "Application Message content type"@en ,
+                           "has Content Type"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasControlPacketType
+:hasControlPacketType rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain :FixedHeader ;
+                      rdfs:range [ rdf:type rdfs:Datatype ;
+                                   owl:unionOf ( xsd:string
+                                                 xsd:unsignedShort
+                                               )
+                                 ] ;
+                      rdfs:comment "4 bits Control Packet Type or literal of the MQTT Fixed Header, indicating the type of MQTT Control Packet (e.g., CONNECT, PUBLISH, SUBSCRIBE)."@en ;
+                      rdfs:label "MQTT Control Packet Type"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasCorrelationData
+:hasCorrelationData rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasProperty ,
+                                       :hasWillProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :PublishProperties
+                                                :WillProperties
+                                              )
+                                ] ;
+                    rdfs:comment "."@en ;
+                    rdfs:label "has Correlation Data"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDUPFlag
+:hasDUPFlag rdf:type owl:DatatypeProperty ;
+            owl:equivalentProperty mqv:hasDUPFlag ;
+            rdfs:subPropertyOf :hasFixedHeaderFlag ;
+            rdfs:domain :PublishFixedHeader ;
+            rdfs:range xsd:boolean ;
+            rdfs:comment "True if this is a duplicate delivery of an earlier PUBLISH message."@en ;
+            rdfs:label "DUP flag"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDisconnectReasonCode
+:hasDisconnectReasonCode rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
+                         rdfs:domain :DisconnectVariableHeader .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasEncoding
+:hasEncoding rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :ApplicationMessage ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The character encoding or serialization used for the Application Message (e.g., 'UTF-8', 'Base64')."@en ;
+             rdfs:label "Application Message encoding"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFilterPattern
 :hasFilterPattern rdf:type owl:DatatypeProperty ;
                   rdfs:domain :TopicFilter ;
                   rdfs:range xsd:string ;
                   rdfs:comment "The MQTT Topic Filter pattern as a string (e.g., 'sensor/+/temp' or 'fabrik/zentrierung/#')."@en ;
                   rdfs:label "MQTT Topic Filter pattern"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFixedHeaderFlag
+:hasFixedHeaderFlag rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :PublishFixedHeader ;
+                    rdfs:range xsd:nonNegativeInteger ;
+                    rdfs:comment ""@en ;
+                    rdfs:label "FixedHeader flag"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasHostAddress
@@ -772,49 +2011,123 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                 rdfs:label "MQTT Broker host"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasKeepAlive
+:hasKeepAlive rdf:type owl:DatatypeProperty ;
+              rdfs:domain :ConnectVariableHeader ;
+              rdfs:comment "."@en ;
+              rdfs:label "has Keep Alive" .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMaximumPacketSize
+:hasMaximumPacketSize rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :hasProperty ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :ConnackProperties
+                                                  :ConnectProperties
+                                                )
+                                  ] ;
+                      rdfs:comment "."@en ;
+                      rdfs:label "has Maximum Packet Size"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMaximumQoS
+:hasMaximumQoS rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasProperty ;
+               rdfs:domain :ConnackProperties ;
+               rdfs:comment "."@en ;
+               rdfs:label "has Maximum QoS"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageExpiryInterval
+:hasMessageExpiryInterval rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :hasProperty ,
+                                             :hasWillProperty ;
+                          rdfs:domain [ rdf:type owl:Class ;
+                                        owl:unionOf ( :PublishProperties
+                                                      :WillProperties
+                                                    )
+                                      ] ;
+                          rdfs:comment "."@en ;
+                          rdfs:label "has Message Expiry Interval"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasNoLocal
+:hasNoLocal rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasSubscriptionOption ;
+            rdfs:domain :SubscriptionEntry ;
+            rdfs:comment "."@en ;
+            rdfs:label "has No Local"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPacketIdentifier
 :hasPacketIdentifier rdf:type owl:DatatypeProperty ,
                               owl:FunctionalProperty ;
-                     rdfs:domain :VariableHeader ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( :PubackVariableHeader
+                                                 :PubcompVariableHeader
+                                                 :PublishVariableHeader
+                                                 :PubrecVariableHeader
+                                                 :PubrelVariableHeader
+                                                 :SubackVariableHeader
+                                                 :SubscribeVariableHeader
+                                                 :UnsubackVariableHeader
+                                                 :UnsubscribeVariableHeader
+                                               )
+                                 ] ;
                      rdfs:range xsd:unsignedShort ;
                      rdfs:comment "A 16-bit identifier used to correlate MQTT messages when QoS > 0."@en ;
                      rdfs:label "packet identifier"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPassword
+:hasPassword rdf:type owl:DatatypeProperty ;
+             rdfs:domain :ConnectPayload ;
+             rdfs:comment "."@en ;
+             rdfs:label "has Password"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPasswordFlag
+:hasPasswordFlag rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasConnectFlag ;
+                 rdfs:domain :ConnectVariableHeader ;
+                 rdfs:comment "."@en ;
+                 rdfs:label "has Password Flag"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadContent
 :hasPayloadContent rdf:type owl:DatatypeProperty ,
                             owl:FunctionalProperty ;
                    rdfs:domain :PublishPayload ;
-                   rdfs:range xsd:string ;
-                   rdfs:comment "The application message body as a string (possibly serialized/encoded)."@en ;
-                   rdfs:label "payload content"@en .
+                   rdfs:comment "."@en ;
+                   rdfs:label "has Payload content"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadContentDelimiter
-:hasPayloadContentDelimiter rdf:type owl:DatatypeProperty ,
-                                     owl:FunctionalProperty ;
-                            rdfs:domain :PublishPayload ;
-                            rdfs:range xsd:string ;
-                            rdfs:comment "The delimiter used to separate fields in the payload content."@en ;
-                            rdfs:label "payload content delimiter"@en .
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadFormatIndicator
+:hasPayloadFormatIndicator rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf :hasProperty ,
+                                              :hasWillProperty ;
+                           rdfs:domain [ rdf:type owl:Class ;
+                                         owl:unionOf ( :PublishProperties
+                                                       :WillProperties
+                                                     )
+                                       ] ;
+                           rdfs:range xsd:boolean ;
+                           rdfs:comment "."@en ;
+                           rdfs:label "has Payload Format Indicator"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadContentType
-:hasPayloadContentType rdf:type owl:DatatypeProperty ,
-                                owl:FunctionalProperty ;
-                       rdfs:domain :PublishPayload ;
-                       rdfs:range xsd:string ;
-                       rdfs:comment "The MIME type of the payload content (e.g., 'application/json')."@en ;
-                       rdfs:label "payload content type"@en .
-
-
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadEncoding
-:hasPayloadEncoding rdf:type owl:DatatypeProperty ,
-                             owl:FunctionalProperty ;
-                    rdfs:domain :PublishPayload ;
-                    rdfs:range xsd:string ;
-                    rdfs:comment "The character encoding or serialization used for the payload (e.g., 'UTF-8', 'Base64')."@en ;
-                    rdfs:label "payload encoding"@en .
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadReasonCode
+:hasPayloadReasonCode rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :hasReasonCode ;
+                      rdf:type owl:FunctionalProperty ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :SubackPayload
+                                                  :UnsubackPayload
+                                                )
+                                  ] ;
+                      rdfs:range xsd:unsignedByte ;
+                      rdfs:comment ""@en ;
+                      rdfs:label "MQTT Reason Code in Payload"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPortNumber
@@ -826,9 +2139,68 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                rdfs:label "MQTT Broker port"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasQosLevel
-:hasQosLevel rdf:type owl:DatatypeProperty ,
-                      owl:FunctionalProperty ;
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperty
+:hasProperty rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Properties ;
+             rdfs:comment "."@en ;
+             rdfs:label "has MQTT Property"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertyLength
+:hasPropertyLength rdf:type owl:DatatypeProperty ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :Properties
+                                               :WillProperties
+                                             )
+                               ] ;
+                   rdfs:range xsd:integer ;
+                   rdfs:comment "."@en ;
+                   rdfs:label "has MQTT Property Length"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProtocolName
+:hasProtocolName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :ConnectVariableHeader ;
+                 rdfs:comment "."@en ;
+                 rdfs:label "has Protocol Name"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProtocolVersion
+:hasProtocolVersion rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :ConnectVariableHeader ;
+                    rdfs:comment "."@en ;
+                    rdfs:label "has Protocol Version"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubackReasonCode
+:hasPubackReasonCode rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
+                     rdfs:domain :PubackVariableHeader .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubcompReasonCode
+:hasPubcompReasonCode rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
+                      rdfs:domain :PubcompVariableHeader .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrecReasonCode
+:hasPubrecReasonCode rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
+                     rdfs:domain :PubrecVariableHeader .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrelReasonCode
+:hasPubrelReasonCode rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
+                     rdfs:domain :PubrelVariableHeader .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasQoSLevel
+:hasQoSLevel rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasFixedHeaderFlag ,
+                                :hasSubscriptionOption ;
+             rdf:type owl:FunctionalProperty ;
              rdfs:domain [ rdf:type owl:Class ;
                            owl:unionOf ( :PublishFixedHeader
                                          :SubscriptionEntry
@@ -847,22 +2219,332 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
              rdfs:label "QoS level"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isDUPFlag
-:isDUPFlag rdf:type owl:DatatypeProperty ;
-           owl:equivalentProperty mqv:hasDUPFlag ;
-           rdfs:domain :PublishFixedHeader ;
-           rdfs:range xsd:boolean ;
-           rdfs:comment "True if this is a duplicate delivery of an earlier PUBLISH message."@en ;
-           rdfs:label "DUP flag"@en .
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasReasonCode
+:hasReasonCode rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:range xsd:unsignedByte ;
+               rdfs:comment ""@en ;
+               rdfs:label "MQTT ReasonCode"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isRetainedFlag
-:isRetainedFlag rdf:type owl:DatatypeProperty ;
-                owl:equivalentProperty mqv:hasRetainFlag ;
-                rdfs:domain :PublishFixedHeader ;
-                rdfs:range xsd:boolean ;
-                rdfs:comment "True if the message should be retained on the MQTT Broker."@en ;
-                rdfs:label "RETAIN flag"@en .
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasReasonString
+:hasReasonString rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :AuthProperties
+                                             :ConnackProperties
+                                             :DisconnectProperties
+                                             :PubackProperties
+                                             :PubcompProperties
+                                             :PubrecProperties
+                                             :PubrelProperties
+                                             :SubackProperties
+                                             :UnsubackProperties
+                                           )
+                             ] ;
+                 rdfs:comment "."@en ;
+                 rdfs:label "has Reason String"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasReceiveMaximum
+:hasReceiveMaximum rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasProperty ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :ConnackProperties
+                                               :ConnectProperties
+                                             )
+                               ] ;
+                   rdfs:comment "."@en ;
+                   rdfs:label "has Receive Maximum"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRemainingLength
+:hasRemainingLength rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :FixedHeader ;
+                    rdfs:range xsd:byte ;
+                    rdfs:comment "This is the length of the Variable Header (plus the length of the Payload), encoded as a Variable Byte Integer."@en ;
+                    rdfs:label "Remaining Length of MQTT Control Packet "@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRequestProblemInformation
+:hasRequestProblemInformation rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf :hasProperty ;
+                              rdfs:domain :ConnectProperties ;
+                              rdfs:comment "."@en ;
+                              rdfs:label "has Request Problem Information"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRequestResponseInformation
+:hasRequestResponseInformation rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf :hasProperty ;
+                               rdfs:domain :ConnectProperties ;
+                               rdfs:comment "."@en ;
+                               rdfs:label "has Request Response Information"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasResponseInformation
+:hasResponseInformation rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf :hasProperty ;
+                        rdfs:domain :ConnackProperties ;
+                        rdfs:comment "."@en ;
+                        rdfs:label "has Response Information"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRetainAsPublished
+:hasRetainAsPublished rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :hasSubscriptionOption ;
+                      rdfs:domain :SubscriptionEntry ;
+                      rdfs:comment ","@en ;
+                      rdfs:label "has Retain As Published"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRetainAvailable
+:hasRetainAvailable rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasProperty ;
+                    rdfs:domain :ConnackProperties ;
+                    rdfs:comment "."@en ;
+                    rdfs:label "has Retain Available"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRetainFlag
+:hasRetainFlag rdf:type owl:DatatypeProperty ;
+               owl:equivalentProperty mqv:hasRetainFlag ;
+               rdfs:subPropertyOf :hasFixedHeaderFlag ;
+               rdfs:domain :PublishFixedHeader ;
+               rdfs:range xsd:boolean ;
+               rdfs:comment "True if the message should be retained on the MQTT Broker."@en ;
+               rdfs:label "RETAIN flag"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRetainHandling
+:hasRetainHandling rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasSubscriptionOption ;
+                   rdfs:domain :SubscriptionEntry ;
+                   rdfs:comment "."@en ;
+                   rdfs:label "has Retain Handling"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasServerKeepAlive
+:hasServerKeepAlive rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasProperty ;
+                    rdfs:domain :ConnackProperties ;
+                    rdfs:comment "."@en ;
+                    rdfs:label "has Server Keep Alive"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasServerReference
+:hasServerReference rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :ConnackProperties
+                                                :DisconnectProperties
+                                              )
+                                ] ;
+                    rdfs:comment "."@en ;
+                    rdfs:label "has Server Reference"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSessionExpiryInterval
+:hasSessionExpiryInterval rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :hasProperty ;
+                          rdfs:domain [ rdf:type owl:Class ;
+                                        owl:unionOf ( :ConnackProperties
+                                                      :ConnectProperties
+                                                      :DisconnectProperties
+                                                    )
+                                      ] ;
+                          rdfs:comment "."@en ;
+                          rdfs:label "has Session Expiry Interval"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSessionPresentFlag
+:hasSessionPresentFlag rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :hasConnackFlag ;
+                       rdfs:domain :ConnackVariableHeader ;
+                       rdfs:comment "."@en ;
+                       rdfs:label "has Session Present Flag"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSharedSubscriptionAvailable
+:hasSharedSubscriptionAvailable rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf :hasProperty ;
+                                rdfs:domain :ConnackProperties ;
+                                rdfs:comment "."@en ;
+                                rdfs:label "has Shared Subscription Available"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackReasonCode
+:hasSubackReasonCode rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasPayloadReasonCode ;
+                     rdfs:domain :SubackPayload .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionIdentifier
+:hasSubscriptionIdentifier rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf :hasProperty ;
+                           rdfs:domain [ rdf:type owl:Class ;
+                                         owl:unionOf ( :PublishProperties
+                                                       :SubscribeProperties
+                                                     )
+                                       ] ;
+                           rdfs:comment "."@en ;
+                           rdfs:label "has Subscription Identifier"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionIdentifierAvailable
+:hasSubscriptionIdentifierAvailable rdf:type owl:DatatypeProperty ;
+                                    rdfs:subPropertyOf :hasProperty ;
+                                    rdfs:domain :ConnackProperties ;
+                                    rdfs:comment "."@en ;
+                                    rdfs:label "has Subscription Identifier Available"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionOption
+:hasSubscriptionOption rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :SubscriptionEntry ;
+                       rdfs:comment "."@en ;
+                       rdfs:label "has Subscription Option"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicAlias
+:hasTopicAlias rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasProperty ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :PublishProperties
+                                           :Topic
+                                         )
+                           ] ;
+               rdfs:comment "."@en ;
+               rdfs:label "has Topic Alias"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicAliasMaximum
+:hasTopicAliasMaximum rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :hasProperty ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :ConnackProperties
+                                                  :ConnectProperties
+                                                )
+                                  ] ;
+                      rdfs:comment "."@en ;
+                      rdfs:label "has Topic Alias Maximum"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackReasonCode
+:hasUnsubackReasonCode rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :hasPayloadReasonCode ;
+                       rdfs:domain :UnsubackPayload .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserName
+:hasUserName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :ConnectPayload ;
+             rdfs:comment "."@en ;
+             rdfs:label "has User Name"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserNameFlag
+:hasUserNameFlag rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasConnectFlag ;
+                 rdfs:domain :ConnectVariableHeader ;
+                 rdfs:comment "."@en ;
+                 rdfs:label "has Username Flag"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserPropertyName
+:hasUserPropertyName rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :UserProperty ;
+                     rdfs:comment "."@en ;
+                     rdfs:label "has User Propery Name"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserPropertyValue
+:hasUserPropertyValue rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :UserProperty ;
+                      rdfs:comment "."@en ;
+                      rdfs:label "has User Property Value"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasVariableHeaderReasonCode
+:hasVariableHeaderReasonCode rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf :hasReasonCode ;
+                             rdf:type owl:FunctionalProperty ;
+                             rdfs:domain [ rdf:type owl:Class ;
+                                           owl:unionOf ( :AuthVariableHeader
+                                                         :ConnackVariableHeader
+                                                         :DisconnectVariableHeader
+                                                         :PubackVariableHeader
+                                                         :PubcompVariableHeader
+                                                         :PubrecVariableHeader
+                                                         :PubrelVariableHeader
+                                                       )
+                                         ] ;
+                             rdfs:range xsd:unsignedByte ;
+                             rdfs:comment ""@en ;
+                             rdfs:label "MQTT Reason Code in Variable Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWilDelayInterval
+:hasWilDelayInterval rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasWillProperty ;
+                     rdfs:domain :WillProperties ;
+                     rdfs:comment "."@en ;
+                     rdfs:label "has Will Delay Interval"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWildcardSubscriptionAvailable
+:hasWildcardSubscriptionAvailable rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf :hasProperty ;
+                                  rdfs:domain :ConnackProperties ;
+                                  rdfs:comment "."@en ;
+                                  rdfs:label "has Wildcard Subscription Available"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillDelayInterval
+:hasWillDelayInterval rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :hasProperty ;
+                      rdfs:domain :WillProperties ;
+                      rdfs:comment "."@en ;
+                      rdfs:label "has Will Delay Interval"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillFlag
+:hasWillFlag rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasConnectFlag ;
+             rdfs:domain :ConnectVariableHeader ;
+             rdfs:comment "."@en ;
+             rdfs:label "has Will Flag"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillPayload
+:hasWillPayload rdf:type owl:DatatypeProperty ;
+                rdfs:domain :ConnectPayload ;
+                rdfs:comment "."@en ;
+                rdfs:label "has Will Payload"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillProperty
+:hasWillProperty rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :WillProperties ;
+                 rdfs:comment "."@en ;
+                 rdfs:label "has MQTT Will Property"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillQoS
+:hasWillQoS rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasConnectFlag ;
+            rdfs:domain :ConnectVariableHeader ;
+            rdfs:comment "."@en ;
+            rdfs:label "has Will QoS"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillRetain
+:hasWillRetain rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasConnectFlag ;
+               rdfs:domain :ConnectVariableHeader ;
+               rdfs:comment "."@en ;
+               rdfs:label "has Will Retain"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#usesTLS
@@ -891,12 +2573,14 @@ rdf:List rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/sosa/Actuation
-sosa:Actuation rdfs:subClassOf :TopicSubject .
+sosa:Actuation rdfs:subClassOf :Activity ,
+                               :TopicSubject .
 
 
 ###  http://www.w3.org/ns/sosa/ActuationCollection
 sosa:ActuationCollection rdf:type owl:Class ;
-                         rdfs:subClassOf :TopicSubject .
+                         rdfs:subClassOf :Activity ,
+                                         :TopicSubject .
 
 
 ###  http://www.w3.org/ns/sosa/FeatureOfInterest
@@ -904,12 +2588,14 @@ sosa:FeatureOfInterest rdfs:subClassOf :TopicSubject .
 
 
 ###  http://www.w3.org/ns/sosa/Observation
-sosa:Observation rdfs:subClassOf :TopicSubject .
+sosa:Observation rdfs:subClassOf :Activity ,
+                                 :TopicSubject .
 
 
 ###  http://www.w3.org/ns/sosa/ObservationCollection
 sosa:ObservationCollection rdf:type owl:Class ;
-                           rdfs:subClassOf :TopicSubject .
+                           rdfs:subClassOf :Activity ,
+                                           :TopicSubject .
 
 
 ###  http://www.w3.org/ns/sosa/Property
@@ -929,6 +2615,46 @@ foaf:Organization rdf:type owl:Class .
 foaf:Person rdf:type owl:Class .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Activity
+:Activity rdf:type owl:Class ;
+          rdfs:comment "An Generalisation of SOSA Observation, ObservationCollection, Actuation, ActuationCollection."@en ;
+          rdfs:label "SOSA Activity"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ApplicationMessage
+:ApplicationMessage rdf:type owl:Class ;
+                    rdfs:comment "Protocol independent Application Message description"@en ;
+                    rdfs:label "Application Message"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#AuthFixedHeader
+:AuthFixedHeader rdf:type owl:Class ;
+                 rdfs:subClassOf :FixedHeader ;
+                 rdfs:comment "The Fixed Header of an AUTH packet."@en ;
+                 rdfs:label "MQTT AUTH Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#AuthPacket
+:AuthPacket rdf:type owl:Class ;
+            rdfs:subClassOf :ControlPacket ;
+            rdfs:comment "An MQTT Control Packet used to perform extended authentication exchanges between Client and Server."@en ;
+            rdfs:label "MQTT AUTH Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#AuthProperties
+:AuthProperties rdf:type owl:Class ;
+                rdfs:subClassOf :Properties ;
+                rdfs:comment ""@en ;
+                rdfs:label "MQTT Auth Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#AuthVariableHeader
+:AuthVariableHeader rdf:type owl:Class ;
+                    rdfs:subClassOf :VariableHeader ;
+                    rdfs:comment "The Variable Header of an AUTH packet."@en ;
+                    rdfs:label "MQTT AUTH Variable Header"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Broker
 :Broker rdf:type owl:Class ;
         owl:equivalentClass mqv:Server ;
@@ -945,11 +2671,102 @@ foaf:Person rdf:type owl:Class .
         rdfs:label "MQTT Client"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackFixedHeader
+:ConnackFixedHeader rdf:type owl:Class ;
+                    rdfs:subClassOf :FixedHeader ;
+                    rdfs:comment "The Fixed Header of an CONNACK packet."@en ;
+                    rdfs:label "MQTT CONNACK Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackPacket
+:ConnackPacket rdf:type owl:Class ;
+               rdfs:subClassOf :ControlPacket ;
+               rdfs:comment "An MQTT Control Packet sent by the Server in response to a CONNECT Packet, indicating the result of the connection attempt."@en ;
+               rdfs:label "MQTT CONNACK Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackProperties
+:ConnackProperties rdf:type owl:Class ;
+                   rdfs:subClassOf :Properties ;
+                   rdfs:comment ""@en ;
+                   rdfs:label "MQTT Connack Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackVariableHeader
+:ConnackVariableHeader rdf:type owl:Class ;
+                       rdfs:subClassOf :VariableHeader ;
+                       rdfs:comment "The Variable Header of an CONNACK packet."@en ;
+                       rdfs:label "MQTT CONNACK Variable Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectFixedHeader
+:ConnectFixedHeader rdf:type owl:Class ;
+                    rdfs:subClassOf :FixedHeader ;
+                    rdfs:comment "The Fixed Header of an CONNECT packet."@en ;
+                    rdfs:label "MQTT CONNECT Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectPacket
+:ConnectPacket rdf:type owl:Class ;
+               rdfs:subClassOf :ControlPacket ;
+               rdfs:comment "An MQTT Control Packet sent by a Client to establish a connection to an MQTT Server."@en ;
+               rdfs:label "MQTT CONNECT Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectPayload
+:ConnectPayload rdf:type owl:Class ;
+                rdfs:subClassOf :Payload ;
+                rdfs:comment "."@en ;
+                rdfs:label "MQTT CONNECT Payload"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectProperties
+:ConnectProperties rdf:type owl:Class ;
+                   rdfs:subClassOf :Properties ;
+                   rdfs:comment ""@en ;
+                   rdfs:label "MQTT Connect Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectVariableHeader
+:ConnectVariableHeader rdf:type owl:Class ;
+                       rdfs:subClassOf :VariableHeader ;
+                       rdfs:comment "The Variable Header of an CONNECT packet."@en ;
+                       rdfs:label "MQTT CONNECT Variable Header"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ControlPacket
 :ControlPacket rdf:type owl:Class ;
                owl:equivalentClass mqv:ControlPacket ;
                rdfs:comment "An MQTT Control Packet such as PUBLISH, SUBSCRIBE, or UNSUBSCRIBE."@en ;
                rdfs:label "MQTT Control Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#DisconnectFixedHeader
+:DisconnectFixedHeader rdf:type owl:Class ;
+                       rdfs:subClassOf :FixedHeader ;
+                       rdfs:comment "The Fixed Header of a DISCONNECT packet."@en ;
+                       rdfs:label "MQTT DISCONNECT Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#DisconnectPacket
+:DisconnectPacket rdf:type owl:Class ;
+                  rdfs:subClassOf :ControlPacket ;
+                  rdfs:comment "An MQTT Control Packet sent by a Client or Server to indicate that the connection is being closed intentionally."@en ;
+                  rdfs:label "MQTT DISCONNECT Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#DisconnectProperties
+:DisconnectProperties rdf:type owl:Class ;
+                      rdfs:subClassOf :Properties ;
+                      rdfs:comment ""@en ;
+                      rdfs:label "MQTT Disconnect Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#DisconnectVariableHeader
+:DisconnectVariableHeader rdf:type owl:Class ;
+                          rdfs:subClassOf :VariableHeader ;
+                          rdfs:comment "The Variable Header of a DISCONNECT packet."@en ;
+                          rdfs:label "MQTT DISCONNECT Variable Header"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#FixedHeader
@@ -961,20 +2778,125 @@ foaf:Person rdf:type owl:Class .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#NetworkConnection
 :NetworkConnection rdf:type owl:Class ;
                    owl:equivalentClass mqv:NetworkConnection ;
+                   rdfs:subClassOf :NetworkEntity ;
                    rdfs:comment "A transport-layer connection between an MQTT Client and an MQTT Broker (optionally secured with TLS)."@en ;
                    rdfs:label "MQTT Network Connection"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#NetworkEntity
+:NetworkEntity rdf:type owl:Class ;
+               rdfs:comment "Entities involved in a network."@en ;
+               rdfs:label "Network Entity"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#NetworkParticipant
 :NetworkParticipant rdf:type owl:Class ;
+                    rdfs:subClassOf :NetworkEntity ;
                     rdfs:comment "An entity participating in an MQTT network, such as an MQTT Client or an MQTT Broker."@en ;
                     rdfs:label "MQTT Network Participant"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#NetworkSession
+:NetworkSession rdf:type owl:Class ;
+                rdfs:subClassOf :NetworkEntity ;
+                rdfs:comment "Persistent Session across a sequence of Network Connections."@en ;
+                rdfs:label "MQTT Network Session"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Payload
 :Payload rdf:type owl:Class ;
          rdfs:comment "The application data carried by an MQTT Control Packet."@en ;
          rdfs:label "MQTT Payload"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PingreqFixedHeader
+:PingreqFixedHeader rdf:type owl:Class ;
+                    rdfs:subClassOf :FixedHeader ;
+                    rdfs:comment "The Fixed Header of a PINGREQ packet."@en ;
+                    rdfs:label "MQTT PINGREQ Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PingreqPacket
+:PingreqPacket rdf:type owl:Class ;
+               rdfs:subClassOf :ControlPacket ;
+               rdfs:comment "An MQTT Control Packet sent by a Client to the Server to indicate that the Client is alive and to maintain the network connection."@en ;
+               rdfs:label "MQTT PINGREQ Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PingrespFixedHeader
+:PingrespFixedHeader rdf:type owl:Class ;
+                     rdfs:subClassOf :FixedHeader ;
+                     rdfs:comment "The Fixed Header of a PINGRESP packet."@en ;
+                     rdfs:label "MQTT PINGRESP Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PingrespPacket
+:PingrespPacket rdf:type owl:Class ;
+                rdfs:subClassOf :ControlPacket ;
+                rdfs:comment "An MQTT Control Packet sent by the Server in response to a PINGREQ Packet to indicate that the Server is alive."@en ;
+                rdfs:label "MQTT PINGRESP Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Properties
+:Properties rdf:type owl:Class ;
+            rdfs:comment ""@en ;
+            rdfs:label "MQTT Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubackFixedHeader
+:PubackFixedHeader rdf:type owl:Class ;
+                   rdfs:subClassOf :FixedHeader ;
+                   rdfs:comment "The Fixed Header of a PUBACK packet."@en ;
+                   rdfs:label "MQTT PUBACK Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubackPacket
+:PubackPacket rdf:type owl:Class ;
+              rdfs:subClassOf :ControlPacket ;
+              rdfs:comment "An MQTT Control Packet sent by a Receiver to acknowledge receipt of a PUBLISH Packet with QoS 1."@en ;
+              rdfs:label "MQTT PUBACK Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubackProperties
+:PubackProperties rdf:type owl:Class ;
+                  rdfs:subClassOf :Properties ;
+                  rdfs:comment ""@en ;
+                  rdfs:label "MQTT Puback Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubackVariableHeader
+:PubackVariableHeader rdf:type owl:Class ;
+                      rdfs:subClassOf :VariableHeader ;
+                      rdfs:comment "The Variable Header of a PUBACK packet."@en ;
+                      rdfs:label "MQTT PUBACK Variable Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubcompFixedHeader
+:PubcompFixedHeader rdf:type owl:Class ;
+                    rdfs:subClassOf :FixedHeader ;
+                    rdfs:comment "The Fixed Header of a PUBCOMP packet."@en ;
+                    rdfs:label "MQTT PUBCOMP Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubcompPacket
+:PubcompPacket rdf:type owl:Class ;
+               rdfs:subClassOf :ControlPacket ;
+               rdfs:comment "An MQTT Control Packet sent by a Receiver as the final acknowledgement in the QoS 2 publish flow."@en ;
+               rdfs:label "MQTT PUBCOMP Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubcompProperties
+:PubcompProperties rdf:type owl:Class ;
+                   rdfs:subClassOf :Properties ;
+                   rdfs:comment ""@en ;
+                   rdfs:label "MQTT Pubcomp Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubcompVariableHeader
+:PubcompVariableHeader rdf:type owl:Class ;
+                       rdfs:subClassOf :VariableHeader ;
+                       rdfs:comment "The Variable Header of a PUBCOMP packet."@en ;
+                       rdfs:label "MQTT PUBCOMP Variable Header"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishFixedHeader
@@ -999,11 +2921,109 @@ foaf:Person rdf:type owl:Class .
                 rdfs:label "MQTT PUBLISH Payload"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishProperties
+:PublishProperties rdf:type owl:Class ;
+                   rdfs:subClassOf :Properties ;
+                   rdfs:comment ""@en ;
+                   rdfs:label "MQTT Publish Properties"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishVariableHeader
 :PublishVariableHeader rdf:type owl:Class ;
                        rdfs:subClassOf :VariableHeader ;
                        rdfs:comment "The Variable Header of a PUBLISH packet; includes the MQTT Topic and optionally a packet identifier."@en ;
                        rdfs:label "MQTT PUBLISH Variable Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrecFixedHeader
+:PubrecFixedHeader rdf:type owl:Class ;
+                   rdfs:subClassOf :FixedHeader ;
+                   rdfs:comment "The Fixed Header of a PUBREC packet."@en ;
+                   rdfs:label "MQTT PUBREC Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrecPacket
+:PubrecPacket rdf:type owl:Class ;
+              rdfs:subClassOf :ControlPacket ;
+              rdfs:comment "An MQTT Control Packet sent by a Receiver to indicate that a PUBLISH Packet with QoS 2 has been received and is being processed."@en ;
+              rdfs:label "MQTT PUBREC Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrecProperties
+:PubrecProperties rdf:type owl:Class ;
+                  rdfs:subClassOf :Properties ;
+                  rdfs:comment ""@en ;
+                  rdfs:label "MQTT Pubrec Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrecVariableHeader
+:PubrecVariableHeader rdf:type owl:Class ;
+                      rdfs:subClassOf :VariableHeader ;
+                      rdfs:comment "The Variable Header of a PUBREC packet."@en ;
+                      rdfs:label "MQTT PUBREC Variable Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrelFixedHeader
+:PubrelFixedHeader rdf:type owl:Class ;
+                   rdfs:subClassOf :FixedHeader ;
+                   rdfs:comment "The Fixed Header of an PUBREL packet."@en ;
+                   rdfs:label "MQTT PUBREL Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrelPacket
+:PubrelPacket rdf:type owl:Class ;
+              rdfs:subClassOf :ControlPacket ;
+              rdfs:comment "An MQTT Control Packet sent by a Sender in the QoS 2 publish flow to release a previously received PUBREC response."@en ;
+              rdfs:label "MQTT PUBREL Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrelProperties
+:PubrelProperties rdf:type owl:Class ;
+                  rdfs:subClassOf :Properties ;
+                  rdfs:comment ""@en ;
+                  rdfs:label "MQTT Pubrel Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrelVariableHeader
+:PubrelVariableHeader rdf:type owl:Class ;
+                      rdfs:subClassOf :VariableHeader ;
+                      rdfs:comment "The Variable Header of an PUBREL packet."@en ;
+                      rdfs:label "MQTT PUBREL Variable Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackFixedHeader
+:SubackFixedHeader rdf:type owl:Class ;
+                   rdfs:subClassOf :FixedHeader ;
+                   rdfs:comment "The Fixed Header of a SUBACK packet."@en ;
+                   rdfs:label "MQTT SUBACK Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackPacket
+:SubackPacket rdf:type owl:Class ;
+              rdfs:subClassOf :ControlPacket ;
+              rdfs:comment "An MQTT Control Packet sent by the Server to acknowledge a SUBSCRIBE request and indicate the assigned subscription options or failure codes."@en ;
+              rdfs:label "MQTT SUBACK Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackPayload
+:SubackPayload rdf:type owl:Class ;
+               rdfs:subClassOf :Payload ;
+               rdfs:comment "."@en ;
+               rdfs:label "MQTT SUBACK Payload"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackProperties
+:SubackProperties rdf:type owl:Class ;
+                  rdfs:subClassOf :Properties ;
+                  rdfs:comment ""@en ;
+                  rdfs:label "MQTT Suback Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackVariableHeader
+:SubackVariableHeader rdf:type owl:Class ;
+                      rdfs:subClassOf :VariableHeader ;
+                      rdfs:comment "The Variable Header of a SUBACK packet."@en ;
+                      rdfs:label "MQTT SUBACK Variable Header"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribeFixedHeader
@@ -1021,6 +3041,20 @@ foaf:Person rdf:type owl:Class .
                  rdfs:label "MQTT SUBSCRIBE Packet"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribePayload
+:SubscribePayload rdf:type owl:Class ;
+                  rdfs:subClassOf :Payload ;
+                  rdfs:comment "The payload of a SUBSCRIBE packet, listing MQTT Subscription Entries."@en ;
+                  rdfs:label "MQTT SUBSCRIBE Payload"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribeProperties
+:SubscribeProperties rdf:type owl:Class ;
+                     rdfs:subClassOf :Properties ;
+                     rdfs:comment ""@en ;
+                     rdfs:label "MQTT Subscribe Properties"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribeVariableHeader
 :SubscribeVariableHeader rdf:type owl:Class ;
                          rdfs:subClassOf :VariableHeader ;
@@ -1032,13 +3066,6 @@ foaf:Person rdf:type owl:Class .
 :SubscriptionEntry rdf:type owl:Class ;
                    rdfs:comment "A single requested subscription consisting of an MQTT Topic Filter and an associated QoS level."@en ;
                    rdfs:label "MQTT Subscription Entry"@en .
-
-
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscriptionPayload
-:SubscriptionPayload rdf:type owl:Class ;
-                     rdfs:subClassOf :Payload ;
-                     rdfs:comment "The payload of a SUBSCRIBE packet, listing MQTT Subscription Entries."@en ;
-                     rdfs:label "MQTT SUBSCRIBE Payload"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic
@@ -1080,6 +3107,41 @@ foaf:Person rdf:type owl:Class .
               rdfs:label "MQTT Topic Subject"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackFixedHeader
+:UnsubackFixedHeader rdf:type owl:Class ;
+                     rdfs:subClassOf :FixedHeader ;
+                     rdfs:comment "The Fixed Header of an UNSUBACK packet."@en ;
+                     rdfs:label "MQTT UNSUBACK Fixed Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackPacket
+:UnsubackPacket rdf:type owl:Class ;
+                rdfs:subClassOf :ControlPacket ;
+                rdfs:comment "An MQTT Control Packet sent by the Server to acknowledge an UNSUBSCRIBE request."@en ;
+                rdfs:label "MQTT UNSUBACK Packet"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackPayload
+:UnsubackPayload rdf:type owl:Class ;
+                 rdfs:subClassOf :Payload ;
+                 rdfs:comment "."@en ;
+                 rdfs:label "MQTT UNSUBACK Payload"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackProperties
+:UnsubackProperties rdf:type owl:Class ;
+                    rdfs:subClassOf :Properties ;
+                    rdfs:comment ""@en ;
+                    rdfs:label "MQTT Unsuback Properties"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackVariableHeader
+:UnsubackVariableHeader rdf:type owl:Class ;
+                        rdfs:subClassOf :VariableHeader ;
+                        rdfs:comment "The Variable Header of an UNSUBACK packet."@en ;
+                        rdfs:label "MQTT UNSUBACK Variable Header"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribeFixedHeader
 :UnsubscribeFixedHeader rdf:type owl:Class ;
                         rdfs:subClassOf :FixedHeader ;
@@ -1095,24 +3157,43 @@ foaf:Person rdf:type owl:Class .
                    rdfs:label "MQTT UNSUBSCRIBE Packet"@en .
 
 
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribePayload
+:UnsubscribePayload rdf:type owl:Class ;
+                    rdfs:subClassOf :Payload ;
+                    rdfs:comment "The payload of an UNSUBSCRIBE packet, listing MQTT Topic Filters to be removed."@en ;
+                    rdfs:label "MQTT UNSUBSCRIBE Payload"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribeProperties
+:UnsubscribeProperties rdf:type owl:Class ;
+                       rdfs:subClassOf :Properties ;
+                       rdfs:comment ""@en ;
+                       rdfs:label "MQTT Unsubscribe Properties"@en .
+
+
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribeVariableHeader
 :UnsubscribeVariableHeader rdf:type owl:Class ;
                            rdfs:subClassOf :VariableHeader ;
-                           rdfs:comment "The Variable Header of an UNSUBSCRIBE packet; typically includes the packet identifier."@en ;
+                           rdfs:comment "The Variable Header of an UNSUBSCRIBE packet."@en ;
                            rdfs:label "MQTT UNSUBSCRIBE Variable Header"@en .
 
 
-###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscriptionPayload
-:UnsubscriptionPayload rdf:type owl:Class ;
-                       rdfs:subClassOf :Payload ;
-                       rdfs:comment "The payload of an UNSUBSCRIBE packet, listing MQTT Topic Filters to be removed."@en ;
-                       rdfs:label "MQTT UNSUBSCRIBE Payload"@en .
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UserProperty
+:UserProperty rdf:type owl:Class ;
+              rdfs:comment "."@en ;
+              rdfs:label "User Property"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#VariableHeader
 :VariableHeader rdf:type owl:Class ;
                 rdfs:comment "The optional header carrying packet-specific metadata (e.g., packet identifier, MQTT Topic name)."@en ;
                 rdfs:label "MQTT Variable Header"@en .
+
+
+###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#WillProperties
+:WillProperties rdf:type owl:Class ;
+                rdfs:comment ""@en ;
+                rdfs:label "MQTT Will Properties"@en .
 
 
 ###  https://www.w3.org/2019/wot/mqtt#Client
@@ -1180,64 +3261,310 @@ mqv:UNSUBSCRIBE rdf:type owl:Class .
                                         foaf:name "Niklas Doerner" .
 
 
+[ xsd:maxInclusive "15"^^xsd:unsignedByte
+] .
+
+[ xsd:minInclusive "0"^^xsd:unsignedByte
+ ] .
+
 #################################################################
 #    General axioms
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( sosa:Actuation
-                sosa:ActuationCollection
-                sosa:FeatureOfInterest
-                sosa:Observation
-                sosa:ObservationCollection
-                sosa:Property
-              )
-] .
+   owl:members ( sosa:Actuation
+                 sosa:ActuationCollection
+                 sosa:FeatureOfInterest
+                 sosa:Observation
+                 sosa:ObservationCollection
+                 sosa:Property
+               )
+ ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :ControlPacket
+  owl:members ( :Activity
+                :ApplicationMessage
+                :ControlPacket
                 :FixedHeader
-                :NetworkConnection
-                :NetworkParticipant
+                :NetworkEntity
                 :Payload
+                :Properties
                 :SubscriptionEntry
                 :Topic
                 :TopicFilter
                 :TopicSubject
+                :UserProperty
                 :VariableHeader
+                :WillProperties
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :PublishFixedHeader
+  owl:members ( :AuthFixedHeader
+                :ConnackFixedHeader
+                :ConnectFixedHeader
+                :DisconnectFixedHeader
+                :PingreqFixedHeader
+                :PingrespFixedHeader
+                :PubackFixedHeader
+                :PubcompFixedHeader
+                :PublishFixedHeader
+                :PubrecFixedHeader
+                :PubrelFixedHeader
+                :SubackFixedHeader
                 :SubscribeFixedHeader
+                :UnsubackFixedHeader
                 :UnsubscribeFixedHeader
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :PublishPacket
+  owl:members ( :AuthPacket
+                :ConnackPacket
+                :ConnectPacket
+                :DisconnectPacket
+                :PingreqPacket
+                :PingrespPacket
+                :PubackPacket
+                :PubcompPacket
+                :PublishPacket
+                :PubrecPacket
+                :PubrelPacket
+                :SubackPacket
                 :SubscribePacket
+                :UnsubackPacket
                 :UnsubscribePacket
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :PublishPayload
-                :SubscriptionPayload
-                :UnsubscriptionPayload
+  owl:members ( :AuthProperties
+                :ConnackProperties
+                :ConnectProperties
+                :DisconnectProperties
+                :PubackProperties
+                :PubcompProperties
+                :PublishProperties
+                :PubrecProperties
+                :PubrelProperties
+                :SubackProperties
+                :SubscribeProperties
+                :UnsubackProperties
+                :UnsubscribeProperties
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :PublishVariableHeader
+  owl:members ( :AuthVariableHeader
+                :ConnackVariableHeader
+                :ConnectVariableHeader
+                :DisconnectVariableHeader
+                :PubackVariableHeader
+                :PubcompVariableHeader
+                :PublishVariableHeader
+                :PubrecVariableHeader
+                :PubrelVariableHeader
+                :SubackVariableHeader
                 :SubscribeVariableHeader
+                :UnsubackVariableHeader
                 :UnsubscribeVariableHeader
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ConnectPayload
+                :PublishPayload
+                :SubackPayload
+                :SubscribePayload
+                :UnsubackPayload
+                :UnsubscribePayload
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :applicationMessageEncodesActuation
+                :applicationMessageEncodesActuationCollection
+                :applicationMessageEncodesObservation
+                :applicationMessageEncodesObservationCollection
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :hasActObsSubject
+                :hasFoISubject
+                :hasPropertySubject
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :hasAuthFixedHeader
+                :hasConnackFixedHeader
+                :hasConnectFixedHeader
+                :hasDisconnectFixedHeader
+                :hasPingreqFixedHeader
+                :hasPingrespFixedHeader
+                :hasPubackFixedHeader
+                :hasPubcompFixedHeader
+                :hasPublishFixedHeader
+                :hasPubrecFixedHeader
+                :hasPubrelFixedHeader
+                :hasSubackFixedHeader
+                :hasSubscribeFixedHeader
+                :hasUnsubackFixedHeader
+                :hasUnsubscribeFixedHeader
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :hasAuthVariableHeader
+                :hasConnackVariableHeader
+                :hasConnectVariableHeader
+                :hasDisconnectVariableHeader
+                :hasPubackVariableHeader
+                :hasPubcompVariableHeader
+                :hasPublishVariableHeader
+                :hasPubrecVariableHeader
+                :hasPubrelVariableHeader
+                :hasSubackVariableHeader
+                :hasSubscribeVariableHeader
+                :hasUnsubackVariableHeader
+                :hasUnsubscribeVariableHeader
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :hasConnackProperties
+                :hasConnectProperties
+                :hasDisconnectProperties
+                :hasProperties
+                :hasPubackProperties
+                :hasPubcompProperties
+                :hasPublishProperties
+                :hasPubrecProperties
+                :hasPubrelProperties
+                :hasSubackProperties
+                :hasSubscribeProperties
+                :hasUnsubackProperties
+                :hasUnsubscribeProperties
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :hasConnectPayload
+                :hasPublishPayload
+                :hasSubackPayload
+                :hasSubscribePayload
+                :hasUnsubackPayload
+                :hasUnsubscribePayload
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :isActObsSubjectOf
+                :isFOISubjectOf
+                :isPropertySubjectOf
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :isAuthFixedHeaderOf
+                :isConnackFixedHeaderOf
+                :isConnectFixedHeaderOf
+                :isDisconnectFixedHeaderOf
+                :isPingreqFixedHeaderOf
+                :isPingrespFixedHeaderOf
+                :isPubackFixedHeaderOf
+                :isPubcompFixedHeaderOf
+                :isPublishFixedHeaderOf
+                :isPubrecFixedHeaderOf
+                :isPubrelFixedHeaderOf
+                :isSubackFixedHeaderOf
+                :isSubscribeFixedHeaderOf
+                :isUnsubackFixedHeaderOf
+                :isUnsubscribeFixedHeaderOf
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :isAuthVariableHeaderOf
+                :isConnackVariableHeaderOf
+                :isConnectVariableHeaderOf
+                :isDisconnectVariableHeaderOf
+                :isPubackVariableHeaderOf
+                :isPubcompVariableHeaderOf
+                :isPublishVariableHeaderOf
+                :isPubrecVariableHeaderOf
+                :isPubrelVariableHeaderOf
+                :isSubackVariableHeaderOf
+                :isSubscribeVariableHeaderOf
+                :isUnsubackVariableHeaderOf
+                :isUnsubscribeVariableHeaderOf
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :isConnectPayloadOf
+                :isPublishPayloadOf
+                :isSubackPayloadOf
+                :isSubscribePayloadOf
+                :isUnsubackPayloadOf
+                :isUnsubscribePayloadOf
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :receivesAuthPacket
+                :receivesConnackPacket
+                :receivesConnectPacket
+                :receivesDisconnectPacket
+                :receivesPingreqPacket
+                :receivesPingrespPacket
+                :receivesPubackPacket
+                :receivesPubcompPacket
+                :receivesPublishPacket
+                :receivesPubrecPacket
+                :receivesPubrelPacket
+                :receivesSubackPacket
+                :receivesSubscribePacket
+                :receivesUnsubackPacket
+                :receivesUnsubscribePacket
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :sendsAuthPacket
+                :sendsConnackPacket
+                :sendsConnectPacket
+                :sendsDisconnectPacket
+                :sendsPingreqPacket
+                :sendsPingrespPacket
+                :sendsPubackPacket
+                :sendsPubcompPacket
+                :sendsPublishPacket
+                :sendsPubrecPacket
+                :sendsPubrelPacket
+                :sendsSubackPacket
+                :sendsSubscribePacket
+                :sendsUnsubackPacket
+                :sendsUnsubscribePacket
               )
 ] .
 

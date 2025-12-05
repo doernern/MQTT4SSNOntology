@@ -1,1 +1,4 @@
 wot_mqtt.ttl
+wot.ttl
+catalog-v001.xml
+*.old
