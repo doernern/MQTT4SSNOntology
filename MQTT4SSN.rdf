@@ -2463,6 +2463,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAssignedClientIdentifier">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackProperties"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Assigned Client Identifier Property. UTF-8 string assigned by the Server when the Client did not provide one.</rdfs:comment>
@@ -2542,6 +2543,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasCleanStart">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectFlag"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectVariableHeader"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Clean Start flag in CONNECT Flags. 1 requests a new Session; 0 continues an existing Session if present.</rdfs:comment>
@@ -2565,6 +2567,7 @@
     <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackFlag -->
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackFlag">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackVariableHeader"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">CONNACK Acknowledge Flags byte. In MQTT 5.0 only Session Present (bit 0) is used; other bits are reserved.</rdfs:comment>
@@ -2742,6 +2745,7 @@
     <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasKeepAlive -->
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasKeepAlive">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectVariableHeader"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedShort"/>
         <rdfs:comment xml:lang="en">Keep Alive in CONNECT variable header. Two Byte Integer seconds defining maximum time between Client Control Packets.</rdfs:comment>
@@ -2773,6 +2777,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMaximumQoS">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackProperties"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedByte"/>
         <rdfs:comment xml:lang="en">Maximum QoS Property. Byte specifying the highest QoS level supported by the Server.</rdfs:comment>
@@ -2909,6 +2914,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPasswordFlag">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectFlag"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectVariableHeader"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Password Flag in CONNECT Flags. If 1, a Password field is present in the CONNECT payload.</rdfs:comment>
@@ -3037,6 +3043,7 @@
     <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProtocolName -->
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProtocolName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectVariableHeader"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Protocol Name in CONNECT. UTF-8 string that MUST equal &apos;MQTT&apos; for MQTT 5.0.</rdfs:comment>
@@ -3048,6 +3055,7 @@
     <!-- https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProtocolVersion -->
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProtocolVersion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectVariableHeader"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedByte"/>
         <rdfs:comment xml:lang="en">Protocol Version in CONNECT. One-byte value that MUST be 5 for MQTT 5.0.</rdfs:comment>
@@ -3264,6 +3272,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRequestProblemInformation">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectProperties"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Request Problem Information Property in CONNECT. Byte 0/1 indicating whether the Server should include Reason String/User Properties on errors.</rdfs:comment>
@@ -3276,6 +3285,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRequestResponseInformation">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectProperties"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Request Response Information Property in CONNECT. Byte 0/1 indicating whether the Server should return Response Information in CONNACK.</rdfs:comment>
@@ -3288,6 +3298,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasResponseInformation">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackProperties"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Response Information Property. UTF-8 string providing response metadata for request/response patterns.</rdfs:comment>
@@ -3312,6 +3323,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRetainAvailable">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackProperties"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Retain Available Property in CONNACK. Byte 0/1 indicating whether retained messages are supported.</rdfs:comment>
@@ -3349,6 +3361,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasServerKeepAlive">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackProperties"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedShort"/>
         <rdfs:comment xml:lang="en">Server Keep Alive Property in CONNACK. Two Byte Integer seconds overriding the Client Keep Alive for this connection.</rdfs:comment>
@@ -3400,6 +3413,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSessionPresentFlag">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackFlag"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackVariableHeader"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Session Present flag in CONNACK. If 1, a prior Session exists and is resumed.</rdfs:comment>
@@ -3412,6 +3426,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSharedSubscriptionAvailable">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackProperties"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Shared Subscription Available Property in CONNACK. Byte 0/1 indicating server support for shared subscriptions.</rdfs:comment>
@@ -3463,6 +3478,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionIdentifierAvailable">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackProperties"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Subscription Identifier Available Property in CONNACK. Byte 0/1 indicating support for Subscription Identifiers.</rdfs:comment>
@@ -3635,6 +3651,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWildcardSubscriptionAvailable">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackProperties"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Wildcard Subscription Available Property in CONNACK. Byte 0/1 indicating support for wildcard topic filters.</rdfs:comment>
@@ -3647,6 +3664,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillDelayInterval">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#WillProperties"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
         <rdfs:comment xml:lang="en">Will Delay Interval Property. Four Byte Integer seconds delaying Will publication after connection loss.</rdfs:comment>
@@ -3659,6 +3677,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillFlag">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectFlag"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectVariableHeader"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Will Flag in CONNECT Flags. If 1, Will Properties/Topic/Payload are present.</rdfs:comment>
@@ -3708,6 +3727,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillQoS">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectFlag"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectVariableHeader"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedByte"/>
         <rdfs:comment xml:lang="en">Will QoS in CONNECT Flags. Two-bit field with values 0, 1, or 2 for the Will Message QoS.</rdfs:comment>
@@ -3720,6 +3740,7 @@
 
     <owl:DatatypeProperty rdf:about="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillRetain">
         <rdfs:subPropertyOf rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectFlag"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectVariableHeader"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Will Retain in CONNECT Flags. If 1, the Will Message is published as retained.</rdfs:comment>
@@ -4769,10 +4790,10 @@
         <foaf:name>Niklas Doerner</foaf:name>
     </owl:NamedIndividual>
     <rdf:Description>
-        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedByte">0</xsd:minInclusive>
+        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedByte">15</xsd:maxInclusive>
     </rdf:Description>
     <rdf:Description>
-        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedByte">15</xsd:maxInclusive>
+        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedByte">0</xsd:minInclusive>
     </rdf:Description>
     
 

@@ -1829,6 +1829,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAssignedClientIdentifier
 :hasAssignedClientIdentifier rdf:type owl:DatatypeProperty ;
                              rdfs:subPropertyOf :hasProperty ;
+                             rdf:type owl:FunctionalProperty ;
                              rdfs:domain :ConnackProperties ;
                              rdfs:range xsd:string ;
                              rdfs:comment "Assigned Client Identifier Property. UTF-8 string assigned by the Server when the Client did not provide one."@en ;
@@ -1884,6 +1885,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasCleanStart
 :hasCleanStart rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :hasConnectFlag ;
+               rdf:type owl:FunctionalProperty ;
                rdfs:domain :ConnectVariableHeader ;
                rdfs:range xsd:boolean ;
                rdfs:comment "Clean Start flag in CONNECT Flags. 1 requests a new Session; 0 continues an existing Session if present."@en ;
@@ -1900,7 +1902,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackFlag
-:hasConnackFlag rdf:type owl:DatatypeProperty ;
+:hasConnackFlag rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
                 rdfs:domain :ConnackVariableHeader ;
                 rdfs:range xsd:boolean ;
                 rdfs:comment "CONNACK Acknowledge Flags byte. In MQTT 5.0 only Session Present (bit 0) is used; other bits are reserved."@en ;
@@ -2026,7 +2029,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasKeepAlive
-:hasKeepAlive rdf:type owl:DatatypeProperty ;
+:hasKeepAlive rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
               rdfs:domain :ConnectVariableHeader ;
               rdfs:range xsd:unsignedShort ;
               rdfs:comment "Keep Alive in CONNECT variable header. Two Byte Integer seconds defining maximum time between Client Control Packets."@en ;
@@ -2049,6 +2053,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMaximumQoS
 :hasMaximumQoS rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :hasProperty ;
+               rdf:type owl:FunctionalProperty ;
                rdfs:domain :ConnackProperties ;
                rdfs:range xsd:unsignedByte ;
                rdfs:comment "Maximum QoS Property. Byte specifying the highest QoS level supported by the Server."@en ;
@@ -2149,6 +2154,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPasswordFlag
 :hasPasswordFlag rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :hasConnectFlag ;
+                 rdf:type owl:FunctionalProperty ;
                  rdfs:domain :ConnectVariableHeader ;
                  rdfs:range xsd:boolean ;
                  rdfs:comment "Password Flag in CONNECT Flags. If 1, a Password field is present in the CONNECT payload."@en ;
@@ -2237,7 +2243,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProtocolName
-:hasProtocolName rdf:type owl:DatatypeProperty ;
+:hasProtocolName rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
                  rdfs:domain :ConnectVariableHeader ;
                  rdfs:range xsd:string ;
                  rdfs:comment "Protocol Name in CONNECT. UTF-8 string that MUST equal 'MQTT' for MQTT 5.0."@en ;
@@ -2245,7 +2252,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProtocolVersion
-:hasProtocolVersion rdf:type owl:DatatypeProperty ;
+:hasProtocolVersion rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
                     rdfs:domain :ConnectVariableHeader ;
                     rdfs:range xsd:unsignedByte ;
                     rdfs:comment "Protocol Version in CONNECT. One-byte value that MUST be 5 for MQTT 5.0."@en ;
@@ -2400,6 +2408,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRequestProblemInformation
 :hasRequestProblemInformation rdf:type owl:DatatypeProperty ;
                               rdfs:subPropertyOf :hasProperty ;
+                              rdf:type owl:FunctionalProperty ;
                               rdfs:domain :ConnectProperties ;
                               rdfs:range xsd:boolean ;
                               rdfs:comment "Request Problem Information Property in CONNECT. Byte 0/1 indicating whether the Server should include Reason String/User Properties on errors."@en ;
@@ -2409,6 +2418,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRequestResponseInformation
 :hasRequestResponseInformation rdf:type owl:DatatypeProperty ;
                                rdfs:subPropertyOf :hasProperty ;
+                               rdf:type owl:FunctionalProperty ;
                                rdfs:domain :ConnectProperties ;
                                rdfs:range xsd:boolean ;
                                rdfs:comment "Request Response Information Property in CONNECT. Byte 0/1 indicating whether the Server should return Response Information in CONNACK."@en ;
@@ -2418,6 +2428,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasResponseInformation
 :hasResponseInformation rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :hasProperty ;
+                        rdf:type owl:FunctionalProperty ;
                         rdfs:domain :ConnackProperties ;
                         rdfs:range xsd:string ;
                         rdfs:comment "Response Information Property. UTF-8 string providing response metadata for request/response patterns."@en ;
@@ -2436,6 +2447,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRetainAvailable
 :hasRetainAvailable rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :hasProperty ;
+                    rdf:type owl:FunctionalProperty ;
                     rdfs:domain :ConnackProperties ;
                     rdfs:range xsd:boolean ;
                     rdfs:comment "Retain Available Property in CONNACK. Byte 0/1 indicating whether retained messages are supported."@en ;
@@ -2464,6 +2476,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasServerKeepAlive
 :hasServerKeepAlive rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :hasProperty ;
+                    rdf:type owl:FunctionalProperty ;
                     rdfs:domain :ConnackProperties ;
                     rdfs:range xsd:unsignedShort ;
                     rdfs:comment "Server Keep Alive Property in CONNACK. Two Byte Integer seconds overriding the Client Keep Alive for this connection."@en ;
@@ -2500,6 +2513,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSessionPresentFlag
 :hasSessionPresentFlag rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :hasConnackFlag ;
+                       rdf:type owl:FunctionalProperty ;
                        rdfs:domain :ConnackVariableHeader ;
                        rdfs:range xsd:boolean ;
                        rdfs:comment "Session Present flag in CONNACK. If 1, a prior Session exists and is resumed."@en ;
@@ -2509,6 +2523,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSharedSubscriptionAvailable
 :hasSharedSubscriptionAvailable rdf:type owl:DatatypeProperty ;
                                 rdfs:subPropertyOf :hasProperty ;
+                                rdf:type owl:FunctionalProperty ;
                                 rdfs:domain :ConnackProperties ;
                                 rdfs:range xsd:boolean ;
                                 rdfs:comment "Shared Subscription Available Property in CONNACK. Byte 0/1 indicating server support for shared subscriptions."@en ;
@@ -2545,6 +2560,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionIdentifierAvailable
 :hasSubscriptionIdentifierAvailable rdf:type owl:DatatypeProperty ;
                                     rdfs:subPropertyOf :hasProperty ;
+                                    rdf:type owl:FunctionalProperty ;
                                     rdfs:domain :ConnackProperties ;
                                     rdfs:range xsd:boolean ;
                                     rdfs:comment "Subscription Identifier Available Property in CONNACK. Byte 0/1 indicating support for Subscription Identifiers."@en ;
@@ -2669,6 +2685,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWildcardSubscriptionAvailable
 :hasWildcardSubscriptionAvailable rdf:type owl:DatatypeProperty ;
                                   rdfs:subPropertyOf :hasProperty ;
+                                  rdf:type owl:FunctionalProperty ;
                                   rdfs:domain :ConnackProperties ;
                                   rdfs:range xsd:boolean ;
                                   rdfs:comment "Wildcard Subscription Available Property in CONNACK. Byte 0/1 indicating support for wildcard topic filters."@en ;
@@ -2678,6 +2695,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillDelayInterval
 :hasWillDelayInterval rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :hasProperty ;
+                      rdf:type owl:FunctionalProperty ;
                       rdfs:domain :WillProperties ;
                       rdfs:range xsd:unsignedInt ;
                       rdfs:comment "Will Delay Interval Property. Four Byte Integer seconds delaying Will publication after connection loss."@en ;
@@ -2687,6 +2705,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillFlag
 :hasWillFlag rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :hasConnectFlag ;
+             rdf:type owl:FunctionalProperty ;
              rdfs:domain :ConnectVariableHeader ;
              rdfs:range xsd:boolean ;
              rdfs:comment "Will Flag in CONNECT Flags. If 1, Will Properties/Topic/Payload are present."@en ;
@@ -2721,6 +2740,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillQoS
 :hasWillQoS rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :hasConnectFlag ;
+            rdf:type owl:FunctionalProperty ;
             rdfs:domain :ConnectVariableHeader ;
             rdfs:range xsd:unsignedByte ;
             rdfs:comment "Will QoS in CONNECT Flags. Two-bit field with values 0, 1, or 2 for the Will Message QoS."@en ;
@@ -2730,6 +2750,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillRetain
 :hasWillRetain rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :hasConnectFlag ;
+               rdf:type owl:FunctionalProperty ;
                rdfs:domain :ConnectVariableHeader ;
                rdfs:range xsd:boolean ;
                rdfs:comment "Will Retain in CONNECT Flags. If 1, the Will Message is published as retained."@en ;
@@ -3450,10 +3471,10 @@ mqv:UNSUBSCRIBE rdf:type owl:Class .
                                         foaf:name "Niklas Doerner" .
 
 
-[ xsd:minInclusive "0"^^xsd:unsignedByte
+[ xsd:maxInclusive "15"^^xsd:unsignedByte
 ] .
 
-[ xsd:maxInclusive "15"^^xsd:unsignedByte
+[ xsd:minInclusive "0"^^xsd:unsignedByte
  ] .
 
 #################################################################
