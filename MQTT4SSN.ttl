@@ -179,7 +179,7 @@ xsd:date rdf:type rdfs:Datatype .
                        owl:inverseOf :isApplicationMessageOf ;
                        rdfs:domain :PublishPayload ;
                        rdfs:range :ApplicationMessage ;
-                       rdfs:comment "."@en ;
+                       rdfs:comment "Links a PUBLISH packet individual to the higher-level ApplicationMessage it carries."@en ;
                        rdfs:label "has Application Message"@en .
 
 
@@ -199,7 +199,7 @@ xsd:date rdf:type rdfs:Datatype .
                    rdfs:subPropertyOf :hasProperties ;
                    rdfs:domain :AuthVariableHeader ;
                    rdfs:range :AuthProperties ;
-                   rdfs:comment "."@en ;
+                   rdfs:comment "Links an AUTH packet individual to its AuthProperties collection."@en ;
                    rdfs:label "has Auth Properties"@en .
 
 
@@ -239,7 +239,7 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:subPropertyOf :hasProperties ;
                       rdfs:domain :ConnackVariableHeader ;
                       rdfs:range :ConnackProperties ;
-                      rdfs:comment "."@en ;
+                      rdfs:comment "Links a CONNACK packet individual to its ConnackProperties collection."@en ;
                       rdfs:label "has Connack Properties"@en .
 
 
@@ -281,7 +281,7 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:subPropertyOf :hasProperties ;
                       rdfs:domain :ConnectVariableHeader ;
                       rdfs:range :ConnectProperties ;
-                      rdfs:comment "."@en ;
+                      rdfs:comment "Links a CONNECT packet individual to its ConnectProperties collection."@en ;
                       rdfs:label "has Connect Properties"@en .
 
 
@@ -321,7 +321,7 @@ xsd:date rdf:type rdfs:Datatype .
                          rdfs:subPropertyOf :hasProperties ;
                          rdfs:domain :DisconnectVariableHeader ;
                          rdfs:range :DisconnectProperties ;
-                         rdfs:comment "."@en ;
+                         rdfs:comment "Links a DISCONNECT packet individual to its DisconnectProperties collection."@en ;
                          rdfs:label "has Disconnect Properties"@en .
 
 
@@ -435,7 +435,7 @@ xsd:date rdf:type rdfs:Datatype .
                                          )
                            ] ;
                rdfs:range :Properties ;
-               rdfs:comment "."@en ;
+               rdfs:comment "Links an MQTT Control Packet or higher-level message individual to its MQTT 5.0 Properties collection (variable header properties)."@en ;
                rdfs:label "has Properties"@en .
 
 
@@ -465,7 +465,7 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:subPropertyOf :hasProperties ;
                      rdfs:domain :PubackVariableHeader ;
                      rdfs:range :PubackProperties ;
-                     rdfs:comment "."@en ;
+                     rdfs:comment "Links a PUBACK packet individual to its PubackProperties collection."@en ;
                      rdfs:label "has Puback Properties"@en .
 
 
@@ -496,7 +496,7 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:subPropertyOf :hasProperties ;
                       rdfs:domain :PubcompVariableHeader ;
                       rdfs:range :PubcompProperties ;
-                      rdfs:comment "."@en ;
+                      rdfs:comment "Links a PUBCOMP packet individual to its PubcompProperties collection."@en ;
                       rdfs:label "has Pubcomp Properties"@en .
 
 
@@ -529,7 +529,7 @@ xsd:date rdf:type rdfs:Datatype .
                    rdf:type owl:FunctionalProperty ;
                    rdfs:domain :PublishPacket ;
                    rdfs:range :PublishPayload ;
-                   rdfs:comment ""@en ;
+                   rdfs:comment "Links a PUBLISH packet (or ApplicationMessage) to its payload container/value instance."@en ;
                    rdfs:label "has PUBLISH Payload"@en .
 
 
@@ -538,7 +538,7 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:subPropertyOf :hasProperties ;
                       rdfs:domain :PublishVariableHeader ;
                       rdfs:range :PublishProperties ;
-                      rdfs:comment "."@en ;
+                      rdfs:comment "Links a PUBLISH packet individual to its PublishProperties collection."@en ;
                       rdfs:label "has Publish Properties"@en .
 
 
@@ -569,7 +569,7 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:subPropertyOf :hasProperties ;
                      rdfs:domain :PubrecVariableHeader ;
                      rdfs:range :PubrecProperties ;
-                     rdfs:comment "."@en ;
+                     rdfs:comment "Links a PUBREC packet individual to its PubrecProperties collection."@en ;
                      rdfs:label "has Pubrec Properties"@en .
 
 
@@ -600,7 +600,7 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:subPropertyOf :hasProperties ;
                      rdfs:domain :PubrelVariableHeader ;
                      rdfs:range :PubrelProperties ;
-                     rdfs:comment "."@en ;
+                     rdfs:comment "Links a PUBREL packet individual to its PubrelProperties collection."@en ;
                      rdfs:label "has Pubrel Properties"@en .
 
 
@@ -625,7 +625,7 @@ xsd:date rdf:type rdfs:Datatype .
                                             )
                               ] ;
                   rdfs:range :Topic ;
-                  rdfs:comment ""@en ;
+                  rdfs:comment "Links a PublishProperties or WillProperties collection to a Response Topic (UTF-8 Topic Name for request/response patterns)."@en ;
                   rdfs:label "has MQTT Response Topic (name)"@en .
 
 
@@ -656,7 +656,7 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:subPropertyOf :hasProperties ;
                      rdfs:domain :SubackVariableHeader ;
                      rdfs:range :SubackProperties ;
-                     rdfs:comment "."@en ;
+                     rdfs:comment "Links a SUBACK packet individual to its SubackProperties collection."@en ;
                      rdfs:label "has Suback Properties"@en .
 
 
@@ -707,7 +707,7 @@ xsd:date rdf:type rdfs:Datatype .
                         rdfs:subPropertyOf :hasProperties ;
                         rdfs:domain :SubscribeVariableHeader ;
                         rdfs:range :SubscribeProperties ;
-                        rdfs:comment "."@en ;
+                        rdfs:comment "Links a SUBSCRIBE packet individual to its SubscribeProperties collection."@en ;
                         rdfs:label "has Subscribe Properties"@en .
 
 
@@ -783,7 +783,7 @@ xsd:date rdf:type rdfs:Datatype .
                        rdfs:subPropertyOf :hasProperties ;
                        rdfs:domain :UnsubackVariableHeader ;
                        rdfs:range :UnsubackProperties ;
-                       rdfs:comment "."@en ;
+                       rdfs:comment "Links an UNSUBACK packet individual to its UnsubackProperties collection."@en ;
                        rdfs:label "has Unsuback Properties"@en .
 
 
@@ -825,7 +825,7 @@ xsd:date rdf:type rdfs:Datatype .
                           rdfs:subPropertyOf :hasProperties ;
                           rdfs:domain :UnsubscribeVariableHeader ;
                           rdfs:range :UnsubscribeProperties ;
-                          rdfs:comment "."@en ;
+                          rdfs:comment "Links an UNSUBSCRIBE packet individual to its UnsubscribeProperties collection."@en ;
                           rdfs:label "has Unsubscribe Properties"@en .
 
 
@@ -860,7 +860,7 @@ xsd:date rdf:type rdfs:Datatype .
                                            )
                              ] ;
                  rdfs:range :UserProperty ;
-                 rdfs:comment "."@en ;
+                 rdfs:comment "Links a Properties collection to one contained UserProperty (Name/Value pair). Multiple values may occur."@en ;
                  rdfs:label "has User Property"@en .
 
 
@@ -876,9 +876,10 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillProperties
 :hasWillProperties rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasProperties ;
                    rdfs:domain :ConnectPayload ;
                    rdfs:range :WillProperties ;
-                   rdfs:comment "."@en ;
+                   rdfs:comment "Links a CONNECT packet or Will Message individual to its WillProperties collection."@en ;
                    rdfs:label "has Will Properties"@en .
 
 
@@ -887,7 +888,7 @@ xsd:date rdf:type rdfs:Datatype .
               owl:inverseOf :isWillTopicOf ;
               rdfs:domain :ConnectPayload ;
               rdfs:range :Topic ;
-              rdfs:comment "."@en ;
+              rdfs:comment "Links a CONNECT packet or Will Message to its Will Topic (Topic Name used when publishing the Will)."@en ;
               rdfs:label "has Will Topic"@en .
 
 
@@ -928,7 +929,7 @@ xsd:date rdf:type rdfs:Datatype .
                         rdfs:subPropertyOf owl:topObjectProperty ;
                         rdfs:domain :ApplicationMessage ;
                         rdfs:range :PublishPayload ;
-                        rdfs:comment "."@en ;
+                        rdfs:comment "Inverse of hasApplicationMessage: links an ApplicationMessage to the PUBLISH packet that carries it."@en ;
                         rdfs:label "is Application Message of"@en .
 
 
@@ -988,7 +989,7 @@ xsd:date rdf:type rdfs:Datatype .
                     rdf:type owl:FunctionalProperty ;
                     rdfs:domain :ConnectPayload ;
                     rdfs:range :ConnectPacket ;
-                    rdfs:comment ""@en ;
+                    rdfs:comment "Inverse relation: links a ConnectPayload individual to the CONNECT packet that contains it."@en ;
                     rdfs:label "is CONNECT Payload of"@en .
 
 
@@ -1237,7 +1238,7 @@ xsd:date rdf:type rdfs:Datatype .
                                               :WillProperties
                                             )
                               ] ;
-                   rdfs:comment "."@en ;
+                   rdfs:comment "Inverse relation: links a Response Topic resource to the Properties collection/PUBLISH where it is defined."@en ;
                    rdfs:label "is MQTT Response Topic (name) of"@en .
 
 
@@ -1257,7 +1258,7 @@ xsd:date rdf:type rdfs:Datatype .
                    rdf:type owl:FunctionalProperty ;
                    rdfs:domain :SubackPayload ;
                    rdfs:range :SubackPacket ;
-                   rdfs:comment ""@en ;
+                   rdfs:comment "Inverse relation: links a SubackPayload individual to the SUBACK packet that contains it."@en ;
                    rdfs:label "is SUBACK Payload of"@en .
 
 
@@ -1353,7 +1354,7 @@ xsd:date rdf:type rdfs:Datatype .
                      rdf:type owl:FunctionalProperty ;
                      rdfs:domain :UnsubackPayload ;
                      rdfs:range :UnsubackPacket ;
-                     rdfs:comment ""@en ;
+                     rdfs:comment "Inverse relation: links an UnsubackPayload individual to the UNSUBACK packet that contains it."@en ;
                      rdfs:label "is UNSUBACK Payload of"@en .
 
 
@@ -1410,7 +1411,7 @@ xsd:date rdf:type rdfs:Datatype .
 :isWillTopicOf rdf:type owl:ObjectProperty ;
                rdfs:domain :Topic ;
                rdfs:range :ConnectPayload ;
-               rdfs:comment "."@en ;
+               rdfs:comment "Inverse relation: links a Will Topic resource to the Will Message/CONNECT packet it belongs to."@en ;
                rdfs:label "is Will Topic of"@en .
 
 
@@ -1829,7 +1830,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasAssignedClientIdentifier rdf:type owl:DatatypeProperty ;
                              rdfs:subPropertyOf :hasProperty ;
                              rdfs:domain :ConnackProperties ;
-                             rdfs:comment "."@en ;
+                             rdfs:range xsd:string ;
+                             rdfs:comment "Assigned Client Identifier Property. UTF-8 string assigned by the Server when the Client did not provide one."@en ;
                              rdfs:label "has Assigned Client Identifier"@en .
 
 
@@ -1837,7 +1839,13 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasAuthReasonCode rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
                    rdfs:domain :AuthVariableHeader ;
-                   rdfs:comment "."@en ;
+                   rdfs:range [ rdf:type rdfs:Datatype ;
+                                owl:unionOf ( xsd:hexBinary
+                                              xsd:string
+                                              xsd:unsignedByte
+                                            )
+                              ] ;
+                   rdfs:comment "AUTH Reason Code. One-byte value indicating enhanced-auth result or continuation status."@en ;
                    rdfs:label "has Auth Reason Code"@en .
 
 
@@ -1850,7 +1858,12 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                                      :ConnectProperties
                                                    )
                                      ] ;
-                         rdfs:comment "."@en ;
+                         rdfs:range [ rdf:type rdfs:Datatype ;
+                                      owl:unionOf ( xsd:base64Binary
+                                                    xsd:hexBinary
+                                                  )
+                                    ] ;
+                         rdfs:comment "Authentication Data Property. Binary Data for enhanced authentication."@en ;
                          rdfs:label "has Authentification Data"@en .
 
 
@@ -1863,7 +1876,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                                        :ConnectProperties
                                                      )
                                        ] ;
-                           rdfs:comment "."@en ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Authentication Method Property. UTF-8 string naming the enhanced-auth method."@en ;
                            rdfs:label "has Authentification Method"@en .
 
 
@@ -1871,7 +1885,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasCleanStart rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :hasConnectFlag ;
                rdfs:domain :ConnectVariableHeader ;
-               rdfs:comment "."@en ;
+               rdfs:range xsd:boolean ;
+               rdfs:comment "Clean Start flag in CONNECT Flags. 1 requests a new Session; 0 continues an existing Session if present."@en ;
                rdfs:label "has Clean Start"@en .
 
 
@@ -1887,7 +1902,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackFlag
 :hasConnackFlag rdf:type owl:DatatypeProperty ;
                 rdfs:domain :ConnackVariableHeader ;
-                rdfs:comment "."@en ;
+                rdfs:range xsd:boolean ;
+                rdfs:comment "CONNACK Acknowledge Flags byte. In MQTT 5.0 only Session Present (bit 0) is used; other bits are reserved."@en ;
                 rdfs:label "has Connack Flag"@en .
 
 
@@ -1895,14 +1911,21 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasConnackReasonCode rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
                       rdfs:domain :ConnackVariableHeader ;
-                      rdfs:comment "."@en ;
+                      rdfs:range [ rdf:type rdfs:Datatype ;
+                                   owl:unionOf ( xsd:hexBinary
+                                                 xsd:string
+                                                 xsd:unsignedByte
+                                               )
+                                 ] ;
+                      rdfs:comment "CONNACK Reason Code. One-byte value indicating the result of a CONNECT request."@en ;
                       rdfs:label "has Connack Reason Code"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectFlag
 :hasConnectFlag rdf:type owl:DatatypeProperty ;
                 rdfs:domain :ConnectVariableHeader ;
-                rdfs:comment "."@en ;
+                rdfs:range xsd:unsignedByte ;
+                rdfs:comment "CONNECT Flags byte encoding User Name/Password/Will/Clean Start fields; reserved bit MUST be 0."@en ;
                 rdfs:label "has Connect Flags"@en .
 
 
@@ -1917,8 +1940,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                           )
                             ] ;
                 rdfs:range xsd:string ;
-                rdfs:label "Application Message content type"@en ,
-                           "has Content Type"@en .
+                rdfs:comment "Application Message content type"@en ;
+                rdfs:label "has Content Type"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasControlPacketType
@@ -1943,7 +1966,13 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                                 :WillProperties
                                               )
                                 ] ;
-                    rdfs:comment "."@en ;
+                    rdfs:range [ rdf:type rdfs:Datatype ;
+                                 owl:unionOf ( xsd:base64Binary
+                                               xsd:hexBinary
+                                               xsd:string
+                                             )
+                               ] ;
+                    rdfs:comment "Correlation Data Property. Binary Data used to correlate requests and responses."@en ;
                     rdfs:label "has Correlation Data"@en .
 
 
@@ -1961,7 +1990,13 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasDisconnectReasonCode rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
                          rdfs:domain :DisconnectVariableHeader ;
-                         rdfs:comment "."@en ;
+                         rdfs:range [ rdf:type rdfs:Datatype ;
+                                      owl:unionOf ( xsd:hexBinary
+                                                    xsd:string
+                                                    xsd:unsignedByte
+                                                  )
+                                    ] ;
+                         rdfs:comment "DISCONNECT Reason Code. One-byte value indicating the reason for disconnection."@en ;
                          rdfs:label "has Dissconnect Reason Code"@en .
 
 
@@ -1976,8 +2011,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFixedHeaderFlag
 :hasFixedHeaderFlag rdf:type owl:DatatypeProperty ;
                     rdfs:domain :PublishFixedHeader ;
-                    rdfs:range xsd:nonNegativeInteger ;
-                    rdfs:comment ""@en ;
+                    rdfs:range xsd:unsignedByte ;
+                    rdfs:comment "Fixed Header flags nibble (bits 3..0 of byte 1). Packet-type-specific reserved/required flag pattern in MQTT 5.0."@en ;
                     rdfs:label "FixedHeader flag"@en .
 
 
@@ -1993,7 +2028,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasKeepAlive
 :hasKeepAlive rdf:type owl:DatatypeProperty ;
               rdfs:domain :ConnectVariableHeader ;
-              rdfs:comment "."@en ;
+              rdfs:range xsd:unsignedShort ;
+              rdfs:comment "Keep Alive in CONNECT variable header. Two Byte Integer seconds defining maximum time between Client Control Packets."@en ;
               rdfs:label "has Keep Alive" .
 
 
@@ -2005,7 +2041,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                                   :ConnectProperties
                                                 )
                                   ] ;
-                      rdfs:comment "."@en ;
+                      rdfs:range xsd:unsignedInt ;
+                      rdfs:comment "Maximum Packet Size Property. Four Byte Integer (non-zero) limiting maximum MQTT packet size accepted."@en ;
                       rdfs:label "has Maximum Packet Size"@en .
 
 
@@ -2013,7 +2050,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasMaximumQoS rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :hasProperty ;
                rdfs:domain :ConnackProperties ;
-               rdfs:comment "."@en ;
+               rdfs:range xsd:unsignedByte ;
+               rdfs:comment "Maximum QoS Property. Byte specifying the highest QoS level supported by the Server."@en ;
                rdfs:label "has Maximum QoS"@en .
 
 
@@ -2021,7 +2059,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasMessageContent rdf:type owl:DatatypeProperty ;
                    rdfs:domain :ApplicationMessage ;
                    rdfs:range xsd:string ;
-                   rdfs:comment "."@en ;
+                   rdfs:comment "Application message content carried by PUBLISH. Conceptual higher-level view of the PUBLISH payload."@en ;
                    rdfs:label "has Application Message content"@en .
 
 
@@ -2061,7 +2099,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                                       :WillProperties
                                                     )
                                       ] ;
-                          rdfs:comment "."@en ;
+                          rdfs:range xsd:unsignedInt ;
+                          rdfs:comment "Message Expiry Interval Property. Four Byte Integer seconds defining PUBLISH message lifetime."@en ;
                           rdfs:label "has Message Expiry Interval"@en .
 
 
@@ -2069,7 +2108,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasNoLocal rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :hasSubscriptionOption ;
             rdfs:domain :SubscriptionEntry ;
-            rdfs:comment "."@en ;
+            rdfs:range xsd:boolean ;
+            rdfs:comment "No Local subscription option. If 1, the Server MUST NOT forward messages published by this Client back to it."@en ;
             rdfs:label "has No Local"@en .
 
 
@@ -2096,7 +2136,13 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPassword
 :hasPassword rdf:type owl:DatatypeProperty ;
              rdfs:domain :ConnectPayload ;
-             rdfs:comment "."@en ;
+             rdfs:range [ rdf:type rdfs:Datatype ;
+                          owl:unionOf ( xsd:base64Binary
+                                        xsd:hexBinary
+                                        xsd:string
+                                      )
+                        ] ;
+             rdfs:comment "Password field in CONNECT payload. Binary Data present only if Password Flag=1."@en ;
              rdfs:label "has Password"@en .
 
 
@@ -2104,7 +2150,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasPasswordFlag rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :hasConnectFlag ;
                  rdfs:domain :ConnectVariableHeader ;
-                 rdfs:comment "."@en ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:comment "Password Flag in CONNECT Flags. If 1, a Password field is present in the CONNECT payload."@en ;
                  rdfs:label "has Password Flag"@en .
 
 
@@ -2112,7 +2159,13 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasPayloadContent rdf:type owl:DatatypeProperty ,
                             owl:FunctionalProperty ;
                    rdfs:domain :PublishPayload ;
-                   rdfs:comment "."@en ;
+                   rdfs:range [ rdf:type rdfs:Datatype ;
+                                owl:unionOf ( xsd:base64Binary
+                                              xsd:hexBinary
+                                              xsd:string
+                                            )
+                              ] ;
+                   rdfs:comment "Application Message Payload content (Binary Data; UTF-8 text if Payload Format Indicator=1)."@en ;
                    rdfs:label "has Payload content"@en .
 
 
@@ -2126,7 +2179,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                                      )
                                        ] ;
                            rdfs:range xsd:boolean ;
-                           rdfs:comment "."@en ;
+                           rdfs:comment "Payload Format Indicator Property. Byte 0/1; 1 means payload is UTF-8 encoded text, 0 means unspecified binary."@en ;
                            rdfs:label "has Payload Format Indicator"@en .
 
 
@@ -2139,8 +2192,13 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                                   :UnsubackPayload
                                                 )
                                   ] ;
-                      rdfs:range xsd:unsignedByte ;
-                      rdfs:comment ""@en ;
+                      rdfs:range [ rdf:type rdfs:Datatype ;
+                                   owl:unionOf ( xsd:hexBinary
+                                                 xsd:string
+                                                 xsd:unsignedByte
+                                               )
+                                 ] ;
+                      rdfs:comment "Reason Code carried in a packet payload when defined by MQTT 5.0 (one-byte reason value)."@en ;
                       rdfs:label "MQTT Reason Code in Payload"@en .
 
 
@@ -2148,7 +2206,7 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasPortNumber rdf:type owl:DatatypeProperty ,
                         owl:FunctionalProperty ;
                rdfs:domain :Broker ;
-               rdfs:range xsd:integer ;
+               rdfs:range xsd:unsignedShort ;
                rdfs:comment "The TCP port on which an MQTT Broker listens."@en ;
                rdfs:label "MQTT Broker port"@en .
 
@@ -2156,7 +2214,13 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperty
 :hasProperty rdf:type owl:DatatypeProperty ;
              rdfs:domain :Properties ;
-             rdfs:comment "."@en ;
+             rdfs:range [ rdf:type rdfs:Datatype ;
+                          owl:unionOf ( xsd:hexBinary
+                                        xsd:string
+                                        xsd:unsignedByte
+                                      )
+                        ] ;
+             rdfs:comment "Property identifier or property carrier for MQTT 5.0. Each Property begins with a one-byte Identifier followed by a typed value."@en ;
              rdfs:label "has MQTT Property"@en .
 
 
@@ -2167,22 +2231,24 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                                :WillProperties
                                              )
                                ] ;
-                   rdfs:range xsd:integer ;
-                   rdfs:comment "."@en ;
+                   rdfs:range xsd:nonNegativeInteger ;
+                   rdfs:comment "Property Length field preceding a Properties collection. Variable Byte Integer giving total length in bytes of following properties."@en ;
                    rdfs:label "has MQTT Property Length"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProtocolName
 :hasProtocolName rdf:type owl:DatatypeProperty ;
                  rdfs:domain :ConnectVariableHeader ;
-                 rdfs:comment "."@en ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Protocol Name in CONNECT. UTF-8 string that MUST equal 'MQTT' for MQTT 5.0."@en ;
                  rdfs:label "has Protocol Name"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProtocolVersion
 :hasProtocolVersion rdf:type owl:DatatypeProperty ;
                     rdfs:domain :ConnectVariableHeader ;
-                    rdfs:comment "."@en ;
+                    rdfs:range xsd:unsignedByte ;
+                    rdfs:comment "Protocol Version in CONNECT. One-byte value that MUST be 5 for MQTT 5.0."@en ;
                     rdfs:label "has Protocol Version"@en .
 
 
@@ -2190,7 +2256,13 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasPubackReasonCode rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
                      rdfs:domain :PubackVariableHeader ;
-                     rdfs:comment "."@en ;
+                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                  owl:unionOf ( xsd:hexBinary
+                                                xsd:string
+                                                xsd:unsignedByte
+                                              )
+                                ] ;
+                     rdfs:comment "PUBACK Reason Code. One-byte value indicating result of QoS 1 PUBLISH processing."@en ;
                      rdfs:label "has Puback  Reason Code"@en .
 
 
@@ -2198,7 +2270,13 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasPubcompReasonCode rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
                       rdfs:domain :PubcompVariableHeader ;
-                      rdfs:comment "."@en ;
+                      rdfs:range [ rdf:type rdfs:Datatype ;
+                                   owl:unionOf ( xsd:hexBinary
+                                                 xsd:string
+                                                 xsd:unsignedByte
+                                               )
+                                 ] ;
+                      rdfs:comment "PUBCOMP Reason Code. One-byte value indicating completion of the QoS 2 flow."@en ;
                       rdfs:label "has Pubcomp Reason Code"@en .
 
 
@@ -2206,7 +2284,13 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasPubrecReasonCode rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
                      rdfs:domain :PubrecVariableHeader ;
-                     rdfs:comment "."@en ;
+                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                  owl:unionOf ( xsd:hexBinary
+                                                xsd:string
+                                                xsd:unsignedByte
+                                              )
+                                ] ;
+                     rdfs:comment "PUBREC Reason Code. One-byte value indicating result of QoS 2 PUBLISH receipt stage."@en ;
                      rdfs:label "has Pubrec Reason Code"@en .
 
 
@@ -2214,7 +2298,13 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasPubrelReasonCode rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :hasVariableHeaderReasonCode ;
                      rdfs:domain :PubrelVariableHeader ;
-                     rdfs:comment "."@en ;
+                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                  owl:unionOf ( xsd:hexBinary
+                                                xsd:string
+                                                xsd:unsignedByte
+                                              )
+                                ] ;
+                     rdfs:comment "PUBREL Reason Code. One-byte value indicating result of QoS 2 release stage."@en ;
                      rdfs:label "has Pubrel Reason Code"@en .
 
 
@@ -2244,8 +2334,25 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasReasonCode
 :hasReasonCode rdf:type owl:DatatypeProperty ,
                         owl:FunctionalProperty ;
-               rdfs:range xsd:unsignedByte ;
-               rdfs:comment ""@en ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :AuthVariableHeader
+                                           :ConnackVariableHeader
+                                           :DisconnectVariableHeader
+                                           :PubackVariableHeader
+                                           :PubcompVariableHeader
+                                           :PubrecVariableHeader
+                                           :PubrelVariableHeader
+                                           :SubackPayload
+                                           :UnsubackPayload
+                                         )
+                           ] ;
+               rdfs:range [ rdf:type rdfs:Datatype ;
+                            owl:unionOf ( xsd:hexBinary
+                                          xsd:string
+                                          xsd:unsignedByte
+                                        )
+                          ] ;
+               rdfs:comment "Generic MQTT Reason Code. One-byte value indicating success or the reason for failure in many packet types."@en ;
                rdfs:label "MQTT ReasonCode"@en .
 
 
@@ -2264,7 +2371,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                              :UnsubackProperties
                                            )
                              ] ;
-                 rdfs:comment "."@en ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Reason String Property. UTF-8 string providing human-readable diagnostics for a Reason Code."@en ;
                  rdfs:label "has Reason String"@en .
 
 
@@ -2276,7 +2384,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                                :ConnectProperties
                                              )
                                ] ;
-                   rdfs:comment "."@en ;
+                   rdfs:range xsd:unsignedShort ;
+                   rdfs:comment "Receive Maximum Property. Two Byte Integer (non-zero) limiting concurrent QoS 1/2 PUBLISH in-flight."@en ;
                    rdfs:label "has Receive Maximum"@en .
 
 
@@ -2292,7 +2401,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasRequestProblemInformation rdf:type owl:DatatypeProperty ;
                               rdfs:subPropertyOf :hasProperty ;
                               rdfs:domain :ConnectProperties ;
-                              rdfs:comment "."@en ;
+                              rdfs:range xsd:boolean ;
+                              rdfs:comment "Request Problem Information Property in CONNECT. Byte 0/1 indicating whether the Server should include Reason String/User Properties on errors."@en ;
                               rdfs:label "has Request Problem Information"@en .
 
 
@@ -2300,7 +2410,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasRequestResponseInformation rdf:type owl:DatatypeProperty ;
                                rdfs:subPropertyOf :hasProperty ;
                                rdfs:domain :ConnectProperties ;
-                               rdfs:comment "."@en ;
+                               rdfs:range xsd:boolean ;
+                               rdfs:comment "Request Response Information Property in CONNECT. Byte 0/1 indicating whether the Server should return Response Information in CONNACK."@en ;
                                rdfs:label "has Request Response Information"@en .
 
 
@@ -2308,7 +2419,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasResponseInformation rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :hasProperty ;
                         rdfs:domain :ConnackProperties ;
-                        rdfs:comment "."@en ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Response Information Property. UTF-8 string providing response metadata for request/response patterns."@en ;
                         rdfs:label "has Response Information"@en .
 
 
@@ -2316,7 +2428,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasRetainAsPublished rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :hasSubscriptionOption ;
                       rdfs:domain :SubscriptionEntry ;
-                      rdfs:comment ","@en ;
+                      rdfs:range xsd:boolean ;
+                      rdfs:comment "Retain As Published subscription option. If 1, forwarded messages keep the original RETAIN flag."@en ;
                       rdfs:label "has Retain As Published"@en .
 
 
@@ -2324,7 +2437,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasRetainAvailable rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :hasProperty ;
                     rdfs:domain :ConnackProperties ;
-                    rdfs:comment "."@en ;
+                    rdfs:range xsd:boolean ;
+                    rdfs:comment "Retain Available Property in CONNACK. Byte 0/1 indicating whether retained messages are supported."@en ;
                     rdfs:label "has Retain Available"@en .
 
 
@@ -2342,7 +2456,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasRetainHandling rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf :hasSubscriptionOption ;
                    rdfs:domain :SubscriptionEntry ;
-                   rdfs:comment "."@en ;
+                   rdfs:range xsd:unsignedByte ;
+                   rdfs:comment "Retain Handling subscription option. Two-bit field: 0=send retained, 1=send retained only if subscription new, 2=do not send retained."@en ;
                    rdfs:label "has Retain Handling"@en .
 
 
@@ -2350,7 +2465,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasServerKeepAlive rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :hasProperty ;
                     rdfs:domain :ConnackProperties ;
-                    rdfs:comment "."@en ;
+                    rdfs:range xsd:unsignedShort ;
+                    rdfs:comment "Server Keep Alive Property in CONNACK. Two Byte Integer seconds overriding the Client Keep Alive for this connection."@en ;
                     rdfs:label "has Server Keep Alive"@en .
 
 
@@ -2362,7 +2478,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                                 :DisconnectProperties
                                               )
                                 ] ;
-                    rdfs:comment "."@en ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Server Reference Property. UTF-8 string suggesting an alternate Server the Client may use."@en ;
                     rdfs:label "has Server Reference"@en .
 
 
@@ -2375,7 +2492,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                                       :DisconnectProperties
                                                     )
                                       ] ;
-                          rdfs:comment "."@en ;
+                          rdfs:range xsd:unsignedInt ;
+                          rdfs:comment "Session Expiry Interval Property. Four Byte Integer seconds defining session lifetime after disconnect."@en ;
                           rdfs:label "has Session Expiry Interval"@en .
 
 
@@ -2383,7 +2501,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasSessionPresentFlag rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :hasConnackFlag ;
                        rdfs:domain :ConnackVariableHeader ;
-                       rdfs:comment "."@en ;
+                       rdfs:range xsd:boolean ;
+                       rdfs:comment "Session Present flag in CONNACK. If 1, a prior Session exists and is resumed."@en ;
                        rdfs:label "has Session Present Flag"@en .
 
 
@@ -2391,7 +2510,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasSharedSubscriptionAvailable rdf:type owl:DatatypeProperty ;
                                 rdfs:subPropertyOf :hasProperty ;
                                 rdfs:domain :ConnackProperties ;
-                                rdfs:comment "."@en ;
+                                rdfs:range xsd:boolean ;
+                                rdfs:comment "Shared Subscription Available Property in CONNACK. Byte 0/1 indicating server support for shared subscriptions."@en ;
                                 rdfs:label "has Shared Subscription Available"@en .
 
 
@@ -2399,7 +2519,13 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasSubackReasonCode rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :hasPayloadReasonCode ;
                      rdfs:domain :SubackPayload ;
-                     rdfs:comment ","@en ;
+                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                  owl:unionOf ( xsd:hexBinary
+                                                xsd:string
+                                                xsd:unsignedByte
+                                              )
+                                ] ;
+                     rdfs:comment "SUBACK Reason Code. One-byte value per subscription indicating success or reason for failure."@en ;
                      rdfs:label "has Suback Reason Code"@en .
 
 
@@ -2411,7 +2537,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                                        :SubscribeProperties
                                                      )
                                        ] ;
-                           rdfs:comment "."@en ;
+                           rdfs:range xsd:nonNegativeInteger ;
+                           rdfs:comment "Subscription Identifier Property. Variable Byte Integer (value > 0) identifying a subscription; returned in PUBLISH as applicable."@en ;
                            rdfs:label "has Subscription Identifier"@en .
 
 
@@ -2419,14 +2546,16 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasSubscriptionIdentifierAvailable rdf:type owl:DatatypeProperty ;
                                     rdfs:subPropertyOf :hasProperty ;
                                     rdfs:domain :ConnackProperties ;
-                                    rdfs:comment "."@en ;
+                                    rdfs:range xsd:boolean ;
+                                    rdfs:comment "Subscription Identifier Available Property in CONNACK. Byte 0/1 indicating support for Subscription Identifiers."@en ;
                                     rdfs:label "has Subscription Identifier Available"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionOption
 :hasSubscriptionOption rdf:type owl:DatatypeProperty ;
                        rdfs:domain :SubscriptionEntry ;
-                       rdfs:comment "."@en ;
+                       rdfs:range xsd:unsignedByte ;
+                       rdfs:comment "Subscription Options byte for a Topic Filter in SUBSCRIBE. Encodes QoS, No Local, Retain As Published, and Retain Handling."@en ;
                        rdfs:label "has Subscription Option"@en .
 
 
@@ -2439,7 +2568,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                            :Topic
                                          )
                            ] ;
-               rdfs:comment "."@en ;
+               rdfs:range xsd:unsignedShort ;
+               rdfs:comment "Topic Alias Property in PUBLISH. Two Byte Integer (non-zero) alias for Topic Name."@en ;
                rdfs:label "has Topic Alias"@en .
 
 
@@ -2451,7 +2581,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                                   :ConnectProperties
                                                 )
                                   ] ;
-                      rdfs:comment "."@en ;
+                      rdfs:range xsd:unsignedShort ;
+                      rdfs:comment "Topic Alias Maximum Property. Two Byte Integer indicating the maximum Topic Alias value accepted."@en ;
                       rdfs:label "has Topic Alias Maximum"@en .
 
 
@@ -2459,14 +2590,21 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasUnsubackReasonCode rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :hasPayloadReasonCode ;
                        rdfs:domain :UnsubackPayload ;
-                       rdfs:comment "."@en ;
+                       rdfs:range [ rdf:type rdfs:Datatype ;
+                                    owl:unionOf ( xsd:hexBinary
+                                                  xsd:string
+                                                  xsd:unsignedByte
+                                                )
+                                  ] ;
+                       rdfs:comment "UNSUBACK Reason Code. One-byte value per topic filter indicating unsubscribe success or failure."@en ;
                        rdfs:label "has Unsuback Reason Code"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserName
 :hasUserName rdf:type owl:DatatypeProperty ;
              rdfs:domain :ConnectPayload ;
-             rdfs:comment "."@en ;
+             rdfs:range xsd:string ;
+             rdfs:comment "User Name in CONNECT payload. UTF-8 string present only if User Name Flag=1."@en ;
              rdfs:label "has User Name"@en .
 
 
@@ -2474,21 +2612,24 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasUserNameFlag rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :hasConnectFlag ;
                  rdfs:domain :ConnectVariableHeader ;
-                 rdfs:comment "."@en ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:comment "User Name Flag in CONNECT Flags. If 1, User Name is present in CONNECT payload."@en ;
                  rdfs:label "has Username Flag"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserPropertyName
 :hasUserPropertyName rdf:type owl:DatatypeProperty ;
                      rdfs:domain :UserProperty ;
-                     rdfs:comment "."@en ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "User Property Name (first UTF-8 string of a User Property string pair)."@en ;
                      rdfs:label "has User Propery Name"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserPropertyValue
 :hasUserPropertyValue rdf:type owl:DatatypeProperty ;
                       rdfs:domain :UserProperty ;
-                      rdfs:comment "."@en ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "User Property Value (second UTF-8 string of a User Property string pair)."@en ;
                       rdfs:label "has User Property Value"@en .
 
 
@@ -2506,8 +2647,13 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
                                                          :PubrelVariableHeader
                                                        )
                                          ] ;
-                             rdfs:range xsd:unsignedByte ;
-                             rdfs:comment ""@en ;
+                             rdfs:range [ rdf:type rdfs:Datatype ;
+                                          owl:unionOf ( xsd:hexBinary
+                                                        xsd:string
+                                                        xsd:unsignedByte
+                                                      )
+                                        ] ;
+                             rdfs:comment "Reason Code carried in a packet variable header when defined by MQTT 5.0 (one-byte reason value)."@en ;
                              rdfs:label "MQTT Reason Code in Variable Header"@en .
 
 
@@ -2515,7 +2661,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasWilDelayInterval rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :hasWillProperty ;
                      rdfs:domain :WillProperties ;
-                     rdfs:comment "."@en ;
+                     rdfs:range xsd:unsignedInt ;
+                     rdfs:comment "Will Delay Interval Property. Four Byte Integer seconds delaying Will publication after connection loss."@en ;
                      rdfs:label "has Will Delay Interval"@en .
 
 
@@ -2523,7 +2670,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasWildcardSubscriptionAvailable rdf:type owl:DatatypeProperty ;
                                   rdfs:subPropertyOf :hasProperty ;
                                   rdfs:domain :ConnackProperties ;
-                                  rdfs:comment "."@en ;
+                                  rdfs:range xsd:boolean ;
+                                  rdfs:comment "Wildcard Subscription Available Property in CONNACK. Byte 0/1 indicating support for wildcard topic filters."@en ;
                                   rdfs:label "has Wildcard Subscription Available"@en .
 
 
@@ -2531,7 +2679,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasWillDelayInterval rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :hasProperty ;
                       rdfs:domain :WillProperties ;
-                      rdfs:comment "."@en ;
+                      rdfs:range xsd:unsignedInt ;
+                      rdfs:comment "Will Delay Interval Property. Four Byte Integer seconds delaying Will publication after connection loss."@en ;
                       rdfs:label "has Will Delay Interval"@en .
 
 
@@ -2539,21 +2688,33 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasWillFlag rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :hasConnectFlag ;
              rdfs:domain :ConnectVariableHeader ;
-             rdfs:comment "."@en ;
+             rdfs:range xsd:boolean ;
+             rdfs:comment "Will Flag in CONNECT Flags. If 1, Will Properties/Topic/Payload are present."@en ;
              rdfs:label "has Will Flag"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillPayload
 :hasWillPayload rdf:type owl:DatatypeProperty ;
                 rdfs:domain :ConnectPayload ;
-                rdfs:comment "."@en ;
+                rdfs:range [ rdf:type rdfs:Datatype ;
+                             owl:unionOf ( xsd:base64Binary
+                                           xsd:hexBinary
+                                           xsd:string
+                                         )
+                           ] ;
+                rdfs:comment "Will Payload in CONNECT payload. Binary Data constituting the Will Message payload."@en ;
                 rdfs:label "has Will Payload"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillProperty
 :hasWillProperty rdf:type owl:DatatypeProperty ;
                  rdfs:domain :WillProperties ;
-                 rdfs:comment "."@en ;
+                 rdfs:range [ rdf:type rdfs:Datatype ;
+                              owl:unionOf ( xsd:base64Binary
+                                            xsd:hexBinary
+                                          )
+                            ] ;
+                 rdfs:comment "Will Properties container in CONNECT payload. Set of MQTT 5.0 Properties applying to the Will Message."@en ;
                  rdfs:label "has MQTT Will Property"@en .
 
 
@@ -2561,7 +2722,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasWillQoS rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :hasConnectFlag ;
             rdfs:domain :ConnectVariableHeader ;
-            rdfs:comment "."@en ;
+            rdfs:range xsd:unsignedByte ;
+            rdfs:comment "Will QoS in CONNECT Flags. Two-bit field with values 0, 1, or 2 for the Will Message QoS."@en ;
             rdfs:label "has Will QoS"@en .
 
 
@@ -2569,7 +2731,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty .
 :hasWillRetain rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :hasConnectFlag ;
                rdfs:domain :ConnectVariableHeader ;
-               rdfs:comment "."@en ;
+               rdfs:range xsd:boolean ;
+               rdfs:comment "Will Retain in CONNECT Flags. If 1, the Will Message is published as retained."@en ;
                rdfs:label "has Will Retain"@en .
 
 
@@ -2670,7 +2833,7 @@ foaf:Person rdf:type owl:Class .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#AuthProperties
 :AuthProperties rdf:type owl:Class ;
                 rdfs:subClassOf :Properties ;
-                rdfs:comment ""@en ;
+                rdfs:comment "Properties section of the AUTH packet variable header in MQTT 5.0 for Enhanced Authentication (e.g., Authentication Method, Authentication Data, Reason String, User Properties)."@en ;
                 rdfs:label "MQTT Auth Properties"@en .
 
 
@@ -2714,7 +2877,7 @@ foaf:Person rdf:type owl:Class .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackProperties
 :ConnackProperties rdf:type owl:Class ;
                    rdfs:subClassOf :Properties ;
-                   rdfs:comment ""@en ;
+                   rdfs:comment "Properties section of the CONNACK packet variable header in MQTT 5.0 (e.g., Session Expiry Interval, Receive Maximum, Maximum QoS, Retain Available, Assigned Client Identifier, Server Keep Alive, Response Information, Server Reference, capability flags, User Properties)."@en ;
                    rdfs:label "MQTT Connack Properties"@en .
 
 
@@ -2742,14 +2905,14 @@ foaf:Person rdf:type owl:Class .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectPayload
 :ConnectPayload rdf:type owl:Class ;
                 rdfs:subClassOf :Payload ;
-                rdfs:comment "."@en ;
+                rdfs:comment "CONNECT packet payload in MQTT 5.0. Contains Client Identifier, Will Properties/Topic/Payload (if Will Flag=1), User Name (if User Name Flag=1), and Password (if Password Flag=1)."@en ;
                 rdfs:label "MQTT CONNECT Payload"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectProperties
 :ConnectProperties rdf:type owl:Class ;
                    rdfs:subClassOf :Properties ;
-                   rdfs:comment ""@en ;
+                   rdfs:comment "Properties section of the CONNECT packet variable header in MQTT 5.0 (e.g., Session Expiry Interval, Receive Maximum, Maximum Packet Size, Authentication Method/Data, Request Problem/Response Information, User Properties)."@en ;
                    rdfs:label "MQTT Connect Properties"@en .
 
 
@@ -2784,7 +2947,7 @@ foaf:Person rdf:type owl:Class .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#DisconnectProperties
 :DisconnectProperties rdf:type owl:Class ;
                       rdfs:subClassOf :Properties ;
-                      rdfs:comment ""@en ;
+                      rdfs:comment "Properties section of the DISCONNECT packet variable header in MQTT 5.0 (e.g., Session Expiry Interval, Reason String, Server Reference, User Properties) accompanying the Disconnect Reason Code."@en ;
                       rdfs:label "MQTT Disconnect Properties"@en .
 
 
@@ -2865,7 +3028,7 @@ foaf:Person rdf:type owl:Class .
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Properties
 :Properties rdf:type owl:Class ;
-            rdfs:comment ""@en ;
+            rdfs:comment "Abstract superclass for MQTT 5.0 Property collections. Each concrete *Properties class represents the Properties section of a specific Control Packet or Payload, encoded as a sequence of Property Identifiers and typed values."@en ;
             rdfs:label "MQTT Properties"@en .
 
 
@@ -2886,7 +3049,7 @@ foaf:Person rdf:type owl:Class .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubackProperties
 :PubackProperties rdf:type owl:Class ;
                   rdfs:subClassOf :Properties ;
-                  rdfs:comment ""@en ;
+                  rdfs:comment "Properties section of the PUBACK packet variable header in MQTT 5.0 (e.g., Reason String, User Properties) accompanying the PUBACK Reason Code."@en ;
                   rdfs:label "MQTT Puback Properties"@en .
 
 
@@ -2914,7 +3077,7 @@ foaf:Person rdf:type owl:Class .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubcompProperties
 :PubcompProperties rdf:type owl:Class ;
                    rdfs:subClassOf :Properties ;
-                   rdfs:comment ""@en ;
+                   rdfs:comment "Properties section of the PUBCOMP packet variable header in MQTT 5.0 (e.g., Reason String, User Properties) accompanying the PUBCOMP Reason Code."@en ;
                    rdfs:label "MQTT Pubcomp Properties"@en .
 
 
@@ -2950,7 +3113,7 @@ foaf:Person rdf:type owl:Class .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishProperties
 :PublishProperties rdf:type owl:Class ;
                    rdfs:subClassOf :Properties ;
-                   rdfs:comment ""@en ;
+                   rdfs:comment "Properties section of the PUBLISH packet variable header in MQTT 5.0 (e.g., Payload Format Indicator, Message Expiry Interval, Topic Alias, Response Topic, Correlation Data, Subscription Identifier(s), Content Type, User Properties)."@en ;
                    rdfs:label "MQTT Publish Properties"@en .
 
 
@@ -2978,7 +3141,7 @@ foaf:Person rdf:type owl:Class .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrecProperties
 :PubrecProperties rdf:type owl:Class ;
                   rdfs:subClassOf :Properties ;
-                  rdfs:comment ""@en ;
+                  rdfs:comment "Properties section of the PUBREC packet variable header in MQTT 5.0 (e.g., Reason String, User Properties) accompanying the PUBREC Reason Code."@en ;
                   rdfs:label "MQTT Pubrec Properties"@en .
 
 
@@ -3006,7 +3169,7 @@ foaf:Person rdf:type owl:Class .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrelProperties
 :PubrelProperties rdf:type owl:Class ;
                   rdfs:subClassOf :Properties ;
-                  rdfs:comment ""@en ;
+                  rdfs:comment "Properties section of the PUBREL packet variable header in MQTT 5.0 (e.g., Reason String, User Properties) accompanying the PUBREL Reason Code."@en ;
                   rdfs:label "MQTT Pubrel Properties"@en .
 
 
@@ -3034,14 +3197,14 @@ foaf:Person rdf:type owl:Class .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackPayload
 :SubackPayload rdf:type owl:Class ;
                rdfs:subClassOf :Payload ;
-               rdfs:comment "."@en ;
+               rdfs:comment "SUBACK packet payload in MQTT 5.0. Sequence of Suback Reason Codes, one for each Topic Filter in the corresponding SUBSCRIBE request."@en ;
                rdfs:label "MQTT SUBACK Payload"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackProperties
 :SubackProperties rdf:type owl:Class ;
                   rdfs:subClassOf :Properties ;
-                  rdfs:comment ""@en ;
+                  rdfs:comment "Properties section of the SUBACK packet variable header in MQTT 5.0 (e.g., Reason String, User Properties) accompanying the Suback Payload."@en ;
                   rdfs:label "MQTT Suback Properties"@en .
 
 
@@ -3077,7 +3240,7 @@ foaf:Person rdf:type owl:Class .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribeProperties
 :SubscribeProperties rdf:type owl:Class ;
                      rdfs:subClassOf :Properties ;
-                     rdfs:comment ""@en ;
+                     rdfs:comment "Properties section of the SUBSCRIBE packet variable header in MQTT 5.0 (e.g., Subscription Identifier, User Properties)."@en ;
                      rdfs:label "MQTT Subscribe Properties"@en .
 
 
@@ -3150,14 +3313,14 @@ foaf:Person rdf:type owl:Class .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackPayload
 :UnsubackPayload rdf:type owl:Class ;
                  rdfs:subClassOf :Payload ;
-                 rdfs:comment "."@en ;
+                 rdfs:comment "UNSUBACK packet payload in MQTT 5.0. Sequence of Unsuback Reason Codes, one for each Topic Filter in the corresponding UNSUBSCRIBE request."@en ;
                  rdfs:label "MQTT UNSUBACK Payload"@en .
 
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackProperties
 :UnsubackProperties rdf:type owl:Class ;
                     rdfs:subClassOf :Properties ;
-                    rdfs:comment ""@en ;
+                    rdfs:comment "Properties section of the UNSUBACK packet variable header in MQTT 5.0 (e.g., Reason String, User Properties) accompanying the Unsuback Payload."@en ;
                     rdfs:label "MQTT Unsuback Properties"@en .
 
 
@@ -3193,7 +3356,7 @@ foaf:Person rdf:type owl:Class .
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribeProperties
 :UnsubscribeProperties rdf:type owl:Class ;
                        rdfs:subClassOf :Properties ;
-                       rdfs:comment ""@en ;
+                       rdfs:comment "Properties section of the UNSUBSCRIBE packet variable header in MQTT 5.0 (e.g., User Properties)."@en ;
                        rdfs:label "MQTT Unsubscribe Properties"@en .
 
 
@@ -3206,7 +3369,7 @@ foaf:Person rdf:type owl:Class .
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UserProperty
 :UserProperty rdf:type owl:Class ;
-              rdfs:comment "."@en ;
+              rdfs:comment "MQTT 5.0 User Property. A UTF-8 String Pair (Name, Value) that can appear in many packet property sets. Semantics are application-defined."@en ;
               rdfs:label "User Property"@en .
 
 
@@ -3218,7 +3381,7 @@ foaf:Person rdf:type owl:Class .
 
 ###  https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#WillProperties
 :WillProperties rdf:type owl:Class ;
-                rdfs:comment ""@en ;
+                rdfs:comment "Will Properties in the CONNECT payload in MQTT 5.0 (e.g., Will Delay Interval, Payload Format Indicator, Message Expiry Interval, Content Type, Response Topic, Correlation Data, User Properties) applying to the Will Message."@en ;
                 rdfs:label "MQTT Will Properties"@en .
 
 

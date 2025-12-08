@@ -1917,6 +1917,10 @@
         <ObjectProperty abbreviatedIRI=":hasVariableHeader"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI=":hasWillProperties"/>
+        <ObjectProperty abbreviatedIRI=":hasProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI=":isActObsSubjectOf"/>
         <ObjectProperty abbreviatedIRI=":isSubjectOf"/>
     </SubObjectPropertyOf>
@@ -4695,6 +4699,20 @@
         </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasReasonCode"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI=":AuthVariableHeader"/>
+            <Class abbreviatedIRI=":ConnackVariableHeader"/>
+            <Class abbreviatedIRI=":DisconnectVariableHeader"/>
+            <Class abbreviatedIRI=":PubackVariableHeader"/>
+            <Class abbreviatedIRI=":PubcompVariableHeader"/>
+            <Class abbreviatedIRI=":PubrecVariableHeader"/>
+            <Class abbreviatedIRI=":PubrelVariableHeader"/>
+            <Class abbreviatedIRI=":SubackPayload"/>
+            <Class abbreviatedIRI=":UnsubackPayload"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty abbreviatedIRI=":hasReasonString"/>
         <ObjectUnionOf>
             <Class abbreviatedIRI=":AuthProperties"/>
@@ -4876,8 +4894,51 @@
         <Class abbreviatedIRI=":NetworkConnection"/>
     </DataPropertyDomain>
     <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasAssignedClientIdentifier"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasAuthReasonCode"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasAuthentificationData"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:base64Binary"/>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasAuthentificationMethod"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasCleanStart"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasClientID"/>
         <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasConnackFlag"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasConnackReasonCode"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasConnectFlag"/>
+        <Datatype abbreviatedIRI="xsd:unsignedByte"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasContentType"/>
@@ -4891,8 +4952,24 @@
         </DataUnionOf>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasCorrelationData"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:base64Binary"/>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasDUPFlag"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasDisconnectReasonCode"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+        </DataUnionOf>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasFilterPattern"/>
@@ -4900,11 +4977,23 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasFixedHeaderFlag"/>
-        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+        <Datatype abbreviatedIRI="xsd:unsignedByte"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasHostAddress"/>
         <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasKeepAlive"/>
+        <Datatype abbreviatedIRI="xsd:unsignedShort"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasMaximumPacketSize"/>
+        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasMaximumQoS"/>
+        <Datatype abbreviatedIRI="xsd:unsignedByte"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasMessageContent"/>
@@ -4923,8 +5012,36 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasMessageExpiryInterval"/>
+        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasNoLocal"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasPacketIdentifier"/>
         <Datatype abbreviatedIRI="xsd:unsignedShort"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasPassword"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:base64Binary"/>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasPasswordFlag"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasPayloadContent"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:base64Binary"/>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasPayloadFormatIndicator"/>
@@ -4932,15 +5049,67 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasPayloadReasonCode"/>
-        <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+        </DataUnionOf>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasPortNumber"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
+        <Datatype abbreviatedIRI="xsd:unsignedShort"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasProperty"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+        </DataUnionOf>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasPropertyLength"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasProtocolName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasProtocolVersion"/>
+        <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasPubackReasonCode"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasPubcompReasonCode"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasPubrecReasonCode"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasPubrelReasonCode"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+        </DataUnionOf>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasQoSLevel"/>
@@ -4956,19 +5125,170 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasReasonCode"/>
-        <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasReasonString"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasReceiveMaximum"/>
+        <Datatype abbreviatedIRI="xsd:unsignedShort"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasRemainingLength"/>
         <Datatype abbreviatedIRI="xsd:byte"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasRequestProblemInformation"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasRequestResponseInformation"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasResponseInformation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasRetainAsPublished"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasRetainAvailable"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty abbreviatedIRI=":hasRetainFlag"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty abbreviatedIRI=":hasVariableHeaderReasonCode"/>
+        <DataProperty abbreviatedIRI=":hasRetainHandling"/>
         <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasServerKeepAlive"/>
+        <Datatype abbreviatedIRI="xsd:unsignedShort"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasServerReference"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasSessionExpiryInterval"/>
+        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasSessionPresentFlag"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasSharedSubscriptionAvailable"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasSubackReasonCode"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasSubscriptionIdentifier"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasSubscriptionIdentifierAvailable"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasSubscriptionOption"/>
+        <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasTopicAlias"/>
+        <Datatype abbreviatedIRI="xsd:unsignedShort"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasTopicAliasMaximum"/>
+        <Datatype abbreviatedIRI="xsd:unsignedShort"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasUnsubackReasonCode"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasUserName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasUserNameFlag"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasUserPropertyName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasUserPropertyValue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasVariableHeaderReasonCode"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasWilDelayInterval"/>
+        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasWildcardSubscriptionAvailable"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasWillDelayInterval"/>
+        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasWillFlag"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasWillPayload"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:base64Binary"/>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasWillProperty"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:base64Binary"/>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasWillQoS"/>
+        <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasWillRetain"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI=":usesTLS"/>
@@ -5017,7 +5337,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:AuthProperties</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Properties section of the AUTH packet variable header in MQTT 5.0 for Enhanced Authentication (e.g., Authentication Method, Authentication Data, Reason String, User Properties).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5077,7 +5397,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:ConnackProperties</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Properties section of the CONNACK packet variable header in MQTT 5.0 (e.g., Session Expiry Interval, Receive Maximum, Maximum QoS, Retain Available, Assigned Client Identifier, Server Keep Alive, Response Information, Server Reference, capability flags, User Properties).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5117,7 +5437,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:ConnectPayload</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">CONNECT packet payload in MQTT 5.0. Contains Client Identifier, Will Properties/Topic/Payload (if Will Flag=1), User Name (if User Name Flag=1), and Password (if Password Flag=1).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5127,7 +5447,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:ConnectProperties</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Properties section of the CONNECT packet variable header in MQTT 5.0 (e.g., Session Expiry Interval, Receive Maximum, Maximum Packet Size, Authentication Method/Data, Request Problem/Response Information, User Properties).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5177,7 +5497,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:DisconnectProperties</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Properties section of the DISCONNECT packet variable header in MQTT 5.0 (e.g., Session Expiry Interval, Reason String, Server Reference, User Properties) accompanying the Disconnect Reason Code.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5297,7 +5617,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:Properties</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Abstract superclass for MQTT 5.0 Property collections. Each concrete *Properties class represents the Properties section of a specific Control Packet or Payload, encoded as a sequence of Property Identifiers and typed values.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5327,7 +5647,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:PubackProperties</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Properties section of the PUBACK packet variable header in MQTT 5.0 (e.g., Reason String, User Properties) accompanying the PUBACK Reason Code.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5367,7 +5687,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:PubcompProperties</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Properties section of the PUBCOMP packet variable header in MQTT 5.0 (e.g., Reason String, User Properties) accompanying the PUBCOMP Reason Code.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5417,7 +5737,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:PublishProperties</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Properties section of the PUBLISH packet variable header in MQTT 5.0 (e.g., Payload Format Indicator, Message Expiry Interval, Topic Alias, Response Topic, Correlation Data, Subscription Identifier(s), Content Type, User Properties).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5457,7 +5777,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:PubrecProperties</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Properties section of the PUBREC packet variable header in MQTT 5.0 (e.g., Reason String, User Properties) accompanying the PUBREC Reason Code.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5497,7 +5817,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:PubrelProperties</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Properties section of the PUBREL packet variable header in MQTT 5.0 (e.g., Reason String, User Properties) accompanying the PUBREL Reason Code.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5537,7 +5857,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:SubackPayload</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">SUBACK packet payload in MQTT 5.0. Sequence of Suback Reason Codes, one for each Topic Filter in the corresponding SUBSCRIBE request.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5547,7 +5867,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:SubackProperties</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Properties section of the SUBACK packet variable header in MQTT 5.0 (e.g., Reason String, User Properties) accompanying the Suback Payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5597,7 +5917,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:SubscribeProperties</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Properties section of the SUBSCRIBE packet variable header in MQTT 5.0 (e.g., Subscription Identifier, User Properties).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5677,7 +5997,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:UnsubackPayload</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">UNSUBACK packet payload in MQTT 5.0. Sequence of Unsuback Reason Codes, one for each Topic Filter in the corresponding UNSUBSCRIBE request.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5687,7 +6007,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:UnsubackProperties</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Properties section of the UNSUBACK packet variable header in MQTT 5.0 (e.g., Reason String, User Properties) accompanying the Unsuback Payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5737,7 +6057,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:UnsubscribeProperties</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Properties section of the UNSUBSCRIBE packet variable header in MQTT 5.0 (e.g., User Properties).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5757,7 +6077,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:UserProperty</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">MQTT 5.0 User Property. A UTF-8 String Pair (Name, Value) that can appear in many packet property sets. Semantics are application-defined.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5777,7 +6097,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:WillProperties</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Will Properties in the CONNECT payload in MQTT 5.0 (e.g., Will Delay Interval, Payload Format Indicator, Message Expiry Interval, Content Type, Response Topic, Correlation Data, User Properties) applying to the Will Message.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5867,7 +6187,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasApplicationMessage</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links a PUBLISH packet individual to the higher-level ApplicationMessage it carries.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5877,7 +6197,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasAssignedClientIdentifier</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Assigned Client Identifier Property. UTF-8 string assigned by the Server when the Client did not provide one.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5897,7 +6217,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasAuthProperties</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links an AUTH packet individual to its AuthProperties collection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5907,7 +6227,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasAuthReasonCode</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">AUTH Reason Code. One-byte value indicating enhanced-auth result or continuation status.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5927,7 +6247,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasAuthentificationData</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Authentication Data Property. Binary Data for enhanced authentication.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5937,7 +6257,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasAuthentificationMethod</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Authentication Method Property. UTF-8 string naming the enhanced-auth method.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5947,7 +6267,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasCleanStart</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Clean Start flag in CONNECT Flags. 1 requests a new Session; 0 continues an existing Session if present.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5987,7 +6307,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasConnackFlag</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">CONNACK Acknowledge Flags byte. In MQTT 5.0 only Session Present (bit 0) is used; other bits are reserved.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5997,7 +6317,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasConnackProperties</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links a CONNACK packet individual to its ConnackProperties collection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6007,7 +6327,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasConnackReasonCode</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">CONNACK Reason Code. One-byte value indicating the result of a CONNECT request.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6037,7 +6357,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasConnectFlag</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">CONNECT Flags byte encoding User Name/Password/Will/Clean Start fields; reserved bit MUST be 0.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6057,7 +6377,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasConnectProperties</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links a CONNECT packet individual to its ConnectProperties collection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6085,7 +6405,7 @@
         <Literal xml:lang="en">has connected MQTT Client</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasContentType</AbbreviatedIRI>
         <Literal xml:lang="en">Application Message content type</Literal>
     </AnnotationAssertion>
@@ -6107,7 +6427,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasCorrelationData</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Correlation Data Property. Binary Data used to correlate requests and responses.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6137,7 +6457,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasDisconnectProperties</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links a DISCONNECT packet individual to its DisconnectProperties collection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6147,7 +6467,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasDisconnectReasonCode</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">DISCONNECT Reason Code. One-byte value indicating the reason for disconnection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6197,7 +6517,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasFixedHeaderFlag</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Fixed Header flags nibble (bits 3..0 of byte 1). Packet-type-specific reserved/required flag pattern in MQTT 5.0.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6227,7 +6547,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasKeepAlive</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Keep Alive in CONNECT variable header. Two Byte Integer seconds defining maximum time between Client Control Packets.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6237,7 +6557,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasMaximumPacketSize</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Maximum Packet Size Property. Four Byte Integer (non-zero) limiting maximum MQTT packet size accepted.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6247,7 +6567,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasMaximumQoS</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Maximum QoS Property. Byte specifying the highest QoS level supported by the Server.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6257,7 +6577,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasMessageContent</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Application message content carried by PUBLISH. Conceptual higher-level view of the PUBLISH payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6297,7 +6617,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasMessageExpiryInterval</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Message Expiry Interval Property. Four Byte Integer seconds defining PUBLISH message lifetime.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6307,7 +6627,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasNoLocal</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">No Local subscription option. If 1, the Server MUST NOT forward messages published by this Client back to it.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6337,7 +6657,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPassword</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Password field in CONNECT payload. Binary Data present only if Password Flag=1.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6347,7 +6667,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPasswordFlag</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Password Flag in CONNECT Flags. If 1, a Password field is present in the CONNECT payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6367,7 +6687,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPayloadContent</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Application Message Payload content (Binary Data; UTF-8 text if Payload Format Indicator=1).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6377,7 +6697,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPayloadFormatIndicator</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Payload Format Indicator Property. Byte 0/1; 1 means payload is UTF-8 encoded text, 0 means unspecified binary.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6387,7 +6707,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPayloadReasonCode</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Reason Code carried in a packet payload when defined by MQTT 5.0 (one-byte reason value).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6437,7 +6757,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasProperties</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links an MQTT Control Packet or higher-level message individual to its MQTT 5.0 Properties collection (variable header properties).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6447,7 +6767,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasProperty</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Property identifier or property carrier for MQTT 5.0. Each Property begins with a one-byte Identifier followed by a typed value.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6457,7 +6777,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPropertyLength</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Property Length field preceding a Properties collection. Variable Byte Integer giving total length in bytes of following properties.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6477,7 +6797,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasProtocolName</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Protocol Name in CONNECT. UTF-8 string that MUST equal &apos;MQTT&apos; for MQTT 5.0.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6487,7 +6807,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasProtocolVersion</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Protocol Version in CONNECT. One-byte value that MUST be 5 for MQTT 5.0.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6507,7 +6827,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPubackProperties</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links a PUBACK packet individual to its PubackProperties collection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6517,7 +6837,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPubackReasonCode</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">PUBACK Reason Code. One-byte value indicating result of QoS 1 PUBLISH processing.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6547,7 +6867,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPubcompProperties</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links a PUBCOMP packet individual to its PubcompProperties collection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6557,7 +6877,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPubcompReasonCode</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">PUBCOMP Reason Code. One-byte value indicating completion of the QoS 2 flow.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6587,7 +6907,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPublishPayload</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Links a PUBLISH packet (or ApplicationMessage) to its payload container/value instance.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6597,7 +6917,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPublishProperties</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links a PUBLISH packet individual to its PublishProperties collection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6627,7 +6947,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPubrecProperties</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links a PUBREC packet individual to its PubrecProperties collection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6637,7 +6957,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPubrecReasonCode</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">PUBREC Reason Code. One-byte value indicating result of QoS 2 PUBLISH receipt stage.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6667,7 +6987,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPubrelProperties</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links a PUBREL packet individual to its PubrelProperties collection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6677,7 +6997,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasPubrelReasonCode</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">PUBREL Reason Code. One-byte value indicating result of QoS 2 release stage.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6712,7 +7032,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasReasonCode</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Generic MQTT Reason Code. One-byte value indicating success or the reason for failure in many packet types.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6722,7 +7042,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasReasonString</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Reason String Property. UTF-8 string providing human-readable diagnostics for a Reason Code.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6732,7 +7052,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasReceiveMaximum</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Receive Maximum Property. Two Byte Integer (non-zero) limiting concurrent QoS 1/2 PUBLISH in-flight.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6752,7 +7072,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasRequestProblemInformation</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Request Problem Information Property in CONNECT. Byte 0/1 indicating whether the Server should include Reason String/User Properties on errors.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6762,7 +7082,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasRequestResponseInformation</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Request Response Information Property in CONNECT. Byte 0/1 indicating whether the Server should return Response Information in CONNACK.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6772,7 +7092,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasResponseInformation</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Response Information Property. UTF-8 string providing response metadata for request/response patterns.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6782,7 +7102,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasResponseTopic</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Links a PublishProperties or WillProperties collection to a Response Topic (UTF-8 Topic Name for request/response patterns).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6792,7 +7112,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasRetainAsPublished</AbbreviatedIRI>
-        <Literal xml:lang="en">,</Literal>
+        <Literal xml:lang="en">Retain As Published subscription option. If 1, forwarded messages keep the original RETAIN flag.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6802,7 +7122,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasRetainAvailable</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Retain Available Property in CONNACK. Byte 0/1 indicating whether retained messages are supported.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6822,7 +7142,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasRetainHandling</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Retain Handling subscription option. Two-bit field: 0=send retained, 1=send retained only if subscription new, 2=do not send retained.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6832,7 +7152,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasServerKeepAlive</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Server Keep Alive Property in CONNACK. Two Byte Integer seconds overriding the Client Keep Alive for this connection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6842,7 +7162,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasServerReference</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Server Reference Property. UTF-8 string suggesting an alternate Server the Client may use.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6852,7 +7172,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasSessionExpiryInterval</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Session Expiry Interval Property. Four Byte Integer seconds defining session lifetime after disconnect.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6862,7 +7182,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasSessionPresentFlag</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Session Present flag in CONNACK. If 1, a prior Session exists and is resumed.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6872,7 +7192,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasSharedSubscriptionAvailable</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Shared Subscription Available Property in CONNACK. Byte 0/1 indicating server support for shared subscriptions.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6902,7 +7222,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasSubackProperties</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links a SUBACK packet individual to its SubackProperties collection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6912,7 +7232,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasSubackReasonCode</AbbreviatedIRI>
-        <Literal xml:lang="en">,</Literal>
+        <Literal xml:lang="en">SUBACK Reason Code. One-byte value per subscription indicating success or reason for failure.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6962,7 +7282,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasSubscribeProperties</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links a SUBSCRIBE packet individual to its SubscribeProperties collection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6982,7 +7302,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasSubscriptionIdentifier</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Subscription Identifier Property. Variable Byte Integer (value &gt; 0) identifying a subscription; returned in PUBLISH as applicable.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6992,7 +7312,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasSubscriptionIdentifierAvailable</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Subscription Identifier Available Property in CONNACK. Byte 0/1 indicating support for Subscription Identifiers.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7002,7 +7322,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasSubscriptionOption</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Subscription Options byte for a Topic Filter in SUBSCRIBE. Encodes QoS, No Local, Retain As Published, and Retain Handling.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7022,7 +7342,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasTopicAlias</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Topic Alias Property in PUBLISH. Two Byte Integer (non-zero) alias for Topic Name.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7032,7 +7352,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasTopicAliasMaximum</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Topic Alias Maximum Property. Two Byte Integer indicating the maximum Topic Alias value accepted.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7082,7 +7402,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasUnsubackProperties</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links an UNSUBACK packet individual to its UnsubackProperties collection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7092,7 +7412,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasUnsubackReasonCode</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">UNSUBACK Reason Code. One-byte value per topic filter indicating unsubscribe success or failure.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7132,7 +7452,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasUnsubscribeProperties</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links an UNSUBSCRIBE packet individual to its UnsubscribeProperties collection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7152,7 +7472,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasUserName</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">User Name in CONNECT payload. UTF-8 string present only if User Name Flag=1.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7162,7 +7482,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasUserNameFlag</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">User Name Flag in CONNECT Flags. If 1, User Name is present in CONNECT payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7172,7 +7492,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasUserProperty</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links a Properties collection to one contained UserProperty (Name/Value pair). Multiple values may occur.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7182,7 +7502,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasUserPropertyName</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">User Property Name (first UTF-8 string of a User Property string pair).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7192,7 +7512,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasUserPropertyValue</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">User Property Value (second UTF-8 string of a User Property string pair).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7212,7 +7532,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasVariableHeaderReasonCode</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Reason Code carried in a packet variable header when defined by MQTT 5.0 (one-byte reason value).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7222,7 +7542,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasWilDelayInterval</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Will Delay Interval Property. Four Byte Integer seconds delaying Will publication after connection loss.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7232,7 +7552,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasWildcardSubscriptionAvailable</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Wildcard Subscription Available Property in CONNACK. Byte 0/1 indicating support for wildcard topic filters.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7242,7 +7562,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasWillDelayInterval</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Will Delay Interval Property. Four Byte Integer seconds delaying Will publication after connection loss.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7252,7 +7572,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasWillFlag</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Will Flag in CONNECT Flags. If 1, Will Properties/Topic/Payload are present.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7262,7 +7582,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasWillPayload</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Will Payload in CONNECT payload. Binary Data constituting the Will Message payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7272,7 +7592,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasWillProperties</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links a CONNECT packet or Will Message individual to its WillProperties collection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7282,7 +7602,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasWillProperty</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Will Properties container in CONNECT payload. Set of MQTT 5.0 Properties applying to the Will Message.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7292,7 +7612,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasWillQoS</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Will QoS in CONNECT Flags. Two-bit field with values 0, 1, or 2 for the Will Message QoS.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7302,7 +7622,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasWillRetain</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Will Retain in CONNECT Flags. If 1, the Will Message is published as retained.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7312,7 +7632,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:hasWillTopic</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Links a CONNECT packet or Will Message to its Will Topic (Topic Name used when publishing the Will).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7352,7 +7672,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:isApplicationMessageOf</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Inverse of hasApplicationMessage: links an ApplicationMessage to the PUBLISH packet that carries it.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7412,7 +7732,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:isConnectPayloadOf</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Inverse relation: links a ConnectPayload individual to the CONNECT packet that contains it.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7672,7 +7992,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:isResponseTopicOf</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Inverse relation: links a Response Topic resource to the Properties collection/PUBLISH where it is defined.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7692,7 +8012,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:isSubackPayloadOf</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Inverse relation: links a SubackPayload individual to the SUBACK packet that contains it.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7792,7 +8112,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:isUnsubackPayloadOf</AbbreviatedIRI>
-        <Literal xml:lang="en"></Literal>
+        <Literal xml:lang="en">Inverse relation: links an UnsubackPayload individual to the UNSUBACK packet that contains it.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7852,7 +8172,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:isWillTopicOf</AbbreviatedIRI>
-        <Literal xml:lang="en">.</Literal>
+        <Literal xml:lang="en">Inverse relation: links a Will Topic resource to the Will Message/CONNECT packet it belongs to.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8291,12 +8611,12 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="xsd:minInclusive"/>
-        <AnonymousIndividual nodeID="_:genid2147484043"/>
+        <AnonymousIndividual nodeID="_:genid2147487225"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">0</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="xsd:maxInclusive"/>
-        <AnonymousIndividual nodeID="_:genid2147484044"/>
+        <AnonymousIndividual nodeID="_:genid2147487226"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">15</Literal>
     </AnnotationAssertion>
 </Ontology>
