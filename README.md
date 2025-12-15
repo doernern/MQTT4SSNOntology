@@ -23,11 +23,6 @@ An Ontology Specification Draft was automatically generated with the help of the
 
 [![Visualize with](https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg)](https://doernern.github.io/MQTT4SSNOntology/documentation/webvowl/index.html#)
 
-<img src="./figures/ControlPacketHierarchy.png" width="50%">
-<img src="./figures/NetworkInfrastructure.png" width="40%">
-<img src="./figures/TopicPayload.png" width="50%">
-<img src="./figures/TopicSubjects.png" width="30%">
-
 ## How to cite
 In case you want to use this ontology in your own research, please cite as:
 ```
