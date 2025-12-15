@@ -8,7 +8,7 @@ MQTT4SSN is an ontology representing the MQTT transport protocol, containing the
 
 The ontology captures the essential elements of MQTT, such as the network entities broker and client, the various control packets and their payloads, the topics that organize communication, and the interrelations between these components. The ontology covers the following key features:
 
-* Supports main MQTT control packets: PUBLISH, SUBSCRIBE and UNSUBSCRIBE
+* Supports all MQTT 5.0 control packets
 * Enables representation of heterogeneous payload formats and character encodings
 * Alignment with the well-established W3C SSN/SOSA ontology
 * Models the relation between MQTT topic naming and SOSA elements such as FeatureOfInterest, Property, Actuation, ActuationCollection, Observation, and ObservationCollection
