@@ -1,0 +1,776 @@
+<h2 id="overv" class="list">MQTT4SSN Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/ActuatableProperty" title="http://www.w3.org/ns/sosa/ActuatableProperty">Actuatable Property</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Actuation" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/ActuationCollection" title="http://www.w3.org/ns/sosa/ActuationCollection">
+         <span>Actuation Collection</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Actuator" title="http://www.w3.org/ns/sosa/Actuator">Actuator</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/Deployment" title="http://www.w3.org/ns/ssn/Deployment">Deployment</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/FeatureOfInterest" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature Of Interest</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/Input" title="http://www.w3.org/ns/ssn/Input">Input</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Broker"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Broker">MQTT Broker</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Client"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Client">MQTT Client</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ControlPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ControlPacket">MQTT Control Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#FixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#FixedHeader">MQTT Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#NetworkConnection"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#NetworkConnection">MQTT Network Connection</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#NetworkParticipant"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#NetworkParticipant">MQTT Network Participant</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Payload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Payload">MQTT Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishFixedHeader">MQTT PUBLISH Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishPacket">MQTT PUBLISH Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishPayload">MQTT PUBLISH Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishVariableHeader">MQTT PUBLISH Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribeFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribeFixedHeader">MQTT SUBSCRIBE Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribePacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribePacket">MQTT SUBSCRIBE Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscriptionPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscriptionPayload">MQTT SUBSCRIBE Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribeVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribeVariableHeader">MQTT SUBSCRIBE Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscriptionEntry"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscriptionEntry">MQTT Subscription Entry</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic">MQTT Topic</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#TopicFilter"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#TopicFilter">MQTT Topic Filter</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#TopicSubject"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#TopicSubject">MQTT Topic Subject</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribeFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribeFixedHeader">MQTT UNSUBSCRIBE Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribePacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribePacket">MQTT UNSUBSCRIBE Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscriptionPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscriptionPayload">MQTT UNSUBSCRIBE Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribeVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribeVariableHeader">MQTT UNSUBSCRIBE Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#VariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#VariableHeader">MQTT Variable Header</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">Observable Property</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/ObservationCollection" title="http://www.w3.org/ns/sosa/ObservationCollection">
+         <span>Observation Collection</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/Output" title="http://www.w3.org/ns/ssn/Output">Output</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Platform" title="http://www.w3.org/ns/sosa/Platform">Platform</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Procedure" title="http://www.w3.org/ns/sosa/Procedure">Procedure</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Property" title="http://www.w3.org/ns/sosa/Property">
+         <span>Property</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/Property" title="http://www.w3.org/ns/ssn/Property">Property</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Result" title="http://www.w3.org/ns/sosa/Result">Result</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Sample" title="http://www.w3.org/ns/sosa/Sample">Sample</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Sampler" title="http://www.w3.org/ns/sosa/Sampler">Sampler</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Sampling" title="http://www.w3.org/ns/sosa/Sampling">Sampling</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/Stimulus" title="http://www.w3.org/ns/ssn/Stimulus">Stimulus</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/System" title="http://www.w3.org/ns/ssn/System">System</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/actsOnProperty" title="http://www.w3.org/ns/sosa/actsOnProperty">acts on property</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/deployedOnPlatform" title="http://www.w3.org/ns/ssn/deployedOnPlatform">deployed on platform</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/deployedSystem" title="http://www.w3.org/ns/ssn/deployedSystem">deployed system</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/detects" title="http://www.w3.org/ns/ssn/detects">detects</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/forProperty" title="http://www.w3.org/ns/ssn/forProperty">for property</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#forwardsPublishPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#forwardsPublishPacket">forwards PUBLISH Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectedClient"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectedClient">has connected MQTT Client</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/hasDeployment" title="http://www.w3.org/ns/ssn/hasDeployment">has deployment</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasEncodedFields"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasEncodedFields">has encoded fields</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFixedHeader">has Fixed Header</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/hasInput" title="http://www.w3.org/ns/ssn/hasInput">has input</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasClient"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasClient">has MQTT Client</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayload">has MQTT Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptions"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptions">has MQTT Subscription Entries</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicName"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicName">has MQTT Topic (name)</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicFilter"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicFilter">has MQTT Topic Filter</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/hasOutput" title="http://www.w3.org/ns/ssn/hasOutput">has output</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasParticipant"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasParticipant">has participant</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadSize"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadSize">has payload size</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/hasProperty" title="http://www.w3.org/ns/ssn/hasProperty">has property</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishFixedHeader">has PUBLISH Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishPayload">has PUBLISH Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishVariableHeader">has PUBLISH Variable Header</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/hasResult" title="http://www.w3.org/ns/sosa/hasResult">has result</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/hasSample" title="http://www.w3.org/ns/sosa/hasSample">has sample</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionFixedHeader">has SUBSCRIBE Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionPayload">has SUBSCRIBE Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionVariableHeader">has SUBSCRIBE Variable Header</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/hasSubSystem" title="http://www.w3.org/ns/ssn/hasSubSystem">has subsystem</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject">has topic subject</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject">has topic subject (Actuation, Actuation collection, Observation or Observation Collection)</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject">has topic subject (Feature of Interest)</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject">has topic subject (Property)</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscriptionFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscriptionFixedHeader">has UNSUBSCRIBE Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscriptionPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscriptionPayload">has UNSUBSCRIBE Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscriptionVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscriptionVariableHeader">has UNSUBSCRIBE Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasVariableHeader">has Variable Header</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/hosts" title="http://www.w3.org/ns/sosa/hosts">hosts</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hosts"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hosts">hosts</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/implementedBy" title="http://www.w3.org/ns/ssn/implementedBy">implemented by</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/implements" title="http://www.w3.org/ns/ssn/implements">implements</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/inDeployment" title="http://www.w3.org/ns/ssn/inDeployment">in deployment</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isAcceptedBy"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isAcceptedBy">is accepted by</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/isActedOnBy" title="http://www.w3.org/ns/sosa/isActedOnBy">is acted on by</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectedToBroker"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectedToBroker">is connected to MQTT Broker</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isEncodedInPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isEncodedInPayload">is encoded in MQTT Payload</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/isFeatureOfInterestOf" title="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">is feature of interest of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFixedHeaderOf">is Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/isHostedBy" title="http://www.w3.org/ns/sosa/isHostedBy">is hosted by</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isHostedBy"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isHostedBy">is hosted by</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isInitiatedBy"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isInitiatedBy">is initiated by</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isMatchedByFilter"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isMatchedByFilter">is matched by MQTT Topic Filter</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPayloadOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPayloadOf">is MQTT Payload of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionOf">is MQTT Subscription Entry of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isTopicNameOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isTopicNameOf">is MQTT Topic (name) of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isTopicFilterOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isTopicFilterOf">is MQTT Topic Filter of</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/isObservedBy" title="http://www.w3.org/ns/sosa/isObservedBy">is observed by</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/isPropertyOf" title="http://www.w3.org/ns/ssn/isPropertyOf">is property of</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/isProxyFor" title="http://www.w3.org/ns/ssn/isProxyFor">is proxy for</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishFixedHeaderOf">is PUBLISH Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishPayloadOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishPayloadOf">is PUBLISH Payload of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishVariableHeaderOf">is PUBLISH Variable Header of</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/isResultOf" title="http://www.w3.org/ns/sosa/isResultOf">is result of</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/isSampleOf" title="http://www.w3.org/ns/sosa/isSampleOf">is sample of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSentBy"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSentBy">is sent by MQTT Client</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionFixedHeaderOf">is SUBSCRIBE Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionPayloadOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionPayloadOf">is SUBSCRIBE Payload of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionVariableHeaderOf">is SUBSCRIBE Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf">is topic subject (Actuation, Actuation collection, Observation or Observation Collection) of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf">is topic subject (Feature of Interest) of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf">is topic subject (Property) of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf">is topic subject of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscriptionFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscriptionFixedHeaderOf">is UNSUBSCRIBE Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscriptionPayloadOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscriptionPayloadOf">is UNSUBSCRIBE Payload of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscriptionVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscriptionVariableHeaderOf">is UNSUBSCRIBE Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isVariableHeaderOf">is Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#listensToTopic"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#listensToTopic">listens to MQTT Topic</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/madeActuation" title="http://www.w3.org/ns/sosa/madeActuation">made actuation</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/madeByActuator" title="http://www.w3.org/ns/sosa/madeByActuator">made by actuator</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/madeBySampler" title="http://www.w3.org/ns/sosa/madeBySampler">made by sampler</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/madeBySensor" title="http://www.w3.org/ns/sosa/madeBySensor">made by sensor</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/madeObservation" title="http://www.w3.org/ns/sosa/madeObservation">made observation</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/madeSampling" title="http://www.w3.org/ns/sosa/madeSampling">made sampling</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#matchesTopic"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#matchesTopic">matches MQTT Topic</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/observedProperty" title="http://www.w3.org/ns/sosa/observedProperty">observed property</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/observes" title="http://www.w3.org/ns/sosa/observes">observes</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#observesTopic"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#observesTopic">observes MQTT Topic</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesActuation"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesActuation">payload encodes SOSA Actuation</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesActuationCollection"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesActuationCollection">payload encodes SOSA Actuation Collection</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesObservation"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesObservation">payload encodes SOSA Observation</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesObservationCollection"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#payloadEncodesObservationCollection">payload encodes SOSA Observation Collection</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/phenomenonTime" title="http://www.w3.org/ns/sosa/phenomenonTime">phenomenon time</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#publishesPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#publishesPacket">publishes PUBLISH Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesSubscribePacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesSubscribePacket">receives SUBSCRIBE Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesUnsubscribePacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesUnsubscribePacket">receives UNSUBSCRIBE Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#runsOnPlatform"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#runsOnPlatform">runs on platform</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsControlPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsControlPacket">sends MQTT Control Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#subscribesPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#subscribesPacket">sends SUBSCRIBE Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#unsubscribesPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#unsubscribesPacket">sends UNSUBSCRIBE Packet</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/usedProcedure" title="http://www.w3.org/ns/sosa/usedProcedure">used procedure</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#usesConnection"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#usesConnection">uses connection</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/wasOriginatedBy" title="http://www.w3.org/ns/ssn/wasOriginatedBy">was originated by</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isDUPFlag"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isDUPFlag">DUP flag</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/hasSimpleResult" title="http://www.w3.org/ns/sosa/hasSimpleResult">has simple result</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasHostAddress"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasHostAddress">MQTT Broker host</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPortNumber"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPortNumber">MQTT Broker port</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasClientID"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasClientID">MQTT Client identifier</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFilterPattern"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFilterPattern">MQTT Topic Filter pattern</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPacketIdentifier"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPacketIdentifier">packet identifier</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadContent"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadContent">payload content</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadContentDelimiter"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadContentDelimiter">payload content delimiter</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadContentType"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadContentType">payload content type</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadEncoding"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadEncoding">payload encoding</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasQosLevel"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasQosLevel">QoS level</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/resultTime" title="http://www.w3.org/ns/sosa/resultTime">result time</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isRetainedFlag"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isRetainedFlag">RETAIN flag</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#usesTLS"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#usesTLS">uses TLS</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract">
+         <span>abstract</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/author" title="http://purl.org/dc/terms/author">
+         <span>author</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/bibliographicCitation" title="http://purl.org/dc/terms/bibliographicCitation">
+         <span>bibliographic Citation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor">
+         <span>contributor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition">
+         <span>definition</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/ontology/bibo/doi" title="http://purl.org/ontology/bibo/doi">
+         <span>doi</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/domainIncludes" title="http://schema.org/domainIncludes">
+         <span>domain Includes</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#example" title="http://www.w3.org/2004/02/skos/core#example">
+         <span>example</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/fundedBy" title="http://xmlns.com/foaf/0.1/fundedBy">
+         <span>funded By</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/homepage" title="http://xmlns.com/foaf/0.1/homepage">
+         <span>homepage</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">
+         <span>mbox</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+         <span>modified</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">
+         <span>name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#note" title="http://www.w3.org/2004/02/skos/core#note">
+         <span>note</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred Namespace Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/rangeIncludes" title="http://schema.org/rangeIncludes">
+         <span>range Includes</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/references" title="http://purl.org/dc/terms/references">
+         <span>references</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/rights" title="http://purl.org/dc/terms/rights">
+         <span>rights</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source">
+         <span>source</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/subject" title="http://purl.org/dc/terms/subject">
+         <span>subject</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://orcid.org/0000-0003-3458-4748" title="https://orcid.org/0000-0003-3458-4748">
+         <span>0000 0003 3458 4748</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://orcid.org/0009-0004-0088-8633" title="https://orcid.org/0009-0004-0088-8633">
+         <span>0009 0004 0088 8633</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://dtecbw.de/" title="https://dtecbw.de/">Digitalization and Technology Research Center of the Bundeswehr</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/" title="http://www.w3.org/ns/sosa/">
+         <span>sosa:</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/" title="http://www.w3.org/ns/ssn/">
+         <span>ssn:</span>
+      </a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
