@@ -1,18 +1,16 @@
-# This CITATION.cff file was generated with Zotero.
-
 cff-version: 1.2.0
-message: >-
-  If you use this software, please cite it using the metadata from this file.
-title:  >-
-  MQTT4SSNOntology: MQTT4SSN v1.0: CEUR Workshop Proceedings release
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Doerner"
+  given-names: "Niklas"
+  orcid: "https://orcid.org/0009-0004-0088-8633"
+- family-names: "Maleshkova"
+  given-names: "Maria"
+  orcid: "https://orcid.org/0000-0003-3458-4748"
+title: "MQTT4SSNOntology: MQTT4SSN v1.0: CEUR Workshop Proceedings release"
 type: software
-license: Creative Commons Attribution 4.0 International
-version: v1.0
-url: https://zenodo.org/doi/10.5281/zenodo.16704302
-authors: 
-  - family-names: Niklas Dörner
+version: 1.0.0
+license: "Creative Commons Attribution 4.0 International"
+doi: 10.5281/ZENODO.16704302
 date-released: 2025-11-25
-identifiers: 
-  - type: doi
-    value: 10.5281/ZENODO.16704302
-
+url: "https://github.com/doernern/MQTT4SSNOntology"
