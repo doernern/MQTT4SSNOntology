@@ -1,0 +1,18 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://www.w3id.org/MQTT4SSN-Ontology/1.0> a prov:Entity;
+	 dc:title "MQTT4SSN Ontology";
+	 prov:wasAttributedTo <https://orcid.org/0000-0003-3458-4748>;
+	 dc:creator <https://orcid.org/0000-0003-3458-4748>;
+	 prov:wasAttributedTo <https://orcid.org/0009-0004-0088-8633>;
+	 dc:creator <https://orcid.org/0009-0004-0088-8633>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0003-3458-4748>;
+	 dc:contributor <https://orcid.org/0000-0003-3458-4748>;
+	 prov:wasAttributedTo <https://orcid.org/0009-0004-0088-8633>;
+	 dc:contributor <https://orcid.org/0009-0004-0088-8633>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <https://www.w3id.org/MQTT4SSN-Ontology>;
+	 prov:wasGeneratedAt "2025-08-11";
+.
