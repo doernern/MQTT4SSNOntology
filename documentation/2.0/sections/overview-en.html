@@ -1,0 +1,1484 @@
+<h2 id="overv" class="list">MQTT4SSN Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/ActuationCollection" title="http://www.w3.org/ns/sosa/ActuationCollection">
+         <span>Actuation Collection</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ApplicationMessage"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ApplicationMessage">Application Message</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#AuthFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#AuthFixedHeader">MQTT AUTH Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#AuthPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#AuthPacket">MQTT AUTH Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#AuthProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#AuthProperties">MQTT Auth Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#AuthVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#AuthVariableHeader">MQTT AUTH Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Broker"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Broker">MQTT Broker</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Client"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Client">MQTT Client</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackFixedHeader">MQTT CONNACK Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackPacket">MQTT CONNACK Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackProperties">MQTT Connack Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnackVariableHeader">MQTT CONNACK Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectFixedHeader">MQTT CONNECT Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectPacket">MQTT CONNECT Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectPayload">MQTT CONNECT Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectProperties">MQTT Connect Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ConnectVariableHeader">MQTT CONNECT Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ControlPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#ControlPacket">MQTT Control Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#DisconnectFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#DisconnectFixedHeader">MQTT DISCONNECT Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#DisconnectPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#DisconnectPacket">MQTT DISCONNECT Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#DisconnectProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#DisconnectProperties">MQTT Disconnect Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#DisconnectVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#DisconnectVariableHeader">MQTT DISCONNECT Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#FixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#FixedHeader">MQTT Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#NetworkConnection"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#NetworkConnection">MQTT Network Connection</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#NetworkParticipant"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#NetworkParticipant">MQTT Network Participant</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#NetworkSession"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#NetworkSession">MQTT Network Session</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Payload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Payload">MQTT Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PingreqFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PingreqFixedHeader">MQTT PINGREQ Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PingreqPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PingreqPacket">MQTT PINGREQ Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PingrespFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PingrespFixedHeader">MQTT PINGRESP Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PingrespPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PingrespPacket">MQTT PINGRESP Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Properties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Properties">MQTT Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubackFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubackFixedHeader">MQTT PUBACK Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubackPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubackPacket">MQTT PUBACK Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubackProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubackProperties">MQTT Puback Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubackVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubackVariableHeader">MQTT PUBACK Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubcompFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubcompFixedHeader">MQTT PUBCOMP Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubcompPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubcompPacket">MQTT PUBCOMP Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubcompProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubcompProperties">MQTT Pubcomp Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubcompVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubcompVariableHeader">MQTT PUBCOMP Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishFixedHeader">MQTT PUBLISH Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishPacket">MQTT PUBLISH Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishPayload">MQTT PUBLISH Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishProperties">MQTT Publish Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PublishVariableHeader">MQTT PUBLISH Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrecFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrecFixedHeader">MQTT PUBREC Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrecPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrecPacket">MQTT PUBREC Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrecProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrecProperties">MQTT Pubrec Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrecVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrecVariableHeader">MQTT PUBREC Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrelFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrelFixedHeader">MQTT PUBREL Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrelPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrelPacket">MQTT PUBREL Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrelProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrelProperties">MQTT Pubrel Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrelVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#PubrelVariableHeader">MQTT PUBREL Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackFixedHeader">MQTT SUBACK Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackPacket">MQTT SUBACK Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackPayload">MQTT SUBACK Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackProperties">MQTT Suback Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubackVariableHeader">MQTT SUBACK Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribeFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribeFixedHeader">MQTT SUBSCRIBE Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribePacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribePacket">MQTT SUBSCRIBE Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribePayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribePayload">MQTT SUBSCRIBE Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribeProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribeProperties">MQTT Subscribe Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribeVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscribeVariableHeader">MQTT SUBSCRIBE Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscriptionEntry"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#SubscriptionEntry">MQTT Subscription Entry</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Topic">MQTT Topic</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#TopicFilter"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#TopicFilter">MQTT Topic Filter</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#TopicSubject"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#TopicSubject">MQTT Topic Subject</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackFixedHeader">MQTT UNSUBACK Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackPacket">MQTT UNSUBACK Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackPayload">MQTT UNSUBACK Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackProperties">MQTT Unsuback Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubackVariableHeader">MQTT UNSUBACK Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribeFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribeFixedHeader">MQTT UNSUBSCRIBE Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribePacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribePacket">MQTT UNSUBSCRIBE Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribePayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribePayload">MQTT UNSUBSCRIBE Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribeProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribeProperties">MQTT Unsubscribe Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribeVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UnsubscribeVariableHeader">MQTT UNSUBSCRIBE Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#VariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#VariableHeader">MQTT Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#WillProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#WillProperties">MQTT Will Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#NetworkEntity"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#NetworkEntity">Network Entity</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/ObservationCollection" title="http://www.w3.org/ns/sosa/ObservationCollection">
+         <span>Observation Collection</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Property" title="http://www.w3.org/ns/sosa/Property">
+         <span>Property</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Activity"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#Activity">SOSA Activity</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UserProperty"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#UserProperty">User Property</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#applicationMessageEncodesActivity"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#applicationMessageEncodesActivity">Application Message encodes Activity</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#applicationMessageEncodesActuation"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#applicationMessageEncodesActuation">Application Message encodes SOSA Actuation</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#applicationMessageEncodesActuationCollection"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#applicationMessageEncodesActuationCollection">Application Message encodes SOSA Actuation Collection</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#applicationMessageEncodesObservation"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#applicationMessageEncodesObservation">Application Message encodes SOSA Observation</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#applicationMessageEncodesObservationCollection"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#applicationMessageEncodesObservationCollection">Application Message encodes SOSA Observation Collection</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#establishedByNetworkConnection"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#establishedByNetworkConnection">established By MQTT Network Connection</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#establishesSession"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#establishesSession">establishes Network Session</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasApplicationMessage"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasApplicationMessage">has Application Message</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthFixedHeader">has AUTH Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthProperties">has Auth Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthVariableHeader">has AUTH Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackFixedHeader">has CONNACK Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackProperties">has Connack Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackVariableHeader">has CONNACK Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectFixedHeader">has CONNECT Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectPayload">has CONNECT Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectProperties">has Connect Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectVariableHeader">has CONNECT Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectedClient"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectedClient">has connected MQTT Client</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDisconnectFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDisconnectFixedHeader">has DISCONNECT Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDisconnectProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDisconnectProperties">has Disconnect Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDisconnectVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDisconnectVariableHeader">has DISCONNECT Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasEncodedFields"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasEncodedFields">has encoded fields</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFixedHeader">has Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasClient"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasClient">has MQTT Client</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayload">has MQTT Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasResponseTopic"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasResponseTopic">has MQTT Response Topic (name)</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptions"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptions">has MQTT Subscription Entries</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicName"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicName">has MQTT Topic (name)</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicFilter"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicFilter">has MQTT Topic Filter</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasParticipant"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasParticipant">has participant</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadSize"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadSize">has payload size</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPingreqFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPingreqFixedHeader">has PINGREQ Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPingrespFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPingrespFixedHeader">has PINGRESP Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperties">has Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubackFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubackFixedHeader">has PUBACK Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubackProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubackProperties">has Puback Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubackVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubackVariableHeader">has PUBACK Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubcompFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubcompFixedHeader">has PUBCOMP Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubcompProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubcompProperties">has Pubcomp Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubcompVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubcompVariableHeader">has PUBCOMP Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishFixedHeader">has PUBLISH Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishPayload">has PUBLISH Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishProperties">has Publish Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPublishVariableHeader">has PUBLISH Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrecFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrecFixedHeader">has PUBREC Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrecProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrecProperties">has Pubrec Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrecVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrecVariableHeader">has PUBREC Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrelFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrelFixedHeader">has PUBREL Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrelProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrelProperties">has Pubrel Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrelVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrelVariableHeader">has PUBREL Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackFixedHeader">has SUBACK Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackPayload">has SUBACK Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackProperties">has Suback Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackVariableHeader">has SUBACK Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscribeFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscribeFixedHeader">has SUBSCRIBE Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscribePayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscribePayload">has SUBSCRIBE Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscribeProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscribeProperties">has Subscribe Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscribeVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscribeVariableHeader">has SUBSCRIBE Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubject">has topic subject</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasActObsSubject">has topic subject (Actuation, Actuation collection, Observation or Observation Collection)</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFoISubject">has topic subject (Feature of Interest)</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertySubject">has topic subject (Property)</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackFixedHeader">has UNSUBACK Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackPayload">has UNSUBACK Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackProperties">has Unsuback Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackVariableHeader">has UNSUBACK Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscribeFixedHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscribeFixedHeader">has UNSUBSCRIBE Fixed Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscribePayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscribePayload">has UNSUBSCRIBE Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscribeProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscribeProperties">has Unsubscribe Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscribeVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubscribeVariableHeader">has UNSUBSCRIBE Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserProperty"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserProperty">has User Property</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasVariableHeader"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasVariableHeader">has Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillProperties"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillProperties">has Will Properties</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillTopic"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillTopic">has Will Topic</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hosts"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hosts">hosts</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isAcceptedBy"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isAcceptedBy">is accepted by</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isApplicationMessageOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isApplicationMessageOf">is Application Message of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isAuthFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isAuthFixedHeaderOf">is AUTH Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isAuthVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isAuthVariableHeaderOf">is AUTH Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnackFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnackFixedHeaderOf">is CONNACK Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnackVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnackVariableHeaderOf">is CONNACK Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectFixedHeaderOf">is CONNECT Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectPayloadOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectPayloadOf">is CONNECT Payload of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectVariableHeaderOf">is CONNECT Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectedToBroker"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isConnectedToBroker">is connected to MQTT Broker</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isDisconnectFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isDisconnectFixedHeaderOf">is DISCONNECT Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isDisconnectVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isDisconnectVariableHeaderOf">is DISCONNECT Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isEncodedInMessage"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isEncodedInMessage">is encoded in MQTT Message</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFixedHeaderOf">is Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isHostedBy"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isHostedBy">is hosted by</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isInitiatedBy"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isInitiatedBy">is initiated by</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isMatchedByFilter"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isMatchedByFilter">is matched by MQTT Topic Filter</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPayloadOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPayloadOf">is MQTT Payload of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isResponseTopicOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isResponseTopicOf">is MQTT Response Topic (name) of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscriptionOf">is MQTT Subscription Entry of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isTopicNameOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isTopicNameOf">is MQTT Topic (name) of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isTopicFilterOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isTopicFilterOf">is MQTT Topic Filter of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPingreqFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPingreqFixedHeaderOf">is PINGREQ Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPingrespFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPingrespFixedHeaderOf">is PINGRESP Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubackFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubackFixedHeaderOf">is PUBACK Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubackVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubackVariableHeaderOf">is PUBACK Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubcompFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubcompFixedHeaderOf">is PUBCOMP Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubcompVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubcompVariableHeaderOf">is PUBCOMP Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishFixedHeaderOf">is PUBLISH Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishPayloadOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishPayloadOf">is PUBLISH Payload of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPublishVariableHeaderOf">is PUBLISH Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubrecFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubrecFixedHeaderOf">is PUBREC Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubrecVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubrecVariableHeaderOf">is PUBREC Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubrelFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubrelFixedHeaderOf">is PUBREL Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubrelVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPubrelVariableHeaderOf">is PUBREL Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubackFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubackFixedHeaderOf">is SUBACK Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubackPayloadOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubackPayloadOf">is SUBACK Payload of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubackVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubackVariableHeaderOf">is SUBACK Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscribeFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscribeFixedHeaderOf">is SUBSCRIBE Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscribePayloadOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscribePayloadOf">is SUBSCRIBE Payload of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscribeVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubscribeVariableHeaderOf">is SUBSCRIBE Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isActObsSubjectOf">is topic subject (Actuation, Actuation collection, Observation or Observation Collection) of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isFOISubjectOf">is topic subject (Feature of Interest) of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isPropertySubjectOf">is topic subject (Property) of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isSubjectOf">is topic subject of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubackFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubackFixedHeaderOf">is UNSUBACK Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubackPayloadOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubackPayloadOf">is UNSUBACK Payload of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubackVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubackVariableHeaderOf">is UNSUBACK Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscribeFixedHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscribeFixedHeaderOf">is UNSUBSCRIBE Fixed Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscribePayloadOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscribePayloadOf">is UNSUBSCRIBE Payload of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscribeVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isUnsubscribeVariableHeaderOf">is UNSUBSCRIBE Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isVariableHeaderOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isVariableHeaderOf">is Variable Header of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isWillTopicOf"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#isWillTopicOf">is Will Topic of</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#listensToTopic"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#listensToTopic">listens to MQTT Topic</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#matchesTopic"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#matchesTopic">matches MQTT Topic</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#observesTopic"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#observesTopic">observes MQTT Topic</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesAuthPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesAuthPacket">receives MQTT AUTH Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesConnackPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesConnackPacket">receives MQTT CONNACK Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesConnectPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesConnectPacket">receives MQTT CONNECT Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesControlPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesControlPacket">receives MQTT Control Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesDisconnectPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesDisconnectPacket">receives MQTT DISCONNECT Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPingreqPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPingreqPacket">receives MQTT PINGREQ Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPingrespPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPingrespPacket">receives MQTT PINGRESP Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPubackPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPubackPacket">receives MQTT PUBACK Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPubcompPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPubcompPacket">receives MQTT PUBCOMP Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPublishPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPublishPacket">receives MQTT PUBLISH Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPubrecPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPubrecPacket">receives MQTT PUBREC Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPubrelPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesPubrelPacket">receives MQTT PUBREL Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesSubackPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesSubackPacket">receives MQTT SUBACK Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesSubscribePacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesSubscribePacket">receives MQTT SUBSCRIBE Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesUnsubackPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesUnsubackPacket">receives MQTT UNSUBACK Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesUnsubscribePacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#receivesUnsubscribePacket">receives MQTT UNSUBSCRIBE Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#runsOnPlatform"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#runsOnPlatform">runs on platform</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsAuthPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsAuthPacket">sends MQTT AUTH Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsConnackPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsConnackPacket">sends MQTT CONNACK Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsConnectPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsConnectPacket">sends MQTT CONNECT Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsControlPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsControlPacket">sends MQTT Control Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsDisconnectPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsDisconnectPacket">sends MQTT DISCONNECT Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPingreqPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPingreqPacket">sends MQTT PINGREQ Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPingrespPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPingrespPacket">sends MQTT PINGRESP Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPubackPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPubackPacket">sends MQTT PUBACK Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPubcompPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPubcompPacket">sends MQTT PUBCOMP Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPublishPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPublishPacket">sends MQTT PUBLISH Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPubrecPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPubrecPacket">sends MQTT PUBREC Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPubrelPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsPubrelPacket">sends MQTT PUBREL Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsSubackPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsSubackPacket">sends MQTT SUBACK Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsSubscribePacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsSubscribePacket">sends MQTT SUBSCRIBE Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsUnsubackPacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsUnsubackPacket">sends MQTT UNSUBACK Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsUnsubscribePacket"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#sendsUnsubscribePacket">sends MQTT UNSUBSCRIBE Packet</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#usesConnection"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#usesConnection">uses connection</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageContentDelimiter"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageContentDelimiter">Application Message content delimiter</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageEncoding"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageEncoding">Application Message encoding</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDUPFlag"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDUPFlag">DUP flag</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFixedHeaderFlag"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFixedHeaderFlag">FixedHeader flag</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageContent"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageContent">has Application Message content</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAssignedClientIdentifier"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAssignedClientIdentifier">has Assigned Client Identifier</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthReasonCode"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthReasonCode">has Auth Reason Code</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthentificationData"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthentificationData">has Authentification Data</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthentificationMethod"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasAuthentificationMethod">has Authentification Method</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasCleanStart"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasCleanStart">has Clean Start</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackFlag"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackFlag">has Connack Flag</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackReasonCode"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnackReasonCode">has Connack Reason Code</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectFlag"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasConnectFlag">has Connect Flags</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasContentType"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasContentType">has Content Type</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasCorrelationData"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasCorrelationData">has Correlation Data</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDisconnectReasonCode"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasDisconnectReasonCode">has Dissconnect Reason Code</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasKeepAlive"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasKeepAlive">has Keep Alive</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMaximumPacketSize"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMaximumPacketSize">has Maximum Packet Size</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMaximumQoS"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMaximumQoS">has Maximum QoS</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageContentType"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageContentType">has Message Content Type</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageExpiryInterval"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasMessageExpiryInterval">has Message Expiry Interval</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperty"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProperty">has MQTT Property</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertyLength"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPropertyLength">has MQTT Property Length</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillProperty"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillProperty">has MQTT Will Property</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasNoLocal"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasNoLocal">has No Local</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPassword"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPassword">has Password</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPasswordFlag"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPasswordFlag">has Password Flag</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadContent"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadContent">has Payload content</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadFormatIndicator"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadFormatIndicator">has Payload Format Indicator</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProtocolName"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProtocolName">has Protocol Name</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProtocolVersion"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasProtocolVersion">has Protocol Version</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubackReasonCode"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubackReasonCode">has Puback  Reason Code</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubcompReasonCode"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubcompReasonCode">has Pubcomp Reason Code</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrecReasonCode"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrecReasonCode">has Pubrec Reason Code</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrelReasonCode"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPubrelReasonCode">has Pubrel Reason Code</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasReasonString"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasReasonString">has Reason String</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasReceiveMaximum"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasReceiveMaximum">has Receive Maximum</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRequestProblemInformation"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRequestProblemInformation">has Request Problem Information</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRequestResponseInformation"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRequestResponseInformation">has Request Response Information</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasResponseInformation"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasResponseInformation">has Response Information</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRetainAsPublished"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRetainAsPublished">has Retain As Published</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRetainAvailable"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRetainAvailable">has Retain Available</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRetainHandling"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRetainHandling">has Retain Handling</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasServerKeepAlive"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasServerKeepAlive">has Server Keep Alive</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasServerReference"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasServerReference">has Server Reference</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSessionExpiryInterval"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSessionExpiryInterval">has Session Expiry Interval</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSessionPresentFlag"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSessionPresentFlag">has Session Present Flag</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSharedSubscriptionAvailable"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSharedSubscriptionAvailable">has Shared Subscription Available</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackReasonCode"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubackReasonCode">has Suback Reason Code</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionIdentifier"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionIdentifier">has Subscription Identifier</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionIdentifierAvailable"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionIdentifierAvailable">has Subscription Identifier Available</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionOption"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasSubscriptionOption">has Subscription Option</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicAlias"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicAlias">has Topic Alias</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicAliasMaximum"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasTopicAliasMaximum">has Topic Alias Maximum</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackReasonCode"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUnsubackReasonCode">has Unsuback Reason Code</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserName"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserName">has User Name</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserPropertyValue"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserPropertyValue">has User Property Value</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserPropertyName"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserPropertyName">has User Propery Name</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserNameFlag"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasUserNameFlag">has Username Flag</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWildcardSubscriptionAvailable"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWildcardSubscriptionAvailable">has Wildcard Subscription Available</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWilDelayInterval"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWilDelayInterval">has Will Delay Interval</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillDelayInterval"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillDelayInterval">has Will Delay Interval</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillFlag"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillFlag">has Will Flag</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillPayload"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillPayload">has Will Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillQoS"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillQoS">has Will QoS</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillRetain"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasWillRetain">has Will Retain</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasHostAddress"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasHostAddress">MQTT Broker host</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPortNumber"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPortNumber">MQTT Broker port</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasClientID"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasClientID">MQTT Client identifier</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasControlPacketType"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasControlPacketType">MQTT Control Packet Type</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadReasonCode"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPayloadReasonCode">MQTT Reason Code in Payload</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasVariableHeaderReasonCode"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasVariableHeaderReasonCode">MQTT Reason Code in Variable Header</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasReasonCode"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasReasonCode">MQTT ReasonCode</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFilterPattern"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasFilterPattern">MQTT Topic Filter pattern</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPacketIdentifier"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasPacketIdentifier">packet identifier</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasQoSLevel"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasQoSLevel">QoS level</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRemainingLength"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRemainingLength">Remaining Length of MQTT Control Packet </a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRetainFlag"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#hasRetainFlag">RETAIN flag</a>
+   </li>
+   <li>
+      <a href="#https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#usesTLS"
+         title="https://doernern.github.io/MQTT4SSNOntology/MQTT4SSN.owl#usesTLS">uses TLS</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract">
+         <span>abstract</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/affiliation" title="http://schema.org/affiliation">
+         <span>affiliation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/alternateName" title="http://schema.org/alternateName">
+         <span>alternate Name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/author" title="http://purl.org/dc/terms/author">
+         <span>author</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/bibliographicCitation" title="http://purl.org/dc/terms/bibliographicCitation">
+         <span>bibliographic Citation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor">
+         <span>contributor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/ontology/bibo/doi" title="http://purl.org/ontology/bibo/doi">
+         <span>doi</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/fundedBy" title="http://xmlns.com/foaf/0.1/fundedBy">
+         <span>funded By</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.linkedmodel.org/schema/vaem#graphName" title="http://www.linkedmodel.org/schema/vaem#graphName">
+         <span>graph Name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.linkedmodel.org/schema/vaem#graphTitle"
+         title="http://www.linkedmodel.org/schema/vaem#graphTitle">
+         <span>graph Title</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/homepage" title="http://xmlns.com/foaf/0.1/homepage">
+         <span>homepage</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.linkedmodel.org/schema/vaem#isMetadataFor"
+         title="http://www.linkedmodel.org/schema/vaem#isMetadataFor">
+         <span>is Metadata For</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#maxCardinality" title="http://www.w3.org/2002/07/owl#maxCardinality">
+         <span>max Cardinality</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2001/XMLSchema#maxInclusive" title="http://www.w3.org/2001/XMLSchema#maxInclusive">
+         <span>max Inclusive</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">
+         <span>mbox</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#minCardinality" title="http://www.w3.org/2002/07/owl#minCardinality">
+         <span>min Cardinality</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2001/XMLSchema#minInclusive" title="http://www.w3.org/2001/XMLSchema#minInclusive">
+         <span>min Inclusive</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+         <span>modified</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/name" title="http://schema.org/name">
+         <span>name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2001/XMLSchema#pattern" title="http://www.w3.org/2001/XMLSchema#pattern">
+         <span>pattern</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/references" title="http://purl.org/dc/terms/references">
+         <span>references</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source">
+         <span>source</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/subject" title="http://purl.org/dc/terms/subject">
+         <span>subject</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/url" title="http://schema.org/url">
+         <span>url</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.linkedmodel.org/schema/vaem#website" title="http://www.linkedmodel.org/schema/vaem#website">
+         <span>website</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://orcid.org/0000-0003-3458-4748" title="https://orcid.org/0000-0003-3458-4748">
+         <span>0000 0003 3458 4748</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://orcid.org/0009-0004-0088-8633" title="https://orcid.org/0009-0004-0088-8633">
+         <span>0009 0004 0088 8633</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://dtecbw.de/" title="https://dtecbw.de/">Digitalization and Technology Research Center of the Bundeswehr</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
