@@ -43,7 +43,8 @@
                                           bibo:doi "bibo:status/draft"@en ,
                                                    "10.5281/zenodo.16704302" ;
                                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "mqtt"@en ;
-                                          <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
+                                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://www.w3id.org/MQTT4SSN-Ontology" ;
+                                          <http://schema.org/codeRepository> <https://github.com/doernern/MQTT4SSNOntology/> ;
                                           rdfs:comment "The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT message protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT message protocol component."@en ;
                                           rdfs:isDefinedBy <http://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html> ;
                                           rdfs:label "MQTT4SSN"@en ;

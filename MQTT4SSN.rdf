@@ -49,7 +49,8 @@
         <bibo:doi xml:lang="en">bibo:status/draft</bibo:doi>
         <bibo:doi>10.5281/zenodo.16704302</bibo:doi>
         <vann:preferredNamespacePrefix xml:lang="en">mqtt</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://www.w3id.org/MQTT4SSN-Ontology#"/>
+        <vann:preferredNamespaceUri>https://www.w3id.org/MQTT4SSN-Ontology</vann:preferredNamespaceUri>
+        <schema:codeRepository rdf:resource="https://github.com/doernern/MQTT4SSNOntology/"/>
         <rdfs:comment xml:lang="en">The MQTT4SSN Ontology provides rdf:type semantic model for representing the MQTT message protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT message protocol component.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html"/>
         <rdfs:label xml:lang="en">MQTT4SSN</rdfs:label>
@@ -87,6 +88,12 @@
     <!-- http://purl.org/ontology/bibo/doi -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/doi"/>
+    
+
+
+    <!-- http://schema.org/codeRepository -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/codeRepository"/>
     
 
 
@@ -4810,10 +4817,10 @@
         <foaf:name>Niklas Doerner</foaf:name>
     </owl:NamedIndividual>
     <rdf:Description>
-        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedByte">15</xsd:maxInclusive>
+        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedByte">0</xsd:minInclusive>
     </rdf:Description>
     <rdf:Description>
-        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedByte">0</xsd:minInclusive>
+        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedByte">15</xsd:maxInclusive>
     </rdf:Description>
     
 

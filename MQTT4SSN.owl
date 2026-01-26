@@ -110,7 +110,11 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
-        <IRI>#</IRI>
+        <Literal>https://www.w3id.org/MQTT4SSN-Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://schema.org/codeRepository"/>
+        <IRI>https://github.com/doernern/MQTT4SSNOntology/</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1312,6 +1316,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="qudt:IEEE754_1985RealEncoding"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://schema.org/codeRepository"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://schema.org/affiliation"/>
@@ -9047,14 +9054,14 @@
         <Literal xml:lang="en">uses TLS</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="xsd:maxInclusive"/>
+        <AnnotationProperty abbreviatedIRI="xsd:minInclusive"/>
         <AnonymousIndividual nodeID="_:genid2147484046"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">15</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">0</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="xsd:minInclusive"/>
+        <AnnotationProperty abbreviatedIRI="xsd:maxInclusive"/>
         <AnonymousIndividual nodeID="_:genid2147484047"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">0</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">15</Literal>
     </AnnotationAssertion>
 </Ontology>
 
