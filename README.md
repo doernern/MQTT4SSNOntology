@@ -1,6 +1,6 @@
 # MQTT4SSN Ontology
 
-[![Format](https://img.shields.io/badge/Format-JSON_LD-blue.svg)](https://www.w3id.org/MQTT4SSN-Ontology/ontology.jsonld) [![Format](https://img.shields.io/badge/Format-RDF/XML-blue.svg)](https://www.w3id.org/MQTT4SSN-Ontology/ontology.owl) [![Format](https://img.shields.io/badge/Format-N_Triples-blue.svg)](https://www.w3id.org/MQTT4SSN-Ontology/ontology.nt) [![Format](https://img.shields.io/badge/Format-TTL-blue.svg)](https://www.w3id.org/MQTT4SSN-Ontology/ontology.ttl)
+[![Format](https://img.shields.io/badge/Format-JSON_LD-blue.svg)](https://doernern.github.io/MQTT4SSNOntology/documentation/ontology.jsonld) [![Format](https://img.shields.io/badge/Format-RDF/XML-blue.svg)](https://doernern.github.io/MQTT4SSNOntology/documentation/ontology.owl) [![Format](https://img.shields.io/badge/Format-N_Triples-blue.svg)](https://doernern.github.io/MQTT4SSNOntology/documentation/ontology.nt) [![Format](https://img.shields.io/badge/Format-TTL-blue.svg)](https://doernern.github.io/MQTT4SSNOntology/documentation/ontology.ttl)
 
 MQTT4SSN is an ontology representing the MQTT transport protocol, containing the transmitted data. It extends the W3C SSN/SOSA ontology with the MQTT transport protocol component and uses the WoT MQTT to RDF draft as an ontology design pattern.
 
@@ -21,7 +21,7 @@ An Ontology Specification Draft was automatically generated with the help of the
 
 ## Visualization
 
-[![Visualize with](https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg)](https://www.w3id.org/MQTT4SSN-Ontology/webvowl/index.html#)
+[![Visualize with](https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg)](https://doernern.github.io/MQTT4SSNOntology/documentation/webvowl/index.html#)
 
 ## How to cite
 If you want to use this ontology in your own research, please cite as:
