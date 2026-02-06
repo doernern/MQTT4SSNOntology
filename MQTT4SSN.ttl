@@ -69,6 +69,10 @@ dct:references rdf:type owl:AnnotationProperty .
 bibo:doi rdf:type owl:AnnotationProperty .
 
 
+###  http://schema.org/codeRepository
+<http://schema.org/codeRepository> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2001/XMLSchema#maxInclusive
 xsd:maxInclusive rdf:type owl:AnnotationProperty .
 
@@ -919,8 +923,8 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty ;
 :hosts rdf:type owl:ObjectProperty ;
        owl:inverseOf :isHostedBy ;
        rdfs:domain :Client ;
-       rdfs:range sosa:System ;
-       rdfs:comment "Links an MQTT Client (as a SOSA platform) to SOSA systems (sensors/actuators) it hosts."@en ;
+       rdfs:range ssn:System ;
+       rdfs:comment "Links an MQTT Client (as a SOSA platform) to SSN systems (sensors/actuators) it hosts."@en ;
        rdfs:label "hosts"@en .
 
 
@@ -1082,9 +1086,9 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty ;
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#isHostedBy
 :isHostedBy rdf:type owl:ObjectProperty ;
-            rdfs:domain sosa:System ;
+            rdfs:domain ssn:System ;
             rdfs:range :Client ;
-            rdfs:comment "Links a SOSA system to the hosting MQTT Client."@en ;
+            rdfs:comment "Links a SSN system to the hosting MQTT Client."@en ;
             rdfs:label "is hosted by"@en .
 
 
@@ -2817,10 +2821,6 @@ sosa:ObservationCollection rdf:type owl:Class ;
 ###  http://www.w3.org/ns/sosa/Property
 sosa:Property rdf:type owl:Class ;
               rdfs:subClassOf :TopicSubject .
-
-
-###  http://www.w3.org/ns/sosa/System
-sosa:System rdf:type owl:Class .
 
 
 ###  http://xmlns.com/foaf/0.1/Organization

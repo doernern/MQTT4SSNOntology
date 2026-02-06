@@ -1381,8 +1381,8 @@ xsd:date rdf:type rdfs:Datatype .
 :hosts rdf:type owl:ObjectProperty ;
        owl:inverseOf :isHostedBy ;
        rdfs:domain :Client ;
-       rdfs:range <http://www.w3.org/ns/sosa/System> ;
-       rdfs:comment "Links an MQTT Client (as a SOSA platform) to SOSA systems (sensors/actuators) it hosts."@en ;
+       rdfs:range <http://www.w3.org/ns/ssn/System> ;
+       rdfs:comment "Links an MQTT Client (as a SOSA platform) to SSN systems (sensors/actuators) it hosts."@en ;
        rdfs:label "hosts"@en .
 
 
@@ -1544,9 +1544,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#isHostedBy
 :isHostedBy rdf:type owl:ObjectProperty ;
-            rdfs:domain <http://www.w3.org/ns/sosa/System> ;
+            rdfs:domain <http://www.w3.org/ns/ssn/System> ;
             rdfs:range :Client ;
-            rdfs:comment "Links a SOSA system to the hosting MQTT Client."@en ;
+            rdfs:comment "Links a SSN system to the hosting MQTT Client."@en ;
             rdfs:label "is hosted by"@en .
 
 
@@ -3680,10 +3680,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
                                    <http://www.w3.org/2004/02/skos/core#example> "Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes."@en .
 
 
-###  http://www.w3.org/ns/sosa/System
-<http://www.w3.org/ns/sosa/System> rdf:type owl:Class .
-
-
 ###  http://www.w3.org/ns/ssn/Deployment
 <http://www.w3.org/ns/ssn/Deployment> rdf:type owl:Class ;
                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -4488,10 +4484,10 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
    <http://xmlns.com/foaf/0.1/name> "W3C/OGC Spatial Data on the Web Working Group"@en
  ] .
 
-[ xsd:maxInclusive "15"^^xsd:unsignedByte
+[ xsd:minInclusive "0"^^xsd:unsignedByte
  ] .
 
-[ xsd:minInclusive "0"^^xsd:unsignedByte
+[ xsd:maxInclusive "15"^^xsd:unsignedByte
  ] .
 
 #################################################################

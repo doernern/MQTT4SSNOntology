@@ -3659,6 +3659,18 @@ This section provides details for each class and property defined by MQTT4SSN.
    <dd>
     <a href="#http://www.w3.org/ns/sosa/Actuator" title="http://www.w3.org/ns/sosa/Actuator">Actuator</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/sosa/Sampler" title="http://www.w3.org/ns/sosa/Sampler">Sampler</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#isHostedBy" title="https://www.w3id.org/MQTT4SSN-Ontology#isHostedBy">is hosted by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hosts" title="https://www.w3id.org/MQTT4SSN-Ontology#hosts">hosts</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="https://www.w3.org/2019/wot/mqtt#TopicFilter">
@@ -6929,7 +6941,7 @@ This section provides details for each class and property defined by MQTT4SSN.
   <h3>hosts<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://www.w3id.org/MQTT4SSN-Ontology#hosts</p>
   <div class="comment">
-   <span class="markdown">Links an MQTT Client (as a SOSA platform) to SOSA systems (sensors/actuators) it hosts.</span>
+   <span class="markdown">Links an MQTT Client (as a SOSA platform) to SSN systems (sensors/actuators) it hosts.</span>
   </div>
   <div class="description">
    <dl>
@@ -6943,7 +6955,7 @@ This section provides details for each class and property defined by MQTT4SSN.
      has range
     </dt>
     <dd>
-     <a href="http://www.w3.org/ns/sosa/System" target="_blank" title="http://www.w3.org/ns/sosa/System">System</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://www.w3.org/ns/ssn/System" title="http://www.w3.org/ns/ssn/System">System</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
@@ -7688,7 +7700,7 @@ This section provides details for each class and property defined by MQTT4SSN.
   <h3>is hosted by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://www.w3id.org/MQTT4SSN-Ontology#isHostedBy</p>
   <div class="comment">
-   <span class="markdown">Links a SOSA system to the hosting MQTT Client.</span>
+   <span class="markdown">Links a SSN system to the hosting MQTT Client.</span>
   </div>
   <div class="description">
    <dl>
@@ -7696,7 +7708,7 @@ This section provides details for each class and property defined by MQTT4SSN.
      has domain
     </dt>
     <dd>
-     <a href="http://www.w3.org/ns/sosa/System" target="_blank" title="http://www.w3.org/ns/sosa/System">System</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://www.w3.org/ns/ssn/System" title="http://www.w3.org/ns/ssn/System">System</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range

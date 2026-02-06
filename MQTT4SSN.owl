@@ -157,9 +157,6 @@
         <Class abbreviatedIRI="sosa:Property"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="sosa:System"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="foaf:Organization"/>
     </Declaration>
     <Declaration>
@@ -1225,361 +1222,7 @@
         <Datatype abbreviatedIRI="xsd:date"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="owl:maxCardinality"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:BitEncoding"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:protocolBuffersName"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:vbName"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="mqv:hasQoSFlag"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CT_FINITE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="mqv:SUBSCRIBE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#GMD_QUDT-SCHEMA"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ViewGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:BigEndian"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#graphTitle"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rdf:Statement"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://dbpedia.org/resource/Category:Units_of_angle"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="owl:Class"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:BooleanEncoding"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:hasCitation"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gMonth"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gMonthDay"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:oracleSQLName"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:cName"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:Aspect"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:hasReciprocalUnit"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:SignedIntegerEncoding"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:ansiSQLName"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gYearMonth"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:Verifiable"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#DocumentationGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://voag.linkedmodel.org/voag/CC-SHAREALIKE_3PT0-US"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:fieldCode"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:EnumeratedQuantity"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:IEEE754_1985RealEncoding"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty IRI="http://schema.org/codeRepository"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://schema.org/affiliation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CT_UNCOUNTABLE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:DoublePrecisionEncoding"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://schema.org/name"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:ShortUnsignedIntegerEncoding"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="mqv:QualityOfService"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rdfs:Resource"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="qudt:length"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#DataGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:PartiallyOrdered"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:exactMatch"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="owl:Ontology"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://voag.linkedmodel.org/schema/voag#QUDT-SchemaCatalogEntry"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:UNSIGNED"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:SignednessType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:SinglePrecisionRealEncoding"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#isMetadataFor"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#LinkSetGraph"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="owl:minCardinality"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:pythonName"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:EnumeratedQuantity"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:AngleUnit"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://schema.org/alternateName"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CharEncoding"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#graphName"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#QUDT"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#0"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.linkedmodel.org/schema/vaem#CatalogEntry"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/dtype#GMD_DTYPE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:Signed"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ConstraintsGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:ISO8601-UTCDateTime-BasicFormat"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://schema.org/Person"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#GMD_VAEM"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:ScaleType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="mqv:PUBLISH"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CT_COUNTABLY-INFINITE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ProxyGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#SchemaGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:TotallyOrdered"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://schema.org/Organization"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#TransformsGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#CurationGraph"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="mqv:fixedHeaderFlag"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#RulesGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CardinalityType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:OctetEncoding"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#VocabularyGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/dtype"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:StringEncodingType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:EndianType"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#website"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:Unordered"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gYear"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#FunctionsGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#MappingGraph"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#0"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#2"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#1"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:SymmetricRelation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://www.vcharpenay.link/#me"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://org.semanticweb.owlapi/error#Error2"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://org.semanticweb.owlapi/error#Error1"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://org.semanticweb.owlapi/error#Error3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:hasVocabulary"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="mqv:hasVariableHeaderFlag"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ScriptGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:LittleEndian"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="qudt:bits"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:LongUnsignedIntegerEncoding"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gDay"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#TopQuadrant"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ControllersGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="mqv:UNSUBSCRIBE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#CollectionGraph"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="xsd:pattern"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:ShortSignedIntegerEncoding"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rdfs:Class"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://schema.org/url"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:UnsignedIntegerEncoding"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rdfs:Datatype"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:Aspect"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:Verifiable"/>
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI="mqv:Client"/>
@@ -3430,7 +3073,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isHostedBy"/>
-        <Class abbreviatedIRI="sosa:System"/>
+        <Class abbreviatedIRI="ssn:System"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isInitiatedBy"/>
@@ -4079,7 +3722,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hosts"/>
-        <Class abbreviatedIRI="sosa:System"/>
+        <Class abbreviatedIRI="ssn:System"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isAcceptedBy"/>
@@ -8136,7 +7779,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hosts</IRI>
-        <Literal xml:lang="en">Links an MQTT Client (as a SOSA platform) to SOSA systems (sensors/actuators) it hosts.</Literal>
+        <Literal xml:lang="en">Links an MQTT Client (as a SOSA platform) to SSN systems (sensors/actuators) it hosts.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8306,7 +7949,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isHostedBy</IRI>
-        <Literal xml:lang="en">Links a SOSA system to the hosting MQTT Client.</Literal>
+        <Literal xml:lang="en">Links a SSN system to the hosting MQTT Client.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -9054,14 +8697,14 @@
         <Literal xml:lang="en">uses TLS</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="xsd:minInclusive"/>
+        <AnnotationProperty abbreviatedIRI="xsd:maxInclusive"/>
         <AnonymousIndividual nodeID="_:genid2147484046"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">0</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">15</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="xsd:maxInclusive"/>
+        <AnnotationProperty abbreviatedIRI="xsd:minInclusive"/>
         <AnonymousIndividual nodeID="_:genid2147484047"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">15</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">0</Literal>
     </AnnotationAssertion>
 </Ontology>
 

@@ -1329,8 +1329,8 @@ _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://www.w3id.org/MQTT4SSN-Ontology#hosts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hosts> <http://www.w3.org/2002/07/owl#inverseOf> <https://www.w3id.org/MQTT4SSN-Ontology#isHostedBy> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hosts> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQTT4SSN-Ontology#Client> .
-<https://www.w3id.org/MQTT4SSN-Ontology#hosts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/System> .
-<https://www.w3id.org/MQTT4SSN-Ontology#hosts> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an MQTT Client (as a SOSA platform) to SOSA systems (sensors/actuators) it hosts."@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hosts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/System> .
+<https://www.w3id.org/MQTT4SSN-Ontology#hosts> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an MQTT Client (as a SOSA platform) to SSN systems (sensors/actuators) it hosts."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hosts> <http://www.w3.org/2000/01/rdf-schema#label> "hosts"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#isAcceptedBy
@@ -1483,9 +1483,9 @@ _:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#isHostedBy
 <https://www.w3id.org/MQTT4SSN-Ontology#isHostedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://www.w3id.org/MQTT4SSN-Ontology#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/System> .
+<https://www.w3id.org/MQTT4SSN-Ontology#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/ssn/System> .
 <https://www.w3id.org/MQTT4SSN-Ontology#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/MQTT4SSN-Ontology#Client> .
-<https://www.w3id.org/MQTT4SSN-Ontology#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SOSA system to the hosting MQTT Client."@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SSN system to the hosting MQTT Client."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is hosted by"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#isInitiatedBy
@@ -3777,9 +3777,6 @@ _:genid337 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2004/02/skos/core#definition> "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en .
 <http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2004/02/skos/core#example> "Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes."@en .
 # 
-# http://www.w3.org/ns/sosa/System
-<http://www.w3.org/ns/sosa/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
 # http://www.w3.org/ns/ssn/Deployment
 <http://www.w3.org/ns/ssn/Deployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/ssn/Deployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid338 .
@@ -4485,8 +4482,8 @@ _:genid371 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/f
 _:genid371 <http://xmlns.com/foaf/0.1/name> "W3C/OGC Spatial Data on the Web Working Group"@en .
 _:genid372 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
 _:genid372 <http://xmlns.com/foaf/0.1/name> "W3C/OGC Spatial Data on the Web Working Group"@en .
-_:genid373 <http://www.w3.org/2001/XMLSchema#maxInclusive> "15"^^<http://www.w3.org/2001/XMLSchema#unsignedByte> .
-_:genid374 <http://www.w3.org/2001/XMLSchema#minInclusive> "0"^^<http://www.w3.org/2001/XMLSchema#unsignedByte> .
+_:genid373 <http://www.w3.org/2001/XMLSchema#minInclusive> "0"^^<http://www.w3.org/2001/XMLSchema#unsignedByte> .
+_:genid374 <http://www.w3.org/2001/XMLSchema#maxInclusive> "15"^^<http://www.w3.org/2001/XMLSchema#unsignedByte> .
 # 
 # 
 # #################################################################
