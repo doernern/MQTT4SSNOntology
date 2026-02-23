@@ -2274,6 +2274,7 @@ _:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasAssignedClientIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasAssignedClientIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Assigned Client Identifier Property. UTF-8 string assigned by the Server when the Client did not provide one."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasAssignedClientIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has Assigned Client Identifier"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasAssignedClientIdentifier> <http://www.w3.org/2004/02/skos/core#example> "If the Client connects using a zero length Client Identifier, the Server MUST respond with a CONNACK containing an Assigned Client Identifier. The Assigned Client Identifier MUST be a new Client Identifier not used by any other Session currently in the Server"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasAuthReasonCode
 <https://www.w3id.org/MQTT4SSN-Ontology#hasAuthReasonCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2318,8 +2319,9 @@ _:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 _:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#base64Binary> .
 _:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-<https://www.w3id.org/MQTT4SSN-Ontology#hasAuthentificationData> <http://www.w3.org/2000/01/rdf-schema#comment> "Authentication Data Property. Binary Data for enhanced authentication."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasAuthentificationData> <http://www.w3.org/2000/01/rdf-schema#label> "has Authentification Data"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasAuthentificationData> <http://www.w3.org/2004/02/skos/core#example> "Authentication Data Property. Binary Data for enhanced authentication."@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasAuthentificationData> <http://www.w3.org/2004/02/skos/core#note> "The contents of this data are defined by the authentication method."@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasAuthentificationMethod
 <https://www.w3id.org/MQTT4SSN-Ontology#hasAuthentificationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2339,6 +2341,7 @@ _:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasAuthentificationMethod> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasAuthentificationMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "Authentication Method Property. UTF-8 string naming the enhanced-auth method."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasAuthentificationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "has Authentification Method"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasAuthentificationMethod> <http://www.w3.org/2004/02/skos/core#example> "ollowed by a UTF-8 Encoded String containing the name of the authentication method. It is a Protocol Error to omit the Authentication Method or to include it more than once."@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasCleanStart
 <https://www.w3id.org/MQTT4SSN-Ontology#hasCleanStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2348,6 +2351,9 @@ _:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasCleanStart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasCleanStart> <http://www.w3.org/2000/01/rdf-schema#comment> "Clean Start flag in CONNECT Flags. 1 requests a new Session; 0 continues an existing Session if present."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasCleanStart> <http://www.w3.org/2000/01/rdf-schema#label> "has Clean Start"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasCleanStart> <http://www.w3.org/2004/02/skos/core#example> "If a CONNECT packet is received with Clean Start is set to 1, the Client and Server MUST discard any existing Session and start a new Session"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasCleanStart> <http://www.w3.org/2004/02/skos/core#example> "If a CONNECT packet is received with Clean Start set to 0 and there is a Session associated with the Client Identifier, the Server MUST resume communications with the Client based on state from the existing Session"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasCleanStart> <http://www.w3.org/2004/02/skos/core#example> "If a CONNECT packet is received with Clean Start set to 0 and there is no Session associated with the Client Identifier, the Server MUST create a new Session"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasClientID
 <https://www.w3id.org/MQTT4SSN-Ontology#hasClientID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2356,6 +2362,8 @@ _:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasClientID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasClientID> <http://www.w3.org/2000/01/rdf-schema#comment> "The MQTT Client identifier used when connecting to an MQTT Broker."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasClientID> <http://www.w3.org/2000/01/rdf-schema#label> "MQTT Client identifier"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasClientID> <http://www.w3.org/2004/02/skos/core#example> "The ClientID MUST be a UTF-8 Encoded String"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasClientID> <http://www.w3.org/2004/02/skos/core#example> "The ClientID MUST be used by Clients and by Servers to identify state that they hold relating to this MQTT Session between the Client and the Server"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasConnackFlag
 <https://www.w3id.org/MQTT4SSN-Ontology#hasConnackFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2364,6 +2372,7 @@ _:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasConnackFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasConnackFlag> <http://www.w3.org/2000/01/rdf-schema#comment> "CONNACK Acknowledge Flags byte. In MQTT 5.0 only Session Present (bit 0) is used; other bits are reserved."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasConnackFlag> <http://www.w3.org/2000/01/rdf-schema#label> "has Connack Flag"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasConnackFlag> <http://www.w3.org/2004/02/skos/core#example> "Byte 1 is the \"Connect Acknowledge Flags\". Bits 7-1 are reserved and MUST be set to 0"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasConnackReasonCode
 <https://www.w3id.org/MQTT4SSN-Ontology#hasConnackReasonCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2390,6 +2399,8 @@ _:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasConnectFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedByte> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasConnectFlag> <http://www.w3.org/2000/01/rdf-schema#comment> "CONNECT Flags byte encoding User Name/Password/Will/Clean Start fields; reserved bit MUST be 0."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasConnectFlag> <http://www.w3.org/2000/01/rdf-schema#label> "has Connect Flags"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasConnectFlag> <http://www.w3.org/2004/02/skos/core#example> "Bit 0 = Reserved; Bit 1 = Clean Start; Bit 2 = Will Flag; Bit 3 und 4 = Will QoS; Bit 5 = Will Retain; Bit 6 = Password Flag; Bit 7 = User Name Flag"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasConnectFlag> <http://www.w3.org/2004/02/skos/core#example> "The Server MUST validate that the reserved flag in the CONNECT packet is set to 0"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasContentType
 <https://www.w3id.org/MQTT4SSN-Ontology#hasContentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2408,6 +2419,7 @@ _:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasContentType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasContentType> <http://www.w3.org/2000/01/rdf-schema#comment> "Application Message content type"@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasContentType> <http://www.w3.org/2000/01/rdf-schema#label> "has Content Type"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasContentType> <http://www.w3.org/2004/02/skos/core#example> "The Content Type MUST be a UTF-8 Encoded String"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasControlPacketType
 <https://www.w3id.org/MQTT4SSN-Ontology#hasControlPacketType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2452,6 +2464,7 @@ _:genid139 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 _:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasCorrelationData> <http://www.w3.org/2000/01/rdf-schema#comment> "Correlation Data Property. Binary Data used to correlate requests and responses."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasCorrelationData> <http://www.w3.org/2000/01/rdf-schema#label> "has Correlation Data"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasCorrelationData> <http://www.w3.org/2004/02/skos/core#example> "The Server MUST send the Correlation Data unaltered to all subscribers receiving the Application Message"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasDUPFlag
 <https://www.w3id.org/MQTT4SSN-Ontology#hasDUPFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2460,6 +2473,8 @@ _:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasDUPFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasDUPFlag> <http://www.w3.org/2000/01/rdf-schema#comment> "True if this is a duplicate delivery of an earlier PUBLISH message."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasDUPFlag> <http://www.w3.org/2000/01/rdf-schema#label> "DUP flag"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasDUPFlag> <http://www.w3.org/2004/02/skos/core#example> "The DUP flag MUST be set to 0 for all QoS 0 messages"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasDUPFlag> <http://www.w3.org/2004/02/skos/core#example> "The DUP flag MUST be set to 1 by the Client or Server when it attempts to re-deliver a PUBLISH packet"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasDisconnectReasonCode
 <https://www.w3id.org/MQTT4SSN-Ontology#hasDisconnectReasonCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2493,6 +2508,7 @@ _:genid140 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasFixedHeaderFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedByte> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasFixedHeaderFlag> <http://www.w3.org/2000/01/rdf-schema#comment> "Fixed Header flags nibble (bits 3..0 of byte 1). Packet-type-specific reserved/required flag pattern in MQTT 5.0."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasFixedHeaderFlag> <http://www.w3.org/2000/01/rdf-schema#label> "FixedHeader flag"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasFixedHeaderFlag> <http://www.w3.org/2004/02/skos/core#example> "Where a flag bit is marked as “Reserved”, it is reserved for future use and MUST be set to the value listed"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasHostAddress
 <https://www.w3id.org/MQTT4SSN-Ontology#hasHostAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2509,6 +2525,8 @@ _:genid140 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasKeepAlive> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedShort> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasKeepAlive> <http://www.w3.org/2000/01/rdf-schema#comment> "Keep Alive in CONNECT variable header. Two Byte Integer seconds defining maximum time between Client Control Packets."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasKeepAlive> <http://www.w3.org/2000/01/rdf-schema#label> "has Keep Alive" .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasKeepAlive> <http://www.w3.org/2004/02/skos/core#example> "If Keep Alive is non-zero and in the absence of sending any other MQTT Control Packets, the Client MUST send a PINGREQ packet"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasKeepAlive> <http://www.w3.org/2004/02/skos/core#example> "If the Keep Alive value is non-zero and the Server does not receive an MQTT Control Packet from the Client within one and a half times the Keep Alive time period, it MUST close the Network Connection to the Client as if the network had failed"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasMaximumPacketSize
 <https://www.w3id.org/MQTT4SSN-Ontology#hasMaximumPacketSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2534,6 +2552,9 @@ _:genid144 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasMaximumQoS> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedByte> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasMaximumQoS> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum QoS Property. Byte specifying the highest QoS level supported by the Server."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasMaximumQoS> <http://www.w3.org/2000/01/rdf-schema#label> "has Maximum QoS"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasMaximumQoS> <http://www.w3.org/2004/02/skos/core#example> "A Server that does not support QoS 1 or QoS 2 PUBLISH packets MUST still accept SUBSCRIBE packets containing a Requested QoS of 0, 1 or 2"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasMaximumQoS> <http://www.w3.org/2004/02/skos/core#example> "If a Client receives a Maximum QoS from a Server, it MUST NOT send PUBLISH packets at a QoS level exceeding the Maximum QoS level specified"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasMaximumQoS> <http://www.w3.org/2004/02/skos/core#example> "If a Server does not support QoS 1 or QoS 2 PUBLISH packets it MUST send a Maximum QoS in the CONNACK packet specifying the highest QoS it supports"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasMessageContent
 <https://www.w3id.org/MQTT4SSN-Ontology#hasMessageContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2557,6 +2578,7 @@ _:genid144 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasMessageContentType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasMessageContentType> <http://www.w3.org/2000/01/rdf-schema#comment> "The MIME type of the Application Message content (e.g., 'application/json')."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasMessageContentType> <http://www.w3.org/2000/01/rdf-schema#label> "has Message Content Type"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasMessageContentType> <http://www.w3.org/2004/02/skos/core#example> "The Content Type MUST be a UTF-8 Encoded String"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasMessageEncoding
 <https://www.w3id.org/MQTT4SSN-Ontology#hasMessageEncoding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2565,6 +2587,8 @@ _:genid144 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasMessageEncoding> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasMessageEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "The character encoding or serialization used for the Application Message (e.g., 'UTF-8', 'Base64')."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasMessageEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "Application Message encoding"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasMessageEncoding> <http://www.w3.org/2004/02/skos/core#example> "A UTF-8 Encoded String MUST NOT include an encoding of the null character U+0000."@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasMessageEncoding> <http://www.w3.org/2004/02/skos/core#example> "The character data in a UTF-8 Encoded String MUST be well-formed UTF-8 as defined by the Unicode specification [Unicode] and restated in RFC 3629 [RFC3629]. In particular, the character data MUST NOT include encodings of code points between U+D800 and U+DFFF"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasMessageExpiryInterval
 <https://www.w3id.org/MQTT4SSN-Ontology#hasMessageExpiryInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2582,6 +2606,8 @@ _:genid147 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasMessageExpiryInterval> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedInt> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasMessageExpiryInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Message Expiry Interval Property. Four Byte Integer seconds defining PUBLISH message lifetime."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasMessageExpiryInterval> <http://www.w3.org/2000/01/rdf-schema#label> "has Message Expiry Interval"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasMessageExpiryInterval> <http://www.w3.org/2004/02/skos/core#example> "If the Message Expiry Interval has passed and the Server has not managed to start onward delivery to a matching subscriber, then it MUST delete the copy of the message for that subscriber"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasMessageExpiryInterval> <http://www.w3.org/2004/02/skos/core#example> "The PUBLISH packet sent to a Client by the Server MUST contain a Message Expiry Interval set to the received value minus the time that the Application Message has been waiting in the Server"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasNoLocal
 <https://www.w3id.org/MQTT4SSN-Ontology#hasNoLocal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2627,6 +2653,9 @@ _:genid150 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasPacketIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedShort> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasPacketIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A 16-bit identifier used to correlate MQTT messages when QoS > 0."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasPacketIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "packet identifier"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasPacketIdentifier> <http://www.w3.org/2004/02/skos/core#example> "A PUBLISH packet MUST NOT contain a Packet Identifier if its QoS value is set to 0"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasPacketIdentifier> <http://www.w3.org/2004/02/skos/core#example> "Each time a Client sends a new SUBSCRIBE, UNSUBSCRIBE,or PUBLISH (where QoS > 0) MQTT Control Packet it MUST assign it a non-zero Packet Identifier that is currently unused"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasPacketIdentifier> <http://www.w3.org/2004/02/skos/core#example> "Each time a Server sends a new PUBLISH (with QoS > 0) MQTT Control Packet it MUST assign it a non zero Packet Identifier that is currently unused"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasPassword
 <https://www.w3id.org/MQTT4SSN-Ontology#hasPassword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2645,6 +2674,8 @@ _:genid163 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 _:genid160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasPassword> <http://www.w3.org/2000/01/rdf-schema#comment> "Password field in CONNECT payload. Binary Data present only if Password Flag=1."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasPassword> <http://www.w3.org/2000/01/rdf-schema#label> "has Password"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasPassword> <http://www.w3.org/2004/02/skos/core#example> "If the Password Flag is set to 0, a Password MUST NOT be present in the Payload"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasPassword> <http://www.w3.org/2004/02/skos/core#example> "If the Password Flag is set to 1, a Password MUST be present in the Payload"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasPasswordFlag
 <https://www.w3id.org/MQTT4SSN-Ontology#hasPasswordFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2654,6 +2685,8 @@ _:genid160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasPasswordFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasPasswordFlag> <http://www.w3.org/2000/01/rdf-schema#comment> "Password Flag in CONNECT Flags. If 1, a Password field is present in the CONNECT payload."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasPasswordFlag> <http://www.w3.org/2000/01/rdf-schema#label> "has Password Flag"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasPasswordFlag> <http://www.w3.org/2004/02/skos/core#example> "If the Password Flag is set to 0, a Password MUST NOT be present in the Payload"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasPasswordFlag> <http://www.w3.org/2004/02/skos/core#example> "If the Password Flag is set to 1, a Password MUST be present in the Payload"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasPayloadContent
 <https://www.w3id.org/MQTT4SSN-Ontology#hasPayloadContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2690,6 +2723,7 @@ _:genid168 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasPayloadFormatIndicator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasPayloadFormatIndicator> <http://www.w3.org/2000/01/rdf-schema#comment> "Payload Format Indicator Property. Byte 0/1; 1 means payload is UTF-8 encoded text, 0 means unspecified binary."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasPayloadFormatIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "has Payload Format Indicator"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasPayloadFormatIndicator> <http://www.w3.org/2004/02/skos/core#example> "A Server MUST send the Payload Format Indicator unaltered to all subscribers receiving the Application Message"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasPayloadReasonCode
 <https://www.w3id.org/MQTT4SSN-Ontology#hasPayloadReasonCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2767,6 +2801,7 @@ _:genid182 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasProtocolName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasProtocolName> <http://www.w3.org/2000/01/rdf-schema#comment> "Protocol Name in CONNECT. UTF-8 string that MUST equal 'MQTT' for MQTT 5.0."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasProtocolName> <http://www.w3.org/2000/01/rdf-schema#label> "has Protocol Name"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasProtocolName> <http://www.w3.org/2004/02/skos/core#example> "The protocol name MUST be the UTF-8 String \"MQTT\". If the Server does not want to accept the CONNECT, and wishes to reveal that it is an MQTT Server it MAY send a CONNACK packet with Reason Code of 0x84 (Unsupported Protocol Version), and then it MUST close the Network Connection"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasProtocolVersion
 <https://www.w3id.org/MQTT4SSN-Ontology#hasProtocolVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2775,6 +2810,7 @@ _:genid182 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasProtocolVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedByte> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasProtocolVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Protocol Version in CONNECT. One-byte value that MUST be 5 for MQTT 5.0."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasProtocolVersion> <http://www.w3.org/2000/01/rdf-schema#label> "has Protocol Version"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasProtocolVersion> <http://www.w3.org/2004/02/skos/core#example> "If the Protocol Version is not 5 and the Server does not want to accept the CONNECT packet, the Server MAY send a CONNACK packet with Reason Code 0x84 (Unsupported Protocol Version) and then MUST close the Network Connection"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasPubackReasonCode
 <https://www.w3id.org/MQTT4SSN-Ontology#hasPubackReasonCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2966,6 +3002,7 @@ _:genid223 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasReasonString> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasReasonString> <http://www.w3.org/2000/01/rdf-schema#comment> "Reason String Property. UTF-8 string providing human-readable diagnostics for a Reason Code."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasReasonString> <http://www.w3.org/2000/01/rdf-schema#label> "has Reason String"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasReasonString> <http://www.w3.org/2004/02/skos/core#example> "The sender MUST NOT send this property if it would increase the size of the PUBACK packet beyond the Maximum Packet Size specified by the receiver"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasReceiveMaximum
 <https://www.w3id.org/MQTT4SSN-Ontology#hasReceiveMaximum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3007,6 +3044,7 @@ _:genid233 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRequestResponseInformation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRequestResponseInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Request Response Information Property in CONNECT. Byte 0/1 indicating whether the Server should return Response Information in CONNACK."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRequestResponseInformation> <http://www.w3.org/2000/01/rdf-schema#label> "has Request Response Information"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasRequestResponseInformation> <http://www.w3.org/2004/02/skos/core#example> "A value of 0 indicates that the Server MUST NOT return Response Information"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasResponseInformation
 <https://www.w3id.org/MQTT4SSN-Ontology#hasResponseInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3024,6 +3062,7 @@ _:genid233 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRetainAsPublished> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRetainAsPublished> <http://www.w3.org/2000/01/rdf-schema#comment> "Retain As Published subscription option. If 1, forwarded messages keep the original RETAIN flag."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRetainAsPublished> <http://www.w3.org/2000/01/rdf-schema#label> "has Retain As Published"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasRetainAsPublished> <http://www.w3.org/2004/02/skos/core#example> "If the value of Retain As Published subscription option is set to 0, the Server MUST set the RETAIN flag to 0 when forwarding an Application Message regardless of how the RETAIN flag was set in the received PUBLISH packet. If the value of Retain As Published subscription option is set to 1, the Server MUST set the RETAIN flag equal to the RETAIN flag in the received PUBLISH packet"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasRetainAvailable
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRetainAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3033,6 +3072,8 @@ _:genid233 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRetainAvailable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRetainAvailable> <http://www.w3.org/2000/01/rdf-schema#comment> "Retain Available Property in CONNACK. Byte 0/1 indicating whether retained messages are supported."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRetainAvailable> <http://www.w3.org/2000/01/rdf-schema#label> "has Retain Available"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasRetainAvailable> <http://www.w3.org/2004/02/skos/core#example> "A Client receiving Retain Available set to 0 from the Server MUST NOT send a PUBLISH packet with the RETAIN flag set to 1"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasRetainAvailable> <http://www.w3.org/2004/02/skos/core#example> "If a Server receives a CONNECT packet containing a Will Message with the Will Retain set to 1, and it does not support retained messages, the Server MUST reject the connection request. It SHOULD send CONNACK with Reason Code 0x9A (Retain not supported) and then it MUST close the Network Connection"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasRetainFlag
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRetainFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3041,6 +3082,8 @@ _:genid233 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRetainFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRetainFlag> <http://www.w3.org/2000/01/rdf-schema#comment> "True if the message should be retained on the MQTT Broker."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRetainFlag> <http://www.w3.org/2000/01/rdf-schema#label> "RETAIN flag"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasRetainFlag> <http://www.w3.org/2004/02/skos/core#example> "If the RETAIN flag is 0 in a PUBLISH packet sent by a Client to a Server, the Server MUST NOT store the message as a retained message and MUST NOT remove or replace any existing retained message"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasRetainFlag> <http://www.w3.org/2004/02/skos/core#example> "If the RETAIN flag is set to 1 in a PUBLISH packet sent by a Client to a Server, the Server MUST replace any existing retained message for this topic and store the Application Message"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasRetainHandling
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRetainHandling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3049,6 +3092,9 @@ _:genid233 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRetainHandling> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedByte> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRetainHandling> <http://www.w3.org/2000/01/rdf-schema#comment> "Retain Handling subscription option. Two-bit field: 0=send retained, 1=send retained only if subscription new, 2=do not send retained."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasRetainHandling> <http://www.w3.org/2000/01/rdf-schema#label> "has Retain Handling"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasRetainHandling> <http://www.w3.org/2004/02/skos/core#example> "If Retain Handling is set to 0 the Server MUST send the retained messages matching the Topic Filter of the subscription to the Client"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasRetainHandling> <http://www.w3.org/2004/02/skos/core#example> "If Retain Handling is set to 1 then if the subscription did not already exist, the Server MUST send all retained message matching the Topic Filter of the subscription to the Client, and if the subscription did exist the Server MUST NOT send the retained messages."@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasRetainHandling> <http://www.w3.org/2004/02/skos/core#example> "If Retain Handling is set to 2, the Server MUST NOT send the retained messages"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasServerKeepAlive
 <https://www.w3id.org/MQTT4SSN-Ontology#hasServerKeepAlive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3058,6 +3104,8 @@ _:genid233 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasServerKeepAlive> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedShort> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasServerKeepAlive> <http://www.w3.org/2000/01/rdf-schema#comment> "Server Keep Alive Property in CONNACK. Two Byte Integer seconds overriding the Client Keep Alive for this connection."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasServerKeepAlive> <http://www.w3.org/2000/01/rdf-schema#label> "has Server Keep Alive"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasServerKeepAlive> <http://www.w3.org/2004/02/skos/core#example> "If the Server does not send the Server Keep Alive, the Server MUST use the Keep Alive value set by the Client on CONNECT"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasServerKeepAlive> <http://www.w3.org/2004/02/skos/core#example> "If the Server sends a Server Keep Alive on the CONNACK packet, the Client MUST use this value instead of the Keep Alive value the Client sent on CONNECT"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasServerReference
 <https://www.w3id.org/MQTT4SSN-Ontology#hasServerReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3074,6 +3122,7 @@ _:genid236 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasServerReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasServerReference> <http://www.w3.org/2000/01/rdf-schema#comment> "Server Reference Property. UTF-8 string suggesting an alternate Server the Client may use."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasServerReference> <http://www.w3.org/2000/01/rdf-schema#label> "has Server Reference"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasServerReference> <http://www.w3.org/2004/02/skos/core#example> "Followed by a UTF-8 Encoded String which can be used by the Client to identify another Server to use."@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasSessionExpiryInterval
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSessionExpiryInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3093,6 +3142,7 @@ _:genid239 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSessionExpiryInterval> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedInt> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSessionExpiryInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Session Expiry Interval Property. Four Byte Integer seconds defining session lifetime after disconnect."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSessionExpiryInterval> <http://www.w3.org/2000/01/rdf-schema#label> "has Session Expiry Interval"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasSessionExpiryInterval> <http://www.w3.org/2004/02/skos/core#example> "The Session Expiry Interval MUST NOT be sent on a DISCONNECT by the Server"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasSessionPresentFlag
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSessionPresentFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3102,6 +3152,8 @@ _:genid239 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSessionPresentFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSessionPresentFlag> <http://www.w3.org/2000/01/rdf-schema#comment> "Session Present flag in CONNACK. If 1, a prior Session exists and is resumed."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSessionPresentFlag> <http://www.w3.org/2000/01/rdf-schema#label> "has Session Present Flag"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasSessionPresentFlag> <http://www.w3.org/2004/02/skos/core#example> "If the Server accepts a connection with Clean Start set to 0 and the Server has Session State for the ClientID, it MUST set Session Present to 1 in the CONNACK packet, otherwise it MUST set Session Present to 0 in the CONNACK packet. In both cases it MUST set a 0x00 (Success) Reason Code in the CONNACK packet"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasSessionPresentFlag> <http://www.w3.org/2004/02/skos/core#example> "If the Server accepts a connection with Clean Start set to 1, the Server MUST set Session Present to 0 in the CONNACK packet in addition to setting a 0x00 (Success) Reason Code in the CONNACK packet"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasSharedSubscriptionAvailable
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSharedSubscriptionAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3111,6 +3163,7 @@ _:genid239 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSharedSubscriptionAvailable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSharedSubscriptionAvailable> <http://www.w3.org/2000/01/rdf-schema#comment> "Shared Subscription Available Property in CONNACK. Byte 0/1 indicating server support for shared subscriptions."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSharedSubscriptionAvailable> <http://www.w3.org/2000/01/rdf-schema#label> "has Shared Subscription Available"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasSharedSubscriptionAvailable> <http://www.w3.org/2004/02/skos/core#example> "Followed by a Byte field. If present, this byte declares whether the Server supports Shared Subscriptions. A value is 0 means that Shared Subscriptions are not supported. A value of 1 means Shared Subscriptions are supported"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasSubackReasonCode
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSubackReasonCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3146,6 +3199,7 @@ _:genid247 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Subscription Identifier Property. Variable Byte Integer (value > 0) identifying a subscription; returned in PUBLISH as applicable."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has Subscription Identifier"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionIdentifier> <http://www.w3.org/2004/02/skos/core#example> "The Subscription Identifier can have the value of 1 to 268,435,455."@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionIdentifierAvailable
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionIdentifierAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3155,6 +3209,7 @@ _:genid247 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionIdentifierAvailable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionIdentifierAvailable> <http://www.w3.org/2000/01/rdf-schema#comment> "Subscription Identifier Available Property in CONNACK. Byte 0/1 indicating support for Subscription Identifiers."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionIdentifierAvailable> <http://www.w3.org/2000/01/rdf-schema#label> "has Subscription Identifier Available"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionIdentifierAvailable> <http://www.w3.org/2004/02/skos/core#example> "If present, this byte declares whether the Server supports Subscription Identifiers. A value is 0 means that Subscription Identifiers are not supported. A value of 1 means Subscription Identifiers are supported."@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionOption
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionOption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3162,6 +3217,7 @@ _:genid247 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionOption> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedByte> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionOption> <http://www.w3.org/2000/01/rdf-schema#comment> "Subscription Options byte for a Topic Filter in SUBSCRIBE. Encodes QoS, No Local, Retain As Published, and Retain Handling."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionOption> <http://www.w3.org/2000/01/rdf-schema#label> "has Subscription Option"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionOption> <http://www.w3.org/2004/02/skos/core#example> "Bit 2 of the Subscription Options represents the No Local option. If the value is 1, Application Messages MUST NOT be forwarded to a connection with a ClientID equal to the ClientID of the publishing connection. It is a Protocol Error to set the No Local bit to 1 on a Shared Subscription"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAlias
 <https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAlias> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3179,6 +3235,9 @@ _:genid250 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAlias> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedShort> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAlias> <http://www.w3.org/2000/01/rdf-schema#comment> "Topic Alias Property in PUBLISH. Two Byte Integer (non-zero) alias for Topic Name."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAlias> <http://www.w3.org/2000/01/rdf-schema#label> "has Topic Alias"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAlias> <http://www.w3.org/2004/02/skos/core#example> "A Client MUST NOT send a PUBLISH packet with a Topic Alias greater than the Topic Alias Maximum value returned by the Server in the CONNACK packet. A Client MUST accept all Topic Alias values greater than 0 and less than or equal to the Topic Alias Maximum value that it sent in the CONNECT packet"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAlias> <http://www.w3.org/2004/02/skos/core#example> "A Server MUST NOT send a PUBLISH packet with a Topic Alias greater than the Topic Alias Maximum value sent by the Client in the CONNECT packet. A Server MUST accept all Topic Alias values greater than 0 and less than or equal to the Topic Alias Maximum value that it returned in the CONNACK packet"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAlias> <http://www.w3.org/2004/02/skos/core#example> "A sender MUST NOT send a PUBLISH packet containing a Topic Alias which has the value 0"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAliasMaximum
 <https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAliasMaximum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3195,6 +3254,8 @@ _:genid253 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAliasMaximum> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedShort> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAliasMaximum> <http://www.w3.org/2000/01/rdf-schema#comment> "Topic Alias Maximum Property. Two Byte Integer indicating the maximum Topic Alias value accepted."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAliasMaximum> <http://www.w3.org/2000/01/rdf-schema#label> "has Topic Alias Maximum"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAliasMaximum> <http://www.w3.org/2004/02/skos/core#example> "The Server MUST NOT send a Topic Alias in a PUBLISH packet to the Client greater than Topic Alias Maximum"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAliasMaximum> <http://www.w3.org/2004/02/skos/core#example> "Topic Alias Maximum is absent or zero, the Server MUST NOT send any Topic Aliases to the Client"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasUnsubackReasonCode
 <https://www.w3id.org/MQTT4SSN-Ontology#hasUnsubackReasonCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3229,6 +3290,8 @@ _:genid256 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasUserNameFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasUserNameFlag> <http://www.w3.org/2000/01/rdf-schema#comment> "User Name Flag in CONNECT Flags. If 1, User Name is present in CONNECT payload."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasUserNameFlag> <http://www.w3.org/2000/01/rdf-schema#label> "has Username Flag"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasUserNameFlag> <http://www.w3.org/2004/02/skos/core#example> "If the User Name Flag is set to 1, a User Name MUST be present in the Payload"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasUserNameFlag> <http://www.w3.org/2004/02/skos/core#example> "f the User Name Flag is set to 0, a User Name MUST NOT be present in the Payload"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasUserPropertyName
 <https://www.w3id.org/MQTT4SSN-Ontology#hasUserPropertyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3303,6 +3366,7 @@ _:genid268 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWildcardSubscriptionAvailable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWildcardSubscriptionAvailable> <http://www.w3.org/2000/01/rdf-schema#comment> "Wildcard Subscription Available Property in CONNACK. Byte 0/1 indicating support for wildcard topic filters."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWildcardSubscriptionAvailable> <http://www.w3.org/2000/01/rdf-schema#label> "has Wildcard Subscription Available"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasWildcardSubscriptionAvailable> <http://www.w3.org/2004/02/skos/core#example> "If present, this byte declares whether the Server supports Wildcard Subscriptions. A value is 0 means that Wildcard Subscriptions are not supported. A value of 1 means Wildcard Subscriptions are supported. If not present, then Wildcard Subscriptions are supported."@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasWillDelayInterval
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillDelayInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3312,6 +3376,7 @@ _:genid268 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillDelayInterval> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedInt> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillDelayInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Will Delay Interval Property. Four Byte Integer seconds delaying Will publication after connection loss."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillDelayInterval> <http://www.w3.org/2000/01/rdf-schema#label> "has Will Delay Interval"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasWillDelayInterval> <http://www.w3.org/2004/02/skos/core#example> "If a new Network Connection to this Session is made before the Will Delay Interval has passed, the Server MUST NOT send the Will Message"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasWillFlag
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3321,6 +3386,8 @@ _:genid268 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillFlag> <http://www.w3.org/2000/01/rdf-schema#comment> "Will Flag in CONNECT Flags. If 1, Will Properties/Topic/Payload are present."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillFlag> <http://www.w3.org/2000/01/rdf-schema#label> "has Will Flag"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasWillFlag> <http://www.w3.org/2004/02/skos/core#example> "If the Will Flag is set to 1 this indicates that a Will Message MUST be stored on the Server and associated with the Session"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasWillFlag> <http://www.w3.org/2004/02/skos/core#example> "If the Will Flag is set to 1, the Will Properties, Will Topic, and Will Payload fields MUST be present in the Payload"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasWillPayload
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillPayload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3339,6 +3406,7 @@ _:genid275 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 _:genid272 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillPayload> <http://www.w3.org/2000/01/rdf-schema#comment> "Will Payload in CONNECT payload. Binary Data constituting the Will Message payload."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillPayload> <http://www.w3.org/2000/01/rdf-schema#label> "has Will Payload"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasWillPayload> <http://www.w3.org/2004/02/skos/core#example> "The Will Payload defines the Application Message Payload that is to be published to the Will Topic"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasWillProperty
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3363,6 +3431,8 @@ _:genid276 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillQoS> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedByte> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillQoS> <http://www.w3.org/2000/01/rdf-schema#comment> "Will QoS in CONNECT Flags. Two-bit field with values 0, 1, or 2 for the Will Message QoS."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillQoS> <http://www.w3.org/2000/01/rdf-schema#label> "has Will QoS"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasWillQoS> <http://www.w3.org/2004/02/skos/core#example> "If the Will Flag is set to 0, then the Will QoS MUST be set to 0 (0x00)"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasWillQoS> <http://www.w3.org/2004/02/skos/core#example> "If the Will Flag is set to 1, the value of Will QoS can be 0 (0x00), 1 (0x01), or 2 (0x02)"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#hasWillRetain
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillRetain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -3372,6 +3442,9 @@ _:genid276 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillRetain> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillRetain> <http://www.w3.org/2000/01/rdf-schema#comment> "Will Retain in CONNECT Flags. If 1, the Will Message is published as retained."@en .
 <https://www.w3id.org/MQTT4SSN-Ontology#hasWillRetain> <http://www.w3.org/2000/01/rdf-schema#label> "has Will Retain"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasWillRetain> <http://www.w3.org/2004/02/skos/core#example> "If the Will Flag is set to 0, then Will Retain MUST be set to 0"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasWillRetain> <http://www.w3.org/2004/02/skos/core#example> "If the Will Flag is set to 1 and Will Retain is set to 0, the Server MUST publish the Will Message as a non-retained message"@en .
+<https://www.w3id.org/MQTT4SSN-Ontology#hasWillRetain> <http://www.w3.org/2004/02/skos/core#example> "If the Will Flag is set to 1 and Will Retain is set to 1, the Server MUST publish the Will Message as a retained message"@en .
 # 
 # https://www.w3id.org/MQTT4SSN-Ontology#usesTLS
 <https://www.w3id.org/MQTT4SSN-Ontology#usesTLS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -4482,8 +4555,8 @@ _:genid371 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/f
 _:genid371 <http://xmlns.com/foaf/0.1/name> "W3C/OGC Spatial Data on the Web Working Group"@en .
 _:genid372 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
 _:genid372 <http://xmlns.com/foaf/0.1/name> "W3C/OGC Spatial Data on the Web Working Group"@en .
-_:genid373 <http://www.w3.org/2001/XMLSchema#minInclusive> "0"^^<http://www.w3.org/2001/XMLSchema#unsignedByte> .
-_:genid374 <http://www.w3.org/2001/XMLSchema#maxInclusive> "15"^^<http://www.w3.org/2001/XMLSchema#unsignedByte> .
+_:genid373 <http://www.w3.org/2001/XMLSchema#maxInclusive> "15"^^<http://www.w3.org/2001/XMLSchema#unsignedByte> .
+_:genid374 <http://www.w3.org/2001/XMLSchema#minInclusive> "0"^^<http://www.w3.org/2001/XMLSchema#unsignedByte> .
 # 
 # 
 # #################################################################

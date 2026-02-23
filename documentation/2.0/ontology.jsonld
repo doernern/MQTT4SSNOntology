@@ -2914,15 +2914,15 @@
   } ]
 }, {
   "@id" : "_:genid373",
-  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#unsignedByte",
-    "@value" : "0"
-  } ]
-}, {
-  "@id" : "_:genid374",
   "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#unsignedByte",
     "@value" : "15"
+  } ]
+}, {
+  "@id" : "_:genid374",
+  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#unsignedByte",
+    "@value" : "0"
   } ]
 }, {
   "@id" : "_:genid375",
@@ -9216,6 +9216,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If the Client connects using a zero length Client Identifier, the Server MUST respond with a CONNACK containing an Assigned Client Identifier. The Assigned Client Identifier MUST be a new Client Identifier not used by any other Session currently in the Server"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasAuthFixedHeader",
@@ -9306,10 +9310,6 @@
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasAuthentificationData",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Authentication Data Property. Binary Data for enhanced authentication."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid112"
   } ],
@@ -9322,6 +9322,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Authentication Data Property. Binary Data for enhanced authentication."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "The contents of this data are defined by the authentication method."
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasAuthentificationMethod",
@@ -9342,6 +9350,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "ollowed by a UTF-8 Encoded String containing the name of the authentication method. It is a Protocol Error to omit the Authentication Method or to include it more than once."
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasCleanStart",
@@ -9362,6 +9374,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasConnectFlag"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If a CONNECT packet is received with Clean Start is set to 1, the Client and Server MUST discard any existing Session and start a new Session"
+  }, {
+    "@language" : "en",
+    "@value" : "If a CONNECT packet is received with Clean Start set to 0 and there is a Session associated with the Client Identifier, the Server MUST resume communications with the Client based on state from the existing Session"
+  }, {
+    "@language" : "en",
+    "@value" : "If a CONNECT packet is received with Clean Start set to 0 and there is no Session associated with the Client Identifier, the Server MUST create a new Session"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasClient",
@@ -9399,6 +9421,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The ClientID MUST be a UTF-8 Encoded String"
+  }, {
+    "@language" : "en",
+    "@value" : "The ClientID MUST be used by Clients and by Servers to identify state that they hold relating to this MQTT Session between the Client and the Server"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasConnackFixedHeader",
@@ -9439,6 +9468,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Byte 1 is the \"Connect Acknowledge Flags\". Bits 7-1 are reserved and MUST be set to 0"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasConnackProperties",
@@ -9542,6 +9575,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#unsignedByte"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Bit 0 = Reserved; Bit 1 = Clean Start; Bit 2 = Will Flag; Bit 3 und 4 = Will QoS; Bit 5 = Will Retain; Bit 6 = Password Flag; Bit 7 = User Name Flag"
+  }, {
+    "@language" : "en",
+    "@value" : "The Server MUST validate that the reserved flag in the CONNECT packet is set to 0"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasConnectPayload",
@@ -9650,6 +9690,10 @@
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
   }, {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasWillProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Content Type MUST be a UTF-8 Encoded String"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasControlPacketType",
@@ -9689,6 +9733,10 @@
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
   }, {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasWillProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Server MUST send the Correlation Data unaltered to all subscribers receiving the Application Message"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasDUPFlag",
@@ -9709,6 +9757,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasFixedHeaderFlag"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The DUP flag MUST be set to 0 for all QoS 0 messages"
+  }, {
+    "@language" : "en",
+    "@value" : "The DUP flag MUST be set to 1 by the Client or Server when it attempts to re-deliver a PUBLISH packet"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasDisconnectFixedHeader",
@@ -9869,6 +9924,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#unsignedByte"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Where a flag bit is marked as “Reserved”, it is reserved for future use and MUST be set to the value listed"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasFoISubject",
@@ -9925,6 +9984,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#unsignedShort"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If Keep Alive is non-zero and in the absence of sending any other MQTT Control Packets, the Client MUST send a PINGREQ packet"
+  }, {
+    "@language" : "en",
+    "@value" : "If the Keep Alive value is non-zero and the Server does not receive an MQTT Control Packet from the Client within one and a half times the Keep Alive time period, it MUST close the Network Connection to the Client as if the network had failed"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasMaximumPacketSize",
@@ -9965,6 +10031,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "A Server that does not support QoS 1 or QoS 2 PUBLISH packets MUST still accept SUBSCRIBE packets containing a Requested QoS of 0, 1 or 2"
+  }, {
+    "@language" : "en",
+    "@value" : "If a Client receives a Maximum QoS from a Server, it MUST NOT send PUBLISH packets at a QoS level exceeding the Maximum QoS level specified"
+  }, {
+    "@language" : "en",
+    "@value" : "If a Server does not support QoS 1 or QoS 2 PUBLISH packets it MUST send a Maximum QoS in the CONNACK packet specifying the highest QoS it supports"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasMessageContent",
@@ -10019,6 +10095,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Content Type MUST be a UTF-8 Encoded String"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasMessageEncoding",
@@ -10036,6 +10116,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "A UTF-8 Encoded String MUST NOT include an encoding of the null character U+0000."
+  }, {
+    "@language" : "en",
+    "@value" : "The character data in a UTF-8 Encoded String MUST be well-formed UTF-8 as defined by the Unicode specification [Unicode] and restated in RFC 3629 [RFC3629]. In particular, the character data MUST NOT include encodings of code points between U+D800 and U+DFFF"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasMessageExpiryInterval",
@@ -10058,6 +10145,13 @@
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
   }, {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasWillProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If the Message Expiry Interval has passed and the Server has not managed to start onward delivery to a matching subscriber, then it MUST delete the copy of the message for that subscriber"
+  }, {
+    "@language" : "en",
+    "@value" : "The PUBLISH packet sent to a Client by the Server MUST contain a Message Expiry Interval set to the received value minus the time that the Application Message has been waiting in the Server"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasNoLocal",
@@ -10095,6 +10189,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#unsignedShort"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "A PUBLISH packet MUST NOT contain a Packet Identifier if its QoS value is set to 0"
+  }, {
+    "@language" : "en",
+    "@value" : "Each time a Client sends a new SUBSCRIBE, UNSUBSCRIBE,or PUBLISH (where QoS > 0) MQTT Control Packet it MUST assign it a non-zero Packet Identifier that is currently unused"
+  }, {
+    "@language" : "en",
+    "@value" : "Each time a Server sends a new PUBLISH (with QoS > 0) MQTT Control Packet it MUST assign it a non zero Packet Identifier that is currently unused"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasParticipant",
@@ -10132,6 +10236,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid160"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If the Password Flag is set to 0, a Password MUST NOT be present in the Payload"
+  }, {
+    "@language" : "en",
+    "@value" : "If the Password Flag is set to 1, a Password MUST be present in the Payload"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasPasswordFlag",
@@ -10152,6 +10263,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasConnectFlag"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If the Password Flag is set to 0, a Password MUST NOT be present in the Payload"
+  }, {
+    "@language" : "en",
+    "@value" : "If the Password Flag is set to 1, a Password MUST be present in the Payload"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasPayload",
@@ -10211,6 +10329,10 @@
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
   }, {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasWillProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "A Server MUST send the Payload Format Indicator unaltered to all subscribers receiving the Application Message"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasPayloadReasonCode",
@@ -10402,6 +10524,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The protocol name MUST be the UTF-8 String \"MQTT\". If the Server does not want to accept the CONNECT, and wishes to reveal that it is an MQTT Server it MAY send a CONNACK packet with Reason Code of 0x84 (Unsupported Protocol Version), and then it MUST close the Network Connection"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProtocolVersion",
@@ -10419,6 +10545,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#unsignedByte"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If the Protocol Version is not 5 and the Server does not want to accept the CONNECT packet, the Server MAY send a CONNACK packet with Reason Code 0x84 (Unsupported Protocol Version) and then MUST close the Network Connection"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasPubackFixedHeader",
@@ -10914,6 +11044,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The sender MUST NOT send this property if it would increase the size of the PUBACK packet beyond the Maximum Packet Size specified by the receiver"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasReceiveMaximum",
@@ -10991,6 +11125,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "A value of 0 indicates that the Server MUST NOT return Response Information"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasResponseInformation",
@@ -11051,6 +11189,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionOption"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If the value of Retain As Published subscription option is set to 0, the Server MUST set the RETAIN flag to 0 when forwarding an Application Message regardless of how the RETAIN flag was set in the received PUBLISH packet. If the value of Retain As Published subscription option is set to 1, the Server MUST set the RETAIN flag equal to the RETAIN flag in the received PUBLISH packet"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasRetainAvailable",
@@ -11071,6 +11213,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "A Client receiving Retain Available set to 0 from the Server MUST NOT send a PUBLISH packet with the RETAIN flag set to 1"
+  }, {
+    "@language" : "en",
+    "@value" : "If a Server receives a CONNECT packet containing a Will Message with the Will Retain set to 1, and it does not support retained messages, the Server MUST reject the connection request. It SHOULD send CONNACK with Reason Code 0x9A (Retain not supported) and then it MUST close the Network Connection"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasRetainFlag",
@@ -11091,6 +11240,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasFixedHeaderFlag"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If the RETAIN flag is 0 in a PUBLISH packet sent by a Client to a Server, the Server MUST NOT store the message as a retained message and MUST NOT remove or replace any existing retained message"
+  }, {
+    "@language" : "en",
+    "@value" : "If the RETAIN flag is set to 1 in a PUBLISH packet sent by a Client to a Server, the Server MUST replace any existing retained message for this topic and store the Application Message"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasRetainHandling",
@@ -11111,6 +11267,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionOption"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If Retain Handling is set to 0 the Server MUST send the retained messages matching the Topic Filter of the subscription to the Client"
+  }, {
+    "@language" : "en",
+    "@value" : "If Retain Handling is set to 1 then if the subscription did not already exist, the Server MUST send all retained message matching the Topic Filter of the subscription to the Client, and if the subscription did exist the Server MUST NOT send the retained messages."
+  }, {
+    "@language" : "en",
+    "@value" : "If Retain Handling is set to 2, the Server MUST NOT send the retained messages"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasServerKeepAlive",
@@ -11131,6 +11297,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If the Server does not send the Server Keep Alive, the Server MUST use the Keep Alive value set by the Client on CONNECT"
+  }, {
+    "@language" : "en",
+    "@value" : "If the Server sends a Server Keep Alive on the CONNACK packet, the Client MUST use this value instead of the Keep Alive value the Client sent on CONNECT"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasServerReference",
@@ -11151,6 +11324,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Followed by a UTF-8 Encoded String which can be used by the Client to identify another Server to use."
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasSessionExpiryInterval",
@@ -11171,6 +11348,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Session Expiry Interval MUST NOT be sent on a DISCONNECT by the Server"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasSessionPresentFlag",
@@ -11191,6 +11372,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasConnackFlag"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If the Server accepts a connection with Clean Start set to 0 and the Server has Session State for the ClientID, it MUST set Session Present to 1 in the CONNACK packet, otherwise it MUST set Session Present to 0 in the CONNACK packet. In both cases it MUST set a 0x00 (Success) Reason Code in the CONNACK packet"
+  }, {
+    "@language" : "en",
+    "@value" : "If the Server accepts a connection with Clean Start set to 1, the Server MUST set Session Present to 0 in the CONNACK packet in addition to setting a 0x00 (Success) Reason Code in the CONNACK packet"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasSharedSubscriptionAvailable",
@@ -11211,6 +11399,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Followed by a Byte field. If present, this byte declares whether the Server supports Shared Subscriptions. A value is 0 means that Shared Subscriptions are not supported. A value of 1 means Shared Subscriptions are supported"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasSubackFixedHeader",
@@ -11449,6 +11641,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Subscription Identifier can have the value of 1 to 268,435,455."
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionIdentifierAvailable",
@@ -11469,6 +11665,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If present, this byte declares whether the Server supports Subscription Identifiers. A value is 0 means that Subscription Identifiers are not supported. A value of 1 means Subscription Identifiers are supported."
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptionOption",
@@ -11486,6 +11686,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#unsignedByte"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Bit 2 of the Subscription Options represents the No Local option. If the value is 1, Application Messages MUST NOT be forwarded to a connection with a ClientID equal to the ClientID of the publishing connection. It is a Protocol Error to set the No Local bit to 1 on a Shared Subscription"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasSubscriptions",
@@ -11526,6 +11730,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "A Client MUST NOT send a PUBLISH packet with a Topic Alias greater than the Topic Alias Maximum value returned by the Server in the CONNACK packet. A Client MUST accept all Topic Alias values greater than 0 and less than or equal to the Topic Alias Maximum value that it sent in the CONNECT packet"
+  }, {
+    "@language" : "en",
+    "@value" : "A Server MUST NOT send a PUBLISH packet with a Topic Alias greater than the Topic Alias Maximum value sent by the Client in the CONNECT packet. A Server MUST accept all Topic Alias values greater than 0 and less than or equal to the Topic Alias Maximum value that it returned in the CONNACK packet"
+  }, {
+    "@language" : "en",
+    "@value" : "A sender MUST NOT send a PUBLISH packet containing a Topic Alias which has the value 0"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAliasMaximum",
@@ -11546,6 +11760,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Server MUST NOT send a Topic Alias in a PUBLISH packet to the Client greater than Topic Alias Maximum"
+  }, {
+    "@language" : "en",
+    "@value" : "Topic Alias Maximum is absent or zero, the Server MUST NOT send any Topic Aliases to the Client"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasTopicFilter",
@@ -11821,6 +12042,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasConnectFlag"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If the User Name Flag is set to 1, a User Name MUST be present in the Payload"
+  }, {
+    "@language" : "en",
+    "@value" : "f the User Name Flag is set to 0, a User Name MUST NOT be present in the Payload"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasUserProperty",
@@ -11952,6 +12180,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If present, this byte declares whether the Server supports Wildcard Subscriptions. A value is 0 means that Wildcard Subscriptions are not supported. A value of 1 means Wildcard Subscriptions are supported. If not present, then Wildcard Subscriptions are supported."
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasWillDelayInterval",
@@ -11972,6 +12204,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If a new Network Connection to this Session is made before the Will Delay Interval has passed, the Server MUST NOT send the Will Message"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasWillFlag",
@@ -11992,6 +12228,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasConnectFlag"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If the Will Flag is set to 1 this indicates that a Will Message MUST be stored on the Server and associated with the Session"
+  }, {
+    "@language" : "en",
+    "@value" : "If the Will Flag is set to 1, the Will Properties, Will Topic, and Will Payload fields MUST be present in the Payload"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasWillPayload",
@@ -12009,6 +12252,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid272"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Will Payload defines the Application Message Payload that is to be published to the Will Topic"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasWillProperties",
@@ -12066,6 +12313,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasConnectFlag"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If the Will Flag is set to 0, then the Will QoS MUST be set to 0 (0x00)"
+  }, {
+    "@language" : "en",
+    "@value" : "If the Will Flag is set to 1, the value of Will QoS can be 0 (0x00), 1 (0x01), or 2 (0x02)"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasWillRetain",
@@ -12086,6 +12340,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasConnectFlag"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "If the Will Flag is set to 0, then Will Retain MUST be set to 0"
+  }, {
+    "@language" : "en",
+    "@value" : "If the Will Flag is set to 1 and Will Retain is set to 0, the Server MUST publish the Will Message as a non-retained message"
+  }, {
+    "@language" : "en",
+    "@value" : "If the Will Flag is set to 1 and Will Retain is set to 1, the Server MUST publish the Will Message as a retained message"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MQTT4SSN-Ontology#hasWillTopic",

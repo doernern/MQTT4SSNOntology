@@ -10846,6 +10846,17 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">The character encoding or serialization used for the Application Message (e.g., 'UTF-8', 'Base64').</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>A UTF-8 Encoded String MUST NOT include an encoding of the null character U+0000.</pre>
+   </dd>
+   <dd>
+    <pre>The character data in a UTF-8 Encoded String MUST be well-formed UTF-8 as defined by the Unicode specification [Unicode] and restated in RFC 3629 [RFC3629]. In particular, the character data MUST NOT include encodings of code points between U+D800 and U+DFFF</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -10870,6 +10881,17 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">True if this is a duplicate delivery of an earlier PUBLISH message.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The DUP flag MUST be set to 0 for all QoS 0 messages</pre>
+   </dd>
+   <dd>
+    <pre>The DUP flag MUST be set to 1 by the Client or Server when it attempts to re-deliver a PUBLISH packet</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -10905,6 +10927,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Fixed Header flags nibble (bits 3..0 of byte 1). Packet-type-specific reserved/required flag pattern in MQTT 5.0.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Where a flag bit is marked as “Reserved”, it is reserved for future use and MUST be set to the value listed</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -10957,6 +10987,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Assigned Client Identifier Property. UTF-8 string assigned by the Server when the Client did not provide one.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If the Client connects using a zero length Client Identifier, the Server MUST respond with a CONNACK containing an Assigned Client Identifier. The Assigned Client Identifier MUST be a new Client Identifier not used by any other Session currently in the Server</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -11013,9 +11051,14 @@ This section provides details for each class and property defined by MQTT4SSN.
  <div class="entity" id="hasAuthentificationData">
   <h3>has Authentification Data<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://www.w3id.org/MQTT4SSN-Ontology#hasAuthentificationData</p>
-  <div class="comment">
-   <span class="markdown">Authentication Data Property. Binary Data for enhanced authentication.</span>
-  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Authentication Data Property. Binary Data for enhanced authentication.</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -11045,6 +11088,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Authentication Method Property. UTF-8 string naming the enhanced-auth method.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>ollowed by a UTF-8 Encoded String containing the name of the authentication method. It is a Protocol Error to omit the Authentication Method or to include it more than once.</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -11074,6 +11125,20 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Clean Start flag in CONNECT Flags. 1 requests a new Session; 0 continues an existing Session if present.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If a CONNECT packet is received with Clean Start is set to 1, the Client and Server MUST discard any existing Session and start a new Session</pre>
+   </dd>
+   <dd>
+    <pre>If a CONNECT packet is received with Clean Start set to 0 and there is a Session associated with the Client Identifier, the Server MUST resume communications with the Client based on state from the existing Session</pre>
+   </dd>
+   <dd>
+    <pre>If a CONNECT packet is received with Clean Start set to 0 and there is no Session associated with the Client Identifier, the Server MUST create a new Session</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -11104,6 +11169,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">CONNACK Acknowledge Flags byte. In MQTT 5.0 only Session Present (bit 0) is used; other bits are reserved.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Byte 1 is the "Connect Acknowledge Flags". Bits 7-1 are reserved and MUST be set to 0</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -11163,6 +11236,17 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">CONNECT Flags byte encoding User Name/Password/Will/Clean Start fields; reserved bit MUST be 0.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Bit 0 = Reserved; Bit 1 = Clean Start; Bit 2 = Will Flag; Bit 3 und 4 = Will QoS; Bit 5 = Will Retain; Bit 6 = Password Flag; Bit 7 = User Name Flag</pre>
+   </dd>
+   <dd>
+    <pre>The Server MUST validate that the reserved flag in the CONNECT packet is set to 0</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -11192,6 +11276,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Application Message content type</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The Content Type MUST be a UTF-8 Encoded String</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -11222,6 +11314,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Correlation Data Property. Binary Data used to correlate requests and responses.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The Server MUST send the Correlation Data unaltered to all subscribers receiving the Application Message</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -11294,6 +11394,17 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Keep Alive in CONNECT variable header. Two Byte Integer seconds defining maximum time between Client Control Packets.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If Keep Alive is non-zero and in the absence of sending any other MQTT Control Packets, the Client MUST send a PINGREQ packet</pre>
+   </dd>
+   <dd>
+    <pre>If the Keep Alive value is non-zero and the Server does not receive an MQTT Control Packet from the Client within one and a half times the Keep Alive time period, it MUST close the Network Connection to the Client as if the network had failed</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -11347,6 +11458,20 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Maximum QoS Property. Byte specifying the highest QoS level supported by the Server.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>A Server that does not support QoS 1 or QoS 2 PUBLISH packets MUST still accept SUBSCRIBE packets containing a Requested QoS of 0, 1 or 2</pre>
+   </dd>
+   <dd>
+    <pre>If a Client receives a Maximum QoS from a Server, it MUST NOT send PUBLISH packets at a QoS level exceeding the Maximum QoS level specified</pre>
+   </dd>
+   <dd>
+    <pre>If a Server does not support QoS 1 or QoS 2 PUBLISH packets it MUST send a Maximum QoS in the CONNACK packet specifying the highest QoS it supports</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -11377,6 +11502,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">The MIME type of the Application Message content (e.g., 'application/json').</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The Content Type MUST be a UTF-8 Encoded String</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -11406,6 +11539,17 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Message Expiry Interval Property. Four Byte Integer seconds defining PUBLISH message lifetime.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If the Message Expiry Interval has passed and the Server has not managed to start onward delivery to a matching subscriber, then it MUST delete the copy of the message for that subscriber</pre>
+   </dd>
+   <dd>
+    <pre>The PUBLISH packet sent to a Client by the Server MUST contain a Message Expiry Interval set to the received value minus the time that the Application Message has been waiting in the Server</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -11545,6 +11689,17 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Password field in CONNECT payload. Binary Data present only if Password Flag=1.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If the Password Flag is set to 0, a Password MUST NOT be present in the Payload</pre>
+   </dd>
+   <dd>
+    <pre>If the Password Flag is set to 1, a Password MUST be present in the Payload</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -11568,6 +11723,17 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Password Flag in CONNECT Flags. If 1, a Password field is present in the CONNECT payload.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If the Password Flag is set to 0, a Password MUST NOT be present in the Payload</pre>
+   </dd>
+   <dd>
+    <pre>If the Password Flag is set to 1, a Password MUST be present in the Payload</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -11622,6 +11788,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Payload Format Indicator Property. Byte 0/1; 1 means payload is UTF-8 encoded text, 0 means unspecified binary.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>A Server MUST send the Payload Format Indicator unaltered to all subscribers receiving the Application Message</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -11651,6 +11825,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Protocol Name in CONNECT. UTF-8 string that MUST equal 'MQTT' for MQTT 5.0.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The protocol name MUST be the UTF-8 String "MQTT". If the Server does not want to accept the CONNECT, and wishes to reveal that it is an MQTT Server it MAY send a CONNACK packet with Reason Code of 0x84 (Unsupported Protocol Version), and then it MUST close the Network Connection</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -11675,6 +11857,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Protocol Version in CONNECT. One-byte value that MUST be 5 for MQTT 5.0.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If the Protocol Version is not 5 and the Server does not want to accept the CONNECT packet, the Server MAY send a CONNACK packet with Reason Code 0x84 (Unsupported Protocol Version) and then MUST close the Network Connection</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -11815,6 +12005,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Reason String Property. UTF-8 string providing human-readable diagnostics for a Reason Code.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The sender MUST NOT send this property if it would increase the size of the PUBACK packet beyond the Maximum Packet Size specified by the receiver</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -11903,6 +12101,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Request Response Information Property in CONNECT. Byte 0/1 indicating whether the Server should return Response Information in CONNACK.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>A value of 0 indicates that the Server MUST NOT return Response Information</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -11963,6 +12169,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Retain As Published subscription option. If 1, forwarded messages keep the original RETAIN flag.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If the value of Retain As Published subscription option is set to 0, the Server MUST set the RETAIN flag to 0 when forwarding an Application Message regardless of how the RETAIN flag was set in the received PUBLISH packet. If the value of Retain As Published subscription option is set to 1, the Server MUST set the RETAIN flag equal to the RETAIN flag in the received PUBLISH packet</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -11992,6 +12206,17 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Retain Available Property in CONNACK. Byte 0/1 indicating whether retained messages are supported.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>A Client receiving Retain Available set to 0 from the Server MUST NOT send a PUBLISH packet with the RETAIN flag set to 1</pre>
+   </dd>
+   <dd>
+    <pre>If a Server receives a CONNECT packet containing a Will Message with the Will Retain set to 1, and it does not support retained messages, the Server MUST reject the connection request. It SHOULD send CONNACK with Reason Code 0x9A (Retain not supported) and then it MUST close the Network Connection</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -12036,6 +12261,20 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Retain Handling subscription option. Two-bit field: 0=send retained, 1=send retained only if subscription new, 2=do not send retained.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If Retain Handling is set to 0 the Server MUST send the retained messages matching the Topic Filter of the subscription to the Client</pre>
+   </dd>
+   <dd>
+    <pre>If Retain Handling is set to 1 then if the subscription did not already exist, the Server MUST send all retained message matching the Topic Filter of the subscription to the Client, and if the subscription did exist the Server MUST NOT send the retained messages.</pre>
+   </dd>
+   <dd>
+    <pre>If Retain Handling is set to 2, the Server MUST NOT send the retained messages</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -12065,6 +12304,17 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Server Keep Alive Property in CONNACK. Two Byte Integer seconds overriding the Client Keep Alive for this connection.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If the Server does not send the Server Keep Alive, the Server MUST use the Keep Alive value set by the Client on CONNECT</pre>
+   </dd>
+   <dd>
+    <pre>If the Server sends a Server Keep Alive on the CONNACK packet, the Client MUST use this value instead of the Keep Alive value the Client sent on CONNECT</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -12095,6 +12345,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Server Reference Property. UTF-8 string suggesting an alternate Server the Client may use.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Followed by a UTF-8 Encoded String which can be used by the Client to identify another Server to use.</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -12124,6 +12382,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Session Expiry Interval Property. Four Byte Integer seconds defining session lifetime after disconnect.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The Session Expiry Interval MUST NOT be sent on a DISCONNECT by the Server</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -12153,6 +12419,17 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Session Present flag in CONNACK. If 1, a prior Session exists and is resumed.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If the Server accepts a connection with Clean Start set to 0 and the Server has Session State for the ClientID, it MUST set Session Present to 1 in the CONNACK packet, otherwise it MUST set Session Present to 0 in the CONNACK packet. In both cases it MUST set a 0x00 (Success) Reason Code in the CONNACK packet</pre>
+   </dd>
+   <dd>
+    <pre>If the Server accepts a connection with Clean Start set to 1, the Server MUST set Session Present to 0 in the CONNACK packet in addition to setting a 0x00 (Success) Reason Code in the CONNACK packet</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -12183,6 +12460,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Shared Subscription Available Property in CONNACK. Byte 0/1 indicating server support for shared subscriptions.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Followed by a Byte field. If present, this byte declares whether the Server supports Shared Subscriptions. A value is 0 means that Shared Subscriptions are not supported. A value of 1 means Shared Subscriptions are supported</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -12284,6 +12569,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Subscription Identifier Property. Variable Byte Integer (value &gt; 0) identifying a subscription; returned in PUBLISH as applicable.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The Subscription Identifier can have the value of 1 to 268,435,455.</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -12313,6 +12606,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Subscription Identifier Available Property in CONNACK. Byte 0/1 indicating support for Subscription Identifiers.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If present, this byte declares whether the Server supports Subscription Identifiers. A value is 0 means that Subscription Identifiers are not supported. A value of 1 means Subscription Identifiers are supported.</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -12343,6 +12644,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Subscription Options byte for a Topic Filter in SUBSCRIBE. Encodes QoS, No Local, Retain As Published, and Retain Handling.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Bit 2 of the Subscription Options represents the No Local option. If the value is 1, Application Messages MUST NOT be forwarded to a connection with a ClientID equal to the ClientID of the publishing connection. It is a Protocol Error to set the No Local bit to 1 on a Shared Subscription</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -12372,6 +12681,20 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Topic Alias Property in PUBLISH. Two Byte Integer (non-zero) alias for Topic Name.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>A Client MUST NOT send a PUBLISH packet with a Topic Alias greater than the Topic Alias Maximum value returned by the Server in the CONNACK packet. A Client MUST accept all Topic Alias values greater than 0 and less than or equal to the Topic Alias Maximum value that it sent in the CONNECT packet</pre>
+   </dd>
+   <dd>
+    <pre>A Server MUST NOT send a PUBLISH packet with a Topic Alias greater than the Topic Alias Maximum value sent by the Client in the CONNECT packet. A Server MUST accept all Topic Alias values greater than 0 and less than or equal to the Topic Alias Maximum value that it returned in the CONNACK packet</pre>
+   </dd>
+   <dd>
+    <pre>A sender MUST NOT send a PUBLISH packet containing a Topic Alias which has the value 0</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -12402,6 +12725,17 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Topic Alias Maximum Property. Two Byte Integer indicating the maximum Topic Alias value accepted.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The Server MUST NOT send a Topic Alias in a PUBLISH packet to the Client greater than Topic Alias Maximum</pre>
+   </dd>
+   <dd>
+    <pre>Topic Alias Maximum is absent or zero, the Server MUST NOT send any Topic Aliases to the Client</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -12529,6 +12863,17 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">User Name Flag in CONNECT Flags. If 1, User Name is present in CONNECT payload.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If the User Name Flag is set to 1, a User Name MUST be present in the Payload</pre>
+   </dd>
+   <dd>
+    <pre>f the User Name Flag is set to 0, a User Name MUST NOT be present in the Payload</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -12558,6 +12903,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Wildcard Subscription Available Property in CONNACK. Byte 0/1 indicating support for wildcard topic filters.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If present, this byte declares whether the Server supports Wildcard Subscriptions. A value is 0 means that Wildcard Subscriptions are not supported. A value of 1 means Wildcard Subscriptions are supported. If not present, then Wildcard Subscriptions are supported.</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -12617,6 +12970,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Will Delay Interval Property. Four Byte Integer seconds delaying Will publication after connection loss.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If a new Network Connection to this Session is made before the Will Delay Interval has passed, the Server MUST NOT send the Will Message</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -12647,6 +13008,17 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Will Flag in CONNECT Flags. If 1, Will Properties/Topic/Payload are present.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If the Will Flag is set to 1 this indicates that a Will Message MUST be stored on the Server and associated with the Session</pre>
+   </dd>
+   <dd>
+    <pre>If the Will Flag is set to 1, the Will Properties, Will Topic, and Will Payload fields MUST be present in the Payload</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -12677,6 +13049,14 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Will Payload in CONNECT payload. Binary Data constituting the Will Message payload.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The Will Payload defines the Application Message Payload that is to be published to the Will Topic</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -12700,6 +13080,17 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Will QoS in CONNECT Flags. Two-bit field with values 0, 1, or 2 for the Will Message QoS.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If the Will Flag is set to 0, then the Will QoS MUST be set to 0 (0x00)</pre>
+   </dd>
+   <dd>
+    <pre>If the Will Flag is set to 1, the value of Will QoS can be 0 (0x00), 1 (0x01), or 2 (0x02)</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -12730,6 +13121,20 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">Will Retain in CONNECT Flags. If 1, the Will Message is published as retained.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If the Will Flag is set to 0, then Will Retain MUST be set to 0</pre>
+   </dd>
+   <dd>
+    <pre>If the Will Flag is set to 1 and Will Retain is set to 0, the Server MUST publish the Will Message as a non-retained message</pre>
+   </dd>
+   <dd>
+    <pre>If the Will Flag is set to 1 and Will Retain is set to 1, the Server MUST publish the Will Message as a retained message</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -12808,6 +13213,17 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">The MQTT Client identifier used when connecting to an MQTT Broker.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The ClientID MUST be a UTF-8 Encoded String</pre>
+   </dd>
+   <dd>
+    <pre>The ClientID MUST be used by Clients and by Servers to identify state that they hold relating to this MQTT Session between the Client and the Server</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -12981,6 +13397,20 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">A 16-bit identifier used to correlate MQTT messages when QoS &gt; 0.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>A PUBLISH packet MUST NOT contain a Packet Identifier if its QoS value is set to 0</pre>
+   </dd>
+   <dd>
+    <pre>Each time a Client sends a new SUBSCRIBE, UNSUBSCRIBE,or PUBLISH (where QoS &gt; 0) MQTT Control Packet it MUST assign it a non-zero Packet Identifier that is currently unused</pre>
+   </dd>
+   <dd>
+    <pre>Each time a Server sends a new PUBLISH (with QoS &gt; 0) MQTT Control Packet it MUST assign it a non zero Packet Identifier that is currently unused</pre>
+   </dd>
+  </dl>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
    <dl>
@@ -13096,6 +13526,17 @@ This section provides details for each class and property defined by MQTT4SSN.
   <div class="comment">
    <span class="markdown">True if the message should be retained on the MQTT Broker.</span>
   </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>If the RETAIN flag is 0 in a PUBLISH packet sent by a Client to a Server, the Server MUST NOT store the message as a retained message and MUST NOT remove or replace any existing retained message</pre>
+   </dd>
+   <dd>
+    <pre>If the RETAIN flag is set to 1 in a PUBLISH packet sent by a Client to a Server, the Server MUST replace any existing retained message for this topic and store the Application Message</pre>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
