@@ -2754,16 +2754,6 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                              rdfs:comment "Reason Code carried in a packet variable header when defined by MQTT 5.0 (one-byte reason value)."@en ;
                              rdfs:label "MQTT Reason Code in Variable Header"@en .
 
-
-###  https://www.w3id.org/MQTT4SSN-Ontology#hasWilDelayInterval
-:hasWilDelayInterval rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf :hasWillProperty ;
-                     rdfs:domain :WillProperties ;
-                     rdfs:range xsd:unsignedInt ;
-                     rdfs:comment "Will Delay Interval Property. Four Byte Integer seconds delaying Will publication after connection loss."@en ;
-                     rdfs:label "has Will Delay Interval"@en .
-
-
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasWildcardSubscriptionAvailable
 :hasWildcardSubscriptionAvailable rdf:type owl:DatatypeProperty ;
                                   rdfs:subPropertyOf :hasProperty ;
