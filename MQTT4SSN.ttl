@@ -82,6 +82,10 @@ xsd:maxInclusive rdf:type owl:AnnotationProperty .
 xsd:minInclusive rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
 ###  http://xmlns.com/foaf/0.1/fundedBy
 foaf:fundedBy rdf:type owl:AnnotationProperty .
 
@@ -1839,12 +1843,15 @@ mqv:sendsControlPacket rdf:type owl:ObjectProperty ;
 
 ###  https://www.w3.org/2019/wot/mqtt#hasDUPFlag
 mqv:hasDUPFlag rdf:type owl:DatatypeProperty ;
-               owl:equivalentProperty :hasDUPFlag .
+               owl:equivalentProperty :hasDUPFlag ;
+               skos:example "The DUP flag MUST be set to 1 by the Client or Server when it attempts to re-deliver a PUBLISH packet.  The DUP flag MUST be set to 0 for all QoS 0 messages."@en .
 
 
 ###  https://www.w3.org/2019/wot/mqtt#hasRetainFlag
 mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
-                  owl:equivalentProperty :hasRetainFlag .
+                  owl:equivalentProperty :hasRetainFlag ;
+                  skos:example "If the RETAIN flag is 0 in a PUBLISH packet sent by a Client to a Server, the Server MUST NOT store the message as a retained message and MUST NOT remove or replace any existing retained message"@en ,
+                               "If the RETAIN flag is set to 1 in a PUBLISH packet sent by a Client to a Server, the Server MUST replace any existing retained message for this topic and store the Application Message.  If the Payload contains zero bytes it is processed normally by the Server but any retained message with the same topic name MUST be removed and any future subscribers for the topic will not receive a retained message. A retained message with a Payload containing zero bytes MUST NOT be stored as a retained message on the Serve."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasAssignedClientIdentifier
@@ -1855,7 +1862,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                              rdfs:range xsd:string ;
                              rdfs:comment "Assigned Client Identifier Property. UTF-8 string assigned by the Server when the Client did not provide one."@en ;
                              rdfs:label "has Assigned Client Identifier"@en ;
-                             skos:example "If the Client connects using a zero length Client Identifier, the Server MUST respond with a CONNACK containing an Assigned Client Identifier. The Assigned Client Identifier MUST be a new Client Identifier not used by any other Session currently in the Server"@en .
+                             skos:example "If the Client connects using a zero length Client Identifier, the Server MUST respond with a CONNACK containing an Assigned Client Identifier. The Assigned Client Identifier MUST be a new Client Identifier not used by any other Session currently in the Server."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasAuthReasonCode
@@ -1914,9 +1921,9 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:boolean ;
                rdfs:comment "Clean Start flag in CONNECT Flags. 1 requests a new Session; 0 continues an existing Session if present."@en ;
                rdfs:label "has Clean Start"@en ;
-               skos:example "If a CONNECT packet is received with Clean Start is set to 1, the Client and Server MUST discard any existing Session and start a new Session"@en ,
-                            "If a CONNECT packet is received with Clean Start set to 0 and there is a Session associated with the Client Identifier, the Server MUST resume communications with the Client based on state from the existing Session"@en ,
-                            "If a CONNECT packet is received with Clean Start set to 0 and there is no Session associated with the Client Identifier, the Server MUST create a new Session"@en .
+               skos:example "If a CONNECT packet is received with Clean Start is set to 1, the Client and Server MUST discard any existing Session and start a new Session."@en ,
+                            "If a CONNECT packet is received with Clean Start set to 0 and there is a Session associated with the Client Identifier, the Server MUST resume communications with the Client based on state from the existing Session."@en ,
+                            "If a CONNECT packet is received with Clean Start set to 0 and there is no Session associated with the Client Identifier, the Server MUST create a new Session."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasClientID
@@ -1926,8 +1933,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:string ;
              rdfs:comment "The MQTT Client identifier used when connecting to an MQTT Broker."@en ;
              rdfs:label "MQTT Client identifier"@en ;
-             skos:example "The ClientID MUST be a UTF-8 Encoded String"@en ,
-                          "The ClientID MUST be used by Clients and by Servers to identify state that they hold relating to this MQTT Session between the Client and the Server"@en .
+             skos:example "The ClientID MUST be a UTF-8 Encoded String."@en ,
+                          "The ClientID MUST be used by Clients and by Servers to identify state that they hold relating to this MQTT Session between the Client and the Server."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasConnackFlag
@@ -1937,7 +1944,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                 rdfs:range xsd:boolean ;
                 rdfs:comment "CONNACK Acknowledge Flags byte. In MQTT 5.0 only Session Present (bit 0) is used; other bits are reserved."@en ;
                 rdfs:label "has Connack Flag"@en ;
-                skos:example "Byte 1 is the \"Connect Acknowledge Flags\". Bits 7-1 are reserved and MUST be set to 0"@en .
+                skos:example "Byte 1 is the \"Connect Acknowledge Flags\". Bits 7-1 are reserved and MUST be set to 0."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasConnackReasonCode
@@ -1960,8 +1967,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                 rdfs:range xsd:unsignedByte ;
                 rdfs:comment "CONNECT Flags byte encoding User Name/Password/Will/Clean Start fields; reserved bit MUST be 0."@en ;
                 rdfs:label "has Connect Flags"@en ;
-                skos:example "Bit 0 = Reserved; Bit 1 = Clean Start; Bit 2 = Will Flag; Bit 3 und 4 = Will QoS; Bit 5 = Will Retain; Bit 6 = Password Flag; Bit 7 = User Name Flag"@en ,
-                             "The Server MUST validate that the reserved flag in the CONNECT packet is set to 0"@en .
+                skos:example "Bit 0 = Reserved; Bit 1 = Clean Start; Bit 2 = Will Flag; Bit 3 und 4 = Will QoS; Bit 5 = Will Retain; Bit 6 = Password Flag; Bit 7 = User Name Flag."@en ,
+                             "The Server MUST validate that the reserved flag in the CONNECT packet is set to 0."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasContentType
@@ -1977,7 +1984,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                 rdfs:range xsd:string ;
                 rdfs:comment "Application Message content type"@en ;
                 rdfs:label "has Content Type"@en ;
-                skos:example "The Content Type MUST be a UTF-8 Encoded String"@en .
+                skos:example "3 (0x03) Byte, Identifier of the Content Type. Followed by a UTF-8 Encoded String describing the content of the Will Message. It is a Protocol Error to include the Content Type more than once. The value of the Content Type is defined by the sending and receiving application."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasControlPacketType
@@ -1990,7 +1997,23 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                                                )
                                  ] ;
                       rdfs:comment "4 bits Control Packet Type or literal of the MQTT Fixed Header, indicating the type of MQTT Control Packet (e.g., CONNECT, PUBLISH, SUBSCRIBE)."@en ;
-                      rdfs:label "MQTT Control Packet Type"@en .
+                      rdfs:label "MQTT Control Packet Type"@en ;
+                      skos:example """Reserved (0): Forbidden — Reserved
+CONNECT (1): Client to Server — Connection request
+CONNACK (2): Server to Client — Connect acknowledgment
+PUBLISH (3): Client to Server or Server to Client — Publish message
+PUBACK (4): Client to Server or Server to Client — Publish acknowledgment (QoS 1)
+PUBREC (5): Client to Server or Server to Client — Publish received (QoS 2 delivery part 1)
+PUBREL (6): Client to Server or Server to Client — Publish release (QoS 2 delivery part 2)
+PUBCOMP (7): Client to Server or Server to Client — Publish complete (QoS 2 delivery part 3)
+SUBSCRIBE (8): Client to Server — Subscribe request
+SUBACK (9): Server to Client — Subscribe acknowledgment
+UNSUBSCRIBE (10): Client to Server — Unsubscribe request
+UNSUBACK (11): Server to Client — Unsubscribe acknowledgment
+PINGREQ (12): Client to Server — PING request
+PINGRESP (13): Server to Client — PING response
+DISCONNECT (14): Client to Server or Server to Client — Disconnect notification
+AUTH (15): Client to Server or Server to Client — Authentication exchange"""@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasCorrelationData
@@ -2010,7 +2033,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                                ] ;
                     rdfs:comment "Correlation Data Property. Binary Data used to correlate requests and responses."@en ;
                     rdfs:label "has Correlation Data"@en ;
-                    skos:example "The Server MUST send the Correlation Data unaltered to all subscribers receiving the Application Message"@en .
+                    skos:example "9 (0x09) Byte, Identifier of the Correlation Data. Followed by Binary Data. The Correlation Data is used by the sender of the Request Message to identify which request the Response Message refers to when it is received. It is a Protocol Error to include Correlation Data more than once. If the Correlation Data is not present, the requester does not require any correlation data."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasDUPFlag
@@ -2020,8 +2043,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
             rdfs:range xsd:boolean ;
             rdfs:comment "True if this is a duplicate delivery of an earlier PUBLISH message."@en ;
             rdfs:label "DUP flag"@en ;
-            skos:example "The DUP flag MUST be set to 0 for all QoS 0 messages"@en ,
-                         "The DUP flag MUST be set to 1 by the Client or Server when it attempts to re-deliver a PUBLISH packet"@en .
+            skos:example "The DUP flag MUST be set to 0 for all QoS 0 messages."@en ,
+                         "The DUP flag MUST be set to 1 by the Client or Server when it attempts to re-deliver a PUBLISH packet."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasDisconnectReasonCode
@@ -2043,7 +2066,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                   rdfs:domain :TopicFilter ;
                   rdfs:range xsd:string ;
                   rdfs:comment "The MQTT Topic Filter pattern as a string (e.g., 'sensor/+/temp' or 'fabrik/zentrierung/#')."@en ;
-                  rdfs:label "MQTT Topic Filter pattern"@en .
+                  rdfs:label "MQTT Topic Filter pattern"@en ;
+                  skos:example "An MQTT topic filter used in subscriptions to match topic names. A filter pattern may include the single-level wildcard '+' and the multi-level wildcard '#'."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasFixedHeaderFlag
@@ -2052,7 +2076,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                     rdfs:range xsd:unsignedByte ;
                     rdfs:comment "Fixed Header flags nibble (bits 3..0 of byte 1). Packet-type-specific reserved/required flag pattern in MQTT 5.0."@en ;
                     rdfs:label "FixedHeader flag"@en ;
-                    skos:example "Where a flag bit is marked as “Reserved”, it is reserved for future use and MUST be set to the value listed"@en .
+                    skos:example "Where a flag bit is marked as “Reserved”, it is reserved for future use and MUST be set to the value listed."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasHostAddress
@@ -2061,7 +2085,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Broker ;
                 rdfs:range xsd:string ;
                 rdfs:comment "The hostname or IP address of an MQTT Broker."@en ;
-                rdfs:label "MQTT Broker host"@en .
+                rdfs:label "MQTT Broker host"@en ;
+                skos:example "Examples: localhost, 127.0.0.1, mqtt.example.com, 192.168.0.10"@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasKeepAlive
@@ -2071,8 +2096,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:unsignedShort ;
               rdfs:comment "Keep Alive in CONNECT variable header. Two Byte Integer seconds defining maximum time between Client Control Packets."@en ;
               rdfs:label "has Keep Alive" ;
-              skos:example "If Keep Alive is non-zero and in the absence of sending any other MQTT Control Packets, the Client MUST send a PINGREQ packet"@en ,
-                           "If the Keep Alive value is non-zero and the Server does not receive an MQTT Control Packet from the Client within one and a half times the Keep Alive time period, it MUST close the Network Connection to the Client as if the network had failed"@en .
+              skos:example "If Keep Alive is non-zero and in the absence of sending any other MQTT Control Packets, the Client MUST send a PINGREQ packet."@en ,
+                           "If the Keep Alive value is non-zero and the Server does not receive an MQTT Control Packet from the Client within one and a half times the Keep Alive time period, it MUST close the Network Connection to the Client as if the network had failed."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasMaximumPacketSize
@@ -2085,7 +2110,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                                   ] ;
                       rdfs:range xsd:unsignedInt ;
                       rdfs:comment "Maximum Packet Size Property. Four Byte Integer (non-zero) limiting maximum MQTT packet size accepted."@en ;
-                      rdfs:label "has Maximum Packet Size"@en .
+                      rdfs:label "has Maximum Packet Size"@en ;
+                      skos:example "39 (0x27) Byte, Identifier of the Maximum Packet Size. Followed by a Four Byte Integer representing the Maximum Packet Size the Client is willing to accept. If the Maximum Packet Size is not present, no limit on the packet size is imposed beyond the limitations in the protocol as a result of the remaining length encoding and the protocol header sizes."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasMaximumQoS
@@ -2096,9 +2122,9 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:unsignedByte ;
                rdfs:comment "Maximum QoS Property. Byte specifying the highest QoS level supported by the Server."@en ;
                rdfs:label "has Maximum QoS"@en ;
-               skos:example "A Server that does not support QoS 1 or QoS 2 PUBLISH packets MUST still accept SUBSCRIBE packets containing a Requested QoS of 0, 1 or 2"@en ,
-                            "If a Client receives a Maximum QoS from a Server, it MUST NOT send PUBLISH packets at a QoS level exceeding the Maximum QoS level specified"@en ,
-                            "If a Server does not support QoS 1 or QoS 2 PUBLISH packets it MUST send a Maximum QoS in the CONNACK packet specifying the highest QoS it supports"@en .
+               skos:example "A Server that does not support QoS 1 or QoS 2 PUBLISH packets MUST still accept SUBSCRIBE packets containing a Requested QoS of 0, 1 or 2."@en ,
+                            "If a Client receives a Maximum QoS from a Server, it MUST NOT send PUBLISH packets at a QoS level exceeding the Maximum QoS level specified."@en ,
+                            "If a Server does not support QoS 1 or QoS 2 PUBLISH packets it MUST send a Maximum QoS in the CONNACK packet specifying the highest QoS it supports."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasMessageContent
@@ -2106,7 +2132,17 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                    rdfs:domain :ApplicationMessage ;
                    rdfs:range xsd:string ;
                    rdfs:comment "Application message content carried by PUBLISH. Conceptual higher-level view of the PUBLISH payload."@en ;
-                   rdfs:label "has Application Message content"@en .
+                   rdfs:label "has Application Message content"@en ;
+                   skos:example """Example message content:
+- container field: data
+- encoding: UTF-8
+- content type: text/csv
+- delimiter: ;
+- fields: RFID; JobStart; JobEnd; Correction_X; Correction_Y; Correction_Z; Sensor; Actuator
+
+Example value:
+RFID;JobStart;JobEnd;Correction_X;Correction_Y;Correction_Z;Sensor;Actuator
+RFID_87A3F1;2025-12-03T09:15:02.120Z;2025-12-03T09:15:02.520Z;-0.44;-0.15;+0.10;Sensor1;Actuator1"""@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasMessageContentDelimiter
@@ -2115,7 +2151,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                             rdfs:domain :ApplicationMessage ;
                             rdfs:range xsd:string ;
                             rdfs:comment "The delimiter used to separate fields in the Application Message content."@en ;
-                            rdfs:label "Application Message content delimiter"@en .
+                            rdfs:label "Application Message content delimiter"@en ;
+                            skos:example ";"@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasMessageContentType
@@ -2125,7 +2162,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                        rdfs:range xsd:string ;
                        rdfs:comment "The MIME type of the Application Message content (e.g., 'application/json')."@en ;
                        rdfs:label "has Message Content Type"@en ;
-                       skos:example "The Content Type MUST be a UTF-8 Encoded String"@en .
+                       skos:example "The Content Type MUST be a UTF-8 Encoded String."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasMessageEncoding
@@ -2136,7 +2173,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                     rdfs:comment "The character encoding or serialization used for the Application Message (e.g., 'UTF-8', 'Base64')."@en ;
                     rdfs:label "Application Message encoding"@en ;
                     skos:example "A UTF-8 Encoded String MUST NOT include an encoding of the null character U+0000."@en ,
-                                 "The character data in a UTF-8 Encoded String MUST be well-formed UTF-8 as defined by the Unicode specification [Unicode] and restated in RFC 3629 [RFC3629]. In particular, the character data MUST NOT include encodings of code points between U+D800 and U+DFFF"@en .
+                                 "The character data in a UTF-8 Encoded String MUST be well-formed UTF-8 as defined by the Unicode specification [Unicode] and restated in RFC 3629 [RFC3629]. In particular, the character data MUST NOT include encodings of code points between U+D800 and U+DFFF."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasMessageExpiryInterval
@@ -2151,8 +2188,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                           rdfs:range xsd:unsignedInt ;
                           rdfs:comment "Message Expiry Interval Property. Four Byte Integer seconds defining PUBLISH message lifetime."@en ;
                           rdfs:label "has Message Expiry Interval"@en ;
-                          skos:example "If the Message Expiry Interval has passed and the Server has not managed to start onward delivery to a matching subscriber, then it MUST delete the copy of the message for that subscriber"@en ,
-                                       "The PUBLISH packet sent to a Client by the Server MUST contain a Message Expiry Interval set to the received value minus the time that the Application Message has been waiting in the Server"@en .
+                          skos:example "2 (0x02) Byte, Identifier of the Message Expiry Interval. Followed by the Four Byte Integer representing the Message Expiry Interval in seconds. If present, the Four Byte value is the lifetime of the Application Message in seconds. If absent, the Application Message does not expire."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasNoLocal
@@ -2160,8 +2196,10 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :hasSubscriptionOption ;
             rdfs:domain :SubscriptionEntry ;
             rdfs:range xsd:boolean ;
-            rdfs:comment "No Local subscription option. If 1, the Server MUST NOT forward messages published by this Client back to it."@en ;
-            rdfs:label "has No Local"@en .
+            rdfs:comment "Bit 2 of the Subscription Options represents the No Local option."@en ,
+                         "No Local subscription option. If 1, the Server MUST NOT forward messages published by this Client back to it."@en ;
+            rdfs:label "has No Local"@en ;
+            skos:example "If the value is 1, Application Messages MUST NOT be forwarded to a connection with a ClientID equal to the ClientID of the publishing connection."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasPacketIdentifier
@@ -2182,9 +2220,9 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                      rdfs:range xsd:unsignedShort ;
                      rdfs:comment "A 16-bit identifier used to correlate MQTT messages when QoS > 0."@en ;
                      rdfs:label "packet identifier"@en ;
-                     skos:example "A PUBLISH packet MUST NOT contain a Packet Identifier if its QoS value is set to 0"@en ,
-                                  "Each time a Client sends a new SUBSCRIBE, UNSUBSCRIBE,or PUBLISH (where QoS > 0) MQTT Control Packet it MUST assign it a non-zero Packet Identifier that is currently unused"@en ,
-                                  "Each time a Server sends a new PUBLISH (with QoS > 0) MQTT Control Packet it MUST assign it a non zero Packet Identifier that is currently unused"@en .
+                     skos:example "A PUBLISH packet MUST NOT contain a Packet Identifier if its QoS value is set to 0."@en ,
+                                  "Each time a Client sends a new SUBSCRIBE, UNSUBSCRIBE,or PUBLISH (where QoS > 0) MQTT Control Packet it MUST assign it a non-zero Packet Identifier that is currently unused."@en ,
+                                  "Each time a Server sends a new PUBLISH (with QoS > 0) MQTT Control Packet it MUST assign it a non zero Packet Identifier that is currently unused."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasPassword
@@ -2198,8 +2236,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                         ] ;
              rdfs:comment "Password field in CONNECT payload. Binary Data present only if Password Flag=1."@en ;
              rdfs:label "has Password"@en ;
-             skos:example "If the Password Flag is set to 0, a Password MUST NOT be present in the Payload"@en ,
-                          "If the Password Flag is set to 1, a Password MUST be present in the Payload"@en .
+             skos:example "If the Password Flag is set to 0, a Password MUST NOT be present in the Payload."@en ,
+                          "If the Password Flag is set to 1, a Password MUST be present in the Payload."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasPasswordFlag
@@ -2210,8 +2248,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                  rdfs:range xsd:boolean ;
                  rdfs:comment "Password Flag in CONNECT Flags. If 1, a Password field is present in the CONNECT payload."@en ;
                  rdfs:label "has Password Flag"@en ;
-                 skos:example "If the Password Flag is set to 0, a Password MUST NOT be present in the Payload"@en ,
-                              "If the Password Flag is set to 1, a Password MUST be present in the Payload"@en .
+                 skos:example "If the Password Flag is set to 0, a Password MUST NOT be present in the Payload."@en ,
+                              "If the Password Flag is set to 1, a Password MUST be present in the Payload."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasPayloadContent
@@ -2240,7 +2278,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                            rdfs:range xsd:boolean ;
                            rdfs:comment "Payload Format Indicator Property. Byte 0/1; 1 means payload is UTF-8 encoded text, 0 means unspecified binary."@en ;
                            rdfs:label "has Payload Format Indicator"@en ;
-                           skos:example "A Server MUST send the Payload Format Indicator unaltered to all subscribers receiving the Application Message"@en .
+                           skos:example "A Server MUST send the Payload Format Indicator unaltered to all subscribers receiving the Application Message."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasPayloadReasonCode
@@ -2259,7 +2297,54 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                                                )
                                  ] ;
                       rdfs:comment "Reason Code carried in a packet payload when defined by MQTT 5.0 (one-byte reason value)."@en ;
-                      rdfs:label "MQTT Reason Code in Payload"@en .
+                      rdfs:label "MQTT Reason Code in Payload"@en ;
+                      skos:example """MQTT 5 Reason Codes
+
+0 / 0x00: Success — CONNACK, PUBACK, PUBREC, PUBREL, PUBCOMP, UNSUBACK, AUTH
+0 / 0x00: Normal disconnection — DISCONNECT
+0 / 0x00: Granted QoS 0 — SUBACK
+1 / 0x01: Granted QoS 1 — SUBACK
+2 / 0x02: Granted QoS 2 — SUBACK
+4 / 0x04: Disconnect with Will Message — DISCONNECT
+16 / 0x10: No matching subscribers — PUBACK, PUBREC
+17 / 0x11: No subscription existed — UNSUBACK
+24 / 0x18: Continue authentication — AUTH
+25 / 0x19: Re-authenticate — AUTH
+128 / 0x80: Unspecified error — CONNACK, PUBACK, PUBREC, SUBACK, UNSUBACK, DISCONNECT
+129 / 0x81: Malformed Packet — CONNACK, DISCONNECT
+130 / 0x82: Protocol Error — CONNACK, DISCONNECT
+131 / 0x83: Implementation specific error — CONNACK, PUBACK, PUBREC, SUBACK, UNSUBACK, DISCONNECT
+132 / 0x84: Unsupported Protocol Version — CONNACK
+133 / 0x85: Client Identifier not valid — CONNACK
+134 / 0x86: Bad User Name or Password — CONNACK
+135 / 0x87: Not authorized — CONNACK, PUBACK, PUBREC, SUBACK, UNSUBACK, DISCONNECT
+136 / 0x88: Server unavailable — CONNACK
+137 / 0x89: Server busy — CONNACK, DISCONNECT
+138 / 0x8A: Banned — CONNACK
+139 / 0x8B: Server shutting down — DISCONNECT
+140 / 0x8C: Bad authentication method — CONNACK, DISCONNECT
+141 / 0x8D: Keep Alive timeout — DISCONNECT
+142 / 0x8E: Session taken over — DISCONNECT
+143 / 0x8F: Topic Filter invalid — SUBACK, UNSUBACK, DISCONNECT
+144 / 0x90: Topic Name invalid — CONNACK, PUBACK, PUBREC, DISCONNECT
+145 / 0x91: Packet Identifier in use — PUBACK, PUBREC, SUBACK, UNSUBACK
+146 / 0x92: Packet Identifier not found — PUBREL, PUBCOMP
+147 / 0x93: Receive Maximum exceeded — DISCONNECT
+148 / 0x94: Topic Alias invalid — DISCONNECT
+149 / 0x95: Packet too large — CONNACK, DISCONNECT
+150 / 0x96: Message rate too high — DISCONNECT
+151 / 0x97: Quota exceeded — CONNACK, PUBACK, PUBREC, SUBACK, DISCONNECT
+152 / 0x98: Administrative action — DISCONNECT
+153 / 0x99: Payload format invalid — CONNACK, PUBACK, PUBREC, DISCONNECT
+154 / 0x9A: Retain not supported — CONNACK, DISCONNECT
+155 / 0x9B: QoS not supported — CONNACK, DISCONNECT
+156 / 0x9C: Use another server — CONNACK, DISCONNECT
+157 / 0x9D: Server moved — CONNACK, DISCONNECT
+158 / 0x9E: Shared Subscriptions not supported — SUBACK, DISCONNECT
+159 / 0x9F: Connection rate exceeded — CONNACK, DISCONNECT
+160 / 0xA0: Maximum connect time — DISCONNECT
+161 / 0xA1: Subscription Identifiers not supported — SUBACK, DISCONNECT
+162 / 0xA2: Wildcard Subscriptions not supported — SUBACK, DISCONNECT"""@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasPortNumber
@@ -2268,7 +2353,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                rdfs:domain :Broker ;
                rdfs:range xsd:unsignedShort ;
                rdfs:comment "The TCP port on which an MQTT Broker listens."@en ;
-               rdfs:label "MQTT Broker port"@en .
+               rdfs:label "MQTT Broker port"@en ;
+               skos:example "TCP ports 8883 and 1883 are registered with IANA for MQTT TLS and non-TLS communication respectively."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasProperty
@@ -2292,8 +2378,13 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                                              )
                                ] ;
                    rdfs:range xsd:nonNegativeInteger ;
-                   rdfs:comment "Property Length field preceding a Properties collection. Variable Byte Integer giving total length in bytes of following properties."@en ;
-                   rdfs:label "has MQTT Property Length"@en .
+                   rdfs:comment "Property Length field preceding a Properties collection. Variable Byte Integer giving total length in bytes of following properties."@en ,
+                                "The Property Length is encoded as a Variable Byte Integer. The Property Length does not include the bytes used to encode itself, but includes the length of the Properties. If there are no properties, this MUST be indicated by including a Property Length of zero."@en ;
+                   rdfs:label "has MQTT Property Length"@en ;
+                   skos:example "The length of Properties in the DISCONNECT packet Variable Header encoded as a Variable Byte Integer. If the Remaining Length is less than 2, a value of 0 is used."@en ,
+                                "The length of the Properties in the PUBACK packet Variable Header encoded as a Variable Byte Integer. If the Remaining Length is less than 4 there is no Property Length and the value of 0 is used."@en ,
+                                "The length of the Properties in the UNSUBACK packet Variable Header encoded as a Variable Byte Integer."@en ,
+                                "The length of the Properties in the Will Properties encoded as a Variable Byte Integer."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasProtocolName
@@ -2303,7 +2394,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                  rdfs:range xsd:string ;
                  rdfs:comment "Protocol Name in CONNECT. UTF-8 string that MUST equal 'MQTT' for MQTT 5.0."@en ;
                  rdfs:label "has Protocol Name"@en ;
-                 skos:example "The protocol name MUST be the UTF-8 String \"MQTT\". If the Server does not want to accept the CONNECT, and wishes to reveal that it is an MQTT Server it MAY send a CONNACK packet with Reason Code of 0x84 (Unsupported Protocol Version), and then it MUST close the Network Connection"@en .
+                 skos:example "The protocol name MUST be the UTF-8 String \"MQTT\". If the Server does not want to accept the CONNECT, and wishes to reveal that it is an MQTT Server it MAY send a CONNACK packet with Reason Code of 0x84 (Unsupported Protocol Version), and then it MUST close the Network Connection."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasProtocolVersion
@@ -2313,7 +2404,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                     rdfs:range xsd:unsignedByte ;
                     rdfs:comment "Protocol Version in CONNECT. One-byte value that MUST be 5 for MQTT 5.0."@en ;
                     rdfs:label "has Protocol Version"@en ;
-                    skos:example "If the Protocol Version is not 5 and the Server does not want to accept the CONNECT packet, the Server MAY send a CONNACK packet with Reason Code 0x84 (Unsupported Protocol Version) and then MUST close the Network Connection"@en .
+                    skos:example "If the Protocol Version is not 5 and the Server does not want to accept the CONNECT packet, the Server MAY send a CONNACK packet with Reason Code 0x84 (Unsupported Protocol Version) and then MUST close the Network Connection."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasPubackReasonCode
@@ -2392,7 +2483,11 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                         ] ;
              rdfs:comment "Not mapped to mqv:hasQoSFlag because MQV models QoS as an object property, while mqtt:hasQosLevel is a datatype property."@en ,
                           "The MQTT Quality of Service level (0 = at most once, 1 = at least once, 2 = exactly once)."@en ;
-             rdfs:label "QoS level"@en .
+             rdfs:label "QoS level"@en ;
+             skos:example """MQTT QoS levels:
+0 — At most once
+1 — At least once
+2 — Exactly once"""@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasReasonCode
@@ -2416,7 +2511,9 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                                           xsd:unsignedByte
                                         )
                           ] ;
-               rdfs:comment "Generic MQTT Reason Code. One-byte value indicating success or the reason for failure in many packet types."@en ;
+               rdfs:comment "\"The CONNACK, PUBACK, PUBREC, PUBREL, PUBCOMP, DISCONNECT and AUTH Control Packets have a single Reason Code as part of the Variable Header. The SUBACK and UNSUBACK packets contain a list of one or more Reason Codes in the Payload."@en ,
+                            "A Reason Code is a one byte unsigned value that indicates the result of an operation. Reason Codes less than 0x80 indicate successful completion of an operation. The normal Reason Code for success is 0. Reason Code values of 0x80 or greater indicate failure."@en ,
+                            "Generic MQTT Reason Code. One-byte value indicating success or the reason for failure in many packet types."@en ;
                rdfs:label "MQTT ReasonCode"@en .
 
 
@@ -2438,7 +2535,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                  rdfs:range xsd:string ;
                  rdfs:comment "Reason String Property. UTF-8 string providing human-readable diagnostics for a Reason Code."@en ;
                  rdfs:label "has Reason String"@en ;
-                 skos:example "The sender MUST NOT send this property if it would increase the size of the PUBACK packet beyond the Maximum Packet Size specified by the receiver"@en .
+                 skos:example "The sender MUST NOT send this property if it would increase the size of the PUBACK packet beyond the Maximum Packet Size specified by the receiver."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasReceiveMaximum
@@ -2451,15 +2548,19 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                                ] ;
                    rdfs:range xsd:unsignedShort ;
                    rdfs:comment "Receive Maximum Property. Two Byte Integer (non-zero) limiting concurrent QoS 1/2 PUBLISH in-flight."@en ;
-                   rdfs:label "has Receive Maximum"@en .
+                   rdfs:label "has Receive Maximum"@en ;
+                   skos:example "33 (0x21) Byte, Identifier of the Receive Maximum. Followed by the Two Byte Integer representing the Receive Maximum value. It is a Protocol Error to include the Receive Maximum value more than once or for it to have the value 0."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasRemainingLength
 :hasRemainingLength rdf:type owl:DatatypeProperty ;
                     rdfs:domain :FixedHeader ;
                     rdfs:range xsd:byte ;
-                    rdfs:comment "This is the length of the Variable Header (plus the length of the Payload), encoded as a Variable Byte Integer."@en ;
-                    rdfs:label "Remaining Length of MQTT Control Packet "@en .
+                    rdfs:comment "The Remaining Length is a Variable Byte Integer that represents the number of bytes remaining within the current Control Packet, including data in the Variable Header and the Payload. The Remaining Length does not include the bytes used to encode the Remaining Length. The packet size is the total number of bytes in an MQTT Control Packet, this is equal to the length of the Fixed Header plus the Remaining Length."@en ,
+                                 "This is the length of the Variable Header (plus the length of the Payload), encoded as a Variable Byte Integer."@en ;
+                    rdfs:label "Remaining Length of MQTT Control Packet "@en ;
+                    skos:example "PUBACK: This is the length of the Variable Header, encoded as a Variable Byte Integer."@en ,
+                                 "PUBLISH: This is the length of Variable Header plus the length of the Payload, encoded as a Variable Byte Integer."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasRequestProblemInformation
@@ -2480,7 +2581,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                                rdfs:range xsd:boolean ;
                                rdfs:comment "Request Response Information Property in CONNECT. Byte 0/1 indicating whether the Server should return Response Information in CONNACK."@en ;
                                rdfs:label "has Request Response Information"@en ;
-                               skos:example "A value of 0 indicates that the Server MUST NOT return Response Information"@en .
+                               skos:example "A value of 0 indicates that the Server MUST NOT return Response Information."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasResponseInformation
@@ -2490,7 +2591,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                         rdfs:domain :ConnackProperties ;
                         rdfs:range xsd:string ;
                         rdfs:comment "Response Information Property. UTF-8 string providing response metadata for request/response patterns."@en ;
-                        rdfs:label "has Response Information"@en .
+                        rdfs:label "has Response Information"@en ;
+                        skos:example "25 (0x19) Byte, Identifier of the Request Response Information. Followed by a Byte with a value of either 0 or 1.  A value of 0 indicates that the Server MUST NOT return Response Information. If the value is 1 the Server MAY return Response Information in the CONNACK packet."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasRetainAsPublished
@@ -2500,7 +2602,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                       rdfs:range xsd:boolean ;
                       rdfs:comment "Retain As Published subscription option. If 1, forwarded messages keep the original RETAIN flag."@en ;
                       rdfs:label "has Retain As Published"@en ;
-                      skos:example "If the value of Retain As Published subscription option is set to 0, the Server MUST set the RETAIN flag to 0 when forwarding an Application Message regardless of how the RETAIN flag was set in the received PUBLISH packet. If the value of Retain As Published subscription option is set to 1, the Server MUST set the RETAIN flag equal to the RETAIN flag in the received PUBLISH packet"@en .
+                      skos:example "If the value of Retain As Published subscription option is set to 0, the Server MUST set the RETAIN flag to 0 when forwarding an Application Message regardless of how the RETAIN flag was set in the received PUBLISH packet. If the value of Retain As Published subscription option is set to 1, the Server MUST set the RETAIN flag equal to the RETAIN flag in the received PUBLISH packet."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasRetainAvailable
@@ -2511,8 +2613,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                     rdfs:range xsd:boolean ;
                     rdfs:comment "Retain Available Property in CONNACK. Byte 0/1 indicating whether retained messages are supported."@en ;
                     rdfs:label "has Retain Available"@en ;
-                    skos:example "A Client receiving Retain Available set to 0 from the Server MUST NOT send a PUBLISH packet with the RETAIN flag set to 1"@en ,
-                                 "If a Server receives a CONNECT packet containing a Will Message with the Will Retain set to 1, and it does not support retained messages, the Server MUST reject the connection request. It SHOULD send CONNACK with Reason Code 0x9A (Retain not supported) and then it MUST close the Network Connection"@en .
+                    skos:example "A Client receiving Retain Available set to 0 from the Server MUST NOT send a PUBLISH packet with the RETAIN flag set to 1."@en ,
+                                 "If a Server receives a CONNECT packet containing a Will Message with the Will Retain set to 1, and it does not support retained messages, the Server MUST reject the connection request. It SHOULD send CONNACK with Reason Code 0x9A (Retain not supported) and then it MUST close the Network Connection."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasRetainFlag
@@ -2522,8 +2624,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:boolean ;
                rdfs:comment "True if the message should be retained on the MQTT Broker."@en ;
                rdfs:label "RETAIN flag"@en ;
-               skos:example "If the RETAIN flag is 0 in a PUBLISH packet sent by a Client to a Server, the Server MUST NOT store the message as a retained message and MUST NOT remove or replace any existing retained message"@en ,
-                            "If the RETAIN flag is set to 1 in a PUBLISH packet sent by a Client to a Server, the Server MUST replace any existing retained message for this topic and store the Application Message"@en .
+               skos:example "If the RETAIN flag is 0 in a PUBLISH packet sent by a Client to a Server, the Server MUST NOT store the message as a retained message and MUST NOT remove or replace any existing retained message."@en ,
+                            "If the RETAIN flag is set to 1 in a PUBLISH packet sent by a Client to a Server, the Server MUST replace any existing retained message for this topic and store the Application Message."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasRetainHandling
@@ -2533,9 +2635,9 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                    rdfs:range xsd:unsignedByte ;
                    rdfs:comment "Retain Handling subscription option. Two-bit field: 0=send retained, 1=send retained only if subscription new, 2=do not send retained."@en ;
                    rdfs:label "has Retain Handling"@en ;
-                   skos:example "If Retain Handling is set to 0 the Server MUST send the retained messages matching the Topic Filter of the subscription to the Client"@en ,
+                   skos:example "If Retain Handling is set to 0 the Server MUST send the retained messages matching the Topic Filter of the subscription to the Client."@en ,
                                 "If Retain Handling is set to 1 then if the subscription did not already exist, the Server MUST send all retained message matching the Topic Filter of the subscription to the Client, and if the subscription did exist the Server MUST NOT send the retained messages."@en ,
-                                "If Retain Handling is set to 2, the Server MUST NOT send the retained messages"@en .
+                                "If Retain Handling is set to 2, the Server MUST NOT send the retained messages."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasServerKeepAlive
@@ -2546,8 +2648,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                     rdfs:range xsd:unsignedShort ;
                     rdfs:comment "Server Keep Alive Property in CONNACK. Two Byte Integer seconds overriding the Client Keep Alive for this connection."@en ;
                     rdfs:label "has Server Keep Alive"@en ;
-                    skos:example "If the Server does not send the Server Keep Alive, the Server MUST use the Keep Alive value set by the Client on CONNECT"@en ,
-                                 "If the Server sends a Server Keep Alive on the CONNACK packet, the Client MUST use this value instead of the Keep Alive value the Client sent on CONNECT"@en .
+                    skos:example "If the Server does not send the Server Keep Alive, the Server MUST use the Keep Alive value set by the Client on CONNECT."@en ,
+                                 "If the Server sends a Server Keep Alive on the CONNACK packet, the Client MUST use this value instead of the Keep Alive value the Client sent on CONNECT."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasServerReference
@@ -2576,7 +2678,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                           rdfs:range xsd:unsignedInt ;
                           rdfs:comment "Session Expiry Interval Property. Four Byte Integer seconds defining session lifetime after disconnect."@en ;
                           rdfs:label "has Session Expiry Interval"@en ;
-                          skos:example "The Session Expiry Interval MUST NOT be sent on a DISCONNECT by the Server"@en .
+                          skos:example "The Session Expiry Interval MUST NOT be sent on a DISCONNECT by the Server."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasSessionPresentFlag
@@ -2587,8 +2689,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                        rdfs:range xsd:boolean ;
                        rdfs:comment "Session Present flag in CONNACK. If 1, a prior Session exists and is resumed."@en ;
                        rdfs:label "has Session Present Flag"@en ;
-                       skos:example "If the Server accepts a connection with Clean Start set to 0 and the Server has Session State for the ClientID, it MUST set Session Present to 1 in the CONNACK packet, otherwise it MUST set Session Present to 0 in the CONNACK packet. In both cases it MUST set a 0x00 (Success) Reason Code in the CONNACK packet"@en ,
-                                    "If the Server accepts a connection with Clean Start set to 1, the Server MUST set Session Present to 0 in the CONNACK packet in addition to setting a 0x00 (Success) Reason Code in the CONNACK packet"@en .
+                       skos:example "If the Server accepts a connection with Clean Start set to 0 and the Server has Session State for the ClientID, it MUST set Session Present to 1 in the CONNACK packet, otherwise it MUST set Session Present to 0 in the CONNACK packet. In both cases it MUST set a 0x00 (Success) Reason Code in the CONNACK packet."@en ,
+                                    "If the Server accepts a connection with Clean Start set to 1, the Server MUST set Session Present to 0 in the CONNACK packet in addition to setting a 0x00 (Success) Reason Code in the CONNACK packet."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasSharedSubscriptionAvailable
@@ -2599,7 +2701,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                                 rdfs:range xsd:boolean ;
                                 rdfs:comment "Shared Subscription Available Property in CONNACK. Byte 0/1 indicating server support for shared subscriptions."@en ;
                                 rdfs:label "has Shared Subscription Available"@en ;
-                                skos:example "Followed by a Byte field. If present, this byte declares whether the Server supports Shared Subscriptions. A value is 0 means that Shared Subscriptions are not supported. A value of 1 means Shared Subscriptions are supported"@en .
+                                skos:example "Followed by a Byte field. If present, this byte declares whether the Server supports Shared Subscriptions. A value is 0 means that Shared Subscriptions are not supported. A value of 1 means Shared Subscriptions are supported."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasSubackReasonCode
@@ -2647,7 +2749,29 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                        rdfs:range xsd:unsignedByte ;
                        rdfs:comment "Subscription Options byte for a Topic Filter in SUBSCRIBE. Encodes QoS, No Local, Retain As Published, and Retain Handling."@en ;
                        rdfs:label "has Subscription Option"@en ;
-                       skos:example "Bit 2 of the Subscription Options represents the No Local option. If the value is 1, Application Messages MUST NOT be forwarded to a connection with a ClientID equal to the ClientID of the publishing connection. It is a Protocol Error to set the No Local bit to 1 on a Shared Subscription"@en .
+                       skos:example "Bits 0 and 1 of the Subscription Options represent Maximum QoS field. This gives the maximum QoS level at which the Server can send Application Messages to the Client. It is a Protocol Error if the Maximum QoS field has the value 3."@en ,
+                                    """Bits 0-1: Maximum QoS
+0 = QoS 0
+1 = QoS 1
+2 = QoS 2
+3 = Protocol Error
+
+Bit 2: No Local
+0 = Forward messages normally
+1 = Do not forward messages from the same ClientID
+
+Bit 3: Retain As Published
+0 = Forwarded messages have RETAIN set to 0
+1 = Forwarded messages keep the published RETAIN flag
+
+Bits 4-5: Retain Handling
+0 = Send retained messages at the time of subscribe
+1 = Send retained messages only if the subscription does not already exist
+2 = Do not send retained messages at subscribe
+3 = Protocol Error
+
+Bits 6-7: Reserved
+Must be 0; otherwise the SUBSCRIBE packet is malformed."""@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAlias
@@ -2662,9 +2786,9 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:unsignedShort ;
                rdfs:comment "Topic Alias Property in PUBLISH. Two Byte Integer (non-zero) alias for Topic Name."@en ;
                rdfs:label "has Topic Alias"@en ;
-               skos:example "A Client MUST NOT send a PUBLISH packet with a Topic Alias greater than the Topic Alias Maximum value returned by the Server in the CONNACK packet. A Client MUST accept all Topic Alias values greater than 0 and less than or equal to the Topic Alias Maximum value that it sent in the CONNECT packet"@en ,
-                            "A Server MUST NOT send a PUBLISH packet with a Topic Alias greater than the Topic Alias Maximum value sent by the Client in the CONNECT packet. A Server MUST accept all Topic Alias values greater than 0 and less than or equal to the Topic Alias Maximum value that it returned in the CONNACK packet"@en ,
-                            "A sender MUST NOT send a PUBLISH packet containing a Topic Alias which has the value 0"@en .
+               skos:example "A Client MUST NOT send a PUBLISH packet with a Topic Alias greater than the Topic Alias Maximum value returned by the Server in the CONNACK packet. A Client MUST accept all Topic Alias values greater than 0 and less than or equal to the Topic Alias Maximum value that it sent in the CONNECT packet."@en ,
+                            "A Server MUST NOT send a PUBLISH packet with a Topic Alias greater than the Topic Alias Maximum value sent by the Client in the CONNECT packet. A Server MUST accept all Topic Alias values greater than 0 and less than or equal to the Topic Alias Maximum value that it returned in the CONNACK packet."@en ,
+                            "A sender MUST NOT send a PUBLISH packet containing a Topic Alias which has the value 0."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasTopicAliasMaximum
@@ -2678,8 +2802,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                       rdfs:range xsd:unsignedShort ;
                       rdfs:comment "Topic Alias Maximum Property. Two Byte Integer indicating the maximum Topic Alias value accepted."@en ;
                       rdfs:label "has Topic Alias Maximum"@en ;
-                      skos:example "The Server MUST NOT send a Topic Alias in a PUBLISH packet to the Client greater than Topic Alias Maximum"@en ,
-                                   "Topic Alias Maximum is absent or zero, the Server MUST NOT send any Topic Aliases to the Client"@en .
+                      skos:example "The Server MUST NOT send a Topic Alias in a PUBLISH packet to the Client greater than Topic Alias Maximum."@en ,
+                                   "Topic Alias Maximum is absent or zero, the Server MUST NOT send any Topic Aliases to the Client."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasUnsubackReasonCode
@@ -2701,7 +2825,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
              rdfs:domain :ConnectPayload ;
              rdfs:range xsd:string ;
              rdfs:comment "User Name in CONNECT payload. UTF-8 string present only if User Name Flag=1."@en ;
-             rdfs:label "has User Name"@en .
+             rdfs:label "has User Name"@en ;
+             skos:example "The User Name MUST be a UTF-8 Encoded String."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasUserNameFlag
@@ -2711,8 +2836,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                  rdfs:range xsd:boolean ;
                  rdfs:comment "User Name Flag in CONNECT Flags. If 1, User Name is present in CONNECT payload."@en ;
                  rdfs:label "has Username Flag"@en ;
-                 skos:example "If the User Name Flag is set to 1, a User Name MUST be present in the Payload"@en ,
-                              "f the User Name Flag is set to 0, a User Name MUST NOT be present in the Payload"@en .
+                 skos:example "If the User Name Flag is set to 1, a User Name MUST be present in the Payload."@en ,
+                              "f the User Name Flag is set to 0, a User Name MUST NOT be present in the Payload."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasUserPropertyName
@@ -2752,7 +2877,55 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                                                       )
                                         ] ;
                              rdfs:comment "Reason Code carried in a packet variable header when defined by MQTT 5.0 (one-byte reason value)."@en ;
-                             rdfs:label "MQTT Reason Code in Variable Header"@en .
+                             rdfs:label "MQTT Reason Code in Variable Header"@en ;
+                             skos:example """MQTT 5 Reason Codes
+
+0 / 0x00: Success — CONNACK, PUBACK, PUBREC, PUBREL, PUBCOMP, UNSUBACK, AUTH
+0 / 0x00: Normal disconnection — DISCONNECT
+0 / 0x00: Granted QoS 0 — SUBACK
+1 / 0x01: Granted QoS 1 — SUBACK
+2 / 0x02: Granted QoS 2 — SUBACK
+4 / 0x04: Disconnect with Will Message — DISCONNECT
+16 / 0x10: No matching subscribers — PUBACK, PUBREC
+17 / 0x11: No subscription existed — UNSUBACK
+24 / 0x18: Continue authentication — AUTH
+25 / 0x19: Re-authenticate — AUTH
+128 / 0x80: Unspecified error — CONNACK, PUBACK, PUBREC, SUBACK, UNSUBACK, DISCONNECT
+129 / 0x81: Malformed Packet — CONNACK, DISCONNECT
+130 / 0x82: Protocol Error — CONNACK, DISCONNECT
+131 / 0x83: Implementation specific error — CONNACK, PUBACK, PUBREC, SUBACK, UNSUBACK, DISCONNECT
+132 / 0x84: Unsupported Protocol Version — CONNACK
+133 / 0x85: Client Identifier not valid — CONNACK
+134 / 0x86: Bad User Name or Password — CONNACK
+135 / 0x87: Not authorized — CONNACK, PUBACK, PUBREC, SUBACK, UNSUBACK, DISCONNECT
+136 / 0x88: Server unavailable — CONNACK
+137 / 0x89: Server busy — CONNACK, DISCONNECT
+138 / 0x8A: Banned — CONNACK
+139 / 0x8B: Server shutting down — DISCONNECT
+140 / 0x8C: Bad authentication method — CONNACK, DISCONNECT
+141 / 0x8D: Keep Alive timeout — DISCONNECT
+142 / 0x8E: Session taken over — DISCONNECT
+143 / 0x8F: Topic Filter invalid — SUBACK, UNSUBACK, DISCONNECT
+144 / 0x90: Topic Name invalid — CONNACK, PUBACK, PUBREC, DISCONNECT
+145 / 0x91: Packet Identifier in use — PUBACK, PUBREC, SUBACK, UNSUBACK
+146 / 0x92: Packet Identifier not found — PUBREL, PUBCOMP
+147 / 0x93: Receive Maximum exceeded — DISCONNECT
+148 / 0x94: Topic Alias invalid — DISCONNECT
+149 / 0x95: Packet too large — CONNACK, DISCONNECT
+150 / 0x96: Message rate too high — DISCONNECT
+151 / 0x97: Quota exceeded — CONNACK, PUBACK, PUBREC, SUBACK, DISCONNECT
+152 / 0x98: Administrative action — DISCONNECT
+153 / 0x99: Payload format invalid — CONNACK, PUBACK, PUBREC, DISCONNECT
+154 / 0x9A: Retain not supported — CONNACK, DISCONNECT
+155 / 0x9B: QoS not supported — CONNACK, DISCONNECT
+156 / 0x9C: Use another server — CONNACK, DISCONNECT
+157 / 0x9D: Server moved — CONNACK, DISCONNECT
+158 / 0x9E: Shared Subscriptions not supported — SUBACK, DISCONNECT
+159 / 0x9F: Connection rate exceeded — CONNACK, DISCONNECT
+160 / 0xA0: Maximum connect time — DISCONNECT
+161 / 0xA1: Subscription Identifiers not supported — SUBACK, DISCONNECT
+162 / 0xA2: Wildcard Subscriptions not supported — SUBACK, DISCONNECT"""@en .
+
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasWildcardSubscriptionAvailable
 :hasWildcardSubscriptionAvailable rdf:type owl:DatatypeProperty ;
@@ -2762,7 +2935,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                                   rdfs:range xsd:boolean ;
                                   rdfs:comment "Wildcard Subscription Available Property in CONNACK. Byte 0/1 indicating support for wildcard topic filters."@en ;
                                   rdfs:label "has Wildcard Subscription Available"@en ;
-                                  skos:example "If present, this byte declares whether the Server supports Wildcard Subscriptions. A value is 0 means that Wildcard Subscriptions are not supported. A value of 1 means Wildcard Subscriptions are supported. If not present, then Wildcard Subscriptions are supported."@en .
+                                  skos:example "If a new Network Connection to this Session is made before the Will Delay Interval has passed, the Server MUST NOT send the Will Message."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasWillDelayInterval
@@ -2784,8 +2957,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:boolean ;
              rdfs:comment "Will Flag in CONNECT Flags. If 1, Will Properties/Topic/Payload are present."@en ;
              rdfs:label "has Will Flag"@en ;
-             skos:example "If the Will Flag is set to 1 this indicates that a Will Message MUST be stored on the Server and associated with the Session"@en ,
-                          "If the Will Flag is set to 1, the Will Properties, Will Topic, and Will Payload fields MUST be present in the Payload"@en .
+             skos:example "If the Will Flag is set to 1 this indicates that a Will Message MUST be stored on the Server and associated with the Session."@en ,
+                          "If the Will Flag is set to 1, the Will Properties, Will Topic, and Will Payload fields MUST be present in the Payload."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasWillPayload
@@ -2799,7 +2972,7 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                            ] ;
                 rdfs:comment "Will Payload in CONNECT payload. Binary Data constituting the Will Message payload."@en ;
                 rdfs:label "has Will Payload"@en ;
-                skos:example "The Will Payload defines the Application Message Payload that is to be published to the Will Topic"@en .
+                skos:example "The Will Payload defines the Application Message Payload that is to be published to the Will Topic."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasWillProperty
@@ -2822,8 +2995,8 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
             rdfs:range xsd:unsignedByte ;
             rdfs:comment "Will QoS in CONNECT Flags. Two-bit field with values 0, 1, or 2 for the Will Message QoS."@en ;
             rdfs:label "has Will QoS"@en ;
-            skos:example "If the Will Flag is set to 0, then the Will QoS MUST be set to 0 (0x00)"@en ,
-                         "If the Will Flag is set to 1, the value of Will QoS can be 0 (0x00), 1 (0x01), or 2 (0x02)"@en .
+            skos:example "If the Will Flag is set to 0, then the Will QoS MUST be set to 0 (0x00)."@en ,
+                         "If the Will Flag is set to 1, the value of Will QoS can be 0 (0x00), 1 (0x01), or 2 (0x02)."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#hasWillRetain
@@ -2834,9 +3007,9 @@ mqv:hasRetainFlag rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:boolean ;
                rdfs:comment "Will Retain in CONNECT Flags. If 1, the Will Message is published as retained."@en ;
                rdfs:label "has Will Retain"@en ;
-               skos:example "If the Will Flag is set to 0, then Will Retain MUST be set to 0"@en ,
-                            "If the Will Flag is set to 1 and Will Retain is set to 0, the Server MUST publish the Will Message as a non-retained message"@en ,
-                            "If the Will Flag is set to 1 and Will Retain is set to 1, the Server MUST publish the Will Message as a retained message"@en .
+               skos:example "If the Will Flag is set to 0, then Will Retain MUST be set to 0."@en ,
+                            "If the Will Flag is set to 1 and Will Retain is set to 0, the Server MUST publish the Will Message as a non-retained message."@en ,
+                            "If the Will Flag is set to 1 and Will Retain is set to 1, the Server MUST publish the Will Message as a retained message."@en .
 
 
 ###  https://www.w3id.org/MQTT4SSN-Ontology#usesTLS
@@ -3541,10 +3714,10 @@ mqv:UNSUBSCRIBE rdf:type owl:Class ;
                                         foaf:name "Niklas Doerner" .
 
 
-[ xsd:maxInclusive "15"^^xsd:unsignedByte
+[ xsd:minInclusive "0"^^xsd:unsignedByte
 ] .
 
-[ xsd:minInclusive "0"^^xsd:unsignedByte
+[ xsd:maxInclusive "15"^^xsd:unsignedByte
  ] .
 
 #################################################################

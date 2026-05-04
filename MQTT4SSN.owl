@@ -1160,9 +1160,6 @@
         <DataProperty IRI="#hasVariableHeaderReasonCode"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasWilDelayInterval"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#hasWildcardSubscriptionAvailable"/>
     </Declaration>
     <Declaration>
@@ -1214,6 +1211,9 @@
         <AnnotationProperty abbreviatedIRI="xsd:minInclusive"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty abbreviatedIRI="foaf:fundedBy"/>
     </Declaration>
     <Declaration>
@@ -1224,360 +1224,6 @@
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:date"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="owl:maxCardinality"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:BitEncoding"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:protocolBuffersName"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:vbName"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="mqv:hasQoSFlag"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CT_FINITE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="mqv:SUBSCRIBE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#GMD_QUDT-SCHEMA"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ViewGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:BigEndian"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#graphTitle"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rdf:Statement"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://dbpedia.org/resource/Category:Units_of_angle"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="owl:Class"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:BooleanEncoding"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:hasCitation"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gMonth"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gMonthDay"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:oracleSQLName"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:cName"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:Aspect"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:hasReciprocalUnit"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:SignedIntegerEncoding"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:ansiSQLName"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gYearMonth"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:Verifiable"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#DocumentationGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://voag.linkedmodel.org/voag/CC-SHAREALIKE_3PT0-US"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:fieldCode"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:EnumeratedQuantity"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:IEEE754_1985RealEncoding"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://schema.org/affiliation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CT_UNCOUNTABLE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:DoublePrecisionEncoding"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://schema.org/name"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:ShortUnsignedIntegerEncoding"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="mqv:QualityOfService"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rdfs:Resource"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="qudt:length"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#DataGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:PartiallyOrdered"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:exactMatch"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="owl:Ontology"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://voag.linkedmodel.org/schema/voag#QUDT-SchemaCatalogEntry"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:UNSIGNED"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:SignednessType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:SinglePrecisionRealEncoding"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#isMetadataFor"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#LinkSetGraph"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="owl:minCardinality"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="qudt:pythonName"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:EnumeratedQuantity"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:AngleUnit"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://schema.org/alternateName"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CharEncoding"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#graphName"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#QUDT"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#0"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.linkedmodel.org/schema/vaem#CatalogEntry"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/dtype#GMD_DTYPE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:Signed"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ConstraintsGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:ISO8601-UTCDateTime-BasicFormat"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://schema.org/Person"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#GMD_VAEM"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:ScaleType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="mqv:PUBLISH"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CT_COUNTABLY-INFINITE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ProxyGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#SchemaGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:TotallyOrdered"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://schema.org/Organization"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#TransformsGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#CurationGraph"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="mqv:fixedHeaderFlag"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#RulesGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:CardinalityType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:OctetEncoding"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#VocabularyGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/dtype"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:StringEncodingType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:EndianType"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#website"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:Unordered"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gYear"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#FunctionsGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#MappingGraph"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#0"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#2"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://www.w3.org/2019/wot/mqtt/qualitfyOfService#1"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:SymmetricRelation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://www.vcharpenay.link/#me"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://org.semanticweb.owlapi/error#Error2"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://org.semanticweb.owlapi/error#Error1"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://org.semanticweb.owlapi/error#Error3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:hasVocabulary"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="mqv:hasVariableHeaderFlag"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ScriptGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:LittleEndian"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="qudt:bits"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:LongUnsignedIntegerEncoding"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="xsd:gDay"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#TopQuadrant"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ControllersGraph"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="mqv:UNSUBSCRIBE"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#CollectionGraph"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="xsd:pattern"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:ShortSignedIntegerEncoding"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rdfs:Class"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://schema.org/url"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="qudt:UnsignedIntegerEncoding"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rdfs:Datatype"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:Aspect"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="qudt:Verifiable"/>
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI="mqv:Client"/>
@@ -4799,10 +4445,6 @@
         <DataProperty IRI="#hasReasonCode"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#hasWilDelayInterval"/>
-        <DataProperty IRI="#hasWillProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="#hasWildcardSubscriptionAvailable"/>
         <DataProperty IRI="#hasProperty"/>
     </SubDataPropertyOf>
@@ -5300,10 +4942,6 @@
         </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasWilDelayInterval"/>
-        <Class IRI="#WillProperties"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#hasWildcardSubscriptionAvailable"/>
         <Class IRI="#ConnackProperties"/>
     </DataPropertyDomain>
@@ -5694,10 +5332,6 @@
         </DataUnionOf>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#hasWilDelayInterval"/>
-        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="#hasWildcardSubscriptionAvailable"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
@@ -5785,6 +5419,21 @@
         <AnnotationProperty abbreviatedIRI="foaf:name"/>
         <IRI>https://orcid.org/0009-0004-0088-8633</IRI>
         <Literal>Niklas Doerner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <AbbreviatedIRI>mqv:hasDUPFlag</AbbreviatedIRI>
+        <Literal xml:lang="en">The DUP flag MUST be set to 1 by the Client or Server when it attempts to re-deliver a PUBLISH packet.  The DUP flag MUST be set to 0 for all QoS 0 messages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <AbbreviatedIRI>mqv:hasRetainFlag</AbbreviatedIRI>
+        <Literal xml:lang="en">If the RETAIN flag is 0 in a PUBLISH packet sent by a Client to a Server, the Server MUST NOT store the message as a retained message and MUST NOT remove or replace any existing retained message</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <AbbreviatedIRI>mqv:hasRetainFlag</AbbreviatedIRI>
+        <Literal xml:lang="en">If the RETAIN flag is set to 1 in a PUBLISH packet sent by a Client to a Server, the Server MUST replace any existing retained message for this topic and store the Application Message.  If the Payload contains zero bytes it is processed normally by the Server but any retained message with the same topic name MUST be removed and any future subscribers for the topic will not receive a retained message. A retained message with a Payload containing zero bytes MUST NOT be stored as a retained message on the Serve.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6699,7 +6348,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasAssignedClientIdentifier</IRI>
-        <Literal xml:lang="en">If the Client connects using a zero length Client Identifier, the Server MUST respond with a CONNACK containing an Assigned Client Identifier. The Assigned Client Identifier MUST be a new Client Identifier not used by any other Session currently in the Server</Literal>
+        <Literal xml:lang="en">If the Client connects using a zero length Client Identifier, the Server MUST respond with a CONNACK containing an Assigned Client Identifier. The Assigned Client Identifier MUST be a new Client Identifier not used by any other Session currently in the Server.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6784,17 +6433,17 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasCleanStart</IRI>
-        <Literal xml:lang="en">If a CONNECT packet is received with Clean Start is set to 1, the Client and Server MUST discard any existing Session and start a new Session</Literal>
+        <Literal xml:lang="en">If a CONNECT packet is received with Clean Start is set to 1, the Client and Server MUST discard any existing Session and start a new Session.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasCleanStart</IRI>
-        <Literal xml:lang="en">If a CONNECT packet is received with Clean Start set to 0 and there is a Session associated with the Client Identifier, the Server MUST resume communications with the Client based on state from the existing Session</Literal>
+        <Literal xml:lang="en">If a CONNECT packet is received with Clean Start set to 0 and there is a Session associated with the Client Identifier, the Server MUST resume communications with the Client based on state from the existing Session.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasCleanStart</IRI>
-        <Literal xml:lang="en">If a CONNECT packet is received with Clean Start set to 0 and there is no Session associated with the Client Identifier, the Server MUST create a new Session</Literal>
+        <Literal xml:lang="en">If a CONNECT packet is received with Clean Start set to 0 and there is no Session associated with the Client Identifier, the Server MUST create a new Session.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6819,12 +6468,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasClientID</IRI>
-        <Literal xml:lang="en">The ClientID MUST be a UTF-8 Encoded String</Literal>
+        <Literal xml:lang="en">The ClientID MUST be a UTF-8 Encoded String.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasClientID</IRI>
-        <Literal xml:lang="en">The ClientID MUST be used by Clients and by Servers to identify state that they hold relating to this MQTT Session between the Client and the Server</Literal>
+        <Literal xml:lang="en">The ClientID MUST be used by Clients and by Servers to identify state that they hold relating to this MQTT Session between the Client and the Server.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6849,7 +6498,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasConnackFlag</IRI>
-        <Literal xml:lang="en">Byte 1 is the &quot;Connect Acknowledge Flags&quot;. Bits 7-1 are reserved and MUST be set to 0</Literal>
+        <Literal xml:lang="en">Byte 1 is the &quot;Connect Acknowledge Flags&quot;. Bits 7-1 are reserved and MUST be set to 0.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6904,12 +6553,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasConnectFlag</IRI>
-        <Literal xml:lang="en">Bit 0 = Reserved; Bit 1 = Clean Start; Bit 2 = Will Flag; Bit 3 und 4 = Will QoS; Bit 5 = Will Retain; Bit 6 = Password Flag; Bit 7 = User Name Flag</Literal>
+        <Literal xml:lang="en">Bit 0 = Reserved; Bit 1 = Clean Start; Bit 2 = Will Flag; Bit 3 und 4 = Will QoS; Bit 5 = Will Retain; Bit 6 = Password Flag; Bit 7 = User Name Flag.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasConnectFlag</IRI>
-        <Literal xml:lang="en">The Server MUST validate that the reserved flag in the CONNECT packet is set to 0</Literal>
+        <Literal xml:lang="en">The Server MUST validate that the reserved flag in the CONNECT packet is set to 0.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6964,7 +6613,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasContentType</IRI>
-        <Literal xml:lang="en">The Content Type MUST be a UTF-8 Encoded String</Literal>
+        <Literal xml:lang="en">3 (0x03) Byte, Identifier of the Content Type. Followed by a UTF-8 Encoded String describing the content of the Will Message. It is a Protocol Error to include the Content Type more than once. The value of the Content Type is defined by the sending and receiving application.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6975,6 +6624,26 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasControlPacketType</IRI>
         <Literal xml:lang="en">MQTT Control Packet Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasControlPacketType</IRI>
+        <Literal xml:lang="en">Reserved (0): Forbidden — Reserved
+CONNECT (1): Client to Server — Connection request
+CONNACK (2): Server to Client — Connect acknowledgment
+PUBLISH (3): Client to Server or Server to Client — Publish message
+PUBACK (4): Client to Server or Server to Client — Publish acknowledgment (QoS 1)
+PUBREC (5): Client to Server or Server to Client — Publish received (QoS 2 delivery part 1)
+PUBREL (6): Client to Server or Server to Client — Publish release (QoS 2 delivery part 2)
+PUBCOMP (7): Client to Server or Server to Client — Publish complete (QoS 2 delivery part 3)
+SUBSCRIBE (8): Client to Server — Subscribe request
+SUBACK (9): Server to Client — Subscribe acknowledgment
+UNSUBSCRIBE (10): Client to Server — Unsubscribe request
+UNSUBACK (11): Server to Client — Unsubscribe acknowledgment
+PINGREQ (12): Client to Server — PING request
+PINGRESP (13): Server to Client — PING response
+DISCONNECT (14): Client to Server or Server to Client — Disconnect notification
+AUTH (15): Client to Server or Server to Client — Authentication exchange</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6989,7 +6658,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasCorrelationData</IRI>
-        <Literal xml:lang="en">The Server MUST send the Correlation Data unaltered to all subscribers receiving the Application Message</Literal>
+        <Literal xml:lang="en">9 (0x09) Byte, Identifier of the Correlation Data. Followed by Binary Data. The Correlation Data is used by the sender of the Request Message to identify which request the Response Message refers to when it is received. It is a Protocol Error to include Correlation Data more than once. If the Correlation Data is not present, the requester does not require any correlation data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7004,12 +6673,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasDUPFlag</IRI>
-        <Literal xml:lang="en">The DUP flag MUST be set to 0 for all QoS 0 messages</Literal>
+        <Literal xml:lang="en">The DUP flag MUST be set to 0 for all QoS 0 messages.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasDUPFlag</IRI>
-        <Literal xml:lang="en">The DUP flag MUST be set to 1 by the Client or Server when it attempts to re-deliver a PUBLISH packet</Literal>
+        <Literal xml:lang="en">The DUP flag MUST be set to 1 by the Client or Server when it attempts to re-deliver a PUBLISH packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7072,6 +6741,11 @@
         <Literal xml:lang="en">MQTT Topic Filter pattern</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasFilterPattern</IRI>
+        <Literal xml:lang="en">An MQTT topic filter used in subscriptions to match topic names. A filter pattern may include the single-level wildcard &apos;+&apos; and the multi-level wildcard &apos;#&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasFixedHeader</IRI>
         <Literal xml:lang="en">Links an MQTT Control Packet to its Fixed Header.</Literal>
@@ -7094,7 +6768,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasFixedHeaderFlag</IRI>
-        <Literal xml:lang="en">Where a flag bit is marked as “Reserved”, it is reserved for future use and MUST be set to the value listed</Literal>
+        <Literal xml:lang="en">Where a flag bit is marked as “Reserved”, it is reserved for future use and MUST be set to the value listed.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7117,6 +6791,11 @@
         <Literal xml:lang="en">MQTT Broker host</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasHostAddress</IRI>
+        <Literal xml:lang="en">Examples: localhost, 127.0.0.1, mqtt.example.com, 192.168.0.10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasKeepAlive</IRI>
         <Literal xml:lang="en">Keep Alive in CONNECT variable header. Two Byte Integer seconds defining maximum time between Client Control Packets.</Literal>
@@ -7129,12 +6808,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasKeepAlive</IRI>
-        <Literal xml:lang="en">If Keep Alive is non-zero and in the absence of sending any other MQTT Control Packets, the Client MUST send a PINGREQ packet</Literal>
+        <Literal xml:lang="en">If Keep Alive is non-zero and in the absence of sending any other MQTT Control Packets, the Client MUST send a PINGREQ packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasKeepAlive</IRI>
-        <Literal xml:lang="en">If the Keep Alive value is non-zero and the Server does not receive an MQTT Control Packet from the Client within one and a half times the Keep Alive time period, it MUST close the Network Connection to the Client as if the network had failed</Literal>
+        <Literal xml:lang="en">If the Keep Alive value is non-zero and the Server does not receive an MQTT Control Packet from the Client within one and a half times the Keep Alive time period, it MUST close the Network Connection to the Client as if the network had failed.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7145,6 +6824,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasMaximumPacketSize</IRI>
         <Literal xml:lang="en">has Maximum Packet Size</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasMaximumPacketSize</IRI>
+        <Literal xml:lang="en">39 (0x27) Byte, Identifier of the Maximum Packet Size. Followed by a Four Byte Integer representing the Maximum Packet Size the Client is willing to accept. If the Maximum Packet Size is not present, no limit on the packet size is imposed beyond the limitations in the protocol as a result of the remaining length encoding and the protocol header sizes.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7159,17 +6843,17 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasMaximumQoS</IRI>
-        <Literal xml:lang="en">A Server that does not support QoS 1 or QoS 2 PUBLISH packets MUST still accept SUBSCRIBE packets containing a Requested QoS of 0, 1 or 2</Literal>
+        <Literal xml:lang="en">A Server that does not support QoS 1 or QoS 2 PUBLISH packets MUST still accept SUBSCRIBE packets containing a Requested QoS of 0, 1 or 2.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasMaximumQoS</IRI>
-        <Literal xml:lang="en">If a Client receives a Maximum QoS from a Server, it MUST NOT send PUBLISH packets at a QoS level exceeding the Maximum QoS level specified</Literal>
+        <Literal xml:lang="en">If a Client receives a Maximum QoS from a Server, it MUST NOT send PUBLISH packets at a QoS level exceeding the Maximum QoS level specified.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasMaximumQoS</IRI>
-        <Literal xml:lang="en">If a Server does not support QoS 1 or QoS 2 PUBLISH packets it MUST send a Maximum QoS in the CONNACK packet specifying the highest QoS it supports</Literal>
+        <Literal xml:lang="en">If a Server does not support QoS 1 or QoS 2 PUBLISH packets it MUST send a Maximum QoS in the CONNACK packet specifying the highest QoS it supports.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7182,6 +6866,20 @@
         <Literal xml:lang="en">has Application Message content</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasMessageContent</IRI>
+        <Literal xml:lang="en">Example message content:
+- container field: data
+- encoding: UTF-8
+- content type: text/csv
+- delimiter: ;
+- fields: RFID; JobStart; JobEnd; Correction_X; Correction_Y; Correction_Z; Sensor; Actuator
+
+Example value:
+RFID;JobStart;JobEnd;Correction_X;Correction_Y;Correction_Z;Sensor;Actuator
+RFID_87A3F1;2025-12-03T09:15:02.120Z;2025-12-03T09:15:02.520Z;-0.44;-0.15;+0.10;Sensor1;Actuator1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasMessageContentDelimiter</IRI>
         <Literal xml:lang="en">The delimiter used to separate fields in the Application Message content.</Literal>
@@ -7190,6 +6888,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasMessageContentDelimiter</IRI>
         <Literal xml:lang="en">Application Message content delimiter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasMessageContentDelimiter</IRI>
+        <Literal xml:lang="en">;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7204,7 +6907,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasMessageContentType</IRI>
-        <Literal xml:lang="en">The Content Type MUST be a UTF-8 Encoded String</Literal>
+        <Literal xml:lang="en">The Content Type MUST be a UTF-8 Encoded String.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7224,7 +6927,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasMessageEncoding</IRI>
-        <Literal xml:lang="en">The character data in a UTF-8 Encoded String MUST be well-formed UTF-8 as defined by the Unicode specification [Unicode] and restated in RFC 3629 [RFC3629]. In particular, the character data MUST NOT include encodings of code points between U+D800 and U+DFFF</Literal>
+        <Literal xml:lang="en">The character data in a UTF-8 Encoded String MUST be well-formed UTF-8 as defined by the Unicode specification [Unicode] and restated in RFC 3629 [RFC3629]. In particular, the character data MUST NOT include encodings of code points between U+D800 and U+DFFF.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7239,12 +6942,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasMessageExpiryInterval</IRI>
-        <Literal xml:lang="en">If the Message Expiry Interval has passed and the Server has not managed to start onward delivery to a matching subscriber, then it MUST delete the copy of the message for that subscriber</Literal>
+        <Literal xml:lang="en">2 (0x02) Byte, Identifier of the Message Expiry Interval. Followed by the Four Byte Integer representing the Message Expiry Interval in seconds. If present, the Four Byte value is the lifetime of the Application Message in seconds. If absent, the Application Message does not expire.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:example"/>
-        <IRI>#hasMessageExpiryInterval</IRI>
-        <Literal xml:lang="en">The PUBLISH packet sent to a Client by the Server MUST contain a Message Expiry Interval set to the received value minus the time that the Application Message has been waiting in the Server</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasNoLocal</IRI>
+        <Literal xml:lang="en">Bit 2 of the Subscription Options represents the No Local option.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7255,6 +6958,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasNoLocal</IRI>
         <Literal xml:lang="en">has No Local</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasNoLocal</IRI>
+        <Literal xml:lang="en">If the value is 1, Application Messages MUST NOT be forwarded to a connection with a ClientID equal to the ClientID of the publishing connection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7269,17 +6977,17 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasPacketIdentifier</IRI>
-        <Literal xml:lang="en">A PUBLISH packet MUST NOT contain a Packet Identifier if its QoS value is set to 0</Literal>
+        <Literal xml:lang="en">A PUBLISH packet MUST NOT contain a Packet Identifier if its QoS value is set to 0.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasPacketIdentifier</IRI>
-        <Literal xml:lang="en">Each time a Client sends a new SUBSCRIBE, UNSUBSCRIBE,or PUBLISH (where QoS &gt; 0) MQTT Control Packet it MUST assign it a non-zero Packet Identifier that is currently unused</Literal>
+        <Literal xml:lang="en">Each time a Client sends a new SUBSCRIBE, UNSUBSCRIBE,or PUBLISH (where QoS &gt; 0) MQTT Control Packet it MUST assign it a non-zero Packet Identifier that is currently unused.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasPacketIdentifier</IRI>
-        <Literal xml:lang="en">Each time a Server sends a new PUBLISH (with QoS &gt; 0) MQTT Control Packet it MUST assign it a non zero Packet Identifier that is currently unused</Literal>
+        <Literal xml:lang="en">Each time a Server sends a new PUBLISH (with QoS &gt; 0) MQTT Control Packet it MUST assign it a non zero Packet Identifier that is currently unused.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7304,12 +7012,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasPassword</IRI>
-        <Literal xml:lang="en">If the Password Flag is set to 0, a Password MUST NOT be present in the Payload</Literal>
+        <Literal xml:lang="en">If the Password Flag is set to 0, a Password MUST NOT be present in the Payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasPassword</IRI>
-        <Literal xml:lang="en">If the Password Flag is set to 1, a Password MUST be present in the Payload</Literal>
+        <Literal xml:lang="en">If the Password Flag is set to 1, a Password MUST be present in the Payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7324,12 +7032,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasPasswordFlag</IRI>
-        <Literal xml:lang="en">If the Password Flag is set to 0, a Password MUST NOT be present in the Payload</Literal>
+        <Literal xml:lang="en">If the Password Flag is set to 0, a Password MUST NOT be present in the Payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasPasswordFlag</IRI>
-        <Literal xml:lang="en">If the Password Flag is set to 1, a Password MUST be present in the Payload</Literal>
+        <Literal xml:lang="en">If the Password Flag is set to 1, a Password MUST be present in the Payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7364,7 +7072,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasPayloadFormatIndicator</IRI>
-        <Literal xml:lang="en">A Server MUST send the Payload Format Indicator unaltered to all subscribers receiving the Application Message</Literal>
+        <Literal xml:lang="en">A Server MUST send the Payload Format Indicator unaltered to all subscribers receiving the Application Message.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7375,6 +7083,57 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPayloadReasonCode</IRI>
         <Literal xml:lang="en">MQTT Reason Code in Payload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasPayloadReasonCode</IRI>
+        <Literal xml:lang="en">MQTT 5 Reason Codes
+
+0 / 0x00: Success — CONNACK, PUBACK, PUBREC, PUBREL, PUBCOMP, UNSUBACK, AUTH
+0 / 0x00: Normal disconnection — DISCONNECT
+0 / 0x00: Granted QoS 0 — SUBACK
+1 / 0x01: Granted QoS 1 — SUBACK
+2 / 0x02: Granted QoS 2 — SUBACK
+4 / 0x04: Disconnect with Will Message — DISCONNECT
+16 / 0x10: No matching subscribers — PUBACK, PUBREC
+17 / 0x11: No subscription existed — UNSUBACK
+24 / 0x18: Continue authentication — AUTH
+25 / 0x19: Re-authenticate — AUTH
+128 / 0x80: Unspecified error — CONNACK, PUBACK, PUBREC, SUBACK, UNSUBACK, DISCONNECT
+129 / 0x81: Malformed Packet — CONNACK, DISCONNECT
+130 / 0x82: Protocol Error — CONNACK, DISCONNECT
+131 / 0x83: Implementation specific error — CONNACK, PUBACK, PUBREC, SUBACK, UNSUBACK, DISCONNECT
+132 / 0x84: Unsupported Protocol Version — CONNACK
+133 / 0x85: Client Identifier not valid — CONNACK
+134 / 0x86: Bad User Name or Password — CONNACK
+135 / 0x87: Not authorized — CONNACK, PUBACK, PUBREC, SUBACK, UNSUBACK, DISCONNECT
+136 / 0x88: Server unavailable — CONNACK
+137 / 0x89: Server busy — CONNACK, DISCONNECT
+138 / 0x8A: Banned — CONNACK
+139 / 0x8B: Server shutting down — DISCONNECT
+140 / 0x8C: Bad authentication method — CONNACK, DISCONNECT
+141 / 0x8D: Keep Alive timeout — DISCONNECT
+142 / 0x8E: Session taken over — DISCONNECT
+143 / 0x8F: Topic Filter invalid — SUBACK, UNSUBACK, DISCONNECT
+144 / 0x90: Topic Name invalid — CONNACK, PUBACK, PUBREC, DISCONNECT
+145 / 0x91: Packet Identifier in use — PUBACK, PUBREC, SUBACK, UNSUBACK
+146 / 0x92: Packet Identifier not found — PUBREL, PUBCOMP
+147 / 0x93: Receive Maximum exceeded — DISCONNECT
+148 / 0x94: Topic Alias invalid — DISCONNECT
+149 / 0x95: Packet too large — CONNACK, DISCONNECT
+150 / 0x96: Message rate too high — DISCONNECT
+151 / 0x97: Quota exceeded — CONNACK, PUBACK, PUBREC, SUBACK, DISCONNECT
+152 / 0x98: Administrative action — DISCONNECT
+153 / 0x99: Payload format invalid — CONNACK, PUBACK, PUBREC, DISCONNECT
+154 / 0x9A: Retain not supported — CONNACK, DISCONNECT
+155 / 0x9B: QoS not supported — CONNACK, DISCONNECT
+156 / 0x9C: Use another server — CONNACK, DISCONNECT
+157 / 0x9D: Server moved — CONNACK, DISCONNECT
+158 / 0x9E: Shared Subscriptions not supported — SUBACK, DISCONNECT
+159 / 0x9F: Connection rate exceeded — CONNACK, DISCONNECT
+160 / 0xA0: Maximum connect time — DISCONNECT
+161 / 0xA1: Subscription Identifiers not supported — SUBACK, DISCONNECT
+162 / 0xA2: Wildcard Subscriptions not supported — SUBACK, DISCONNECT</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7417,6 +7176,11 @@
         <Literal xml:lang="en">MQTT Broker port</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasPortNumber</IRI>
+        <Literal xml:lang="en">TCP ports 8883 and 1883 are registered with IANA for MQTT TLS and non-TLS communication respectively.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasProperties</IRI>
         <Literal xml:lang="en">Links an MQTT Control Packet or higher-level message individual to its MQTT 5.0 Properties collection (variable header properties).</Literal>
@@ -7442,9 +7206,34 @@
         <Literal xml:lang="en">Property Length field preceding a Properties collection. Variable Byte Integer giving total length in bytes of following properties.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasPropertyLength</IRI>
+        <Literal xml:lang="en">The Property Length is encoded as a Variable Byte Integer. The Property Length does not include the bytes used to encode itself, but includes the length of the Properties. If there are no properties, this MUST be indicated by including a Property Length of zero.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPropertyLength</IRI>
         <Literal xml:lang="en">has MQTT Property Length</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasPropertyLength</IRI>
+        <Literal xml:lang="en">The length of Properties in the DISCONNECT packet Variable Header encoded as a Variable Byte Integer. If the Remaining Length is less than 2, a value of 0 is used.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasPropertyLength</IRI>
+        <Literal xml:lang="en">The length of the Properties in the PUBACK packet Variable Header encoded as a Variable Byte Integer. If the Remaining Length is less than 4 there is no Property Length and the value of 0 is used.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasPropertyLength</IRI>
+        <Literal xml:lang="en">The length of the Properties in the UNSUBACK packet Variable Header encoded as a Variable Byte Integer.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasPropertyLength</IRI>
+        <Literal xml:lang="en">The length of the Properties in the Will Properties encoded as a Variable Byte Integer.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7469,7 +7258,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasProtocolName</IRI>
-        <Literal xml:lang="en">The protocol name MUST be the UTF-8 String &quot;MQTT&quot;. If the Server does not want to accept the CONNECT, and wishes to reveal that it is an MQTT Server it MAY send a CONNACK packet with Reason Code of 0x84 (Unsupported Protocol Version), and then it MUST close the Network Connection</Literal>
+        <Literal xml:lang="en">The protocol name MUST be the UTF-8 String &quot;MQTT&quot;. If the Server does not want to accept the CONNECT, and wishes to reveal that it is an MQTT Server it MAY send a CONNACK packet with Reason Code of 0x84 (Unsupported Protocol Version), and then it MUST close the Network Connection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7484,7 +7273,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasProtocolVersion</IRI>
-        <Literal xml:lang="en">If the Protocol Version is not 5 and the Server does not want to accept the CONNECT packet, the Server MAY send a CONNACK packet with Reason Code 0x84 (Unsupported Protocol Version) and then MUST close the Network Connection</Literal>
+        <Literal xml:lang="en">If the Protocol Version is not 5 and the Server does not want to accept the CONNECT packet, the Server MAY send a CONNACK packet with Reason Code 0x84 (Unsupported Protocol Version) and then MUST close the Network Connection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7702,6 +7491,24 @@
         <Literal xml:lang="en">QoS level</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasQoSLevel</IRI>
+        <Literal xml:lang="en">MQTT QoS levels:
+0 — At most once
+1 — At least once
+2 — Exactly once</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasReasonCode</IRI>
+        <Literal xml:lang="en">&quot;The CONNACK, PUBACK, PUBREC, PUBREL, PUBCOMP, DISCONNECT and AUTH Control Packets have a single Reason Code as part of the Variable Header. The SUBACK and UNSUBACK packets contain a list of one or more Reason Codes in the Payload.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasReasonCode</IRI>
+        <Literal xml:lang="en">A Reason Code is a one byte unsigned value that indicates the result of an operation. Reason Codes less than 0x80 indicate successful completion of an operation. The normal Reason Code for success is 0. Reason Code values of 0x80 or greater indicate failure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasReasonCode</IRI>
         <Literal xml:lang="en">Generic MQTT Reason Code. One-byte value indicating success or the reason for failure in many packet types.</Literal>
@@ -7724,7 +7531,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasReasonString</IRI>
-        <Literal xml:lang="en">The sender MUST NOT send this property if it would increase the size of the PUBACK packet beyond the Maximum Packet Size specified by the receiver</Literal>
+        <Literal xml:lang="en">The sender MUST NOT send this property if it would increase the size of the PUBACK packet beyond the Maximum Packet Size specified by the receiver.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7737,6 +7544,16 @@
         <Literal xml:lang="en">has Receive Maximum</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasReceiveMaximum</IRI>
+        <Literal xml:lang="en">33 (0x21) Byte, Identifier of the Receive Maximum. Followed by the Two Byte Integer representing the Receive Maximum value. It is a Protocol Error to include the Receive Maximum value more than once or for it to have the value 0.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasRemainingLength</IRI>
+        <Literal xml:lang="en">The Remaining Length is a Variable Byte Integer that represents the number of bytes remaining within the current Control Packet, including data in the Variable Header and the Payload. The Remaining Length does not include the bytes used to encode the Remaining Length. The packet size is the total number of bytes in an MQTT Control Packet, this is equal to the length of the Fixed Header plus the Remaining Length.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasRemainingLength</IRI>
         <Literal xml:lang="en">This is the length of the Variable Header (plus the length of the Payload), encoded as a Variable Byte Integer.</Literal>
@@ -7745,6 +7562,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRemainingLength</IRI>
         <Literal xml:lang="en">Remaining Length of MQTT Control Packet </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasRemainingLength</IRI>
+        <Literal xml:lang="en">PUBACK: This is the length of the Variable Header, encoded as a Variable Byte Integer.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasRemainingLength</IRI>
+        <Literal xml:lang="en">PUBLISH: This is the length of Variable Header plus the length of the Payload, encoded as a Variable Byte Integer.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7769,7 +7596,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasRequestResponseInformation</IRI>
-        <Literal xml:lang="en">A value of 0 indicates that the Server MUST NOT return Response Information</Literal>
+        <Literal xml:lang="en">A value of 0 indicates that the Server MUST NOT return Response Information.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7780,6 +7607,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasResponseInformation</IRI>
         <Literal xml:lang="en">has Response Information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasResponseInformation</IRI>
+        <Literal xml:lang="en">25 (0x19) Byte, Identifier of the Request Response Information. Followed by a Byte with a value of either 0 or 1.  A value of 0 indicates that the Server MUST NOT return Response Information. If the value is 1 the Server MAY return Response Information in the CONNACK packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7804,7 +7636,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasRetainAsPublished</IRI>
-        <Literal xml:lang="en">If the value of Retain As Published subscription option is set to 0, the Server MUST set the RETAIN flag to 0 when forwarding an Application Message regardless of how the RETAIN flag was set in the received PUBLISH packet. If the value of Retain As Published subscription option is set to 1, the Server MUST set the RETAIN flag equal to the RETAIN flag in the received PUBLISH packet</Literal>
+        <Literal xml:lang="en">If the value of Retain As Published subscription option is set to 0, the Server MUST set the RETAIN flag to 0 when forwarding an Application Message regardless of how the RETAIN flag was set in the received PUBLISH packet. If the value of Retain As Published subscription option is set to 1, the Server MUST set the RETAIN flag equal to the RETAIN flag in the received PUBLISH packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7819,12 +7651,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasRetainAvailable</IRI>
-        <Literal xml:lang="en">A Client receiving Retain Available set to 0 from the Server MUST NOT send a PUBLISH packet with the RETAIN flag set to 1</Literal>
+        <Literal xml:lang="en">A Client receiving Retain Available set to 0 from the Server MUST NOT send a PUBLISH packet with the RETAIN flag set to 1.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasRetainAvailable</IRI>
-        <Literal xml:lang="en">If a Server receives a CONNECT packet containing a Will Message with the Will Retain set to 1, and it does not support retained messages, the Server MUST reject the connection request. It SHOULD send CONNACK with Reason Code 0x9A (Retain not supported) and then it MUST close the Network Connection</Literal>
+        <Literal xml:lang="en">If a Server receives a CONNECT packet containing a Will Message with the Will Retain set to 1, and it does not support retained messages, the Server MUST reject the connection request. It SHOULD send CONNACK with Reason Code 0x9A (Retain not supported) and then it MUST close the Network Connection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7839,12 +7671,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasRetainFlag</IRI>
-        <Literal xml:lang="en">If the RETAIN flag is 0 in a PUBLISH packet sent by a Client to a Server, the Server MUST NOT store the message as a retained message and MUST NOT remove or replace any existing retained message</Literal>
+        <Literal xml:lang="en">If the RETAIN flag is 0 in a PUBLISH packet sent by a Client to a Server, the Server MUST NOT store the message as a retained message and MUST NOT remove or replace any existing retained message.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasRetainFlag</IRI>
-        <Literal xml:lang="en">If the RETAIN flag is set to 1 in a PUBLISH packet sent by a Client to a Server, the Server MUST replace any existing retained message for this topic and store the Application Message</Literal>
+        <Literal xml:lang="en">If the RETAIN flag is set to 1 in a PUBLISH packet sent by a Client to a Server, the Server MUST replace any existing retained message for this topic and store the Application Message.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7859,7 +7691,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasRetainHandling</IRI>
-        <Literal xml:lang="en">If Retain Handling is set to 0 the Server MUST send the retained messages matching the Topic Filter of the subscription to the Client</Literal>
+        <Literal xml:lang="en">If Retain Handling is set to 0 the Server MUST send the retained messages matching the Topic Filter of the subscription to the Client.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
@@ -7869,7 +7701,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasRetainHandling</IRI>
-        <Literal xml:lang="en">If Retain Handling is set to 2, the Server MUST NOT send the retained messages</Literal>
+        <Literal xml:lang="en">If Retain Handling is set to 2, the Server MUST NOT send the retained messages.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7884,12 +7716,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasServerKeepAlive</IRI>
-        <Literal xml:lang="en">If the Server does not send the Server Keep Alive, the Server MUST use the Keep Alive value set by the Client on CONNECT</Literal>
+        <Literal xml:lang="en">If the Server does not send the Server Keep Alive, the Server MUST use the Keep Alive value set by the Client on CONNECT.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasServerKeepAlive</IRI>
-        <Literal xml:lang="en">If the Server sends a Server Keep Alive on the CONNACK packet, the Client MUST use this value instead of the Keep Alive value the Client sent on CONNECT</Literal>
+        <Literal xml:lang="en">If the Server sends a Server Keep Alive on the CONNACK packet, the Client MUST use this value instead of the Keep Alive value the Client sent on CONNECT.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7919,7 +7751,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasSessionExpiryInterval</IRI>
-        <Literal xml:lang="en">The Session Expiry Interval MUST NOT be sent on a DISCONNECT by the Server</Literal>
+        <Literal xml:lang="en">The Session Expiry Interval MUST NOT be sent on a DISCONNECT by the Server.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7934,12 +7766,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasSessionPresentFlag</IRI>
-        <Literal xml:lang="en">If the Server accepts a connection with Clean Start set to 0 and the Server has Session State for the ClientID, it MUST set Session Present to 1 in the CONNACK packet, otherwise it MUST set Session Present to 0 in the CONNACK packet. In both cases it MUST set a 0x00 (Success) Reason Code in the CONNACK packet</Literal>
+        <Literal xml:lang="en">If the Server accepts a connection with Clean Start set to 0 and the Server has Session State for the ClientID, it MUST set Session Present to 1 in the CONNACK packet, otherwise it MUST set Session Present to 0 in the CONNACK packet. In both cases it MUST set a 0x00 (Success) Reason Code in the CONNACK packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasSessionPresentFlag</IRI>
-        <Literal xml:lang="en">If the Server accepts a connection with Clean Start set to 1, the Server MUST set Session Present to 0 in the CONNACK packet in addition to setting a 0x00 (Success) Reason Code in the CONNACK packet</Literal>
+        <Literal xml:lang="en">If the Server accepts a connection with Clean Start set to 1, the Server MUST set Session Present to 0 in the CONNACK packet in addition to setting a 0x00 (Success) Reason Code in the CONNACK packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7954,7 +7786,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasSharedSubscriptionAvailable</IRI>
-        <Literal xml:lang="en">Followed by a Byte field. If present, this byte declares whether the Server supports Shared Subscriptions. A value is 0 means that Shared Subscriptions are not supported. A value of 1 means Shared Subscriptions are supported</Literal>
+        <Literal xml:lang="en">Followed by a Byte field. If present, this byte declares whether the Server supports Shared Subscriptions. A value is 0 means that Shared Subscriptions are not supported. A value of 1 means Shared Subscriptions are supported.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8099,7 +7931,33 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasSubscriptionOption</IRI>
-        <Literal xml:lang="en">Bit 2 of the Subscription Options represents the No Local option. If the value is 1, Application Messages MUST NOT be forwarded to a connection with a ClientID equal to the ClientID of the publishing connection. It is a Protocol Error to set the No Local bit to 1 on a Shared Subscription</Literal>
+        <Literal xml:lang="en">Bits 0 and 1 of the Subscription Options represent Maximum QoS field. This gives the maximum QoS level at which the Server can send Application Messages to the Client. It is a Protocol Error if the Maximum QoS field has the value 3.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasSubscriptionOption</IRI>
+        <Literal xml:lang="en">Bits 0-1: Maximum QoS
+0 = QoS 0
+1 = QoS 1
+2 = QoS 2
+3 = Protocol Error
+
+Bit 2: No Local
+0 = Forward messages normally
+1 = Do not forward messages from the same ClientID
+
+Bit 3: Retain As Published
+0 = Forwarded messages have RETAIN set to 0
+1 = Forwarded messages keep the published RETAIN flag
+
+Bits 4-5: Retain Handling
+0 = Send retained messages at the time of subscribe
+1 = Send retained messages only if the subscription does not already exist
+2 = Do not send retained messages at subscribe
+3 = Protocol Error
+
+Bits 6-7: Reserved
+Must be 0; otherwise the SUBSCRIBE packet is malformed.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8124,17 +7982,17 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasTopicAlias</IRI>
-        <Literal xml:lang="en">A Client MUST NOT send a PUBLISH packet with a Topic Alias greater than the Topic Alias Maximum value returned by the Server in the CONNACK packet. A Client MUST accept all Topic Alias values greater than 0 and less than or equal to the Topic Alias Maximum value that it sent in the CONNECT packet</Literal>
+        <Literal xml:lang="en">A Client MUST NOT send a PUBLISH packet with a Topic Alias greater than the Topic Alias Maximum value returned by the Server in the CONNACK packet. A Client MUST accept all Topic Alias values greater than 0 and less than or equal to the Topic Alias Maximum value that it sent in the CONNECT packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasTopicAlias</IRI>
-        <Literal xml:lang="en">A Server MUST NOT send a PUBLISH packet with a Topic Alias greater than the Topic Alias Maximum value sent by the Client in the CONNECT packet. A Server MUST accept all Topic Alias values greater than 0 and less than or equal to the Topic Alias Maximum value that it returned in the CONNACK packet</Literal>
+        <Literal xml:lang="en">A Server MUST NOT send a PUBLISH packet with a Topic Alias greater than the Topic Alias Maximum value sent by the Client in the CONNECT packet. A Server MUST accept all Topic Alias values greater than 0 and less than or equal to the Topic Alias Maximum value that it returned in the CONNACK packet.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasTopicAlias</IRI>
-        <Literal xml:lang="en">A sender MUST NOT send a PUBLISH packet containing a Topic Alias which has the value 0</Literal>
+        <Literal xml:lang="en">A sender MUST NOT send a PUBLISH packet containing a Topic Alias which has the value 0.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8149,12 +8007,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasTopicAliasMaximum</IRI>
-        <Literal xml:lang="en">The Server MUST NOT send a Topic Alias in a PUBLISH packet to the Client greater than Topic Alias Maximum</Literal>
+        <Literal xml:lang="en">The Server MUST NOT send a Topic Alias in a PUBLISH packet to the Client greater than Topic Alias Maximum.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasTopicAliasMaximum</IRI>
-        <Literal xml:lang="en">Topic Alias Maximum is absent or zero, the Server MUST NOT send any Topic Aliases to the Client</Literal>
+        <Literal xml:lang="en">Topic Alias Maximum is absent or zero, the Server MUST NOT send any Topic Aliases to the Client.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8277,6 +8135,11 @@
         <Literal xml:lang="en">has User Name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasUserName</IRI>
+        <Literal xml:lang="en">The User Name MUST be a UTF-8 Encoded String.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasUserNameFlag</IRI>
         <Literal xml:lang="en">User Name Flag in CONNECT Flags. If 1, User Name is present in CONNECT payload.</Literal>
@@ -8289,12 +8152,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasUserNameFlag</IRI>
-        <Literal xml:lang="en">If the User Name Flag is set to 1, a User Name MUST be present in the Payload</Literal>
+        <Literal xml:lang="en">If the User Name Flag is set to 1, a User Name MUST be present in the Payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasUserNameFlag</IRI>
-        <Literal xml:lang="en">f the User Name Flag is set to 0, a User Name MUST NOT be present in the Payload</Literal>
+        <Literal xml:lang="en">f the User Name Flag is set to 0, a User Name MUST NOT be present in the Payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8347,14 +8210,55 @@
         <Literal xml:lang="en">MQTT Reason Code in Variable Header</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasWilDelayInterval</IRI>
-        <Literal xml:lang="en">Will Delay Interval Property. Four Byte Integer seconds delaying Will publication after connection loss.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasWilDelayInterval</IRI>
-        <Literal xml:lang="en">has Will Delay Interval</Literal>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasVariableHeaderReasonCode</IRI>
+        <Literal xml:lang="en">MQTT 5 Reason Codes
+
+0 / 0x00: Success — CONNACK, PUBACK, PUBREC, PUBREL, PUBCOMP, UNSUBACK, AUTH
+0 / 0x00: Normal disconnection — DISCONNECT
+0 / 0x00: Granted QoS 0 — SUBACK
+1 / 0x01: Granted QoS 1 — SUBACK
+2 / 0x02: Granted QoS 2 — SUBACK
+4 / 0x04: Disconnect with Will Message — DISCONNECT
+16 / 0x10: No matching subscribers — PUBACK, PUBREC
+17 / 0x11: No subscription existed — UNSUBACK
+24 / 0x18: Continue authentication — AUTH
+25 / 0x19: Re-authenticate — AUTH
+128 / 0x80: Unspecified error — CONNACK, PUBACK, PUBREC, SUBACK, UNSUBACK, DISCONNECT
+129 / 0x81: Malformed Packet — CONNACK, DISCONNECT
+130 / 0x82: Protocol Error — CONNACK, DISCONNECT
+131 / 0x83: Implementation specific error — CONNACK, PUBACK, PUBREC, SUBACK, UNSUBACK, DISCONNECT
+132 / 0x84: Unsupported Protocol Version — CONNACK
+133 / 0x85: Client Identifier not valid — CONNACK
+134 / 0x86: Bad User Name or Password — CONNACK
+135 / 0x87: Not authorized — CONNACK, PUBACK, PUBREC, SUBACK, UNSUBACK, DISCONNECT
+136 / 0x88: Server unavailable — CONNACK
+137 / 0x89: Server busy — CONNACK, DISCONNECT
+138 / 0x8A: Banned — CONNACK
+139 / 0x8B: Server shutting down — DISCONNECT
+140 / 0x8C: Bad authentication method — CONNACK, DISCONNECT
+141 / 0x8D: Keep Alive timeout — DISCONNECT
+142 / 0x8E: Session taken over — DISCONNECT
+143 / 0x8F: Topic Filter invalid — SUBACK, UNSUBACK, DISCONNECT
+144 / 0x90: Topic Name invalid — CONNACK, PUBACK, PUBREC, DISCONNECT
+145 / 0x91: Packet Identifier in use — PUBACK, PUBREC, SUBACK, UNSUBACK
+146 / 0x92: Packet Identifier not found — PUBREL, PUBCOMP
+147 / 0x93: Receive Maximum exceeded — DISCONNECT
+148 / 0x94: Topic Alias invalid — DISCONNECT
+149 / 0x95: Packet too large — CONNACK, DISCONNECT
+150 / 0x96: Message rate too high — DISCONNECT
+151 / 0x97: Quota exceeded — CONNACK, PUBACK, PUBREC, SUBACK, DISCONNECT
+152 / 0x98: Administrative action — DISCONNECT
+153 / 0x99: Payload format invalid — CONNACK, PUBACK, PUBREC, DISCONNECT
+154 / 0x9A: Retain not supported — CONNACK, DISCONNECT
+155 / 0x9B: QoS not supported — CONNACK, DISCONNECT
+156 / 0x9C: Use another server — CONNACK, DISCONNECT
+157 / 0x9D: Server moved — CONNACK, DISCONNECT
+158 / 0x9E: Shared Subscriptions not supported — SUBACK, DISCONNECT
+159 / 0x9F: Connection rate exceeded — CONNACK, DISCONNECT
+160 / 0xA0: Maximum connect time — DISCONNECT
+161 / 0xA1: Subscription Identifiers not supported — SUBACK, DISCONNECT
+162 / 0xA2: Wildcard Subscriptions not supported — SUBACK, DISCONNECT</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8369,7 +8273,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasWildcardSubscriptionAvailable</IRI>
-        <Literal xml:lang="en">If present, this byte declares whether the Server supports Wildcard Subscriptions. A value is 0 means that Wildcard Subscriptions are not supported. A value of 1 means Wildcard Subscriptions are supported. If not present, then Wildcard Subscriptions are supported.</Literal>
+        <Literal xml:lang="en">If a new Network Connection to this Session is made before the Will Delay Interval has passed, the Server MUST NOT send the Will Message.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8399,12 +8303,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasWillFlag</IRI>
-        <Literal xml:lang="en">If the Will Flag is set to 1 this indicates that a Will Message MUST be stored on the Server and associated with the Session</Literal>
+        <Literal xml:lang="en">If the Will Flag is set to 1 this indicates that a Will Message MUST be stored on the Server and associated with the Session.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasWillFlag</IRI>
-        <Literal xml:lang="en">If the Will Flag is set to 1, the Will Properties, Will Topic, and Will Payload fields MUST be present in the Payload</Literal>
+        <Literal xml:lang="en">If the Will Flag is set to 1, the Will Properties, Will Topic, and Will Payload fields MUST be present in the Payload.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8419,7 +8323,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasWillPayload</IRI>
-        <Literal xml:lang="en">The Will Payload defines the Application Message Payload that is to be published to the Will Topic</Literal>
+        <Literal xml:lang="en">The Will Payload defines the Application Message Payload that is to be published to the Will Topic.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8454,12 +8358,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasWillQoS</IRI>
-        <Literal xml:lang="en">If the Will Flag is set to 0, then the Will QoS MUST be set to 0 (0x00)</Literal>
+        <Literal xml:lang="en">If the Will Flag is set to 0, then the Will QoS MUST be set to 0 (0x00).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasWillQoS</IRI>
-        <Literal xml:lang="en">If the Will Flag is set to 1, the value of Will QoS can be 0 (0x00), 1 (0x01), or 2 (0x02)</Literal>
+        <Literal xml:lang="en">If the Will Flag is set to 1, the value of Will QoS can be 0 (0x00), 1 (0x01), or 2 (0x02).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8474,17 +8378,17 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasWillRetain</IRI>
-        <Literal xml:lang="en">If the Will Flag is set to 0, then Will Retain MUST be set to 0</Literal>
+        <Literal xml:lang="en">If the Will Flag is set to 0, then Will Retain MUST be set to 0.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasWillRetain</IRI>
-        <Literal xml:lang="en">If the Will Flag is set to 1 and Will Retain is set to 0, the Server MUST publish the Will Message as a non-retained message</Literal>
+        <Literal xml:lang="en">If the Will Flag is set to 1 and Will Retain is set to 0, the Server MUST publish the Will Message as a non-retained message.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:example"/>
         <IRI>#hasWillRetain</IRI>
-        <Literal xml:lang="en">If the Will Flag is set to 1 and Will Retain is set to 1, the Server MUST publish the Will Message as a retained message</Literal>
+        <Literal xml:lang="en">If the Will Flag is set to 1 and Will Retain is set to 1, the Server MUST publish the Will Message as a retained message.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -9417,14 +9321,14 @@
         <Literal xml:lang="en">uses TLS</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="xsd:maxInclusive"/>
-        <AnonymousIndividual nodeID="_:genid2147484046"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">15</Literal>
+        <AnnotationProperty abbreviatedIRI="xsd:minInclusive"/>
+        <AnonymousIndividual nodeID="_:genid2147484296"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">0</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="xsd:minInclusive"/>
-        <AnonymousIndividual nodeID="_:genid2147484047"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">0</Literal>
+        <AnnotationProperty abbreviatedIRI="xsd:maxInclusive"/>
+        <AnonymousIndividual nodeID="_:genid2147484297"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedByte">15</Literal>
     </AnnotationAssertion>
 </Ontology>
 
