@@ -2486,7 +2486,6 @@
 
     <owl:DatatypeProperty rdf:about="https://www.w3.org/2019/wot/mqtt#hasDUPFlag">
         <owl:equivalentProperty rdf:resource="https://www.w3id.org/MQTT4SSN-Ontology#hasDUPFlag"/>
-        <skos:example xml:lang="en">The DUP flag MUST be set to 1 by the Client or Server when it attempts to re-deliver a PUBLISH packet.  The DUP flag MUST be set to 0 for all QoS 0 messages.</skos:example>
     </owl:DatatypeProperty>
     
 
@@ -2495,8 +2494,6 @@
 
     <owl:DatatypeProperty rdf:about="https://www.w3.org/2019/wot/mqtt#hasRetainFlag">
         <owl:equivalentProperty rdf:resource="https://www.w3id.org/MQTT4SSN-Ontology#hasRetainFlag"/>
-        <skos:example xml:lang="en">If the RETAIN flag is 0 in a PUBLISH packet sent by a Client to a Server, the Server MUST NOT store the message as a retained message and MUST NOT remove or replace any existing retained message</skos:example>
-        <skos:example xml:lang="en">If the RETAIN flag is set to 1 in a PUBLISH packet sent by a Client to a Server, the Server MUST replace any existing retained message for this topic and store the Application Message.  If the Payload contains zero bytes it is processed normally by the Server but any retained message with the same topic name MUST be removed and any future subscribers for the topic will not receive a retained message. A retained message with a Payload containing zero bytes MUST NOT be stored as a retained message on the Serve.</skos:example>
     </owl:DatatypeProperty>
     
 
