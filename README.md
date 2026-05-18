@@ -48,7 +48,7 @@ If you are using a BiBTex-file, you can copy the following:
   url       = {https://ceur-ws.org/Vol-4093/paper7.pdf}
 }
 ```
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16704302.svg)](https://doi.org/10.5281/zenodo.16704302)
+[![DOI](https://img.shields.io/badge/DOI-https://zenodo.org/badge/DOI/10.5281/zenodo.16704302/-blue.svg)](https://doi.org/10.5281/zenodo.16704302)
 
 ## License
 All resources are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.
