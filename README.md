@@ -26,6 +26,10 @@ An Ontology Specification Draft was automatically generated with the help of the
 ## How to cite
 If you want to use this ontology in your own research, please cite as:
 ```
+Doerner, N., & Maleshkova, M. (2026). MQTT4SSN v2.0. Zenodo. https://doi.org/10.5281/zenodo.16704302
+```
+and
+```
 Doerner, N., & Maleshkova, M. (2025). MQTT4SSN: An Ontology for the MQTT Message Protocol. In F. Novakazi & A. S. Dalal (Eds.), Joint Proceedings of the 16th Workshop on Ontology Design and Patterns (WOP 2025) and the 1st Workshop on Bridging Hybrid Intelligence and the Semantic Web (HAIBRIDGE 2025), co-located with ISWC 2025 (CEUR Workshop Proceedings, Vol. 4093, pp. 57–70). CEUR-WS.org. https://doi.org/10.24405/22121
 ```
 and
@@ -33,6 +37,20 @@ and
 Doerner, N., & Maleshkova, M. (2026). From Opaque Streams to Explainable Systems: Semantic MQTT Integration at the Edge. Future Internet, 18(7), 334. https://doi.org/10.3390/fi18070334
 ```
 If you are using a BiBTex-file, you can copy the following:
+```
+@software{DoernerMaleshkova2026MQTT4SSN,
+  author       = {Dörner, Niklas and
+                  Maleshkova, Maria},
+  title        = {MQTT4SSN v2.0},
+  month        = may,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {v2.0-pre},
+  doi          = {10.5281/zenodo.16704302},
+  url          = {https://doi.org/10.5281/zenodo.16704302},
+}
+```
+and
 ```
 @inproceedings{DoernerMaleshkova2025MQTT4SSN,
   author    = {Niklas Doerner and Maria Maleshkova},
@@ -54,17 +72,18 @@ If you are using a BiBTex-file, you can copy the following:
 ```
 and
 ```
-@article{DoernerMaleshkova2026MQTT4SSN,
-author         = {Doerner, Niklas and Maleshkova, Maria},
-title          = {From Opaque Streams to Explainable Systems: Semantic MQTT Integration at the Edge},
-journal        = {Future Internet},
-volume         = {18},
-year           = {2026},
-number         = {7},
-article-number = {334},
-url            = {https://www.mdpi.com/1999-5903/18/7/334},
-ISSN           = {1999-5903},
-DOI            = {10.3390/fi18070334}
+@article{DoernerMaleshkova2026SemanticMQTTIntegration,
+  author         = {Doerner, Niklas and
+                    Maleshkova, Maria},
+  title          = {From Opaque Streams to Explainable Systems: Semantic MQTT Integration at the Edge},
+  journal        = {Future Internet},
+  volume         = {18},
+  year           = {2026},
+  number         = {7},
+  article-number = {334},
+  url            = {https://www.mdpi.com/1999-5903/18/7/334},
+  ISSN           = {1999-5903},
+  DOI            = {10.3390/fi18070334}
 }
 ```
 [![DOI](https://img.shields.io/badge/DOI-https://doi.org/10.5281/zenodo.16704302/-blue.svg)](https://doi.org/10.5281/zenodo.16704302)
